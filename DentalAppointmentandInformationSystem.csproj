@@ -201,6 +201,9 @@
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables.cs" />
+    <EmbeddedResource Include="AddAppointment.resx">
+      <DependentUpon>AddAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddAppointmentExisting.resx">
       <DependentUpon>AddAppointmentExisting.cs</DependentUpon>
     </EmbeddedResource>

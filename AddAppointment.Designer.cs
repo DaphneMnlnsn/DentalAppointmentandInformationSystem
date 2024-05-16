@@ -79,18 +79,18 @@
             this.addressTxtBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.logoutBtn = new System.Windows.Forms.Label();
-            this.logoutPic = new System.Windows.Forms.PictureBox();
             this.servicesBtn = new System.Windows.Forms.Label();
             this.staffBtn = new System.Windows.Forms.Label();
-            this.staffPic = new System.Windows.Forms.PictureBox();
             this.ptntBtn = new System.Windows.Forms.Label();
-            this.patientPic = new System.Windows.Forms.PictureBox();
             this.apptclndrBtn = new System.Windows.Forms.Label();
-            this.clndrPic = new System.Windows.Forms.PictureBox();
-            this.doctorPic = new System.Windows.Forms.PictureBox();
             this.emNameTxtBox = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dshboardBtn = new System.Windows.Forms.Label();
+            this.logoutPic = new System.Windows.Forms.PictureBox();
+            this.staffPic = new System.Windows.Forms.PictureBox();
+            this.patientPic = new System.Windows.Forms.PictureBox();
+            this.clndrPic = new System.Windows.Forms.PictureBox();
+            this.doctorPic = new System.Windows.Forms.PictureBox();
             this.dshbrdPic = new System.Windows.Forms.PictureBox();
             this.srvcsPic = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
@@ -106,8 +106,8 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.AutoSize = true;
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
@@ -208,7 +208,7 @@
             // 
             // label15
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,7 +232,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,7 +246,7 @@
             // 
             // label14
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,7 +260,7 @@
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -284,7 +284,7 @@
             // 
             // lbl3
             // 
-            this.lbl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.lbl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -309,7 +309,7 @@
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -334,7 +334,7 @@
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -348,8 +348,8 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label2, 5);
@@ -372,7 +372,7 @@
             // 
             // label13
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -396,7 +396,7 @@
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -410,7 +410,7 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -424,7 +424,7 @@
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -438,7 +438,7 @@
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -452,7 +452,7 @@
             // 
             // label19
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -466,7 +466,7 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -480,7 +480,7 @@
             // 
             // label17
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -494,7 +494,7 @@
             // 
             // label18
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -508,7 +508,7 @@
             // 
             // label16
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -522,7 +522,7 @@
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -558,7 +558,7 @@
             // 
             // label20
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -572,6 +572,7 @@
             // 
             // birthDate
             // 
+            this.birthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.birthDate.Location = new System.Drawing.Point(477, 85);
             this.birthDate.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.birthDate.Name = "birthDate";
@@ -581,6 +582,7 @@
             // 
             // appntmntDate
             // 
+            this.appntmntDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.appntmntDate.Location = new System.Drawing.Point(20, 386);
             this.appntmntDate.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.appntmntDate.Name = "appntmntDate";
@@ -688,7 +690,7 @@
             // 
             // label22
             // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -712,7 +714,7 @@
             // 
             // label21
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -746,7 +748,7 @@
             // 
             // label23
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -760,7 +762,7 @@
             // 
             // label24
             // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -822,8 +824,8 @@
             // 
             // logoutBtn
             // 
-            this.logoutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.logoutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.logoutBtn.AutoSize = true;
             this.logoutBtn.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -833,23 +835,12 @@
             this.logoutBtn.TabIndex = 14;
             this.logoutBtn.Text = "Log out";
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // logoutPic
-            // 
-            this.logoutPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.logoutPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.logout;
-            this.logoutPic.Location = new System.Drawing.Point(54, 818);
-            this.logoutPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.logoutPic.Name = "logoutPic";
-            this.logoutPic.Size = new System.Drawing.Size(43, 44);
-            this.logoutPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoutPic.TabIndex = 13;
-            this.logoutPic.TabStop = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // servicesBtn
             // 
-            this.servicesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.servicesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.servicesBtn.AutoSize = true;
             this.servicesBtn.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -859,11 +850,12 @@
             this.servicesBtn.TabIndex = 12;
             this.servicesBtn.Text = "List of Services";
             this.servicesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.servicesBtn.Click += new System.EventHandler(this.servicesBtn_Click);
             // 
             // staffBtn
             // 
-            this.staffBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.staffBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.staffBtn.AutoSize = true;
             this.staffBtn.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -873,23 +865,12 @@
             this.staffBtn.TabIndex = 11;
             this.staffBtn.Text = "List of Staff";
             this.staffBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // staffPic
-            // 
-            this.staffPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.staffPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.staffs;
-            this.staffPic.Location = new System.Drawing.Point(48, 612);
-            this.staffPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.staffPic.Name = "staffPic";
-            this.staffPic.Size = new System.Drawing.Size(55, 61);
-            this.staffPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.staffPic.TabIndex = 9;
-            this.staffPic.TabStop = false;
+            this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
             // 
             // ptntBtn
             // 
-            this.ptntBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.ptntBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ptntBtn.AutoSize = true;
             this.ptntBtn.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -899,23 +880,12 @@
             this.ptntBtn.TabIndex = 8;
             this.ptntBtn.Text = "List of Patients";
             this.ptntBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // patientPic
-            // 
-            this.patientPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.patientPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.patients;
-            this.patientPic.Location = new System.Drawing.Point(47, 513);
-            this.patientPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.patientPic.Name = "patientPic";
-            this.patientPic.Size = new System.Drawing.Size(57, 60);
-            this.patientPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.patientPic.TabIndex = 7;
-            this.patientPic.TabStop = false;
+            this.ptntBtn.Click += new System.EventHandler(this.ptntBtn_Click);
             // 
             // apptclndrBtn
             // 
-            this.apptclndrBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.apptclndrBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.apptclndrBtn.AutoSize = true;
             this.apptclndrBtn.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -925,35 +895,12 @@
             this.apptclndrBtn.TabIndex = 6;
             this.apptclndrBtn.Text = "Appointment\r\nCalendar";
             this.apptclndrBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // clndrPic
-            // 
-            this.clndrPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.clndrPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.calendar;
-            this.clndrPic.Location = new System.Drawing.Point(50, 421);
-            this.clndrPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.clndrPic.Name = "clndrPic";
-            this.clndrPic.Size = new System.Drawing.Size(50, 46);
-            this.clndrPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.clndrPic.TabIndex = 5;
-            this.clndrPic.TabStop = false;
-            // 
-            // doctorPic
-            // 
-            this.doctorPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.doctorPic, 2);
-            this.doctorPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.profile_icon;
-            this.doctorPic.Location = new System.Drawing.Point(96, 18);
-            this.doctorPic.Name = "doctorPic";
-            this.doctorPic.Size = new System.Drawing.Size(153, 141);
-            this.doctorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.doctorPic.TabIndex = 0;
-            this.doctorPic.TabStop = false;
+            this.apptclndrBtn.Click += new System.EventHandler(this.apptclndrBtn_Click);
             // 
             // emNameTxtBox
             // 
-            this.emNameTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.emNameTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.emNameTxtBox.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.emNameTxtBox, 2);
@@ -967,7 +914,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
@@ -980,8 +927,8 @@
             // 
             // dshboardBtn
             // 
-            this.dshboardBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dshboardBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dshboardBtn.AutoSize = true;
             this.dshboardBtn.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -991,6 +938,71 @@
             this.dshboardBtn.TabIndex = 3;
             this.dshboardBtn.Text = "Dashboard";
             this.dshboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dshboardBtn.Click += new System.EventHandler(this.dashboardBtn_Click);
+            // 
+            // logoutPic
+            // 
+            this.logoutPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.logoutPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.logout;
+            this.logoutPic.Location = new System.Drawing.Point(54, 818);
+            this.logoutPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.logoutPic.Name = "logoutPic";
+            this.logoutPic.Size = new System.Drawing.Size(43, 44);
+            this.logoutPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoutPic.TabIndex = 13;
+            this.logoutPic.TabStop = false;
+            this.logoutPic.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
+            // staffPic
+            // 
+            this.staffPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.staffPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.staffs;
+            this.staffPic.Location = new System.Drawing.Point(48, 612);
+            this.staffPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.staffPic.Name = "staffPic";
+            this.staffPic.Size = new System.Drawing.Size(55, 61);
+            this.staffPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.staffPic.TabIndex = 9;
+            this.staffPic.TabStop = false;
+            this.staffPic.Click += new System.EventHandler(this.staffBtn_Click);
+            // 
+            // patientPic
+            // 
+            this.patientPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.patientPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.patients;
+            this.patientPic.Location = new System.Drawing.Point(47, 513);
+            this.patientPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.patientPic.Name = "patientPic";
+            this.patientPic.Size = new System.Drawing.Size(57, 60);
+            this.patientPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.patientPic.TabIndex = 7;
+            this.patientPic.TabStop = false;
+            this.patientPic.Click += new System.EventHandler(this.ptntBtn_Click);
+            // 
+            // clndrPic
+            // 
+            this.clndrPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.clndrPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.calendar;
+            this.clndrPic.Location = new System.Drawing.Point(50, 421);
+            this.clndrPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.clndrPic.Name = "clndrPic";
+            this.clndrPic.Size = new System.Drawing.Size(50, 46);
+            this.clndrPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.clndrPic.TabIndex = 5;
+            this.clndrPic.TabStop = false;
+            this.clndrPic.Click += new System.EventHandler(this.apptclndrBtn_Click);
+            // 
+            // doctorPic
+            // 
+            this.doctorPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.doctorPic, 2);
+            this.doctorPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.profile_icon;
+            this.doctorPic.Location = new System.Drawing.Point(96, 18);
+            this.doctorPic.Name = "doctorPic";
+            this.doctorPic.Size = new System.Drawing.Size(153, 141);
+            this.doctorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.doctorPic.TabIndex = 0;
+            this.doctorPic.TabStop = false;
             // 
             // dshbrdPic
             // 
@@ -1003,6 +1015,7 @@
             this.dshbrdPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dshbrdPic.TabIndex = 4;
             this.dshbrdPic.TabStop = false;
+            this.dshbrdPic.Click += new System.EventHandler(this.dashboardBtn_Click);
             // 
             // srvcsPic
             // 
@@ -1015,6 +1028,7 @@
             this.srvcsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.srvcsPic.TabIndex = 10;
             this.srvcsPic.TabStop = false;
+            this.srvcsPic.Click += new System.EventHandler(this.servicesBtn_Click);
             // 
             // AddAppointment
             // 

@@ -63,7 +63,7 @@ namespace DentalAppointmentandInformationSystem
                         SqlDataReader reader3 = cmd3.ExecuteReader();
                         if (reader3.Read())
                         {
-                            serviceName.Concat(", " + reader3["service_name"].ToString());
+                            serviceName += ", " + reader3["service_name"].ToString();
                         }
                         reader3.Dispose();
                         cmd3.Dispose();
@@ -76,7 +76,7 @@ namespace DentalAppointmentandInformationSystem
                         SqlDataReader reader4 = cmd4.ExecuteReader();
                         if (reader4.Read())
                         {
-                            serviceName.Concat(", " + reader4["service_name"].ToString());
+                            serviceName += ", " + reader4["service_name"].ToString();
                         }
                         reader4.Dispose();
                         cmd4.Dispose();
@@ -125,11 +125,11 @@ namespace DentalAppointmentandInformationSystem
                                 {
                                     if (reader7.GetValue(2).ToString().Equals("NULL") || reader7.GetValue(2).ToString().Equals(""))
                                     {
-                                        staffName.Concat(", " + reader7.GetValue(3).ToString() + " " + reader7.GetValue(1).ToString());
+                                        staffName += ", " + reader7.GetValue(3).ToString() + " " + reader7.GetValue(1).ToString();
                                     }
                                     else
                                     {
-                                        staffName.Concat(", " + reader7.GetValue(3).ToString() + " " + reader7.GetValue(2).ToString() + " " + reader7.GetValue(1).ToString());
+                                        staffName += ", " + reader7.GetValue(3).ToString() + " " + reader7.GetValue(2).ToString() + " " + reader7.GetValue(1).ToString();
                                     }
                                 }
                                 reader7.Dispose();
