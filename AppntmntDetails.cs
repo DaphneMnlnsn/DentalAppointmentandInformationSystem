@@ -170,6 +170,7 @@ namespace DentalAppointmentandInformationSystem
                         }
                     }
                 }
+                appntmnt.Parent = this;
                 appntmntContainer.Controls.Add(appntmnt);
             }
             constring.Close();
