@@ -18,7 +18,7 @@ namespace DentalAppointmentandInformationSystem
     public partial class AddAppointment : Form
     {
         Variables v = new Variables();
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DAISdB.mdf;Integrated Security=True");
+        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
         public AddAppointment()
         {
             InitializeComponent();
@@ -161,8 +161,6 @@ namespace DentalAppointmentandInformationSystem
                         b.Append(c.ColumnName.ToString() + ":" + r[c.ColumnName].ToString());
                     }
                 }
-                MessageBox.Show(b.ToString());
-                MessageBox.Show("Patient Created!");
             }
             else
             {
@@ -175,63 +173,134 @@ namespace DentalAppointmentandInformationSystem
             if (read.Read())
             {
                 appointmentID = read.GetInt32(0) + 1;
-                MessageBox.Show(" " + appointmentID);
             }
             else
             {
                 MessageBox.Show("NO DATA FOUND");
             }
             read.Close();
-            if (service2Combo.SelectedIndex == -1)
+            if (service2Combo.Text == null || service2Combo.Text == "")
             {
-                service2 = "";
+                service2 = "NULL";
             }
             else
             {
-                service2 = service2Combo.Text;
+                service2 = service2Combo.SelectedValue.ToString();
             }
 
-            if (service3Combo.SelectedIndex == -1)
+            if (service3Combo.Text == null || service3Combo.Text == "")
             {
-                service3 = "";
+                service3 = "NULL";
             }
             else
             {
-                service3 = service3Combo.Text;
+                service3 = service2Combo.SelectedValue.ToString();
             }
-            if (staff2Combo.SelectedIndex == -1)
+            if (staff2Combo.Text == null || staff2Combo.Text == "")
             {
-                staff2 = ""; 
+                staff2 = "NULL";
             }
             else
             {
-                staff2 = staff2Combo.Text;
+                staff2 = staff2Combo.SelectedValue.ToString();
             }
 
-            if (staff3Combo.SelectedIndex == -1)
+            if (staff3Combo.Text == null || staff3Combo.Text == "")
             {
-                staff3 = "";
+                staff3 = "NULL";
             }
             else
             {
-                staff3 = staff3Combo.Text;
+                staff3 = staff3Combo.SelectedValue.ToString();
             }
             String query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + patientID + "','"
-                + service1Combo.Text + "','12346" + "','12347" + "','" + appntmntDate.Text
+                + service1Combo.SelectedValue + "'," + service2 + "," + service3 + ",'" + appntmntDate.Text
                 + "','" + startTime.Text + "','" + endTime.Text + "','" + teethTxtBox.Text + "','"
-                + priceTxtBox.Text + "','" + staff1Combo.Text + "','10001" + "','10003" + "','" + notesTxtBox.Text + "')";
+                + priceTxtBox.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "')";
 
             SqlCommand cmd3 = new SqlCommand(query2, constring);
             cmd3.CommandText = query2;
             if (cmd3.ExecuteNonQuery() == 1)
             {
                 MessageBox.Show("Appointment Created!");
+                Calendar clndr = new Calendar();
+                clndr.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Something went wrong. Please try again.");
             }
             constring.Close();
+        }
+
+        private void staff1Combo_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Staff";
+            SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
+            DataTable dt = new DataTable();
+            adpt.Fill(dt);
+            dt.Columns.Add("employee_name", typeof(string), "employee_fname + ' ' + employee_lname");
+            staff1Combo.DataSource = dt;
+            staff1Combo.DisplayMember = "employee_name";
+            staff1Combo.ValueMember = "employee_num";
+        }
+
+        private void staff2Combo_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Staff";
+            SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
+            DataTable dt = new DataTable();
+            adpt.Fill(dt);
+            dt.Columns.Add("employee_name", typeof(string), "employee_fname + ' ' + employee_lname");
+            staff2Combo.DataSource = dt;
+            staff2Combo.DisplayMember = "employee_name";
+            staff2Combo.ValueMember = "employee_num";
+        }
+
+        private void staff3Combo_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Staff";
+            SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
+            DataTable dt = new DataTable();
+            adpt.Fill(dt);
+            dt.Columns.Add("employee_name", typeof(string), "employee_fname + ' ' + employee_lname");
+            staff3Combo.DataSource = dt;
+            staff3Combo.DisplayMember = "employee_name";
+            staff3Combo.ValueMember = "employee_num";
+        }
+
+        private void service1Combo_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Service";
+            SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
+            DataTable dt = new DataTable();
+            adpt.Fill(dt);
+            service1Combo.DataSource = dt;
+            service1Combo.DisplayMember = "service_name";
+            service1Combo.ValueMember = "service_id";
+        }
+
+        private void service2Combo_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Service";
+            SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
+            DataTable dt = new DataTable();
+            adpt.Fill(dt);
+            service2Combo.DataSource = dt;
+            service2Combo.DisplayMember = "service_name";
+            service2Combo.ValueMember = "service_id";
+        }
+
+        private void service3Combo_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Service";
+            SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
+            DataTable dt = new DataTable();
+            adpt.Fill(dt);
+            service3Combo.DataSource = dt;
+            service3Combo.DisplayMember = "service_name";
+            service3Combo.ValueMember = "service_id";
         }
     }
 }

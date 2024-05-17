@@ -26,7 +26,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void displayAppointment()
         {
-            SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DAISdB.mdf;Integrated Security=True");
+            SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
             constring.Open();
             string sql = "SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + v.getsetDay + "'";
             SqlCommand cmd = constring.CreateCommand();
@@ -41,6 +41,7 @@ namespace DentalAppointmentandInformationSystem
                 int employee_id = Convert.ToInt32(reader["employee_num"]);
                 string employee_id2 = reader["employee_num2"].ToString();
                 string employee_id3 = reader["employee_num3"].ToString();
+                string appointment_notes = reader["appointment_notes"].ToString();
 
                 string time = reader["appointment_startTime"].ToString()[0] + "" + reader["appointment_startTime"].ToString()[1] + "" + reader["appointment_startTime"].ToString()[2] + "" + reader["appointment_startTime"].ToString()[3] + "" + reader["appointment_startTime"].ToString()[4];
                 string time2 = reader["appointment_endTime"].ToString()[0] + "" + reader["appointment_endTime"].ToString()[1] + "" + reader["appointment_endTime"].ToString()[2] + "" + reader["appointment_endTime"].ToString()[3] + "" + reader["appointment_endTime"].ToString()[4];
@@ -145,20 +146,21 @@ namespace DentalAppointmentandInformationSystem
                                 {
                                     if (reader8.GetValue(2).ToString().Equals("NULL") || reader8.GetValue(2).ToString().Equals(""))
                                     {
-                                        staffName.Concat(", " + reader8.GetValue(3).ToString() + " " + reader8.GetValue(1).ToString());
+                                        staffName += ", " + reader8.GetValue(3).ToString() + " " + reader8.GetValue(1).ToString();
                                     }
                                     else
                                     {
-                                        staffName.Concat(", " + reader8.GetValue(3).ToString() + " " + reader8.GetValue(2).ToString() + " " + reader8.GetValue(1).ToString());
+                                        staffName += ", " + reader8.GetValue(3).ToString() + " " + reader8.GetValue(2).ToString() + " " + reader8.GetValue(1).ToString();
                                     }
                                 }
                                 reader8.Dispose();
                                 cmd8.Dispose();
                             }
                             ptntLbl.Text = patient_name;
-                            srvcLbl.Text = serviceName;
-                            timeLbl.Text = time + "-" + time2;
-                            stffLbl.Text = staffName;
+                            srvcLbl.Text = "Service/s Availed: " + serviceName;
+                            timeLbl.Text = "Time: " + time + "-" + time2;
+                            stffLbl.Text = "Staff/s Assigned: " + staffName;
+                            label1.Text = "Notes: " + appointment_notes;
                         }
                     }
                 }

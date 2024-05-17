@@ -50,7 +50,7 @@
             this.staff3Combo = new System.Windows.Forms.ComboBox();
             this.staff2Combo = new System.Windows.Forms.ComboBox();
             this.staff1Combo = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.endTime = new System.Windows.Forms.DateTimePicker();
             this.startTime = new System.Windows.Forms.DateTimePicker();
             this.appntmntDate = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -65,16 +65,16 @@
             this.savePatientBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.mnameTxtBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pIDTextBox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.priceTxtBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.teethTxtBox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.notesTxtBox = new System.Windows.Forms.RichTextBox();
+            this.patientCombo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffPic)).BeginInit();
@@ -137,6 +137,7 @@
             this.logoutBtn.TabIndex = 14;
             this.logoutBtn.Text = "Log out";
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // logoutPic
             // 
@@ -149,6 +150,7 @@
             this.logoutPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoutPic.TabIndex = 13;
             this.logoutPic.TabStop = false;
+            this.logoutPic.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // servicesBtn
             // 
@@ -163,6 +165,7 @@
             this.servicesBtn.TabIndex = 12;
             this.servicesBtn.Text = "List of Services";
             this.servicesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.servicesBtn.Click += new System.EventHandler(this.servicesBtn_Click);
             // 
             // staffBtn
             // 
@@ -177,6 +180,7 @@
             this.staffBtn.TabIndex = 11;
             this.staffBtn.Text = "List of Staff";
             this.staffBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
             // 
             // staffPic
             // 
@@ -189,6 +193,7 @@
             this.staffPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.staffPic.TabIndex = 9;
             this.staffPic.TabStop = false;
+            this.staffPic.Click += new System.EventHandler(this.staffBtn_Click);
             // 
             // ptntBtn
             // 
@@ -203,6 +208,7 @@
             this.ptntBtn.TabIndex = 8;
             this.ptntBtn.Text = "List of Patients";
             this.ptntBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ptntBtn.Click += new System.EventHandler(this.ptntBtn_Click);
             // 
             // patientPic
             // 
@@ -215,6 +221,7 @@
             this.patientPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.patientPic.TabIndex = 7;
             this.patientPic.TabStop = false;
+            this.patientPic.Click += new System.EventHandler(this.ptntBtn_Click);
             // 
             // apptclndrBtn
             // 
@@ -229,6 +236,7 @@
             this.apptclndrBtn.TabIndex = 6;
             this.apptclndrBtn.Text = "Appointment\r\nCalendar";
             this.apptclndrBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.apptclndrBtn.Click += new System.EventHandler(this.apptclndrBtn_Click);
             // 
             // clndrPic
             // 
@@ -241,6 +249,7 @@
             this.clndrPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.clndrPic.TabIndex = 5;
             this.clndrPic.TabStop = false;
+            this.clndrPic.Click += new System.EventHandler(this.apptclndrBtn_Click);
             // 
             // doctorPic
             // 
@@ -295,6 +304,7 @@
             this.dshboardBtn.TabIndex = 3;
             this.dshboardBtn.Text = "Dashboard";
             this.dshboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dshboardBtn.Click += new System.EventHandler(this.dashboardBtn_Click);
             // 
             // dshbrdPic
             // 
@@ -307,6 +317,7 @@
             this.dshbrdPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dshbrdPic.TabIndex = 4;
             this.dshbrdPic.TabStop = false;
+            this.dshbrdPic.Click += new System.EventHandler(this.dashboardBtn_Click);
             // 
             // srvcsPic
             // 
@@ -319,6 +330,7 @@
             this.srvcsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.srvcsPic.TabIndex = 10;
             this.srvcsPic.TabStop = false;
+            this.srvcsPic.Click += new System.EventHandler(this.servicesBtn_Click);
             // 
             // service3Combo
             // 
@@ -329,6 +341,7 @@
             this.service3Combo.Name = "service3Combo";
             this.service3Combo.Size = new System.Drawing.Size(502, 29);
             this.service3Combo.TabIndex = 67;
+            this.service3Combo.Click += new System.EventHandler(this.service3Combo_Click);
             // 
             // service2Combo
             // 
@@ -339,6 +352,7 @@
             this.service2Combo.Name = "service2Combo";
             this.service2Combo.Size = new System.Drawing.Size(502, 29);
             this.service2Combo.TabIndex = 65;
+            this.service2Combo.Click += new System.EventHandler(this.service2Combo_Click);
             // 
             // service1Combo
             // 
@@ -349,6 +363,7 @@
             this.service1Combo.Name = "service1Combo";
             this.service1Combo.Size = new System.Drawing.Size(502, 29);
             this.service1Combo.TabIndex = 66;
+            this.service1Combo.Click += new System.EventHandler(this.service1Combo_Click);
             // 
             // staff3Combo
             // 
@@ -359,6 +374,7 @@
             this.staff3Combo.Name = "staff3Combo";
             this.staff3Combo.Size = new System.Drawing.Size(409, 29);
             this.staff3Combo.TabIndex = 63;
+            this.staff3Combo.Click += new System.EventHandler(this.staff3Combo_Click);
             // 
             // staff2Combo
             // 
@@ -369,6 +385,7 @@
             this.staff2Combo.Name = "staff2Combo";
             this.staff2Combo.Size = new System.Drawing.Size(409, 29);
             this.staff2Combo.TabIndex = 64;
+            this.staff2Combo.Click += new System.EventHandler(this.staff2Combo_Click);
             // 
             // staff1Combo
             // 
@@ -379,16 +396,18 @@
             this.staff1Combo.Name = "staff1Combo";
             this.staff1Combo.Size = new System.Drawing.Size(409, 29);
             this.staff1Combo.TabIndex = 62;
+            this.staff1Combo.Click += new System.EventHandler(this.staff1Combo_Click);
             // 
-            // dateTimePicker2
+            // endTime
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(840, 184);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(241, 29);
-            this.dateTimePicker2.TabIndex = 61;
-            this.dateTimePicker2.Value = new System.DateTime(2024, 5, 15, 0, 0, 0, 0);
+            this.endTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.endTime.Location = new System.Drawing.Point(840, 184);
+            this.endTime.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.endTime.Name = "endTime";
+            this.endTime.ShowUpDown = true;
+            this.endTime.Size = new System.Drawing.Size(241, 29);
+            this.endTime.TabIndex = 61;
+            this.endTime.Value = new System.DateTime(2024, 5, 15, 0, 0, 0, 0);
             // 
             // startTime
             // 
@@ -396,12 +415,14 @@
             this.startTime.Location = new System.Drawing.Point(490, 184);
             this.startTime.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.startTime.Name = "startTime";
+            this.startTime.ShowUpDown = true;
             this.startTime.Size = new System.Drawing.Size(283, 29);
             this.startTime.TabIndex = 60;
             this.startTime.Value = new System.DateTime(2024, 5, 15, 0, 0, 0, 0);
             // 
             // appntmntDate
             // 
+            this.appntmntDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.appntmntDate.Location = new System.Drawing.Point(20, 184);
             this.appntmntDate.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.appntmntDate.Name = "appntmntDate";
@@ -548,6 +569,7 @@
             this.savePatientBtn.TabIndex = 35;
             this.savePatientBtn.Text = "Set Appointment";
             this.savePatientBtn.UseVisualStyleBackColor = false;
+            this.savePatientBtn.Click += new System.EventHandler(this.savePatientBtn_Click);
             // 
             // label2
             // 
@@ -578,17 +600,6 @@
             this.label3.Text = "PATIENT NAME *";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // mnameTxtBox
-            // 
-            this.mnameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel2.SetColumnSpan(this.mnameTxtBox, 2);
-            this.mnameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnameTxtBox.Location = new System.Drawing.Point(490, 110);
-            this.mnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.mnameTxtBox.Name = "mnameTxtBox";
-            this.mnameTxtBox.Size = new System.Drawing.Size(425, 30);
-            this.mnameTxtBox.TabIndex = 25;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -604,16 +615,15 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 339F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.mnameTxtBox, 3, 3);
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.pIDTextBox, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.savePatientBtn, 4, 18);
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.appntmntDate, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label16, 3, 4);
             this.tableLayoutPanel2.Controls.Add(this.startTime, 3, 5);
             this.tableLayoutPanel2.Controls.Add(this.label18, 4, 4);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker2, 4, 5);
+            this.tableLayoutPanel2.Controls.Add(this.endTime, 4, 5);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.staff1Combo, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.label10, 0, 8);
@@ -632,6 +642,7 @@
             this.tableLayoutPanel2.Controls.Add(this.teethTxtBox, 4, 13);
             this.tableLayoutPanel2.Controls.Add(this.label23, 0, 12);
             this.tableLayoutPanel2.Controls.Add(this.notesTxtBox, 0, 13);
+            this.tableLayoutPanel2.Controls.Add(this.patientCombo, 3, 3);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(366, 45);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -651,8 +662,8 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
@@ -675,17 +686,17 @@
             this.label6.Text = "PATIENT ID";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // pIDTextBox
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel2.SetColumnSpan(this.textBox1, 2);
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(20, 110);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(409, 30);
-            this.textBox1.TabIndex = 69;
+            this.pIDTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel2.SetColumnSpan(this.pIDTextBox, 2);
+            this.pIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pIDTextBox.Location = new System.Drawing.Point(20, 110);
+            this.pIDTextBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.pIDTextBox.Name = "pIDTextBox";
+            this.pIDTextBox.ReadOnly = true;
+            this.pIDTextBox.Size = new System.Drawing.Size(409, 30);
+            this.pIDTextBox.TabIndex = 69;
             // 
             // label21
             // 
@@ -698,7 +709,7 @@
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(332, 22);
             this.label21.TabIndex = 75;
-            this.label21.Text = "TEETH TREATED (0 IF UNDONE)*";
+            this.label21.Text = "TEETH TREATED";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // priceTxtBox
@@ -710,6 +721,7 @@
             this.priceTxtBox.Name = "priceTxtBox";
             this.priceTxtBox.Size = new System.Drawing.Size(309, 30);
             this.priceTxtBox.TabIndex = 77;
+            this.priceTxtBox.Text = "0";
             // 
             // label22
             // 
@@ -722,7 +734,7 @@
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(321, 22);
             this.label22.TabIndex = 76;
-            this.label22.Text = "PRICE BILLED (0 IF NOT DONE)*";
+            this.label22.Text = "PRICE BILLED";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // teethTxtBox
@@ -734,6 +746,7 @@
             this.teethTxtBox.Name = "teethTxtBox";
             this.teethTxtBox.Size = new System.Drawing.Size(309, 30);
             this.teethTxtBox.TabIndex = 78;
+            this.teethTxtBox.Text = "0";
             // 
             // label23
             // 
@@ -755,9 +768,21 @@
             this.notesTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.notesTxtBox.Name = "notesTxtBox";
             this.tableLayoutPanel2.SetRowSpan(this.notesTxtBox, 2);
-            this.notesTxtBox.Size = new System.Drawing.Size(385, 92);
+            this.notesTxtBox.Size = new System.Drawing.Size(385, 132);
             this.notesTxtBox.TabIndex = 79;
             this.notesTxtBox.Text = "";
+            // 
+            // patientCombo
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.patientCombo, 2);
+            this.patientCombo.FormattingEnabled = true;
+            this.patientCombo.Location = new System.Drawing.Point(490, 111);
+            this.patientCombo.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.patientCombo.Name = "patientCombo";
+            this.patientCombo.Size = new System.Drawing.Size(425, 29);
+            this.patientCombo.TabIndex = 81;
+            this.patientCombo.SelectionChangeCommitted += new System.EventHandler(this.patientCombo_SelectionChanged);
+            this.patientCombo.Click += new System.EventHandler(this.patientCombo_Click);
             // 
             // AddAppointmentExisting
             // 
@@ -821,21 +846,21 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker appntmntDate;
         private System.Windows.Forms.DateTimePicker startTime;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker endTime;
         private System.Windows.Forms.ComboBox staff1Combo;
         private System.Windows.Forms.ComboBox staff2Combo;
         private System.Windows.Forms.ComboBox staff3Combo;
         private System.Windows.Forms.ComboBox service1Combo;
         private System.Windows.Forms.ComboBox service2Combo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox mnameTxtBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox pIDTextBox;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox priceTxtBox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox teethTxtBox;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.RichTextBox notesTxtBox;
+        private System.Windows.Forms.ComboBox patientCombo;
     }
 }

@@ -19,7 +19,7 @@ namespace DentalAppointmentandInformationSystem
             InitializeComponent();
         }
 
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DAISdB.mdf;Integrated Security=True");
+        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
 
         private void Services_FormClosing(object sender, FormClosingEventArgs e)
         {
