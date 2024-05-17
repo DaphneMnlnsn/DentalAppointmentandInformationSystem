@@ -220,6 +220,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DAISdBDataSet.xsc">
       <DependentUpon>DAISdBDataSet.xsd</DependentUpon>
     </None>

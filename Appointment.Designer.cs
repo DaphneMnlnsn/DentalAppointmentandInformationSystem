@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.appntmntIDLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -40,13 +42,13 @@
             this.timeLbl = new System.Windows.Forms.Label();
             this.srvcLbl = new System.Windows.Forms.Label();
             this.ptntLbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.appntmntIDLbl);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
@@ -62,6 +64,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1064, 306);
             this.panel1.TabIndex = 15;
+            // 
+            // appntmntIDLbl
+            // 
+            this.appntmntIDLbl.AutoSize = true;
+            this.appntmntIDLbl.Font = new System.Drawing.Font("Inter Medium", 1F, System.Drawing.FontStyle.Bold);
+            this.appntmntIDLbl.Location = new System.Drawing.Point(1045, 291);
+            this.appntmntIDLbl.Name = "appntmntIDLbl";
+            this.appntmntIDLbl.Size = new System.Drawing.Size(8, 2);
+            this.appntmntIDLbl.TabIndex = 13;
+            this.appntmntIDLbl.Text = "label3";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Inter Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, 229);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 21);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "notes";
             // 
             // panel6
             // 
@@ -99,30 +121,35 @@
             // 
             this.panel2.Controls.Add(this.deleteAppntmnt);
             this.panel2.Controls.Add(this.editAppntmnt);
-            this.panel2.Location = new System.Drawing.Point(703, 46);
+            this.panel2.Location = new System.Drawing.Point(756, 46);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(316, 155);
+            this.panel2.Size = new System.Drawing.Size(263, 155);
             this.panel2.TabIndex = 7;
             // 
             // deleteAppntmnt
             // 
+            this.deleteAppntmnt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteAppntmnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteAppntmnt.Location = new System.Drawing.Point(29, 81);
-            this.deleteAppntmnt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deleteAppntmnt.Location = new System.Drawing.Point(25, 83);
             this.deleteAppntmnt.Name = "deleteAppntmnt";
-            this.deleteAppntmnt.Size = new System.Drawing.Size(262, 49);
+            this.deleteAppntmnt.Size = new System.Drawing.Size(219, 49);
             this.deleteAppntmnt.TabIndex = 2;
             this.deleteAppntmnt.Text = "Delete";
             this.deleteAppntmnt.UseVisualStyleBackColor = true;
+            this.deleteAppntmnt.Click += new System.EventHandler(this.deleteAppntmnt_Click);
             // 
             // editAppntmnt
             // 
+            this.editAppntmnt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.editAppntmnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editAppntmnt.Location = new System.Drawing.Point(29, 21);
-            this.editAppntmnt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.editAppntmnt.Location = new System.Drawing.Point(25, 23);
             this.editAppntmnt.Name = "editAppntmnt";
-            this.editAppntmnt.Size = new System.Drawing.Size(262, 46);
+            this.editAppntmnt.Size = new System.Drawing.Size(219, 46);
             this.editAppntmnt.TabIndex = 1;
             this.editAppntmnt.Text = "Edit";
             this.editAppntmnt.UseVisualStyleBackColor = true;
@@ -169,16 +196,6 @@
             this.ptntLbl.Text = "label2";
             this.ptntLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Inter Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 229);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 21);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "notes";
-            // 
             // Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -209,5 +226,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label appntmntIDLbl;
     }
 }
