@@ -14,8 +14,8 @@ namespace DentalAppointmentandInformationSystem
 {
     public partial class Appointment : UserControl
     {
+        Variables v = new Variables();
         SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
-
         public Appointment()
         {
             InitializeComponent();
@@ -36,9 +36,11 @@ namespace DentalAppointmentandInformationSystem
 
         private void editAppntmnt_Click(object sender, EventArgs e)
         {
-            EditAppointment editAppointment = new EditAppointment();
-            editAppointment.Show();
-            this.Parent.Hide();
+            v.getsetappointmentSelected = appntmntIDLbl.Text;
+            this.ParentForm.Hide();
+            EditAppointment edit = new EditAppointment();
+            edit.Show();
+
         }
 
         private void deleteAppntmnt_Click(object sender, EventArgs e)

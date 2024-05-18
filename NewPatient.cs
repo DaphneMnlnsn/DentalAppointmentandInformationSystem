@@ -13,6 +13,10 @@ namespace DentalAppointmentandInformationSystem
 {
     public partial class NewPatient : Form
     {
+        string path;
+        Variables v = new Variables();
+        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
+
         public NewPatient()
         {
             InitializeComponent();
@@ -21,6 +25,26 @@ namespace DentalAppointmentandInformationSystem
         {
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            constring.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
+            SqlDataReader reader1;
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                if (reader1.GetValue(2).ToString().Equals("NULL") || reader1.GetValue(2).ToString().Equals(""))
+                {
+                    emNameTxtBox.Text = reader1.GetValue(3).ToString() + " " + reader1.GetValue(1).ToString();
+                }
+                else
+                {
+                    emNameTxtBox.Text = reader1.GetValue(3).ToString() + " " + reader1.GetValue(2).ToString() + " " + reader1.GetValue(1).ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
+            constring.Close();
         }
         private void attachFileBtn_Click(object sender, EventArgs e)
         {
@@ -32,7 +56,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 if (openFileDialog1.CheckFileExists)
                 {
-                    string path = System.IO.Path.GetFullPath(openFileDialog1.FileName);
+                    path = System.IO.Path.GetFullPath(openFileDialog1.FileName);
                 }
             }
             else
@@ -42,8 +66,7 @@ namespace DentalAppointmentandInformationSystem
         }
 
         private void savePatientBtn_Click(object sender, EventArgs e)
-        {
-            SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
+        {            
             string filename = System.IO.Path.GetFileName(openFileDialog1.FileName);
             if (filename == null)
             {
@@ -51,7 +74,6 @@ namespace DentalAppointmentandInformationSystem
             }
             else
             {
-                //we already define our connection globaly. We are just calling the object of connection.
                 constring.Open();
                 SqlCommand cmd = new SqlCommand("INSERT INTO History(med_history) VALUES ('\\Document\\" + filename + "')", constring);
                 string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
@@ -63,6 +85,66 @@ namespace DentalAppointmentandInformationSystem
         private void NewPatient_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void dashboardBtn_Click(object sender, EventArgs e)
+        {
+            Dashboard dshbrd = new Dashboard();
+            dshbrd.Show();
+            dshbrd.Hide();
+        }
+        private void apptclndrBtn_Click(object sender, EventArgs e)
+        {
+            Calendar cldr = new Calendar();
+            cldr.Show();
+            this.Hide();
+        }
+
+        private void ptntBtn_Click(object sender, EventArgs e)
+        {
+            Patients ptnt = new Patients();
+            ptnt.Show();
+            this.Hide();
+        }
+
+        private void staffBtn_Click(object sender, EventArgs e)
+        {
+            constring.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
+            SqlDataReader reader1;
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
+                {
+                    Staff stf = new Staff();
+                    stf.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("You do not have the authorization to open this!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
+            constring.Close();
+        }
+
+        private void servicesBtn_Click(object sender, EventArgs e)
+        {
+            Services srvcs = new Services();
+            srvcs.Show();
+            this.Hide();
+        }
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            v.getsetloggedIn = "";
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
 
 

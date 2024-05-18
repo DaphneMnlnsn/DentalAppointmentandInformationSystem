@@ -69,9 +69,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pIDTextBox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.priceTxtBox = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.teethTxtBox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.priceTxtBox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.notesTxtBox = new System.Windows.Forms.RichTextBox();
             this.patientCombo = new System.Windows.Forms.ComboBox();
@@ -357,6 +357,7 @@
             // service1Combo
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.service1Combo, 2);
+            this.service1Combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.service1Combo.FormattingEnabled = true;
             this.service1Combo.Location = new System.Drawing.Point(490, 281);
             this.service1Combo.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
@@ -390,6 +391,7 @@
             // staff1Combo
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.staff1Combo, 2);
+            this.staff1Combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.staff1Combo.FormattingEnabled = true;
             this.staff1Combo.Location = new System.Drawing.Point(20, 281);
             this.staff1Combo.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
@@ -637,9 +639,9 @@
             this.tableLayoutPanel2.Controls.Add(this.label11, 3, 10);
             this.tableLayoutPanel2.Controls.Add(this.service3Combo, 3, 11);
             this.tableLayoutPanel2.Controls.Add(this.label21, 3, 12);
-            this.tableLayoutPanel2.Controls.Add(this.priceTxtBox, 3, 13);
+            this.tableLayoutPanel2.Controls.Add(this.teethTxtBox, 3, 13);
             this.tableLayoutPanel2.Controls.Add(this.label22, 4, 12);
-            this.tableLayoutPanel2.Controls.Add(this.teethTxtBox, 4, 13);
+            this.tableLayoutPanel2.Controls.Add(this.priceTxtBox, 4, 13);
             this.tableLayoutPanel2.Controls.Add(this.label23, 0, 12);
             this.tableLayoutPanel2.Controls.Add(this.notesTxtBox, 0, 13);
             this.tableLayoutPanel2.Controls.Add(this.patientCombo, 3, 3);
@@ -712,16 +714,16 @@
             this.label21.Text = "TEETH TREATED";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // priceTxtBox
+            // teethTxtBox
             // 
-            this.priceTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.priceTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtBox.Location = new System.Drawing.Point(490, 502);
-            this.priceTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.priceTxtBox.Name = "priceTxtBox";
-            this.priceTxtBox.Size = new System.Drawing.Size(309, 30);
-            this.priceTxtBox.TabIndex = 77;
-            this.priceTxtBox.Text = "0";
+            this.teethTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.teethTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teethTxtBox.Location = new System.Drawing.Point(490, 502);
+            this.teethTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.teethTxtBox.Name = "teethTxtBox";
+            this.teethTxtBox.Size = new System.Drawing.Size(309, 30);
+            this.teethTxtBox.TabIndex = 77;
+            this.teethTxtBox.Text = "0";
             // 
             // label22
             // 
@@ -737,16 +739,16 @@
             this.label22.Text = "PRICE BILLED";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // teethTxtBox
+            // priceTxtBox
             // 
-            this.teethTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.teethTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teethTxtBox.Location = new System.Drawing.Point(840, 502);
-            this.teethTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.teethTxtBox.Name = "teethTxtBox";
-            this.teethTxtBox.Size = new System.Drawing.Size(309, 30);
-            this.teethTxtBox.TabIndex = 78;
-            this.teethTxtBox.Text = "0";
+            this.priceTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.priceTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceTxtBox.Location = new System.Drawing.Point(840, 502);
+            this.priceTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.priceTxtBox.Name = "priceTxtBox";
+            this.priceTxtBox.Size = new System.Drawing.Size(309, 30);
+            this.priceTxtBox.TabIndex = 78;
+            this.priceTxtBox.Text = "0";
             // 
             // label23
             // 
@@ -856,9 +858,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox pIDTextBox;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox priceTxtBox;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox teethTxtBox;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox priceTxtBox;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.RichTextBox notesTxtBox;
         private System.Windows.Forms.ComboBox patientCombo;

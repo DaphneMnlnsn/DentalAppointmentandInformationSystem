@@ -161,7 +161,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 staff3 = staff3Combo.SelectedValue.ToString();
             }
-            String query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + pIDTextBox.Text + "','"
+            string query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + pIDTextBox.Text + "','"
                 + service1Combo.SelectedValue + "'," + service2 + "," + service3 + ",'" + appntmntDate.Text
                 + "','" + startTime.Text + "','" + endTime.Text + "','" + teethTxtBox.Text + "','"
                 + priceTxtBox.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "')";

@@ -170,7 +170,6 @@ namespace DentalAppointmentandInformationSystem
                         }
                     }
                 }
-                appntmnt.Parent = this;
                 appntmntContainer.Controls.Add(appntmnt);
             }
             constring.Close();
@@ -236,5 +235,6 @@ namespace DentalAppointmentandInformationSystem
             login.Show();
             this.Hide();
         }
+
     }
 }

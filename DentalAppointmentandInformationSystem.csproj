@@ -162,6 +162,12 @@
     <Compile Include="Patients.Designer.cs">
       <DependentUpon>Patients.cs</DependentUpon>
     </Compile>
+    <Compile Include="PatientsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatientsList.Designer.cs">
+      <DependentUpon>PatientsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services.cs">
@@ -218,6 +224,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditStaff.resx">
       <DependentUpon>EditStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPatient.resx">
+      <DependentUpon>NewPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewStaff.resx">
+      <DependentUpon>NewStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients.resx">
+      <DependentUpon>Patients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsList.resx">
+      <DependentUpon>PatientsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

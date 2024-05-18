@@ -615,6 +615,7 @@
             // staff1Combo
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.staff1Combo, 2);
+            this.staff1Combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.staff1Combo.FormattingEnabled = true;
             this.staff1Combo.Location = new System.Drawing.Point(20, 467);
             this.staff1Combo.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
@@ -648,6 +649,7 @@
             // service1Combo
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.service1Combo, 2);
+            this.service1Combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.service1Combo.FormattingEnabled = true;
             this.service1Combo.Location = new System.Drawing.Point(477, 467);
             this.service1Combo.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
