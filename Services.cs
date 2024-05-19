@@ -31,7 +31,7 @@ namespace DentalAppointmentandInformationSystem
         {
             addService1.Visible = false;
             editService1.Visible = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
 
             displayServices();
@@ -103,6 +103,13 @@ namespace DentalAppointmentandInformationSystem
         {
             editService1.Visible = true;
             editService1.setValues();
+        }
+
+        private void dshbrdbtn_Click(object sender, EventArgs e)
+        {
+            Dashboard dshbrd = new Dashboard();
+            dshbrd.Show();
+            this.Hide();
         }
     }
 }

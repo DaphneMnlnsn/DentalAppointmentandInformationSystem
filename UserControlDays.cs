@@ -49,7 +49,7 @@ namespace DentalAppointmentandInformationSystem
                 SqlDataReader reader2 = cmd2.ExecuteReader();
                 if (reader2.Read())
                 {
-                    lblsched.Text = reader2["service_name"].ToString() + ":" + time + "-" + time2;
+                        lblsched.Text = reader2["service_name"].ToString() + ":" + time + "-" + time2;
                 }
                 reader2.Dispose();
                 cmd2.Dispose();

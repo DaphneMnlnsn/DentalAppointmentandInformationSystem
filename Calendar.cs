@@ -14,7 +14,7 @@ namespace DentalAppointmentandInformationSystem
 {
     public partial class Calendar : Form
     {
-        int month, year;
+        Variables v = new Variables();
         public Calendar()
         {
             InitializeComponent();
@@ -22,21 +22,20 @@ namespace DentalAppointmentandInformationSystem
 
         private void Calendar_Load(object sender, EventArgs e)
         {
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
-
             displayDays();
         }
         private void displayDays()
         {
             DateTime now = DateTime.Now;
-            month = now.Month;
-            year = now.Year;
+            v.getsetMonth = now.Month;
+            v.getsetYear = now.Year;
 
-            string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            monthLbl.Text = monthName + " " + year;
+            string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(v.getsetMonth);
+            monthLbl.Text = monthName + " " + v.getsetYear;
 
-            DateTime startOfTheMonth = new DateTime(year, month, 1);
+            DateTime startOfTheMonth = new DateTime(v.getsetYear, v.getsetMonth, 1);
             int days = DateTime.DaysInMonth(now.Year, now.Month);
             int daysOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d")) + 1;
 
@@ -77,13 +76,13 @@ namespace DentalAppointmentandInformationSystem
         private void btnprevious_Click(object sender, EventArgs e)
         {
             daycontainer.Controls.Clear();
-            month--;
+            v.getsetMonth--;
 
-            string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            monthLbl.Text = monthName + " " + year;
+            string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(v.getsetMonth);
+            monthLbl.Text = monthName + " " + v.getsetYear;
 
-            DateTime startOfTheMonth = new DateTime(year, month, 1);
-            int days = DateTime.DaysInMonth(year, month);
+            DateTime startOfTheMonth = new DateTime(v.getsetYear, v.getsetMonth, 1);
+            int days = DateTime.DaysInMonth(v.getsetYear, v.getsetMonth);
             int daysOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d")) + 1;
 
             for (int i = 1; i < daysOfTheWeek; i++)
@@ -103,13 +102,13 @@ namespace DentalAppointmentandInformationSystem
         private void btnnext_Click(object sender, EventArgs e)
         {
             daycontainer.Controls.Clear();
-            month++;
+            v.getsetMonth++;
 
-            string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            monthLbl.Text = monthName + " " + year;
+            string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(v.getsetMonth);
+            monthLbl.Text = monthName + " " + v.getsetYear;
 
-            DateTime startOfTheMonth = new DateTime(year, month, 1);
-            int days = DateTime.DaysInMonth(year, month);
+            DateTime startOfTheMonth = new DateTime(v.getsetYear, v.getsetMonth, 1);
+            int days = DateTime.DaysInMonth(v.getsetYear, v.getsetMonth);
             int daysOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d")) + 1;
 
             for (int i = 1; i < daysOfTheWeek; i++)
@@ -150,6 +149,13 @@ namespace DentalAppointmentandInformationSystem
         private void Calendar_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void dshbrdBtn_Click(object sender, EventArgs e)
+        {
+            Dashboard dshbrd = new Dashboard();
+            dshbrd.Show();
+            this.Hide();
         }
     }
 }

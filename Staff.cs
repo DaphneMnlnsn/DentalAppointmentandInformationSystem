@@ -29,7 +29,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void Staff_Load(object sender, EventArgs e)
         {
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             displayStaff();
         }
@@ -87,6 +87,13 @@ namespace DentalAppointmentandInformationSystem
         {
             NewStaff newStaff = new NewStaff();
             newStaff.Show();
+            this.Hide();
+        }
+
+        private void dshbrdBtn_Click(object sender, EventArgs e)
+        {
+            Dashboard dshbrd = new Dashboard();
+            dshbrd.Show();
             this.Hide();
         }
     }

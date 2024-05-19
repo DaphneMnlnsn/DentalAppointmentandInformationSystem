@@ -36,7 +36,7 @@
             // 
             // dayLbl
             // 
-            this.dayLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dayLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dayLbl.AutoSize = true;
             this.dayLbl.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold);
@@ -47,11 +47,12 @@
             this.dayLbl.TabIndex = 1;
             this.dayLbl.Text = "day no.";
             this.dayLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dayLbl.Click += new System.EventHandler(this.DashboardDaysNotBlank_Click);
             // 
             // eventLbl
             // 
-            this.eventLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.eventLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.eventLbl.AutoSize = true;
             this.eventLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
@@ -62,6 +63,7 @@
             this.eventLbl.Size = new System.Drawing.Size(125, 63);
             this.eventLbl.TabIndex = 2;
             this.eventLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.eventLbl.Click += new System.EventHandler(this.DashboardDaysNotBlank_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -86,6 +88,7 @@
             this.Name = "DashboardDaysNotBlank";
             this.Size = new System.Drawing.Size(137, 94);
             this.Load += new System.EventHandler(this.DashboardDaysNotBlank_Load);
+            this.Click += new System.EventHandler(this.DashboardDaysNotBlank_Click);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

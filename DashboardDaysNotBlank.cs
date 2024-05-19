@@ -58,5 +58,12 @@ namespace DentalAppointmentandInformationSystem
             cmd.Dispose();
             constring.Close();
         }
+
+        private void DashboardDaysNotBlank_Click(object sender, EventArgs e)
+        {
+            Calendar clndr = new Calendar();
+            clndr.Show();
+            this.Hide();
+        }
     }
 }

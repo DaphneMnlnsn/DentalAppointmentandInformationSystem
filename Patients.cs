@@ -27,7 +27,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void Patients_Load(object sender, EventArgs e)
         {
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             displayPatient();
         }
@@ -110,6 +110,13 @@ namespace DentalAppointmentandInformationSystem
         {
             Services srvcs = new Services();
             srvcs.Show();
+            this.Hide();
+        }
+
+        private void dshbrdBtn_Click(object sender, EventArgs e)
+        {
+            Dashboard dshbrd = new Dashboard();
+            dshbrd.Show();
             this.Hide();
         }
     }

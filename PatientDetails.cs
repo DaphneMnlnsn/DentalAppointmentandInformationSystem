@@ -24,7 +24,8 @@ namespace DentalAppointmentandInformationSystem
 
         private void PatientDetails_Load(object sender, EventArgs e)
         {
-
+            this.CenterToScreen();
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
         }
     }
 }

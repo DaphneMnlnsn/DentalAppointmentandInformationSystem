@@ -231,6 +231,12 @@
     <EmbeddedResource Include="Appointment.resx">
       <DependentUpon>Appointment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardDaysNotBlank.resx">
+      <DependentUpon>DashboardDaysNotBlank.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditAppointment.resx">
       <DependentUpon>EditAppointment.cs</DependentUpon>
     </EmbeddedResource>

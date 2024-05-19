@@ -30,7 +30,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void AddAppointment_Load(object sender, EventArgs e)
         {
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);

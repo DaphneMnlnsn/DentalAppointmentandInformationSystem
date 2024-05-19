@@ -27,7 +27,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void EditPatient_Load(object sender, EventArgs e)
         {
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
         }
 
