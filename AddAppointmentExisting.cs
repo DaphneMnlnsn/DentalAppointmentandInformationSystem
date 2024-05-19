@@ -163,14 +163,44 @@ namespace DentalAppointmentandInformationSystem
             }
             string query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + pIDTextBox.Text + "','"
                 + service1Combo.SelectedValue + "'," + service2 + "," + service3 + ",'" + appntmntDate.Text
-                + "','" + startTime.Text + "','" + endTime.Text + "','" + teethTxtBox.Text + "','"
-                + priceTxtBox.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "')";
+                + "','" + startTime.Text + "','" + endTime.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "')";
 
             SqlCommand cmd3 = new SqlCommand(query2, constring);
             cmd3.CommandText = query2;
             if (cmd3.ExecuteNonQuery() == 1)
             {
                 MessageBox.Show("Appointment Created!");
+                Calendar clndr = new Calendar();
+                clndr.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Something went wrong. Please try again.");
+            }
+
+            int recordID = 0;
+            SqlCommand com = new SqlCommand("SELECT TOP 1 record_id FROM Record ORDER BY record_id DESC", constring);
+            SqlDataReader re;
+            re = com.ExecuteReader();
+            if (re.Read())
+            {
+                recordID = re.GetInt32(0) + 1;
+            }
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
+            re.Close();
+
+            string query3 = "INSERT INTO Record VALUES('" + recordID + "','" + pIDTextBox.Text + "','"
+                + service1Combo.Text + " " + service2Combo.Text + " " + service3Combo.Text + "','" + appointmentID
+                + "','0','0',NULL);";
+
+            SqlCommand cmd4 = new SqlCommand(query2, constring);
+            cmd4.CommandText = query3;
+            if (cmd4.ExecuteNonQuery() == 1)
+            {
                 Calendar clndr = new Calendar();
                 clndr.Show();
                 this.Hide();

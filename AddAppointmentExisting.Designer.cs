@@ -68,10 +68,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.pIDTextBox = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.teethTxtBox = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.priceTxtBox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.notesTxtBox = new System.Windows.Forms.RichTextBox();
             this.patientCombo = new System.Windows.Forms.ComboBox();
@@ -563,11 +559,11 @@
             this.savePatientBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.savePatientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(115)))), ((int)(((byte)(247)))));
             this.savePatientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.savePatientBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savePatientBtn.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.savePatientBtn.ForeColor = System.Drawing.Color.White;
-            this.savePatientBtn.Location = new System.Drawing.Point(892, 780);
+            this.savePatientBtn.Location = new System.Drawing.Point(879, 693);
             this.savePatientBtn.Name = "savePatientBtn";
-            this.savePatientBtn.Size = new System.Drawing.Size(194, 43);
+            this.savePatientBtn.Size = new System.Drawing.Size(221, 55);
             this.savePatientBtn.TabIndex = 35;
             this.savePatientBtn.Text = "Set Appointment";
             this.savePatientBtn.UseVisualStyleBackColor = false;
@@ -619,7 +615,6 @@
             this.tableLayoutPanel2.Controls.Add(this.label3, 3, 2);
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.pIDTextBox, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.savePatientBtn, 4, 18);
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.appntmntDate, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label16, 3, 4);
@@ -638,18 +633,15 @@
             this.tableLayoutPanel2.Controls.Add(this.staff3Combo, 0, 11);
             this.tableLayoutPanel2.Controls.Add(this.label11, 3, 10);
             this.tableLayoutPanel2.Controls.Add(this.service3Combo, 3, 11);
-            this.tableLayoutPanel2.Controls.Add(this.label21, 3, 12);
-            this.tableLayoutPanel2.Controls.Add(this.teethTxtBox, 3, 13);
-            this.tableLayoutPanel2.Controls.Add(this.label22, 4, 12);
-            this.tableLayoutPanel2.Controls.Add(this.priceTxtBox, 4, 13);
             this.tableLayoutPanel2.Controls.Add(this.label23, 0, 12);
             this.tableLayoutPanel2.Controls.Add(this.notesTxtBox, 0, 13);
             this.tableLayoutPanel2.Controls.Add(this.patientCombo, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.savePatientBtn, 4, 15);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(366, 45);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 21;
+            this.tableLayoutPanel2.RowCount = 17;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
@@ -665,13 +657,9 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1159, 883);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 166F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1159, 845);
             this.tableLayoutPanel2.TabIndex = 15;
             // 
             // label6
@@ -700,56 +688,6 @@
             this.pIDTextBox.Size = new System.Drawing.Size(409, 30);
             this.pIDTextBox.TabIndex = 69;
             // 
-            // label21
-            // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(485, 478);
-            this.label21.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(332, 22);
-            this.label21.TabIndex = 75;
-            this.label21.Text = "TEETH TREATED";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // teethTxtBox
-            // 
-            this.teethTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.teethTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teethTxtBox.Location = new System.Drawing.Point(490, 502);
-            this.teethTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.teethTxtBox.Name = "teethTxtBox";
-            this.teethTxtBox.Size = new System.Drawing.Size(309, 30);
-            this.teethTxtBox.TabIndex = 77;
-            this.teethTxtBox.Text = "0";
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(835, 478);
-            this.label22.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(321, 22);
-            this.label22.TabIndex = 76;
-            this.label22.Text = "PRICE BILLED";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // priceTxtBox
-            // 
-            this.priceTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.priceTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtBox.Location = new System.Drawing.Point(840, 502);
-            this.priceTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.priceTxtBox.Name = "priceTxtBox";
-            this.priceTxtBox.Size = new System.Drawing.Size(309, 30);
-            this.priceTxtBox.TabIndex = 78;
-            this.priceTxtBox.Text = "0";
-            // 
             // label23
             // 
             this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -766,11 +704,12 @@
             // 
             // notesTxtBox
             // 
+            this.tableLayoutPanel2.SetColumnSpan(this.notesTxtBox, 5);
             this.notesTxtBox.Location = new System.Drawing.Point(20, 503);
             this.notesTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.notesTxtBox.Name = "notesTxtBox";
             this.tableLayoutPanel2.SetRowSpan(this.notesTxtBox, 2);
-            this.notesTxtBox.Size = new System.Drawing.Size(385, 132);
+            this.notesTxtBox.Size = new System.Drawing.Size(1061, 132);
             this.notesTxtBox.TabIndex = 79;
             this.notesTxtBox.Text = "";
             // 
@@ -857,10 +796,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox pIDTextBox;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox teethTxtBox;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox priceTxtBox;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.RichTextBox notesTxtBox;
         private System.Windows.Forms.ComboBox patientCombo;

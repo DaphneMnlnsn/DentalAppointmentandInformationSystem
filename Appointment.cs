@@ -52,6 +52,10 @@ namespace DentalAppointmentandInformationSystem
                 string query = "DELETE FROM Appointment WHERE appointment_id =" + appntmntIDLbl.Text;
                 SqlCommand cmd = new SqlCommand(query, constring);
                 cmd.CommandText = query;
+                string query2 = "DELETE FROM Record WHERE appointment_id =" + appntmntIDLbl.Text;
+                SqlCommand cmd2 = new SqlCommand(query2, constring);
+                cmd2.CommandText = query2;
+                cmd2.ExecuteNonQuery();
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Appointment Deleted Successfully!");

@@ -77,6 +77,7 @@
             this.fullName.TabIndex = 80;
             this.fullName.Text = "Full Name";
             this.fullName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.fullName.Click += new System.EventHandler(this.editStaff_Click);
             // 
             // employeeNum
             // 
@@ -89,6 +90,7 @@
             this.employeeNum.TabIndex = 77;
             this.employeeNum.Text = "Employee No.";
             this.employeeNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.employeeNum.Click += new System.EventHandler(this.editStaff_Click);
             // 
             // ageLbl
             // 
@@ -101,6 +103,7 @@
             this.ageLbl.TabIndex = 78;
             this.ageLbl.Text = "Age";
             this.ageLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ageLbl.Click += new System.EventHandler(this.editStaff_Click);
             // 
             // birthDate
             // 
@@ -113,6 +116,7 @@
             this.birthDate.TabIndex = 79;
             this.birthDate.Text = "Birthdate";
             this.birthDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.birthDate.Click += new System.EventHandler(this.editStaff_Click);
             // 
             // staffRole
             // 
@@ -125,6 +129,7 @@
             this.staffRole.TabIndex = 81;
             this.staffRole.Text = "Staff Role";
             this.staffRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.staffRole.Click += new System.EventHandler(this.editStaff_Click);
             // 
             // contactNum
             // 
@@ -137,6 +142,7 @@
             this.contactNum.TabIndex = 82;
             this.contactNum.Text = "Contact";
             this.contactNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.contactNum.Click += new System.EventHandler(this.editStaff_Click);
             // 
             // passwordLbl
             // 
@@ -149,6 +155,7 @@
             this.passwordLbl.TabIndex = 83;
             this.passwordLbl.Text = "Password";
             this.passwordLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.passwordLbl.Click += new System.EventHandler(this.editStaff_Click);
             // 
             // StaffList
             // 

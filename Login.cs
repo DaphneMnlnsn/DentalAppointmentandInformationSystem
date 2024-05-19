@@ -88,5 +88,10 @@ namespace DentalAppointmentandInformationSystem
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void forgotPassLbl_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please ask your administrator for a password reset.");
+        }
     }
 }

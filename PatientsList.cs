@@ -13,6 +13,7 @@ namespace DentalAppointmentandInformationSystem
 {
     public partial class PatientsList : UserControl
     {
+        Variables v = new Variables();
         public PatientsList()
         {
             InitializeComponent();
@@ -25,6 +26,14 @@ namespace DentalAppointmentandInformationSystem
             patientGender.Text = patient_gender;
             patientLastVisit.Text = patient_lv;
             patientContact.Text = patient_contact;
+        }
+
+        private void patientDetails_Click(object sender, EventArgs e)
+        {
+            v.getsetpatientSelected = patientId.Text;
+            PatientDetails patientDetails = new PatientDetails();
+            patientDetails.Show();
+            this.ParentForm.Hide();
         }
     }
 }

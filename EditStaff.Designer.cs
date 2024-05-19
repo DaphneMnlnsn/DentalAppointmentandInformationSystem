@@ -30,40 +30,39 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.logoutBtn = new System.Windows.Forms.Label();
+            this.logoutPic = new System.Windows.Forms.PictureBox();
             this.servicesBtn = new System.Windows.Forms.Label();
             this.staffBtn = new System.Windows.Forms.Label();
+            this.staffPic = new System.Windows.Forms.PictureBox();
             this.ptntBtn = new System.Windows.Forms.Label();
+            this.patientPic = new System.Windows.Forms.PictureBox();
             this.apptclndrBtn = new System.Windows.Forms.Label();
+            this.clndrPic = new System.Windows.Forms.PictureBox();
+            this.doctorPic = new System.Windows.Forms.PictureBox();
             this.emNameTxtBox = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dshboardBtn = new System.Windows.Forms.Label();
+            this.dshbrdPic = new System.Windows.Forms.PictureBox();
+            this.srvcsPic = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.fnameTxtBox = new System.Windows.Forms.TextBox();
-            this.mnameTxtBox = new System.Windows.Forms.TextBox();
+            this.saveStaffBtn = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
+            this.mnameTxtBox = new System.Windows.Forms.TextBox();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lnameTxtBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.phoneTxtBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.ageTxtBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.passTxtBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.birthDateTxtBox = new System.Windows.Forms.DateTimePicker();
-            this.saveStaffBtn = new System.Windows.Forms.Button();
-            this.passTxtBox = new System.Windows.Forms.TextBox();
+            this.ageTxtBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.phoneTxtBox = new System.Windows.Forms.TextBox();
+            this.fnameTxtBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.deleteStffBtn = new System.Windows.Forms.Button();
-            this.logoutPic = new System.Windows.Forms.PictureBox();
-            this.staffPic = new System.Windows.Forms.PictureBox();
-            this.patientPic = new System.Windows.Forms.PictureBox();
-            this.clndrPic = new System.Windows.Forms.PictureBox();
-            this.doctorPic = new System.Windows.Forms.PictureBox();
-            this.dshbrdPic = new System.Windows.Forms.PictureBox();
-            this.srvcsPic = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientPic)).BeginInit();
@@ -71,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -126,6 +126,19 @@
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
+            // logoutPic
+            // 
+            this.logoutPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.logoutPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.logout;
+            this.logoutPic.Location = new System.Drawing.Point(54, 818);
+            this.logoutPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.logoutPic.Name = "logoutPic";
+            this.logoutPic.Size = new System.Drawing.Size(43, 44);
+            this.logoutPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoutPic.TabIndex = 13;
+            this.logoutPic.TabStop = false;
+            this.logoutPic.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
             // servicesBtn
             // 
             this.servicesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -156,6 +169,19 @@
             this.staffBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
             // 
+            // staffPic
+            // 
+            this.staffPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.staffPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.staffs;
+            this.staffPic.Location = new System.Drawing.Point(48, 612);
+            this.staffPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.staffPic.Name = "staffPic";
+            this.staffPic.Size = new System.Drawing.Size(55, 61);
+            this.staffPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.staffPic.TabIndex = 9;
+            this.staffPic.TabStop = false;
+            this.staffPic.Click += new System.EventHandler(this.staffBtn_Click);
+            // 
             // ptntBtn
             // 
             this.ptntBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -171,6 +197,19 @@
             this.ptntBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ptntBtn.Click += new System.EventHandler(this.ptntBtn_Click);
             // 
+            // patientPic
+            // 
+            this.patientPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.patientPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.patients;
+            this.patientPic.Location = new System.Drawing.Point(47, 513);
+            this.patientPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.patientPic.Name = "patientPic";
+            this.patientPic.Size = new System.Drawing.Size(57, 60);
+            this.patientPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.patientPic.TabIndex = 7;
+            this.patientPic.TabStop = false;
+            this.patientPic.Click += new System.EventHandler(this.ptntBtn_Click);
+            // 
             // apptclndrBtn
             // 
             this.apptclndrBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -185,6 +224,31 @@
             this.apptclndrBtn.Text = "Appointment\r\nCalendar";
             this.apptclndrBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.apptclndrBtn.Click += new System.EventHandler(this.apptclndrBtn_Click);
+            // 
+            // clndrPic
+            // 
+            this.clndrPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.clndrPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.calendar;
+            this.clndrPic.Location = new System.Drawing.Point(50, 421);
+            this.clndrPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.clndrPic.Name = "clndrPic";
+            this.clndrPic.Size = new System.Drawing.Size(50, 46);
+            this.clndrPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.clndrPic.TabIndex = 5;
+            this.clndrPic.TabStop = false;
+            this.clndrPic.Click += new System.EventHandler(this.apptclndrBtn_Click);
+            // 
+            // doctorPic
+            // 
+            this.doctorPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.doctorPic, 2);
+            this.doctorPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.profile_icon;
+            this.doctorPic.Location = new System.Drawing.Point(96, 18);
+            this.doctorPic.Name = "doctorPic";
+            this.doctorPic.Size = new System.Drawing.Size(153, 141);
+            this.doctorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.doctorPic.TabIndex = 0;
+            this.doctorPic.TabStop = false;
             // 
             // emNameTxtBox
             // 
@@ -229,6 +293,32 @@
             this.dshboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dshboardBtn.Click += new System.EventHandler(this.dashboard_Click);
             // 
+            // dshbrdPic
+            // 
+            this.dshbrdPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dshbrdPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.dashboard;
+            this.dshbrdPic.Location = new System.Drawing.Point(52, 321);
+            this.dshbrdPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.dshbrdPic.Name = "dshbrdPic";
+            this.dshbrdPic.Size = new System.Drawing.Size(46, 48);
+            this.dshbrdPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dshbrdPic.TabIndex = 4;
+            this.dshbrdPic.TabStop = false;
+            this.dshbrdPic.Click += new System.EventHandler(this.dashboard_Click);
+            // 
+            // srvcsPic
+            // 
+            this.srvcsPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.srvcsPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.services;
+            this.srvcsPic.Location = new System.Drawing.Point(49, 715);
+            this.srvcsPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.srvcsPic.Name = "srvcsPic";
+            this.srvcsPic.Size = new System.Drawing.Size(53, 53);
+            this.srvcsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.srvcsPic.TabIndex = 10;
+            this.srvcsPic.TabStop = false;
+            this.srvcsPic.Click += new System.EventHandler(this.servicesBtn_Click);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -255,8 +345,8 @@
             this.tableLayoutPanel2.Controls.Add(this.ageTxtBox, 4, 5);
             this.tableLayoutPanel2.Controls.Add(this.label5, 4, 4);
             this.tableLayoutPanel2.Controls.Add(this.label6, 3, 4);
-            this.tableLayoutPanel2.Controls.Add(this.fnameTxtBox, 3, 3);
-            this.tableLayoutPanel2.Controls.Add(this.phoneTxtBox, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.phoneTxtBox, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.fnameTxtBox, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label4, 3, 2);
             this.tableLayoutPanel2.Controls.Add(this.deleteStffBtn, 1, 9);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(389, 141);
@@ -307,27 +397,21 @@
             this.label2.Text = "Edit Staff";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // fnameTxtBox
+            // saveStaffBtn
             // 
-            this.fnameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel2.SetColumnSpan(this.fnameTxtBox, 2);
-            this.fnameTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fnameTxtBox.Location = new System.Drawing.Point(637, 146);
-            this.fnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.fnameTxtBox.Name = "fnameTxtBox";
-            this.fnameTxtBox.Size = new System.Drawing.Size(466, 32);
-            this.fnameTxtBox.TabIndex = 7;
-            // 
-            // mnameTxtBox
-            // 
-            this.mnameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel2.SetColumnSpan(this.mnameTxtBox, 2);
-            this.mnameTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnameTxtBox.Location = new System.Drawing.Point(20, 233);
-            this.mnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.mnameTxtBox.Name = "mnameTxtBox";
-            this.mnameTxtBox.Size = new System.Drawing.Size(466, 32);
-            this.mnameTxtBox.TabIndex = 25;
+            this.saveStaffBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveStaffBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(115)))), ((int)(((byte)(247)))));
+            this.saveStaffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveStaffBtn.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveStaffBtn.ForeColor = System.Drawing.Color.White;
+            this.saveStaffBtn.Location = new System.Drawing.Point(626, 428);
+            this.saveStaffBtn.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.saveStaffBtn.Name = "saveStaffBtn";
+            this.saveStaffBtn.Size = new System.Drawing.Size(221, 49);
+            this.saveStaffBtn.TabIndex = 35;
+            this.saveStaffBtn.Text = "Save";
+            this.saveStaffBtn.UseVisualStyleBackColor = false;
+            this.saveStaffBtn.Click += new System.EventHandler(this.saveStaffBtn_Click);
             // 
             // label12
             // 
@@ -342,6 +426,17 @@
             this.label12.TabIndex = 24;
             this.label12.Text = "MIDDLE NAME *";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // mnameTxtBox
+            // 
+            this.mnameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel2.SetColumnSpan(this.mnameTxtBox, 2);
+            this.mnameTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnameTxtBox.Location = new System.Drawing.Point(20, 233);
+            this.mnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.mnameTxtBox.Name = "mnameTxtBox";
+            this.mnameTxtBox.Size = new System.Drawing.Size(466, 32);
+            this.mnameTxtBox.TabIndex = 25;
             // 
             // lbl3
             // 
@@ -368,68 +463,16 @@
             this.lnameTxtBox.Size = new System.Drawing.Size(466, 32);
             this.lnameTxtBox.TabIndex = 23;
             // 
-            // label4
+            // passTxtBox
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(632, 122);
-            this.label4.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 21);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "PHONE *";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // phoneTxtBox
-            // 
-            this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel2.SetColumnSpan(this.phoneTxtBox, 2);
-            this.phoneTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTxtBox.Location = new System.Drawing.Point(20, 146);
-            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.phoneTxtBox.Name = "phoneTxtBox";
-            this.phoneTxtBox.Size = new System.Drawing.Size(430, 32);
-            this.phoneTxtBox.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(865, 209);
-            this.label5.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(239, 21);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "AGE *";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ageTxtBox
-            // 
-            this.ageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ageTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageTxtBox.Location = new System.Drawing.Point(870, 233);
-            this.ageTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.ageTxtBox.Name = "ageTxtBox";
-            this.ageTxtBox.Size = new System.Drawing.Size(197, 32);
-            this.ageTxtBox.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(632, 209);
-            this.label6.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(215, 21);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "DATE OF BIRTH *";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.passTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel2.SetColumnSpan(this.passTxtBox, 2);
+            this.passTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passTxtBox.Location = new System.Drawing.Point(637, 320);
+            this.passTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.passTxtBox.Name = "passTxtBox";
+            this.passTxtBox.Size = new System.Drawing.Size(430, 32);
+            this.passTxtBox.TabIndex = 37;
             // 
             // label7
             // 
@@ -454,32 +497,79 @@
             this.birthDateTxtBox.Size = new System.Drawing.Size(200, 26);
             this.birthDateTxtBox.TabIndex = 36;
             // 
-            // saveStaffBtn
+            // ageTxtBox
             // 
-            this.saveStaffBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveStaffBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(115)))), ((int)(((byte)(247)))));
-            this.saveStaffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveStaffBtn.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveStaffBtn.ForeColor = System.Drawing.Color.White;
-            this.saveStaffBtn.Location = new System.Drawing.Point(626, 428);
-            this.saveStaffBtn.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.saveStaffBtn.Name = "saveStaffBtn";
-            this.saveStaffBtn.Size = new System.Drawing.Size(221, 49);
-            this.saveStaffBtn.TabIndex = 35;
-            this.saveStaffBtn.Text = "Save";
-            this.saveStaffBtn.UseVisualStyleBackColor = false;
-            this.saveStaffBtn.Click += new System.EventHandler(this.saveStaffBtn_Click);
+            this.ageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ageTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageTxtBox.Location = new System.Drawing.Point(870, 233);
+            this.ageTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.ageTxtBox.Name = "ageTxtBox";
+            this.ageTxtBox.Size = new System.Drawing.Size(197, 32);
+            this.ageTxtBox.TabIndex = 10;
             // 
-            // passTxtBox
+            // label5
             // 
-            this.passTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel2.SetColumnSpan(this.passTxtBox, 2);
-            this.passTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passTxtBox.Location = new System.Drawing.Point(637, 320);
-            this.passTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.passTxtBox.Name = "passTxtBox";
-            this.passTxtBox.Size = new System.Drawing.Size(430, 32);
-            this.passTxtBox.TabIndex = 37;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(865, 209);
+            this.label5.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(239, 21);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "AGE *";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(632, 209);
+            this.label6.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(215, 21);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "DATE OF BIRTH *";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // phoneTxtBox
+            // 
+            this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel2.SetColumnSpan(this.phoneTxtBox, 2);
+            this.phoneTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneTxtBox.Location = new System.Drawing.Point(637, 146);
+            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.phoneTxtBox.Name = "phoneTxtBox";
+            this.phoneTxtBox.Size = new System.Drawing.Size(466, 32);
+            this.phoneTxtBox.TabIndex = 7;
+            // 
+            // fnameTxtBox
+            // 
+            this.fnameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel2.SetColumnSpan(this.fnameTxtBox, 2);
+            this.fnameTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fnameTxtBox.Location = new System.Drawing.Point(20, 146);
+            this.fnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.fnameTxtBox.Name = "fnameTxtBox";
+            this.fnameTxtBox.Size = new System.Drawing.Size(430, 32);
+            this.fnameTxtBox.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(632, 122);
+            this.label4.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(215, 21);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "PHONE *";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // deleteStffBtn
             // 
@@ -497,96 +587,6 @@
             this.deleteStffBtn.UseVisualStyleBackColor = false;
             this.deleteStffBtn.Click += new System.EventHandler(this.deleteStffBtn_Click);
             // 
-            // logoutPic
-            // 
-            this.logoutPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.logoutPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.logout;
-            this.logoutPic.Location = new System.Drawing.Point(54, 818);
-            this.logoutPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.logoutPic.Name = "logoutPic";
-            this.logoutPic.Size = new System.Drawing.Size(43, 44);
-            this.logoutPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoutPic.TabIndex = 13;
-            this.logoutPic.TabStop = false;
-            this.logoutPic.Click += new System.EventHandler(this.logoutBtn_Click);
-            // 
-            // staffPic
-            // 
-            this.staffPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.staffPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.staffs;
-            this.staffPic.Location = new System.Drawing.Point(48, 612);
-            this.staffPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.staffPic.Name = "staffPic";
-            this.staffPic.Size = new System.Drawing.Size(55, 61);
-            this.staffPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.staffPic.TabIndex = 9;
-            this.staffPic.TabStop = false;
-            this.staffPic.Click += new System.EventHandler(this.staffBtn_Click);
-            // 
-            // patientPic
-            // 
-            this.patientPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.patientPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.patients;
-            this.patientPic.Location = new System.Drawing.Point(47, 513);
-            this.patientPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.patientPic.Name = "patientPic";
-            this.patientPic.Size = new System.Drawing.Size(57, 60);
-            this.patientPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.patientPic.TabIndex = 7;
-            this.patientPic.TabStop = false;
-            this.patientPic.Click += new System.EventHandler(this.ptntBtn_Click);
-            // 
-            // clndrPic
-            // 
-            this.clndrPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.clndrPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.calendar;
-            this.clndrPic.Location = new System.Drawing.Point(50, 421);
-            this.clndrPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.clndrPic.Name = "clndrPic";
-            this.clndrPic.Size = new System.Drawing.Size(50, 46);
-            this.clndrPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.clndrPic.TabIndex = 5;
-            this.clndrPic.TabStop = false;
-            this.clndrPic.Click += new System.EventHandler(this.apptclndrBtn_Click);
-            // 
-            // doctorPic
-            // 
-            this.doctorPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.doctorPic, 2);
-            this.doctorPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.profile_icon;
-            this.doctorPic.Location = new System.Drawing.Point(96, 18);
-            this.doctorPic.Name = "doctorPic";
-            this.doctorPic.Size = new System.Drawing.Size(153, 141);
-            this.doctorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.doctorPic.TabIndex = 0;
-            this.doctorPic.TabStop = false;
-            // 
-            // dshbrdPic
-            // 
-            this.dshbrdPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dshbrdPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.dashboard;
-            this.dshbrdPic.Location = new System.Drawing.Point(52, 321);
-            this.dshbrdPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.dshbrdPic.Name = "dshbrdPic";
-            this.dshbrdPic.Size = new System.Drawing.Size(46, 48);
-            this.dshbrdPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.dshbrdPic.TabIndex = 4;
-            this.dshbrdPic.TabStop = false;
-            this.dshbrdPic.Click += new System.EventHandler(this.dashboard_Click);
-            // 
-            // srvcsPic
-            // 
-            this.srvcsPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.srvcsPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.services;
-            this.srvcsPic.Location = new System.Drawing.Point(49, 715);
-            this.srvcsPic.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.srvcsPic.Name = "srvcsPic";
-            this.srvcsPic.Size = new System.Drawing.Size(53, 53);
-            this.srvcsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.srvcsPic.TabIndex = 10;
-            this.srvcsPic.TabStop = false;
-            this.srvcsPic.Click += new System.EventHandler(this.servicesBtn_Click);
-            // 
             // EditStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -602,8 +602,6 @@
             this.Load += new System.EventHandler(this.EditStaff_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientPic)).EndInit();
@@ -611,6 +609,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -637,13 +637,13 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox fnameTxtBox;
+        private System.Windows.Forms.TextBox phoneTxtBox;
         private System.Windows.Forms.TextBox mnameTxtBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.TextBox lnameTxtBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox phoneTxtBox;
+        private System.Windows.Forms.TextBox fnameTxtBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox ageTxtBox;
         private System.Windows.Forms.Label label6;

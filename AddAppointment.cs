@@ -140,7 +140,7 @@ namespace DentalAppointmentandInformationSystem
             reader1.Close();
             cmd.Dispose();
 
-            String query = "INSERT INTO Patient(patient_id, patient_lname, patient_mname, patient_fname, patient_age, patient_gender, patient_bdate, patient_cnum, patient_email, patient_address, patient_cperson, patient_cpernum, patient_notes) VALUES('" + patientID + "','" + lnameTxtBox.Text + "','"
+            string query = "INSERT INTO Patient(patient_id, patient_lname, patient_mname, patient_fname, patient_age, patient_gender, patient_bdate, patient_cnum, patient_email, patient_address, patient_cperson, patient_cpernum, patient_notes) VALUES('" + patientID + "','" + lnameTxtBox.Text + "','"
                 + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + ageTxtBox.Text + "','" + gender
                 + "','" + birthDate.Text + "','" + phoneTxtBox.Text + "','" + emailTxtBox.Text + "','"
                 + addressTxtBox.Text + "','" + contactPrsnTxtBox.Text + "','" + cpersonNumTxtBox.Text + "','')";
@@ -149,18 +149,6 @@ namespace DentalAppointmentandInformationSystem
             cmd2.CommandText = query;
             if (cmd2.ExecuteNonQuery() == 1)
             {
-                string sql = "SELECT * FROM Patient";
-                DataTable staffs = new DataTable("staffs");
-                SqlDataAdapter da = new SqlDataAdapter(sql, constring);
-                da.Fill(staffs);
-                System.Text.StringBuilder b = new System.Text.StringBuilder();
-                foreach (System.Data.DataRow r in staffs.Rows)
-                {
-                    foreach (System.Data.DataColumn c in staffs.Columns)
-                    {
-                        b.Append(c.ColumnName.ToString() + ":" + r[c.ColumnName].ToString());
-                    }
-                }
             }
             else
             {
@@ -213,16 +201,43 @@ namespace DentalAppointmentandInformationSystem
             {
                 staff3 = staff3Combo.SelectedValue.ToString();
             }
-            String query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + patientID + "','"
+            string query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + patientID + "','"
                 + service1Combo.SelectedValue + "'," + service2 + "," + service3 + ",'" + appntmntDate.Text
-                + "','" + startTime.Text + "','" + endTime.Text + "','" + teethTxtBox.Text + "','"
-                + priceTxtBox.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "')";
+                + "','" + startTime.Text + "','" + endTime.Text + "','" +  staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "')";
 
             SqlCommand cmd3 = new SqlCommand(query2, constring);
             cmd3.CommandText = query2;
             if (cmd3.ExecuteNonQuery() == 1)
             {
                 MessageBox.Show("Appointment Created!");
+            }
+            else
+            {
+                MessageBox.Show("Something went wrong. Please try again.");
+            }
+
+            int recordID = 0;
+            SqlCommand com = new SqlCommand("SELECT TOP 1 record_id FROM Record ORDER BY record_id DESC", constring);
+            SqlDataReader re;
+            re = com.ExecuteReader();
+            if (re.Read())
+            {
+                recordID = re.GetInt32(0) + 1;
+            }
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
+            re.Close();
+
+            string query3 = "INSERT INTO Record VALUES('" + recordID + "','" + patientID + "','"
+                + service1Combo.Text + " " + service2Combo.Text + " " + service3Combo.Text + "','" + appointmentID
+                + "','0','0',NULL);";
+
+            SqlCommand cmd4 = new SqlCommand(query2, constring);
+            cmd4.CommandText = query3;
+            if (cmd4.ExecuteNonQuery() == 1)
+            {
                 Calendar clndr = new Calendar();
                 clndr.Show();
                 this.Hide();

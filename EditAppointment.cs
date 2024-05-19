@@ -228,10 +228,7 @@ namespace DentalAppointmentandInformationSystem
                         reader4.Dispose();
                         cmd5.Dispose();
                     }
-                    
                     notesTxtBox.Text = row["appointment_notes"].ToString();
-                    teethTxtBox.Text = row["teeth_treated"].ToString();
-                    priceTxtBox.Text = row["price_billed"].ToString();
                 }
             }
             constring.Close();
@@ -281,8 +278,7 @@ namespace DentalAppointmentandInformationSystem
                 "', employee_num = '" + staff1Combo.SelectedValue.ToString() + "', employee_num2 = " + staff2 +
                 ", employee_num3 = " + staff3 + ", service_id = '" + service1Combo.SelectedValue.ToString() +
                 "', service_id2 = " + service2 + ", service_id3 = " + service3 + ", appointment_notes = '" +
-                notesTxtBox.Text + "', teeth_treated = '" + teethTxtBox.Text + "', price_billed = '" + priceTxtBox.Text +
-                "' WHERE appointment_id = '" + v.getsetappointmentSelected + "';";
+                notesTxtBox.Text + " WHERE appointment_id = '" + v.getsetappointmentSelected + "';";
 
                 SqlCommand cmd3 = new SqlCommand(query2, constring);
                 cmd3.CommandText = query2;

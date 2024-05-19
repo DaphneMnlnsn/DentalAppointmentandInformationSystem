@@ -59,15 +59,11 @@ namespace DentalAppointmentandInformationSystem
                 reader1 = cmd.ExecuteReader();
                 if (reader1.Read())
                 {
-                    lastVisit = reader1.GetValue(0).ToString();
-                }
-                else
-                {
-                    MessageBox.Show("NO DATA FOUND");
+                        lastVisit += (DateTime.Parse(reader1["appointment_date"].ToString()).ToString("MM/dd/yyyy")).ToString();
                 }
                 reader1.Close();
                 patient.setPatientInfo(row["patient_id"].ToString(), patient_fullname, row["patient_age"].ToString(),
-                    row["patient_gender"].ToString(), DateTime.Parse(lastVisit).ToString("MM/dd/yyyy"), row["patient_cnum"].ToString());
+                    row["patient_gender"].ToString(), lastVisit, row["patient_cnum"].ToString());
                 staffContainer.Controls.Add(patient);
             }
             constring.Close();
@@ -117,6 +113,13 @@ namespace DentalAppointmentandInformationSystem
         {
             Dashboard dshbrd = new Dashboard();
             dshbrd.Show();
+            this.Hide();
+        }
+
+        private void newPtntBtn_Click(object sender, EventArgs e)
+        {
+            NewPatient newptnt = new NewPatient();
+            newptnt.Show();
             this.Hide();
         }
     }

@@ -27,5 +27,12 @@ namespace DentalAppointmentandInformationSystem
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
         }
+
+        private void editPatientBtn_Click(object sender, EventArgs e)
+        {
+            EditPatient editptnt = new EditPatient();
+            editptnt.Show();
+            this.Hide();
+        }
     }
 }

@@ -69,10 +69,6 @@
             this.service2Combo = new System.Windows.Forms.ComboBox();
             this.service3Combo = new System.Windows.Forms.ComboBox();
             this.savePatientBtn = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.priceTxtBox = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.teethTxtBox = new System.Windows.Forms.TextBox();
             this.notesTxtBox = new System.Windows.Forms.RichTextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -157,10 +153,6 @@
             this.tableLayoutPanel2.Controls.Add(this.service2Combo, 3, 15);
             this.tableLayoutPanel2.Controls.Add(this.service3Combo, 3, 17);
             this.tableLayoutPanel2.Controls.Add(this.savePatientBtn, 4, 20);
-            this.tableLayoutPanel2.Controls.Add(this.label22, 3, 18);
-            this.tableLayoutPanel2.Controls.Add(this.priceTxtBox, 3, 19);
-            this.tableLayoutPanel2.Controls.Add(this.label21, 4, 18);
-            this.tableLayoutPanel2.Controls.Add(this.teethTxtBox, 4, 19);
             this.tableLayoutPanel2.Controls.Add(this.notesTxtBox, 0, 19);
             this.tableLayoutPanel2.Controls.Add(this.label23, 0, 18);
             this.tableLayoutPanel2.Controls.Add(this.label24, 4, 6);
@@ -696,63 +688,14 @@
             this.savePatientBtn.UseVisualStyleBackColor = false;
             this.savePatientBtn.Click += new System.EventHandler(this.savePatientBtn_Click);
             // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(472, 698);
-            this.label22.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(314, 22);
-            this.label22.TabIndex = 70;
-            this.label22.Text = "PRICE BILLED";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // priceTxtBox
-            // 
-            this.priceTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.priceTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtBox.Location = new System.Drawing.Point(477, 722);
-            this.priceTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.priceTxtBox.Name = "priceTxtBox";
-            this.priceTxtBox.Size = new System.Drawing.Size(309, 30);
-            this.priceTxtBox.TabIndex = 71;
-            this.priceTxtBox.Text = "0";
-            // 
-            // label21
-            // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(804, 698);
-            this.label21.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(331, 22);
-            this.label21.TabIndex = 68;
-            this.label21.Text = "TEETH TREATED";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // teethTxtBox
-            // 
-            this.teethTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.teethTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teethTxtBox.Location = new System.Drawing.Point(809, 722);
-            this.teethTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.teethTxtBox.Name = "teethTxtBox";
-            this.teethTxtBox.Size = new System.Drawing.Size(309, 30);
-            this.teethTxtBox.TabIndex = 72;
-            this.teethTxtBox.Text = "0";
-            // 
             // notesTxtBox
             // 
+            this.tableLayoutPanel2.SetColumnSpan(this.notesTxtBox, 4);
             this.notesTxtBox.Location = new System.Drawing.Point(20, 723);
             this.notesTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.notesTxtBox.Name = "notesTxtBox";
             this.tableLayoutPanel2.SetRowSpan(this.notesTxtBox, 2);
-            this.notesTxtBox.Size = new System.Drawing.Size(368, 106);
+            this.notesTxtBox.Size = new System.Drawing.Size(749, 106);
             this.notesTxtBox.TabIndex = 73;
             this.notesTxtBox.Text = "";
             // 
@@ -1128,10 +1071,6 @@
         private System.Windows.Forms.ComboBox service1Combo;
         private System.Windows.Forms.ComboBox service2Combo;
         private System.Windows.Forms.ComboBox service3Combo;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox priceTxtBox;
-        private System.Windows.Forms.TextBox teethTxtBox;
         private System.Windows.Forms.RichTextBox notesTxtBox;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;

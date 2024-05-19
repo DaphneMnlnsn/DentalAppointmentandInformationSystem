@@ -62,6 +62,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1322, 90);
             this.tableLayoutPanel2.TabIndex = 92;
+            this.tableLayoutPanel2.Click += new System.EventHandler(this.patientDetails_Click);
             // 
             // patientName
             // 
@@ -74,6 +75,7 @@
             this.patientName.TabIndex = 80;
             this.patientName.Text = "Full Name";
             this.patientName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.patientName.Click += new System.EventHandler(this.patientDetails_Click);
             // 
             // patientId
             // 
@@ -86,6 +88,7 @@
             this.patientId.TabIndex = 77;
             this.patientId.Text = "Patient ID";
             this.patientId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.patientId.Click += new System.EventHandler(this.patientDetails_Click);
             // 
             // patientAge
             // 
@@ -98,6 +101,7 @@
             this.patientAge.TabIndex = 78;
             this.patientAge.Text = "Age";
             this.patientAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.patientAge.Click += new System.EventHandler(this.patientDetails_Click);
             // 
             // patientGender
             // 
@@ -110,6 +114,7 @@
             this.patientGender.TabIndex = 79;
             this.patientGender.Text = "Gender";
             this.patientGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.patientGender.Click += new System.EventHandler(this.patientDetails_Click);
             // 
             // patientContact
             // 
@@ -122,6 +127,7 @@
             this.patientContact.TabIndex = 82;
             this.patientContact.Text = "Contact";
             this.patientContact.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.patientContact.Click += new System.EventHandler(this.patientDetails_Click);
             // 
             // patientLastVisit
             // 
@@ -134,11 +140,13 @@
             this.patientLastVisit.TabIndex = 83;
             this.patientLastVisit.Text = "Last Visit";
             this.patientLastVisit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.patientLastVisit.Click += new System.EventHandler(this.patientDetails_Click);
             // 
             // PatientsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "PatientsList";
             this.Size = new System.Drawing.Size(1322, 90);

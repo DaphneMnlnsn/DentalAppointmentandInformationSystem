@@ -56,7 +56,7 @@ namespace DentalAppointmentandInformationSystem
                     MessageBox.Show("Service Deleted Successfully!");
                     Services srvcs = new Services();
                     srvcs.Show();
-                    this.Parent.Hide();
+                    this.ParentForm.Hide();
                 }
                 else
                 {

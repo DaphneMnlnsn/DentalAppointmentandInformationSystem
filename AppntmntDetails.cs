@@ -101,7 +101,7 @@ namespace DentalAppointmentandInformationSystem
                         reader3.Dispose();
                         cmd3.Dispose();
                     }
-                    else if (service_id3 != null || service_id3 != " ")
+                    if (service_id3 != null || service_id3 != " ")
                     {
                         string sql4 = "SELECT * FROM Service WHERE service_id = " + "'" + service_id3 + "'";
                         SqlCommand cmd4 = constring.CreateCommand();
@@ -153,7 +153,7 @@ namespace DentalAppointmentandInformationSystem
                                 reader7.Dispose();
                                 cmd7.Dispose();
                             }
-                            else if (employee_id3 != null || employee_id3 != " ")
+                            if (employee_id3 != null || employee_id3 != " ")
                             {
                                 string sql8 = "SELECT * FROM Staff WHERE employee_num = " + "'" + employee_id3 + "'";
                                 SqlCommand cmd8 = constring.CreateCommand();

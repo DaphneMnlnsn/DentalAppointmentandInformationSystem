@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,8 @@ namespace DentalAppointmentandInformationSystem
 {
     public partial class NewPatient : Form
     {
-        string path;
+        byte[] bytes;
+        string fileName;
         Variables v = new Variables();
         SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
 
@@ -45,6 +47,11 @@ namespace DentalAppointmentandInformationSystem
                 MessageBox.Show("NO DATA FOUND");
             }
             constring.Close();
+            List<string> items = new List<string>()
+            {
+                "Female", "Male"
+            };
+            genderCombo.DataSource = items;
         }
         private void attachFileBtn_Click(object sender, EventArgs e)
         {
@@ -56,31 +63,90 @@ namespace DentalAppointmentandInformationSystem
             {
                 if (openFileDialog1.CheckFileExists)
                 {
-                    path = System.IO.Path.GetFullPath(openFileDialog1.FileName);
+                    fileName = Path.GetFileName(openFileDialog1.FileName);
+                    bytes = File.ReadAllBytes(openFileDialog1.FileName);
+                    attachFileBtn.Text = fileName;
                 }
-            }
-            else
-            {
-                MessageBox.Show("Please Upload document.");
             }
         }
 
         private void savePatientBtn_Click(object sender, EventArgs e)
-        {            
-            string filename = System.IO.Path.GetFileName(openFileDialog1.FileName);
-            if (filename == null)
+        {
+            string gender = genderCombo.Items[genderCombo.SelectedIndex].ToString();
+            int patientID = 0;
+            constring.Open();
+            SqlCommand cmd = new SqlCommand("SELECT TOP 1 patient_id FROM Patient ORDER BY patient_id DESC", constring);
+            SqlDataReader reader1;
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
             {
-                MessageBox.Show("Please select a valid document.");
+                patientID = reader1.GetInt32(0) + 1;
             }
             else
             {
-                constring.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO History(med_history) VALUES ('\\Document\\" + filename + "')", constring);
-                string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
-                System.IO.File.Copy(openFileDialog1.FileName, path + "\\Document\\" + filename);
-                cmd.ExecuteNonQuery();
-                constring.Close();
+                MessageBox.Show("NO DATA FOUND");
             }
+            reader1.Close();
+            cmd.Dispose();
+
+            string query = "INSERT INTO Patient(patient_id, patient_lname, patient_mname, patient_fname, patient_age, patient_gender, patient_bdate, patient_cnum, patient_email, patient_address, patient_cperson, patient_cpernum, patient_notes) VALUES('" + patientID + "','" + lnameTxtBox.Text + "','"
+                + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + ageTxtBox.Text + "','" + gender
+                + "','" + birthDate.Text + "','" + phoneTxtBox.Text + "','" + emailTxtBox.Text + "','"
+                + addressTxtBox.Text + "','" + contactPrsnTxtBox.Text + "','" + cpersonNumTxtBox.Text + "','" + notesTxtBox.Text + "');";
+
+            SqlCommand cmd2 = new SqlCommand(query, constring);
+            cmd2.CommandText = query;
+            if (cmd2.ExecuteNonQuery() == 1)
+            {
+            }
+            else
+            {
+                MessageBox.Show("Something went wrong. Please try again.");
+            }
+
+            if ((!string.IsNullOrEmpty(dentistTxtBox.Text)) && (!string.IsNullOrEmpty(pastTreatTxtBox.Text)))
+            {
+                int historyID = 0;
+                SqlCommand cm = new SqlCommand("SELECT TOP 1 history_id FROM History ORDER BY history_id DESC", constring);
+                SqlDataReader read;
+                read = cm.ExecuteReader();
+                if (read.Read())
+                {
+                    historyID = read.GetInt32(0) + 1;
+                }
+                else
+                {
+                    MessageBox.Show("NO DATA FOUND");
+                }
+                read.Close();
+                cm.Dispose();
+                if (attachFileBtn.Text.Equals("+ Add Attachment"))
+                {
+                    SqlCommand command = new SqlCommand("INSERT INTO History VALUES ('" + historyID + "','" + patientID + 
+                        "',NULL,NULL,'" + dentistTxtBox.Text + "','" + pastTreatTxtBox.Text + "')", constring);
+                    if(command.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Patient added successfully!");                        
+                    }
+                }
+                else
+                {
+                    SqlCommand command = new SqlCommand("INSERT INTO History VALUES ('" + historyID + "','" + patientID +
+                       "','" + fileName + "',CONVERT(varbinary, '" + bytes + "'),'" + dentistTxtBox.Text + "','" + pastTreatTxtBox.Text + "')", constring);
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Patient added successfully!");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Patient added successfully!");
+            }
+            Patients patients = new Patients();
+            patients.Show();
+            this.Hide();
+            constring.Close();
         }
         private void NewPatient_FormClosing(object sender, FormClosingEventArgs e)
         {

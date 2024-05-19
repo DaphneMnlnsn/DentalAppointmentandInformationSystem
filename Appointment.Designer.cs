@@ -132,13 +132,15 @@
             this.deleteAppntmnt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteAppntmnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteAppntmnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.deleteAppntmnt.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteAppntmnt.ForeColor = System.Drawing.Color.White;
             this.deleteAppntmnt.Location = new System.Drawing.Point(25, 83);
             this.deleteAppntmnt.Name = "deleteAppntmnt";
             this.deleteAppntmnt.Size = new System.Drawing.Size(219, 49);
             this.deleteAppntmnt.TabIndex = 2;
             this.deleteAppntmnt.Text = "Delete";
-            this.deleteAppntmnt.UseVisualStyleBackColor = true;
+            this.deleteAppntmnt.UseVisualStyleBackColor = false;
             this.deleteAppntmnt.Click += new System.EventHandler(this.deleteAppntmnt_Click);
             // 
             // editAppntmnt
@@ -146,7 +148,7 @@
             this.editAppntmnt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.editAppntmnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editAppntmnt.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editAppntmnt.Location = new System.Drawing.Point(25, 23);
             this.editAppntmnt.Name = "editAppntmnt";
             this.editAppntmnt.Size = new System.Drawing.Size(219, 46);

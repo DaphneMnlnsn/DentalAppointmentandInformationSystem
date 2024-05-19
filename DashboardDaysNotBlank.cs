@@ -63,7 +63,7 @@ namespace DentalAppointmentandInformationSystem
         {
             Calendar clndr = new Calendar();
             clndr.Show();
-            this.Hide();
+            this.ParentForm.Hide();
         }
     }
 }

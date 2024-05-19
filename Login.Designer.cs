@@ -161,7 +161,7 @@
             // 
             // forgotPassLbl
             // 
-            this.forgotPassLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.forgotPassLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forgotPassLbl.AutoSize = true;
             this.forgotPassLbl.BackColor = System.Drawing.Color.Transparent;
@@ -173,6 +173,7 @@
             this.forgotPassLbl.TabIndex = 20;
             this.forgotPassLbl.Text = "Forgot Password?";
             this.forgotPassLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.forgotPassLbl.Click += new System.EventHandler(this.forgotPassLbl_Click);
             // 
             // passTxtbox
             // 

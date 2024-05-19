@@ -350,14 +350,14 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(384, 213);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 11;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
@@ -371,7 +371,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 82);
+            this.label3.Location = new System.Drawing.Point(15, 97);
             this.label3.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(201, 21);
@@ -389,7 +389,7 @@
             this.label2.Font = new System.Drawing.Font("Inter", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1101, 56);
+            this.label2.Size = new System.Drawing.Size(1101, 84);
             this.label2.TabIndex = 5;
             this.label2.Text = "New Staff";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -399,7 +399,7 @@
             this.fnameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel2.SetColumnSpan(this.fnameTxtBox, 2);
             this.fnameTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fnameTxtBox.Location = new System.Drawing.Point(20, 106);
+            this.fnameTxtBox.Location = new System.Drawing.Point(20, 121);
             this.fnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.fnameTxtBox.Name = "fnameTxtBox";
             this.fnameTxtBox.Size = new System.Drawing.Size(430, 32);
@@ -410,7 +410,7 @@
             this.mnameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel2.SetColumnSpan(this.mnameTxtBox, 2);
             this.mnameTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnameTxtBox.Location = new System.Drawing.Point(20, 193);
+            this.mnameTxtBox.Location = new System.Drawing.Point(20, 205);
             this.mnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.mnameTxtBox.Name = "mnameTxtBox";
             this.mnameTxtBox.Size = new System.Drawing.Size(430, 32);
@@ -422,7 +422,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(15, 169);
+            this.label12.Location = new System.Drawing.Point(15, 181);
             this.label12.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(201, 21);
@@ -436,7 +436,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.Location = new System.Drawing.Point(15, 256);
+            this.lbl3.Location = new System.Drawing.Point(15, 262);
             this.lbl3.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(201, 21);
@@ -449,7 +449,7 @@
             this.lnameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel2.SetColumnSpan(this.lnameTxtBox, 2);
             this.lnameTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnameTxtBox.Location = new System.Drawing.Point(20, 280);
+            this.lnameTxtBox.Location = new System.Drawing.Point(20, 286);
             this.lnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.lnameTxtBox.Name = "lnameTxtBox";
             this.lnameTxtBox.Size = new System.Drawing.Size(430, 32);
@@ -461,7 +461,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(574, 82);
+            this.label4.Location = new System.Drawing.Point(574, 97);
             this.label4.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(273, 21);
@@ -474,7 +474,7 @@
             this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel2.SetColumnSpan(this.phoneTxtBox, 2);
             this.phoneTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTxtBox.Location = new System.Drawing.Point(579, 106);
+            this.phoneTxtBox.Location = new System.Drawing.Point(579, 121);
             this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.phoneTxtBox.Name = "phoneTxtBox";
             this.phoneTxtBox.Size = new System.Drawing.Size(495, 32);
@@ -486,7 +486,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(865, 169);
+            this.label5.Location = new System.Drawing.Point(865, 181);
             this.label5.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(239, 21);
@@ -498,7 +498,7 @@
             // 
             this.ageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ageTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageTxtBox.Location = new System.Drawing.Point(870, 193);
+            this.ageTxtBox.Location = new System.Drawing.Point(870, 205);
             this.ageTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.ageTxtBox.Name = "ageTxtBox";
             this.ageTxtBox.Size = new System.Drawing.Size(204, 32);
@@ -510,7 +510,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(574, 169);
+            this.label6.Location = new System.Drawing.Point(574, 181);
             this.label6.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(273, 21);
@@ -524,7 +524,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(574, 256);
+            this.label7.Location = new System.Drawing.Point(574, 262);
             this.label7.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(273, 21);
@@ -536,20 +536,22 @@
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.staffRoleCombo, 2);
             this.staffRoleCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.staffRoleCombo.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.staffRoleCombo.FormattingEnabled = true;
-            this.staffRoleCombo.Location = new System.Drawing.Point(579, 280);
+            this.staffRoleCombo.Location = new System.Drawing.Point(579, 286);
             this.staffRoleCombo.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.staffRoleCombo.Name = "staffRoleCombo";
-            this.staffRoleCombo.Size = new System.Drawing.Size(473, 28);
+            this.staffRoleCombo.Size = new System.Drawing.Size(473, 29);
             this.staffRoleCombo.TabIndex = 18;
             // 
             // birthDateTxtBox
             // 
+            this.birthDateTxtBox.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthDateTxtBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.birthDateTxtBox.Location = new System.Drawing.Point(579, 193);
+            this.birthDateTxtBox.Location = new System.Drawing.Point(579, 205);
             this.birthDateTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.birthDateTxtBox.Name = "birthDateTxtBox";
-            this.birthDateTxtBox.Size = new System.Drawing.Size(200, 26);
+            this.birthDateTxtBox.Size = new System.Drawing.Size(200, 29);
             this.birthDateTxtBox.TabIndex = 36;
             // 
             // saveStaffBtn
