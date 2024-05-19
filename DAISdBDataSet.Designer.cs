@@ -52,9 +52,9 @@ namespace DentalAppointmentandInformationSystem {
         
         private global::System.Data.DataRelation relationFK__Record__appointm__48CFD27E;
         
-        private global::System.Data.DataRelation relationFK__Record__history___47DBAE45;
-        
         private global::System.Data.DataRelation relationFK__Record__patient___46E78A0C;
+        
+        private global::System.Data.DataRelation relationFK__History__patient__6FE99F9F;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -342,8 +342,8 @@ namespace DentalAppointmentandInformationSystem {
             this.relationFK__Appointme__servi__403A8C7D = this.Relations["FK__Appointme__servi__403A8C7D"];
             this.relationFK__Appointme__servi__412EB0B6 = this.Relations["FK__Appointme__servi__412EB0B6"];
             this.relationFK__Record__appointm__48CFD27E = this.Relations["FK__Record__appointm__48CFD27E"];
-            this.relationFK__Record__history___47DBAE45 = this.Relations["FK__Record__history___47DBAE45"];
             this.relationFK__Record__patient___46E78A0C = this.Relations["FK__Record__patient___46E78A0C"];
+            this.relationFK__History__patient__6FE99F9F = this.Relations["FK__History__patient__6FE99F9F"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -398,14 +398,14 @@ namespace DentalAppointmentandInformationSystem {
                         this.tableAppointment.appointment_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableRecord.appointment_idColumn}, false);
             this.Relations.Add(this.relationFK__Record__appointm__48CFD27E);
-            this.relationFK__Record__history___47DBAE45 = new global::System.Data.DataRelation("FK__Record__history___47DBAE45", new global::System.Data.DataColumn[] {
-                        this.tableHistory.history_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRecord.history_idColumn}, false);
-            this.Relations.Add(this.relationFK__Record__history___47DBAE45);
             this.relationFK__Record__patient___46E78A0C = new global::System.Data.DataRelation("FK__Record__patient___46E78A0C", new global::System.Data.DataColumn[] {
                         this.tablePatient.patient_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableRecord.patient_idColumn}, false);
             this.Relations.Add(this.relationFK__Record__patient___46E78A0C);
+            this.relationFK__History__patient__6FE99F9F = new global::System.Data.DataRelation("FK__History__patient__6FE99F9F", new global::System.Data.DataColumn[] {
+                        this.tablePatient.patient_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableHistory.patient_idColumn}, false);
+            this.Relations.Add(this.relationFK__History__patient__6FE99F9F);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -540,10 +540,6 @@ namespace DentalAppointmentandInformationSystem {
             
             private global::System.Data.DataColumn columnappointment_endTime;
             
-            private global::System.Data.DataColumn columnteeth_treated;
-            
-            private global::System.Data.DataColumn columnprice_billed;
-            
             private global::System.Data.DataColumn columnemployee_num;
             
             private global::System.Data.DataColumn columnemployee_num2;
@@ -651,22 +647,6 @@ namespace DentalAppointmentandInformationSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn teeth_treatedColumn {
-                get {
-                    return this.columnteeth_treated;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn price_billedColumn {
-                get {
-                    return this.columnprice_billed;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn employee_numColumn {
                 get {
                     return this.columnemployee_num;
@@ -734,7 +714,7 @@ namespace DentalAppointmentandInformationSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AppointmentRow AddAppointmentRow(int appointment_id, PatientRow parentPatientRowByFK__Appointme__patie__3E52440B, ServiceRow parentServiceRowByFK__Appointme__servi__3F466844, ServiceRow parentServiceRowByFK__Appointme__servi__403A8C7D, ServiceRow parentServiceRowByFK__Appointme__servi__412EB0B6, System.DateTime appointment_date, System.TimeSpan appointment_startTime, System.TimeSpan appointment_endTime, int teeth_treated, double price_billed, StaffRow parentStaffRowByFK__Appointme__emplo__4222D4EF, StaffRow parentStaffRowByFK__Appointme__emplo__4316F928, StaffRow parentStaffRowByFK__Appointme__emplo__440B1D61, string appointment_notes) {
+            public AppointmentRow AddAppointmentRow(int appointment_id, PatientRow parentPatientRowByFK__Appointme__patie__3E52440B, ServiceRow parentServiceRowByFK__Appointme__servi__3F466844, ServiceRow parentServiceRowByFK__Appointme__servi__403A8C7D, ServiceRow parentServiceRowByFK__Appointme__servi__412EB0B6, System.DateTime appointment_date, System.TimeSpan appointment_startTime, System.TimeSpan appointment_endTime, StaffRow parentStaffRowByFK__Appointme__emplo__4222D4EF, StaffRow parentStaffRowByFK__Appointme__emplo__4316F928, StaffRow parentStaffRowByFK__Appointme__emplo__440B1D61, string appointment_notes) {
                 AppointmentRow rowAppointmentRow = ((AppointmentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         appointment_id,
@@ -745,8 +725,6 @@ namespace DentalAppointmentandInformationSystem {
                         appointment_date,
                         appointment_startTime,
                         appointment_endTime,
-                        teeth_treated,
-                        price_billed,
                         null,
                         null,
                         null,
@@ -764,13 +742,13 @@ namespace DentalAppointmentandInformationSystem {
                     columnValuesArray[4] = parentServiceRowByFK__Appointme__servi__412EB0B6[0];
                 }
                 if ((parentStaffRowByFK__Appointme__emplo__4222D4EF != null)) {
-                    columnValuesArray[10] = parentStaffRowByFK__Appointme__emplo__4222D4EF[0];
+                    columnValuesArray[8] = parentStaffRowByFK__Appointme__emplo__4222D4EF[0];
                 }
                 if ((parentStaffRowByFK__Appointme__emplo__4316F928 != null)) {
-                    columnValuesArray[11] = parentStaffRowByFK__Appointme__emplo__4316F928[0];
+                    columnValuesArray[9] = parentStaffRowByFK__Appointme__emplo__4316F928[0];
                 }
                 if ((parentStaffRowByFK__Appointme__emplo__440B1D61 != null)) {
-                    columnValuesArray[12] = parentStaffRowByFK__Appointme__emplo__440B1D61[0];
+                    columnValuesArray[10] = parentStaffRowByFK__Appointme__emplo__440B1D61[0];
                 }
                 rowAppointmentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAppointmentRow);
@@ -809,8 +787,6 @@ namespace DentalAppointmentandInformationSystem {
                 this.columnappointment_date = base.Columns["appointment_date"];
                 this.columnappointment_startTime = base.Columns["appointment_startTime"];
                 this.columnappointment_endTime = base.Columns["appointment_endTime"];
-                this.columnteeth_treated = base.Columns["teeth_treated"];
-                this.columnprice_billed = base.Columns["price_billed"];
                 this.columnemployee_num = base.Columns["employee_num"];
                 this.columnemployee_num2 = base.Columns["employee_num2"];
                 this.columnemployee_num3 = base.Columns["employee_num3"];
@@ -836,10 +812,6 @@ namespace DentalAppointmentandInformationSystem {
                 base.Columns.Add(this.columnappointment_startTime);
                 this.columnappointment_endTime = new global::System.Data.DataColumn("appointment_endTime", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnappointment_endTime);
-                this.columnteeth_treated = new global::System.Data.DataColumn("teeth_treated", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnteeth_treated);
-                this.columnprice_billed = new global::System.Data.DataColumn("price_billed", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprice_billed);
                 this.columnemployee_num = new global::System.Data.DataColumn("employee_num", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnemployee_num);
                 this.columnemployee_num2 = new global::System.Data.DataColumn("employee_num2", typeof(int), null, global::System.Data.MappingType.Element);
@@ -857,8 +829,6 @@ namespace DentalAppointmentandInformationSystem {
                 this.columnappointment_date.AllowDBNull = false;
                 this.columnappointment_startTime.AllowDBNull = false;
                 this.columnappointment_endTime.AllowDBNull = false;
-                this.columnteeth_treated.AllowDBNull = false;
-                this.columnprice_billed.AllowDBNull = false;
                 this.columnemployee_num.AllowDBNull = false;
                 this.columnappointment_notes.MaxLength = 500;
             }
@@ -1002,6 +972,10 @@ namespace DentalAppointmentandInformationSystem {
             
             private global::System.Data.DataColumn columnpast_treatment;
             
+            private global::System.Data.DataColumn columnpatient_id;
+            
+            private global::System.Data.DataColumn columnmedhistory_filename;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public HistoryDataTable() {
@@ -1069,6 +1043,22 @@ namespace DentalAppointmentandInformationSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn patient_idColumn {
+                get {
+                    return this.columnpatient_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn medhistory_filenameColumn {
+                get {
+                    return this.columnmedhistory_filename;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1104,13 +1094,18 @@ namespace DentalAppointmentandInformationSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HistoryRow AddHistoryRow(int history_id, byte[] med_history, string dentist_name, string past_treatment) {
+            public HistoryRow AddHistoryRow(int history_id, byte[] med_history, string dentist_name, string past_treatment, PatientRow parentPatientRowByFK__History__patient__6FE99F9F, string medhistory_filename) {
                 HistoryRow rowHistoryRow = ((HistoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         history_id,
                         med_history,
                         dentist_name,
-                        past_treatment};
+                        past_treatment,
+                        null,
+                        medhistory_filename};
+                if ((parentPatientRowByFK__History__patient__6FE99F9F != null)) {
+                    columnValuesArray[4] = parentPatientRowByFK__History__patient__6FE99F9F[0];
+                }
                 rowHistoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowHistoryRow);
                 return rowHistoryRow;
@@ -1144,6 +1139,8 @@ namespace DentalAppointmentandInformationSystem {
                 this.columnmed_history = base.Columns["med_history"];
                 this.columndentist_name = base.Columns["dentist_name"];
                 this.columnpast_treatment = base.Columns["past_treatment"];
+                this.columnpatient_id = base.Columns["patient_id"];
+                this.columnmedhistory_filename = base.Columns["medhistory_filename"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1157,6 +1154,10 @@ namespace DentalAppointmentandInformationSystem {
                 base.Columns.Add(this.columndentist_name);
                 this.columnpast_treatment = new global::System.Data.DataColumn("past_treatment", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpast_treatment);
+                this.columnpatient_id = new global::System.Data.DataColumn("patient_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpatient_id);
+                this.columnmedhistory_filename = new global::System.Data.DataColumn("medhistory_filename", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmedhistory_filename);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnhistory_id}, true));
                 this.columnhistory_id.AllowDBNull = false;
@@ -1165,6 +1166,8 @@ namespace DentalAppointmentandInformationSystem {
                 this.columndentist_name.MaxLength = 100;
                 this.columnpast_treatment.AllowDBNull = false;
                 this.columnpast_treatment.MaxLength = 50;
+                this.columnpatient_id.AllowDBNull = false;
+                this.columnmedhistory_filename.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1753,7 +1756,9 @@ namespace DentalAppointmentandInformationSystem {
             
             private global::System.Data.DataColumn columnrecord_xray;
             
-            private global::System.Data.DataColumn columnhistory_id;
+            private global::System.Data.DataColumn columnteeth_treated;
+            
+            private global::System.Data.DataColumn columnprice_billed;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1830,9 +1835,17 @@ namespace DentalAppointmentandInformationSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn history_idColumn {
+            public global::System.Data.DataColumn teeth_treatedColumn {
                 get {
-                    return this.columnhistory_id;
+                    return this.columnteeth_treated;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn price_billedColumn {
+                get {
+                    return this.columnprice_billed;
                 }
             }
             
@@ -1873,7 +1886,7 @@ namespace DentalAppointmentandInformationSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RecordRow AddRecordRow(int record_id, PatientRow parentPatientRowByFK__Record__patient___46E78A0C, string record_name, AppointmentRow parentAppointmentRowByFK__Record__appointm__48CFD27E, byte[] record_xray, HistoryRow parentHistoryRowByFK__Record__history___47DBAE45) {
+            public RecordRow AddRecordRow(int record_id, PatientRow parentPatientRowByFK__Record__patient___46E78A0C, string record_name, AppointmentRow parentAppointmentRowByFK__Record__appointm__48CFD27E, byte[] record_xray, int teeth_treated, double price_billed) {
                 RecordRow rowRecordRow = ((RecordRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         record_id,
@@ -1881,15 +1894,13 @@ namespace DentalAppointmentandInformationSystem {
                         record_name,
                         null,
                         record_xray,
-                        null};
+                        teeth_treated,
+                        price_billed};
                 if ((parentPatientRowByFK__Record__patient___46E78A0C != null)) {
                     columnValuesArray[1] = parentPatientRowByFK__Record__patient___46E78A0C[0];
                 }
                 if ((parentAppointmentRowByFK__Record__appointm__48CFD27E != null)) {
                     columnValuesArray[3] = parentAppointmentRowByFK__Record__appointm__48CFD27E[0];
-                }
-                if ((parentHistoryRowByFK__Record__history___47DBAE45 != null)) {
-                    columnValuesArray[5] = parentHistoryRowByFK__Record__history___47DBAE45[0];
                 }
                 rowRecordRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRecordRow);
@@ -1925,7 +1936,8 @@ namespace DentalAppointmentandInformationSystem {
                 this.columnrecord_name = base.Columns["record_name"];
                 this.columnappointment_id = base.Columns["appointment_id"];
                 this.columnrecord_xray = base.Columns["record_xray"];
-                this.columnhistory_id = base.Columns["history_id"];
+                this.columnteeth_treated = base.Columns["teeth_treated"];
+                this.columnprice_billed = base.Columns["price_billed"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1941,8 +1953,10 @@ namespace DentalAppointmentandInformationSystem {
                 base.Columns.Add(this.columnappointment_id);
                 this.columnrecord_xray = new global::System.Data.DataColumn("record_xray", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnrecord_xray);
-                this.columnhistory_id = new global::System.Data.DataColumn("history_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhistory_id);
+                this.columnteeth_treated = new global::System.Data.DataColumn("teeth_treated", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnteeth_treated);
+                this.columnprice_billed = new global::System.Data.DataColumn("price_billed", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprice_billed);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnrecord_id}, true));
                 this.columnrecord_id.AllowDBNull = false;
@@ -1951,6 +1965,8 @@ namespace DentalAppointmentandInformationSystem {
                 this.columnrecord_name.AllowDBNull = false;
                 this.columnrecord_name.MaxLength = 50;
                 this.columnappointment_id.AllowDBNull = false;
+                this.columnteeth_treated.AllowDBNull = false;
+                this.columnprice_billed.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2863,28 +2879,6 @@ namespace DentalAppointmentandInformationSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int teeth_treated {
-                get {
-                    return ((int)(this[this.tableAppointment.teeth_treatedColumn]));
-                }
-                set {
-                    this[this.tableAppointment.teeth_treatedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double price_billed {
-                get {
-                    return ((double)(this[this.tableAppointment.price_billedColumn]));
-                }
-                set {
-                    this[this.tableAppointment.price_billedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int employee_num {
                 get {
                     return ((int)(this[this.tableAppointment.employee_numColumn]));
@@ -3156,6 +3150,44 @@ namespace DentalAppointmentandInformationSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int patient_id {
+                get {
+                    return ((int)(this[this.tableHistory.patient_idColumn]));
+                }
+                set {
+                    this[this.tableHistory.patient_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string medhistory_filename {
+                get {
+                    try {
+                        return ((string)(this[this.tableHistory.medhistory_filenameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'medhistory_filename\' in table \'History\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHistory.medhistory_filenameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PatientRow PatientRow {
+                get {
+                    return ((PatientRow)(this.GetParentRow(this.Table.ParentRelations["FK__History__patient__6FE99F9F"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__History__patient__6FE99F9F"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Ismed_historyNull() {
                 return this.IsNull(this.tableHistory.med_historyColumn);
             }
@@ -3168,13 +3200,14 @@ namespace DentalAppointmentandInformationSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RecordRow[] GetRecordRows() {
-                if ((this.Table.ChildRelations["FK__Record__history___47DBAE45"] == null)) {
-                    return new RecordRow[0];
-                }
-                else {
-                    return ((RecordRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Record__history___47DBAE45"])));
-                }
+            public bool Ismedhistory_filenameNull() {
+                return this.IsNull(this.tableHistory.medhistory_filenameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setmedhistory_filenameNull() {
+                this[this.tableHistory.medhistory_filenameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3407,6 +3440,17 @@ namespace DentalAppointmentandInformationSystem {
                     return ((RecordRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Record__patient___46E78A0C"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public HistoryRow[] GetHistoryRows() {
+                if ((this.Table.ChildRelations["FK__History__patient__6FE99F9F"] == null)) {
+                    return new HistoryRow[0];
+                }
+                else {
+                    return ((HistoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__History__patient__6FE99F9F"])));
+                }
+            }
         }
         
         /// <summary>
@@ -3485,17 +3529,23 @@ namespace DentalAppointmentandInformationSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int history_id {
+            public int teeth_treated {
                 get {
-                    try {
-                        return ((int)(this[this.tableRecord.history_idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'history_id\' in table \'Record\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableRecord.teeth_treatedColumn]));
                 }
                 set {
-                    this[this.tableRecord.history_idColumn] = value;
+                    this[this.tableRecord.teeth_treatedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double price_billed {
+                get {
+                    return ((double)(this[this.tableRecord.price_billedColumn]));
+                }
+                set {
+                    this[this.tableRecord.price_billedColumn] = value;
                 }
             }
             
@@ -3507,17 +3557,6 @@ namespace DentalAppointmentandInformationSystem {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK__Record__appointm__48CFD27E"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HistoryRow HistoryRow {
-                get {
-                    return ((HistoryRow)(this.GetParentRow(this.Table.ParentRelations["FK__Record__history___47DBAE45"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Record__history___47DBAE45"]);
                 }
             }
             
@@ -3542,18 +3581,6 @@ namespace DentalAppointmentandInformationSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setrecord_xrayNull() {
                 this[this.tableRecord.record_xrayColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Ishistory_idNull() {
-                return this.IsNull(this.tableRecord.history_idColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Sethistory_idNull() {
-                this[this.tableRecord.history_idColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4139,8 +4166,6 @@ namespace DentalAppointmentandInformationSystem.DAISdBDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("appointment_date", "appointment_date");
             tableMapping.ColumnMappings.Add("appointment_startTime", "appointment_startTime");
             tableMapping.ColumnMappings.Add("appointment_endTime", "appointment_endTime");
-            tableMapping.ColumnMappings.Add("teeth_treated", "teeth_treated");
-            tableMapping.ColumnMappings.Add("price_billed", "price_billed");
             tableMapping.ColumnMappings.Add("employee_num", "employee_num");
             tableMapping.ColumnMappings.Add("employee_num2", "employee_num2");
             tableMapping.ColumnMappings.Add("employee_num3", "employee_num3");
@@ -4148,7 +4173,7 @@ namespace DentalAppointmentandInformationSystem.DAISdBDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Appointment] WHERE (([appointment_id] = @Original_appointment_id) AND ([patient_id] = @Original_patient_id) AND ([service_id] = @Original_service_id) AND ((@IsNull_service_id2 = 1 AND [service_id2] IS NULL) OR ([service_id2] = @Original_service_id2)) AND ((@IsNull_service_id3 = 1 AND [service_id3] IS NULL) OR ([service_id3] = @Original_service_id3)) AND ([appointment_date] = @Original_appointment_date) AND ([appointment_startTime] = @Original_appointment_startTime) AND ([appointment_endTime] = @Original_appointment_endTime) AND ([teeth_treated] = @Original_teeth_treated) AND ([price_billed] = @Original_price_billed) AND ([employee_num] = @Original_employee_num) AND ((@IsNull_employee_num2 = 1 AND [employee_num2] IS NULL) OR ([employee_num2] = @Original_employee_num2)) AND ((@IsNull_employee_num3 = 1 AND [employee_num3] IS NULL) OR ([employee_num3] = @Original_employee_num3)) AND ((@IsNull_appointment_notes = 1 AND [appointment_notes] IS NULL) OR ([appointment_notes] = @Original_appointment_notes)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Appointment] WHERE (([appointment_id] = @Original_appointment_id) AND ([patient_id] = @Original_patient_id) AND ([service_id] = @Original_service_id) AND ((@IsNull_service_id2 = 1 AND [service_id2] IS NULL) OR ([service_id2] = @Original_service_id2)) AND ((@IsNull_service_id3 = 1 AND [service_id3] IS NULL) OR ([service_id3] = @Original_service_id3)) AND ([appointment_date] = @Original_appointment_date) AND ([appointment_startTime] = @Original_appointment_startTime) AND ([appointment_endTime] = @Original_appointment_endTime) AND ([employee_num] = @Original_employee_num) AND ((@IsNull_employee_num2 = 1 AND [employee_num2] IS NULL) OR ([employee_num2] = @Original_employee_num2)) AND ((@IsNull_employee_num3 = 1 AND [employee_num3] IS NULL) OR ([employee_num3] = @Original_employee_num3)) AND ((@IsNull_appointment_notes = 1 AND [appointment_notes] IS NULL) OR ([appointment_notes] = @Original_appointment_notes)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_appointment_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_patient_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patient_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4160,8 +4185,6 @@ namespace DentalAppointmentandInformationSystem.DAISdBDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_appointment_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_appointment_startTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_startTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_appointment_endTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_endTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_teeth_treated", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teeth_treated", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_price_billed", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price_billed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_employee_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_employee_num2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_employee_num2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4171,8 +4194,8 @@ namespace DentalAppointmentandInformationSystem.DAISdBDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_appointment_notes", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_notes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Appointment] ([appointment_id], [patient_id], [service_id], [service_id2], [service_id3], [appointment_date], [appointment_startTime], [appointment_endTime], [teeth_treated], [price_billed], [employee_num], [employee_num2], [employee_num3], [appointment_notes]) VALUES (@appointment_id, @patient_id, @service_id, @service_id2, @service_id3, @appointment_date, @appointment_startTime, @appointment_endTime, @teeth_treated, @price_billed, @employee_num, @employee_num2, @employee_num3, @appointment_notes);
-SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appointment_date, appointment_startTime, appointment_endTime, teeth_treated, price_billed, employee_num, employee_num2, employee_num3, appointment_notes FROM Appointment WHERE (appointment_id = @appointment_id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Appointment] ([appointment_id], [patient_id], [service_id], [service_id2], [service_id3], [appointment_date], [appointment_startTime], [appointment_endTime], [employee_num], [employee_num2], [employee_num3], [appointment_notes]) VALUES (@appointment_id, @patient_id, @service_id, @service_id2, @service_id3, @appointment_date, @appointment_startTime, @appointment_endTime, @employee_num, @employee_num2, @employee_num3, @appointment_notes);
+SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appointment_date, appointment_startTime, appointment_endTime, employee_num, employee_num2, employee_num3, appointment_notes FROM Appointment WHERE (appointment_id = @appointment_id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@appointment_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@patient_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patient_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4182,37 +4205,33 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@appointment_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@appointment_startTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_startTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@appointment_endTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_endTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@teeth_treated", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teeth_treated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price_billed", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price_billed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@employee_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@employee_num2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@employee_num3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@appointment_notes", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_notes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Appointment] SET [appointment_id] = @appointment_id, [patient_id] =" +
-                " @patient_id, [service_id] = @service_id, [service_id2] = @service_id2, [service" +
-                "_id3] = @service_id3, [appointment_date] = @appointment_date, [appointment_start" +
-                "Time] = @appointment_startTime, [appointment_endTime] = @appointment_endTime, [t" +
-                "eeth_treated] = @teeth_treated, [price_billed] = @price_billed, [employee_num] =" +
-                " @employee_num, [employee_num2] = @employee_num2, [employee_num3] = @employee_nu" +
-                "m3, [appointment_notes] = @appointment_notes WHERE (([appointment_id] = @Origina" +
-                "l_appointment_id) AND ([patient_id] = @Original_patient_id) AND ([service_id] = " +
-                "@Original_service_id) AND ((@IsNull_service_id2 = 1 AND [service_id2] IS NULL) O" +
-                "R ([service_id2] = @Original_service_id2)) AND ((@IsNull_service_id3 = 1 AND [se" +
-                "rvice_id3] IS NULL) OR ([service_id3] = @Original_service_id3)) AND ([appointmen" +
-                "t_date] = @Original_appointment_date) AND ([appointment_startTime] = @Original_a" +
-                "ppointment_startTime) AND ([appointment_endTime] = @Original_appointment_endTime" +
-                ") AND ([teeth_treated] = @Original_teeth_treated) AND ([price_billed] = @Origina" +
-                "l_price_billed) AND ([employee_num] = @Original_employee_num) AND ((@IsNull_empl" +
-                "oyee_num2 = 1 AND [employee_num2] IS NULL) OR ([employee_num2] = @Original_emplo" +
-                "yee_num2)) AND ((@IsNull_employee_num3 = 1 AND [employee_num3] IS NULL) OR ([emp" +
-                "loyee_num3] = @Original_employee_num3)) AND ((@IsNull_appointment_notes = 1 AND " +
-                "[appointment_notes] IS NULL) OR ([appointment_notes] = @Original_appointment_not" +
-                "es)));\r\nSELECT appointment_id, patient_id, service_id, service_id2, service_id3," +
-                " appointment_date, appointment_startTime, appointment_endTime, teeth_treated, pr" +
-                "ice_billed, employee_num, employee_num2, employee_num3, appointment_notes FROM A" +
-                "ppointment WHERE (appointment_id = @appointment_id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Appointment] SET [appointment_id] = @appointment_id, [patient_id] = @pati" +
+                "ent_id, [service_id] = @service_id, [service_id2] = @service_id2, [service_id3] " +
+                "= @service_id3, [appointment_date] = @appointment_date, [appointment_startTime] " +
+                "= @appointment_startTime, [appointment_endTime] = @appointment_endTime, [employe" +
+                "e_num] = @employee_num, [employee_num2] = @employee_num2, [employee_num3] = @emp" +
+                "loyee_num3, [appointment_notes] = @appointment_notes WHERE (([appointment_id] = " +
+                "@Original_appointment_id) AND ([patient_id] = @Original_patient_id) AND ([servic" +
+                "e_id] = @Original_service_id) AND ((@IsNull_service_id2 = 1 AND [service_id2] IS" +
+                " NULL) OR ([service_id2] = @Original_service_id2)) AND ((@IsNull_service_id3 = 1" +
+                " AND [service_id3] IS NULL) OR ([service_id3] = @Original_service_id3)) AND ([ap" +
+                "pointment_date] = @Original_appointment_date) AND ([appointment_startTime] = @Or" +
+                "iginal_appointment_startTime) AND ([appointment_endTime] = @Original_appointment" +
+                "_endTime) AND ([employee_num] = @Original_employee_num) AND ((@IsNull_employee_n" +
+                "um2 = 1 AND [employee_num2] IS NULL) OR ([employee_num2] = @Original_employee_nu" +
+                "m2)) AND ((@IsNull_employee_num3 = 1 AND [employee_num3] IS NULL) OR ([employee_" +
+                "num3] = @Original_employee_num3)) AND ((@IsNull_appointment_notes = 1 AND [appoi" +
+                "ntment_notes] IS NULL) OR ([appointment_notes] = @Original_appointment_notes)));" +
+                "\r\nSELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoi" +
+                "ntment_date, appointment_startTime, appointment_endTime, employee_num, employee_" +
+                "num2, employee_num3, appointment_notes FROM Appointment WHERE (appointment_id = " +
+                "@appointment_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@appointment_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@patient_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patient_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4222,8 +4241,6 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@appointment_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@appointment_startTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_startTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@appointment_endTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_endTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@teeth_treated", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teeth_treated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price_billed", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price_billed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@employee_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@employee_num2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@employee_num3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4238,8 +4255,6 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_appointment_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_appointment_startTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_startTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_appointment_endTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_endTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_teeth_treated", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teeth_treated", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_price_billed", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price_billed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_employee_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_employee_num2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_employee_num2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "employee_num2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4263,9 +4278,8 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appointm" +
-                "ent_date, appointment_startTime, appointment_endTime, teeth_treated, price_bille" +
-                "d, employee_num, employee_num2, employee_num3, appointment_notes FROM dbo.Appoin" +
-                "tment";
+                "ent_date, appointment_startTime, appointment_endTime, employee_num, employee_num" +
+                "2, employee_num3, appointment_notes FROM Appointment";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4326,7 +4340,7 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_appointment_id, int Original_patient_id, int Original_service_id, global::System.Nullable<int> Original_service_id2, global::System.Nullable<int> Original_service_id3, System.DateTime Original_appointment_date, System.TimeSpan Original_appointment_startTime, System.TimeSpan Original_appointment_endTime, int Original_teeth_treated, double Original_price_billed, int Original_employee_num, global::System.Nullable<int> Original_employee_num2, global::System.Nullable<int> Original_employee_num3, string Original_appointment_notes) {
+        public virtual int Delete(int Original_appointment_id, int Original_patient_id, int Original_service_id, global::System.Nullable<int> Original_service_id2, global::System.Nullable<int> Original_service_id3, System.DateTime Original_appointment_date, System.TimeSpan Original_appointment_startTime, System.TimeSpan Original_appointment_endTime, int Original_employee_num, global::System.Nullable<int> Original_employee_num2, global::System.Nullable<int> Original_employee_num3, string Original_appointment_notes) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_appointment_id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_patient_id));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_service_id));
@@ -4349,32 +4363,30 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
             this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_appointment_date));
             this.Adapter.DeleteCommand.Parameters[8].Value = ((System.TimeSpan)(Original_appointment_startTime));
             this.Adapter.DeleteCommand.Parameters[9].Value = ((System.TimeSpan)(Original_appointment_endTime));
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_teeth_treated));
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((double)(Original_price_billed));
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_employee_num));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_employee_num));
             if ((Original_employee_num2.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_employee_num2.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_employee_num3.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_employee_num2.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_employee_num3.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_employee_num3.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_employee_num3.Value));
-            }
-            else {
+            if ((Original_appointment_notes == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_appointment_notes == null)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_appointment_notes));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_appointment_notes));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4396,7 +4408,7 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int appointment_id, int patient_id, int service_id, global::System.Nullable<int> service_id2, global::System.Nullable<int> service_id3, System.DateTime appointment_date, System.TimeSpan appointment_startTime, System.TimeSpan appointment_endTime, int teeth_treated, double price_billed, int employee_num, global::System.Nullable<int> employee_num2, global::System.Nullable<int> employee_num3, string appointment_notes) {
+        public virtual int Insert(int appointment_id, int patient_id, int service_id, global::System.Nullable<int> service_id2, global::System.Nullable<int> service_id3, System.DateTime appointment_date, System.TimeSpan appointment_startTime, System.TimeSpan appointment_endTime, int employee_num, global::System.Nullable<int> employee_num2, global::System.Nullable<int> employee_num3, string appointment_notes) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(appointment_id));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(patient_id));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(service_id));
@@ -4415,26 +4427,24 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
             this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(appointment_date));
             this.Adapter.InsertCommand.Parameters[6].Value = ((System.TimeSpan)(appointment_startTime));
             this.Adapter.InsertCommand.Parameters[7].Value = ((System.TimeSpan)(appointment_endTime));
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(teeth_treated));
-            this.Adapter.InsertCommand.Parameters[9].Value = ((double)(price_billed));
-            this.Adapter.InsertCommand.Parameters[10].Value = ((int)(employee_num));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(employee_num));
             if ((employee_num2.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(employee_num2.Value));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(employee_num2.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             if ((employee_num3.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(employee_num3.Value));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(employee_num3.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((appointment_notes == null)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(appointment_notes));
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(appointment_notes));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4465,8 +4475,6 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
                     System.DateTime appointment_date, 
                     System.TimeSpan appointment_startTime, 
                     System.TimeSpan appointment_endTime, 
-                    int teeth_treated, 
-                    double price_billed, 
                     int employee_num, 
                     global::System.Nullable<int> employee_num2, 
                     global::System.Nullable<int> employee_num3, 
@@ -4479,8 +4487,6 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
                     System.DateTime Original_appointment_date, 
                     System.TimeSpan Original_appointment_startTime, 
                     System.TimeSpan Original_appointment_endTime, 
-                    int Original_teeth_treated, 
-                    double Original_price_billed, 
                     int Original_employee_num, 
                     global::System.Nullable<int> Original_employee_num2, 
                     global::System.Nullable<int> Original_employee_num3, 
@@ -4503,75 +4509,71 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
             this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(appointment_date));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((System.TimeSpan)(appointment_startTime));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((System.TimeSpan)(appointment_endTime));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(teeth_treated));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(price_billed));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(employee_num));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(employee_num));
             if ((employee_num2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(employee_num2.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(employee_num2.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             if ((employee_num3.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(employee_num3.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(employee_num3.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((appointment_notes == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(appointment_notes));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(appointment_notes));
             }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_appointment_id));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_patient_id));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_service_id));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_appointment_id));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_patient_id));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_service_id));
             if ((Original_service_id2.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_service_id2.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Original_service_id3.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_service_id2.Value));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_service_id3.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_service_id3.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_service_id3.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((System.DateTime)(Original_appointment_date));
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((System.TimeSpan)(Original_appointment_startTime));
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((System.TimeSpan)(Original_appointment_endTime));
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_teeth_treated));
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((double)(Original_price_billed));
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_employee_num));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_appointment_date));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((System.TimeSpan)(Original_appointment_startTime));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((System.TimeSpan)(Original_appointment_endTime));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_employee_num));
             if ((Original_employee_num2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_employee_num2.Value));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_employee_num2.Value));
             }
             else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((Original_employee_num3.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_employee_num3.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_appointment_notes == null)) {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            if ((Original_employee_num3.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_employee_num3.Value));
-            }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            if ((Original_appointment_notes == null)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_appointment_notes));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_appointment_notes));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4601,8 +4603,6 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
                     System.DateTime appointment_date, 
                     System.TimeSpan appointment_startTime, 
                     System.TimeSpan appointment_endTime, 
-                    int teeth_treated, 
-                    double price_billed, 
                     int employee_num, 
                     global::System.Nullable<int> employee_num2, 
                     global::System.Nullable<int> employee_num3, 
@@ -4615,13 +4615,11 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
                     System.DateTime Original_appointment_date, 
                     System.TimeSpan Original_appointment_startTime, 
                     System.TimeSpan Original_appointment_endTime, 
-                    int Original_teeth_treated, 
-                    double Original_price_billed, 
                     int Original_employee_num, 
                     global::System.Nullable<int> Original_employee_num2, 
                     global::System.Nullable<int> Original_employee_num3, 
                     string Original_appointment_notes) {
-            return this.Update(Original_appointment_id, patient_id, service_id, service_id2, service_id3, appointment_date, appointment_startTime, appointment_endTime, teeth_treated, price_billed, employee_num, employee_num2, employee_num3, appointment_notes, Original_appointment_id, Original_patient_id, Original_service_id, Original_service_id2, Original_service_id3, Original_appointment_date, Original_appointment_startTime, Original_appointment_endTime, Original_teeth_treated, Original_price_billed, Original_employee_num, Original_employee_num2, Original_employee_num3, Original_appointment_notes);
+            return this.Update(Original_appointment_id, patient_id, service_id, service_id2, service_id3, appointment_date, appointment_startTime, appointment_endTime, employee_num, employee_num2, employee_num3, appointment_notes, Original_appointment_id, Original_patient_id, Original_service_id, Original_service_id2, Original_service_id3, Original_appointment_date, Original_appointment_startTime, Original_appointment_endTime, Original_employee_num, Original_employee_num2, Original_employee_num3, Original_appointment_notes);
         }
     }
     
@@ -4750,37 +4748,47 @@ SELECT appointment_id, patient_id, service_id, service_id2, service_id3, appoint
             tableMapping.ColumnMappings.Add("med_history", "med_history");
             tableMapping.ColumnMappings.Add("dentist_name", "dentist_name");
             tableMapping.ColumnMappings.Add("past_treatment", "past_treatment");
+            tableMapping.ColumnMappings.Add("patient_id", "patient_id");
+            tableMapping.ColumnMappings.Add("medhistory_filename", "medhistory_filename");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[History] WHERE (([history_id] = @Original_history_id) AND ([de" +
-                "ntist_name] = @Original_dentist_name) AND ([past_treatment] = @Original_past_tre" +
-                "atment))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [History] WHERE (([history_id] = @Original_history_id) AND ([dentist_name] = @Original_dentist_name) AND ([past_treatment] = @Original_past_treatment) AND ((@IsNull_medhistory_filename = 1 AND [medhistory_filename] IS NULL) OR ([medhistory_filename] = @Original_medhistory_filename)) AND ([patient_id] = @Original_patient_id))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_history_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "history_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dentist_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dentist_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_past_treatment", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "past_treatment", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_medhistory_filename", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "medhistory_filename", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_medhistory_filename", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "medhistory_filename", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_patient_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patient_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[History] ([history_id], [med_history], [dentist_name], [past_treatment]) VALUES (@history_id, @med_history, @dentist_name, @past_treatment);
-SELECT history_id, med_history, dentist_name, past_treatment FROM History WHERE (history_id = @history_id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [History] ([history_id], [med_history], [dentist_name], [past_treatment], [medhistory_filename], [patient_id]) VALUES (@history_id, @med_history, @dentist_name, @past_treatment, @medhistory_filename, @patient_id);
+SELECT history_id, med_history, dentist_name, past_treatment, medhistory_filename, patient_id FROM History WHERE (history_id = @history_id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@history_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "history_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@med_history", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "med_history", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dentist_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dentist_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@past_treatment", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "past_treatment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@medhistory_filename", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "medhistory_filename", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@patient_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patient_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[History] SET [history_id] = @history_id, [med_history] = @med_history, [dentist_name] = @dentist_name, [past_treatment] = @past_treatment WHERE (([history_id] = @Original_history_id) AND ([dentist_name] = @Original_dentist_name) AND ([past_treatment] = @Original_past_treatment));
-SELECT history_id, med_history, dentist_name, past_treatment FROM History WHERE (history_id = @history_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [History] SET [history_id] = @history_id, [med_history] = @med_history, [dentist_name] = @dentist_name, [past_treatment] = @past_treatment, [medhistory_filename] = @medhistory_filename, [patient_id] = @patient_id WHERE (([history_id] = @Original_history_id) AND ([dentist_name] = @Original_dentist_name) AND ([past_treatment] = @Original_past_treatment) AND ((@IsNull_medhistory_filename = 1 AND [medhistory_filename] IS NULL) OR ([medhistory_filename] = @Original_medhistory_filename)) AND ([patient_id] = @Original_patient_id));
+SELECT history_id, med_history, dentist_name, past_treatment, medhistory_filename, patient_id FROM History WHERE (history_id = @history_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@history_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "history_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@med_history", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "med_history", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dentist_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dentist_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@past_treatment", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "past_treatment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@medhistory_filename", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "medhistory_filename", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@patient_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patient_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_history_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "history_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dentist_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dentist_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_past_treatment", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "past_treatment", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_medhistory_filename", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "medhistory_filename", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_medhistory_filename", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "medhistory_filename", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_patient_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patient_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4796,7 +4804,8 @@ SELECT history_id, med_history, dentist_name, past_treatment FROM History WHERE 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT history_id, med_history, dentist_name, past_treatment FROM dbo.History";
+            this._commandCollection[0].CommandText = "SELECT history_id, med_history, dentist_name, past_treatment, medhistory_filename" +
+                ", patient_id FROM History";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4857,7 +4866,7 @@ SELECT history_id, med_history, dentist_name, past_treatment FROM History WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_history_id, string Original_dentist_name, string Original_past_treatment) {
+        public virtual int Delete(int Original_history_id, string Original_dentist_name, string Original_past_treatment, string Original_medhistory_filename, int Original_patient_id) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_history_id));
             if ((Original_dentist_name == null)) {
                 throw new global::System.ArgumentNullException("Original_dentist_name");
@@ -4871,6 +4880,15 @@ SELECT history_id, med_history, dentist_name, past_treatment FROM History WHERE 
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_past_treatment));
             }
+            if ((Original_medhistory_filename == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_medhistory_filename));
+            }
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_patient_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4891,7 +4909,7 @@ SELECT history_id, med_history, dentist_name, past_treatment FROM History WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int history_id, byte[] med_history, string dentist_name, string past_treatment) {
+        public virtual int Insert(int history_id, byte[] med_history, string dentist_name, string past_treatment, string medhistory_filename, int patient_id) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(history_id));
             if ((med_history == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -4911,6 +4929,13 @@ SELECT history_id, med_history, dentist_name, past_treatment FROM History WHERE 
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(past_treatment));
             }
+            if ((medhistory_filename == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(medhistory_filename));
+            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(patient_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4931,7 +4956,7 @@ SELECT history_id, med_history, dentist_name, past_treatment FROM History WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int history_id, byte[] med_history, string dentist_name, string past_treatment, int Original_history_id, string Original_dentist_name, string Original_past_treatment) {
+        public virtual int Update(int history_id, byte[] med_history, string dentist_name, string past_treatment, string medhistory_filename, int patient_id, int Original_history_id, string Original_dentist_name, string Original_past_treatment, string Original_medhistory_filename, int Original_patient_id) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(history_id));
             if ((med_history == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -4951,19 +4976,35 @@ SELECT history_id, med_history, dentist_name, past_treatment FROM History WHERE 
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(past_treatment));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_history_id));
+            if ((medhistory_filename == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(medhistory_filename));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(patient_id));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_history_id));
             if ((Original_dentist_name == null)) {
                 throw new global::System.ArgumentNullException("Original_dentist_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_dentist_name));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_dentist_name));
             }
             if ((Original_past_treatment == null)) {
                 throw new global::System.ArgumentNullException("Original_past_treatment");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_past_treatment));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_past_treatment));
             }
+            if ((Original_medhistory_filename == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_medhistory_filename));
+            }
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_patient_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4984,8 +5025,8 @@ SELECT history_id, med_history, dentist_name, past_treatment FROM History WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte[] med_history, string dentist_name, string past_treatment, int Original_history_id, string Original_dentist_name, string Original_past_treatment) {
-            return this.Update(Original_history_id, med_history, dentist_name, past_treatment, Original_history_id, Original_dentist_name, Original_past_treatment);
+        public virtual int Update(byte[] med_history, string dentist_name, string past_treatment, string medhistory_filename, int patient_id, int Original_history_id, string Original_dentist_name, string Original_past_treatment, string Original_medhistory_filename, int Original_patient_id) {
+            return this.Update(Original_history_id, med_history, dentist_name, past_treatment, medhistory_filename, patient_id, Original_history_id, Original_dentist_name, Original_past_treatment, Original_medhistory_filename, Original_patient_id);
         }
     }
     
@@ -5801,46 +5842,49 @@ SELECT patient_id, patient_lname, patient_mname, patient_fname, patient_age, pat
             tableMapping.ColumnMappings.Add("record_name", "record_name");
             tableMapping.ColumnMappings.Add("appointment_id", "appointment_id");
             tableMapping.ColumnMappings.Add("record_xray", "record_xray");
-            tableMapping.ColumnMappings.Add("history_id", "history_id");
+            tableMapping.ColumnMappings.Add("teeth_treated", "teeth_treated");
+            tableMapping.ColumnMappings.Add("price_billed", "price_billed");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Record] WHERE (([record_id] = @Original_record_id) AND ([patient_id] = @Original_patient_id) AND ([record_name] = @Original_record_name) AND ([appointment_id] = @Original_appointment_id) AND ((@IsNull_history_id = 1 AND [history_id] IS NULL) OR ([history_id] = @Original_history_id)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Record] WHERE (([record_id] = @Original_record_id) AND ([patient_id] = @Original_patient_id) AND ([record_name] = @Original_record_name) AND ([appointment_id] = @Original_appointment_id) AND ([price_billed] = @Original_price_billed) AND ([teeth_treated] = @Original_teeth_treated))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_record_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "record_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_patient_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patient_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_record_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "record_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_appointment_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_history_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "history_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_history_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "history_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_price_billed", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price_billed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_teeth_treated", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teeth_treated", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Record] ([record_id], [patient_id], [record_name], [appointment_id], [record_xray], [history_id]) VALUES (@record_id, @patient_id, @record_name, @appointment_id, @record_xray, @history_id);
-SELECT record_id, patient_id, record_name, appointment_id, record_xray, history_id FROM Record WHERE (record_id = @record_id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Record] ([record_id], [patient_id], [record_name], [appointment_id], [record_xray], [price_billed], [teeth_treated]) VALUES (@record_id, @patient_id, @record_name, @appointment_id, @record_xray, @price_billed, @teeth_treated);
+SELECT record_id, patient_id, record_name, appointment_id, record_xray, price_billed, teeth_treated FROM Record WHERE (record_id = @record_id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@record_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "record_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@patient_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patient_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@record_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "record_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@appointment_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@record_xray", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "record_xray", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@history_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "history_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price_billed", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price_billed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@teeth_treated", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teeth_treated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Record] SET [record_id] = @record_id, [patient_id] = @patient_id, [record_name] = @record_name, [appointment_id] = @appointment_id, [record_xray] = @record_xray, [history_id] = @history_id WHERE (([record_id] = @Original_record_id) AND ([patient_id] = @Original_patient_id) AND ([record_name] = @Original_record_name) AND ([appointment_id] = @Original_appointment_id) AND ((@IsNull_history_id = 1 AND [history_id] IS NULL) OR ([history_id] = @Original_history_id)));
-SELECT record_id, patient_id, record_name, appointment_id, record_xray, history_id FROM Record WHERE (record_id = @record_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Record] SET [record_id] = @record_id, [patient_id] = @patient_id, [record_name] = @record_name, [appointment_id] = @appointment_id, [record_xray] = @record_xray, [price_billed] = @price_billed, [teeth_treated] = @teeth_treated WHERE (([record_id] = @Original_record_id) AND ([patient_id] = @Original_patient_id) AND ([record_name] = @Original_record_name) AND ([appointment_id] = @Original_appointment_id) AND ([price_billed] = @Original_price_billed) AND ([teeth_treated] = @Original_teeth_treated));
+SELECT record_id, patient_id, record_name, appointment_id, record_xray, price_billed, teeth_treated FROM Record WHERE (record_id = @record_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@record_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "record_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@patient_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patient_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@record_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "record_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@appointment_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@record_xray", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "record_xray", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@history_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "history_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price_billed", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price_billed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@teeth_treated", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teeth_treated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_record_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "record_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_patient_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patient_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_record_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "record_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_appointment_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "appointment_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_history_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "history_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_history_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "history_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_price_billed", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price_billed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_teeth_treated", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teeth_treated", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5856,8 +5900,8 @@ SELECT record_id, patient_id, record_name, appointment_id, record_xray, history_
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT record_id, patient_id, record_name, appointment_id, record_xray, history_i" +
-                "d FROM dbo.Record";
+            this._commandCollection[0].CommandText = "SELECT record_id, patient_id, record_name, appointment_id, record_xray, price_bil" +
+                "led, teeth_treated FROM Record";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5918,7 +5962,7 @@ SELECT record_id, patient_id, record_name, appointment_id, record_xray, history_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_record_id, int Original_patient_id, string Original_record_name, int Original_appointment_id, global::System.Nullable<int> Original_history_id) {
+        public virtual int Delete(int Original_record_id, int Original_patient_id, string Original_record_name, int Original_appointment_id, double Original_price_billed, int Original_teeth_treated) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_record_id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_patient_id));
             if ((Original_record_name == null)) {
@@ -5928,14 +5972,8 @@ SELECT record_id, patient_id, record_name, appointment_id, record_xray, history_
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_record_name));
             }
             this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_appointment_id));
-            if ((Original_history_id.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_history_id.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_price_billed));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_teeth_treated));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5956,7 +5994,7 @@ SELECT record_id, patient_id, record_name, appointment_id, record_xray, history_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int record_id, int patient_id, string record_name, int appointment_id, byte[] record_xray, global::System.Nullable<int> history_id) {
+        public virtual int Insert(int record_id, int patient_id, string record_name, int appointment_id, byte[] record_xray, double price_billed, int teeth_treated) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(record_id));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(patient_id));
             if ((record_name == null)) {
@@ -5972,12 +6010,8 @@ SELECT record_id, patient_id, record_name, appointment_id, record_xray, history_
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((byte[])(record_xray));
             }
-            if ((history_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(history_id.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((double)(price_billed));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(teeth_treated));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5998,7 +6032,7 @@ SELECT record_id, patient_id, record_name, appointment_id, record_xray, history_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int record_id, int patient_id, string record_name, int appointment_id, byte[] record_xray, global::System.Nullable<int> history_id, int Original_record_id, int Original_patient_id, string Original_record_name, int Original_appointment_id, global::System.Nullable<int> Original_history_id) {
+        public virtual int Update(int record_id, int patient_id, string record_name, int appointment_id, byte[] record_xray, double price_billed, int teeth_treated, int Original_record_id, int Original_patient_id, string Original_record_name, int Original_appointment_id, double Original_price_billed, int Original_teeth_treated) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(record_id));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(patient_id));
             if ((record_name == null)) {
@@ -6014,29 +6048,19 @@ SELECT record_id, patient_id, record_name, appointment_id, record_xray, history_
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((byte[])(record_xray));
             }
-            if ((history_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(history_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_record_id));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_patient_id));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(price_billed));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(teeth_treated));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_record_id));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_patient_id));
             if ((Original_record_name == null)) {
                 throw new global::System.ArgumentNullException("Original_record_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_record_name));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_record_name));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_appointment_id));
-            if ((Original_history_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_history_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_appointment_id));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(Original_price_billed));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_teeth_treated));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6057,8 +6081,8 @@ SELECT record_id, patient_id, record_name, appointment_id, record_xray, history_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int patient_id, string record_name, int appointment_id, byte[] record_xray, global::System.Nullable<int> history_id, int Original_record_id, int Original_patient_id, string Original_record_name, int Original_appointment_id, global::System.Nullable<int> Original_history_id) {
-            return this.Update(Original_record_id, patient_id, record_name, appointment_id, record_xray, history_id, Original_record_id, Original_patient_id, Original_record_name, Original_appointment_id, Original_history_id);
+        public virtual int Update(int patient_id, string record_name, int appointment_id, byte[] record_xray, double price_billed, int teeth_treated, int Original_record_id, int Original_patient_id, string Original_record_name, int Original_appointment_id, double Original_price_billed, int Original_teeth_treated) {
+            return this.Update(Original_record_id, patient_id, record_name, appointment_id, record_xray, price_billed, teeth_treated, Original_record_id, Original_patient_id, Original_record_name, Original_appointment_id, Original_price_billed, Original_teeth_treated);
         }
     }
     
