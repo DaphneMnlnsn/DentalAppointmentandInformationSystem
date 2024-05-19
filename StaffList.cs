@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace DentalAppointmentandInformationSystem
 {
     public partial class StaffList : UserControl
     {
+        Variables v = new Variables();
         public StaffList()
         {
             InitializeComponent();
@@ -25,6 +27,18 @@ namespace DentalAppointmentandInformationSystem
             staffRole.Text = employee_role;
             contactNum.Text = employee_contact;
             passwordLbl.Text = employee_pass;
+            
+        }
+        private void editStaff_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Edit this staff record?", "Confirm Edit", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                v.getsetstaffSelected = employeeNum.Text;
+                this.ParentForm.Hide();
+                EditStaff edit = new EditStaff();
+                edit.Show();
+            }
         }
     }
 }

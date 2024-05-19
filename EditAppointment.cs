@@ -237,7 +237,7 @@ namespace DentalAppointmentandInformationSystem
             constring.Close();
         }
 
-        private void savePatientBtn_Click(object sender, EventArgs e)
+        private void saveAppnmtntBtn_Click(object sender, EventArgs e)
         {
             constring.Open();
             string staff2, staff3, service2, service3;

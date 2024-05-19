@@ -73,6 +73,12 @@
     <Compile Include="AddAppointmentExisting.Designer.cs">
       <DependentUpon>AddAppointmentExisting.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddService.Designer.cs">
+      <DependentUpon>AddService.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppntmntDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,12 @@
     </Compile>
     <Compile Include="EditPatient.Designer.cs">
       <DependentUpon>EditPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditService.Designer.cs">
+      <DependentUpon>EditService.cs</DependentUpon>
     </Compile>
     <Compile Include="EditStaff.cs">
       <SubType>Form</SubType>
@@ -213,6 +225,9 @@
     <EmbeddedResource Include="AddAppointmentExisting.resx">
       <DependentUpon>AddAppointmentExisting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddService.resx">
+      <DependentUpon>AddService.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Appointment.resx">
       <DependentUpon>Appointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditPatient.resx">
       <DependentUpon>EditPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditService.resx">
+      <DependentUpon>EditService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditStaff.resx">
       <DependentUpon>EditStaff.cs</DependentUpon>
@@ -250,6 +268,15 @@
     <EmbeddedResource Include="Services.resx">
       <DependentUpon>Services.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ServicesList.resx">
+      <DependentUpon>ServicesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffList.resx">
+      <DependentUpon>StaffList.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DAISdBDataSet.xsc">
       <DependentUpon>DAISdBDataSet.xsd</DependentUpon>
     </None>
@@ -275,9 +302,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\back.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bg.png" />
@@ -323,6 +347,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>DAISdB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\back.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

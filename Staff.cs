@@ -82,5 +82,12 @@ namespace DentalAppointmentandInformationSystem
             srvcs.Show();
             this.Hide();
         }
+
+        private void btnAddStaff_Click(object sender, EventArgs e)
+        {
+            NewStaff newStaff = new NewStaff();
+            newStaff.Show();
+            this.Hide();
+        }
     }
 }

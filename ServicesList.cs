@@ -15,6 +15,8 @@ namespace DentalAppointmentandInformationSystem
 {
     public partial class ServicesList : UserControl
     {
+        Variables v = new Variables();
+        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
 
         public ServicesList()
         {
@@ -32,5 +34,36 @@ namespace DentalAppointmentandInformationSystem
             servicePrice.Text = service_price;
         }
 
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            v.getsetserviceSelected = serviceID.Text;
+            Services mainForm;
+            mainForm = (Services)this.FindForm();
+            mainForm.editVisible();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this service?", "Confirm Delete", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                constring.Open();
+                string query = "DELETE FROM Service WHERE service_id =" + v.getsetserviceSelected;
+                SqlCommand cmd = new SqlCommand(query, constring);
+                cmd.CommandText = query;
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Service Deleted Successfully!");
+                    Services srvcs = new Services();
+                    srvcs.Show();
+                    this.Parent.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("DATA NOT DELETED SUCCESSFULLY");
+                }
+                constring.Close();
+            }
+        }
     }
 }

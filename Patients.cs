@@ -82,9 +82,28 @@ namespace DentalAppointmentandInformationSystem
 
         private void staffBtn_Click(object sender, EventArgs e)
         {
-            Staff staff = new Staff();
-            staff.Show();
-            this.Hide();
+            constring.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
+            SqlDataReader reader1;
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
+                {
+                    Staff stf = new Staff();
+                    stf.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("You do not have the authorization to open this!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
+            constring.Close();
         }
 
         private void servicesBtn_Click(object sender, EventArgs e)

@@ -30,7 +30,7 @@
         {
             this.dshbrdLbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnnewappointment = new System.Windows.Forms.Button();
+            this.btnAddStaff = new System.Windows.Forms.Button();
             this.doctorPic = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -58,8 +58,8 @@
             // 
             // dshbrdLbl
             // 
-            this.dshbrdLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dshbrdLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dshbrdLbl.AutoSize = true;
             this.dshbrdLbl.Font = new System.Drawing.Font("Metrophobic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,7 +73,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.panel1.Controls.Add(this.btnnewappointment);
+            this.panel1.Controls.Add(this.btnAddStaff);
             this.panel1.Controls.Add(this.doctorPic);
             this.panel1.Controls.Add(this.dshbrdLbl);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -83,21 +83,22 @@
             this.panel1.Size = new System.Drawing.Size(1537, 97);
             this.panel1.TabIndex = 6;
             // 
-            // btnnewappointment
+            // btnAddStaff
             // 
-            this.btnnewappointment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.btnAddStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnnewappointment.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnnewappointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnnewappointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnnewappointment.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnnewappointment.Location = new System.Drawing.Point(1162, 26);
-            this.btnnewappointment.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnnewappointment.Name = "btnnewappointment";
-            this.btnnewappointment.Size = new System.Drawing.Size(224, 48);
-            this.btnnewappointment.TabIndex = 8;
-            this.btnnewappointment.Text = "+ Add Staff";
-            this.btnnewappointment.UseVisualStyleBackColor = false;
+            this.btnAddStaff.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStaff.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAddStaff.Location = new System.Drawing.Point(1162, 26);
+            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(224, 48);
+            this.btnAddStaff.TabIndex = 8;
+            this.btnAddStaff.Text = "+ Add Staff";
+            this.btnAddStaff.UseVisualStyleBackColor = false;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
             // 
             // doctorPic
             // 
@@ -179,9 +180,10 @@
             // 
             // staffContainer
             // 
+            this.staffContainer.AutoScroll = true;
             this.staffContainer.Location = new System.Drawing.Point(190, 272);
             this.staffContainer.Name = "staffContainer";
-            this.staffContainer.Size = new System.Drawing.Size(1322, 570);
+            this.staffContainer.Size = new System.Drawing.Size(1322, 607);
             this.staffContainer.TabIndex = 90;
             // 
             // label6
@@ -343,6 +345,6 @@
         private System.Windows.Forms.Label employee_no;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button btnnewappointment;
+        private System.Windows.Forms.Button btnAddStaff;
     }
 }

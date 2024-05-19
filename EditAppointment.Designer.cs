@@ -472,7 +472,7 @@
             this.savePatientBtn.TabIndex = 35;
             this.savePatientBtn.Text = "Set Appointment";
             this.savePatientBtn.UseVisualStyleBackColor = false;
-            this.savePatientBtn.Click += new System.EventHandler(this.savePatientBtn_Click);
+            this.savePatientBtn.Click += new System.EventHandler(this.saveAppnmtntBtn_Click);
             // 
             // label9
             // 

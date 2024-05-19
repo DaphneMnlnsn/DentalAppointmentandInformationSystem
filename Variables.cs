@@ -13,6 +13,8 @@ namespace DentalAppointmentandInformationSystem
         private static int month, year;
         private static string day;
         private static string appointmentSelected;
+        private static string staffSelected;
+        private static string serviceSelected;
 
         public string getsetloggedIn
         {
@@ -48,6 +50,18 @@ namespace DentalAppointmentandInformationSystem
         {
             get { return appointmentSelected; }
             set { appointmentSelected = value; }
+        }
+
+        public string getsetstaffSelected
+        {
+            get { return staffSelected; }
+            set { staffSelected = value; }
+        }
+
+        public string getsetserviceSelected
+        {
+            get { return serviceSelected; }
+            set { serviceSelected = value; }
         }
     }
 }

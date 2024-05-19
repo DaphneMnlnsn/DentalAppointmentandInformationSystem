@@ -52,21 +52,24 @@ namespace DentalAppointmentandInformationSystem
             constring.Close();
             List<string> items = new List<string>()
             {
-                "Administrator", "Dentist", "Assistant"
+                "Dentist", "Assistant"
             };
             staffRoleCombo.DataSource = items;
         }
 
         private void saveStaffBtn_Click(object sender, EventArgs e)
         {
-            int staffID = 0;
+            int staffID = 0, staffPassNum = 0;
+            string staffPass = "";
             constring.Open();
-            SqlCommand cmd = new SqlCommand("SELECT TOP 1 employee_num FROM Staff ORDER BY employee_num DESC", constring);
+            SqlCommand cmd = new SqlCommand("SELECT TOP 1 employee_num, employee_role, employee_pass FROM Staff ORDER BY employee_num DESC", constring);
             SqlDataReader reader1;
             reader1 = cmd.ExecuteReader();
             if (reader1.Read())
             {
                 staffID = reader1.GetInt32(0) + 1;
+                staffPassNum = int.Parse(staffID.ToString()[2] + "" + staffID.ToString()[3] + "" + staffID.ToString()[4]) + 100;
+
             }
             else
             {
@@ -75,31 +78,96 @@ namespace DentalAppointmentandInformationSystem
             reader1.Close();
             cmd.Dispose();
 
+            if (staffRoleCombo.Text.Equals("Dentist"))
+            {
+                staffPass += "dentist";
+                staffPass += staffPassNum.ToString();
+            }
+            if (staffRoleCombo.Text.Equals("Assistant"))
+            {
+                staffPass += "assist";
+                staffPass += staffPassNum.ToString();
+            }
+
             String query = "INSERT INTO Staff VALUES('" + staffID + "','" + lnameTxtBox.Text + "','"
-                + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + ageTxtBox.Text + "','"
-                + (DateTime.Parse(birthDateTxtBox.Text).ToString("MM/dd/yyyy")) + "','" + phoneTxtBox.Text + ",)";
+                + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + phoneTxtBox.Text + "','" + ageTxtBox.Text + "','"
+                + (DateTime.Parse(birthDateTxtBox.Text).ToString("MM/dd/yyyy")) + "','" + staffRoleCombo.Text + "','" + staffPass + "');";
 
             SqlCommand cmd2 = new SqlCommand(query, constring);
             cmd2.CommandText = query;
             if (cmd2.ExecuteNonQuery() == 1)
             {
-                string sql = "SELECT * FROM Patient";
-                DataTable staffs = new DataTable("staffs");
-                SqlDataAdapter da = new SqlDataAdapter(sql, constring);
-                da.Fill(staffs);
-                System.Text.StringBuilder b = new System.Text.StringBuilder();
-                foreach (System.Data.DataRow r in staffs.Rows)
-                {
-                    foreach (System.Data.DataColumn c in staffs.Columns)
-                    {
-                        b.Append(c.ColumnName.ToString() + ":" + r[c.ColumnName].ToString());
-                    }
-                }
+                MessageBox.Show("Staff Member added!\nThe employee's credentials are:\nEmployee Number: " + staffID + "\nPassword: " + staffPass);
+                Staff staff = new Staff();
+                staff.Show();
+                this.Hide();
+
             }
             else
             {
                 MessageBox.Show("Something went wrong. Please try again.");
             }
+            constring.Close();
+        }
+
+        private void dashboardBtn_Click(object sender, EventArgs e)
+        {
+            Dashboard dshbrd = new Dashboard();
+            dshbrd.Show();
+            this.Hide();
+        }
+        private void apptclndrBtn_Click(object sender, EventArgs e)
+        {
+            Calendar cldr = new Calendar();
+            cldr.Show();
+            this.Hide();
+        }
+
+        private void ptntBtn_Click(object sender, EventArgs e)
+        {
+            Patients ptnt = new Patients();
+            ptnt.Show();
+            this.Hide();
+        }
+
+        private void staffBtn_Click(object sender, EventArgs e)
+        {
+            constring.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
+            SqlDataReader reader1;
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
+                {
+                    Staff stf = new Staff();
+                    stf.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("You do not have the authorization to open this!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
+            constring.Close();
+        }
+
+        private void servicesBtn_Click(object sender, EventArgs e)
+        {
+            Services srvcs = new Services();
+            srvcs.Show();
+            this.Hide();
+        }
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            v.getsetloggedIn = "";
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
     }
 }
