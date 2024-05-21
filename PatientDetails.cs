@@ -14,10 +14,11 @@ namespace DentalAppointmentandInformationSystem
     public partial class PatientDetails : Form
     {
         Variables v = new Variables();
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
+        SqlConnection constring;
         public PatientDetails()
         {
             InitializeComponent();
+            constring = v.getConnection;
         }
 
         private void PatientDetails_FormClosing(object sender, FormClosingEventArgs e)
@@ -27,6 +28,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void PatientDetails_Load(object sender, EventArgs e)
         {
+            editRecord1.Visible = false;
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             displayPatientDetails();
@@ -137,7 +139,7 @@ namespace DentalAppointmentandInformationSystem
                     recordsPrice = row2["price_billed"].ToString();
 
                     Record record = new Record();
-                    record.setPatientInfo(recordsDate, recordsTreat, recordsTooth, recordsPrice);
+                    record.setPatientInfo(row2["record_id"].ToString(), recordsDate, recordsTreat, recordsTooth, recordsPrice);
                     recordContainer.Controls.Add(record);
                 }
             }
@@ -179,6 +181,12 @@ namespace DentalAppointmentandInformationSystem
             this.Hide();
         }
 
+        public void editVisible()
+        {
+            editRecord1.Visible = true;
+            editRecord1.setValues();
+        }
+
         private void deletePtnt_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this patient? \nAll records of the patient will be deleted!", "Confirm Delete", MessageBoxButtons.YesNo);
@@ -203,6 +211,7 @@ namespace DentalAppointmentandInformationSystem
                 if (cmd4.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Patient Deleted Successfully!");
+                    constring.Close();
                     Patients ptnt = new Patients();
                     ptnt.Show();
                     this.Hide();
@@ -211,7 +220,6 @@ namespace DentalAppointmentandInformationSystem
                 {
                     MessageBox.Show("DATA NOT DELETED SUCCESSFULLY");
                 }
-                constring.Close();
             }
         }
     }

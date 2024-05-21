@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,9 @@ namespace DentalAppointmentandInformationSystem
         private static string appointmentSelected;
         private static string staffSelected;
         private static string serviceSelected;
+        private static string recordSelected;
+        private static SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
+
 
         public string getsetloggedIn
         {
@@ -62,6 +67,17 @@ namespace DentalAppointmentandInformationSystem
         {
             get { return serviceSelected; }
             set { serviceSelected = value; }
+        }
+
+        public string getsetrecordSelected
+        {
+            get { return recordSelected; }
+            set { recordSelected = value; }
+        }
+
+        public SqlConnection getConnection
+        {
+            get { return constring; }
         }
     }
 }

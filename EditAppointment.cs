@@ -16,10 +16,11 @@ namespace DentalAppointmentandInformationSystem
     public partial class EditAppointment : Form
     {
         Variables v = new Variables();
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
+        SqlConnection constring;
         public EditAppointment()
         {
             InitializeComponent();
+            constring = v.getConnection;
         }
 
         private void EditAppointment_FormClosing(object sender, FormClosingEventArgs e)
@@ -278,13 +279,14 @@ namespace DentalAppointmentandInformationSystem
                 "', employee_num = '" + staff1Combo.SelectedValue.ToString() + "', employee_num2 = " + staff2 +
                 ", employee_num3 = " + staff3 + ", service_id = '" + service1Combo.SelectedValue.ToString() +
                 "', service_id2 = " + service2 + ", service_id3 = " + service3 + ", appointment_notes = '" +
-                notesTxtBox.Text + " WHERE appointment_id = '" + v.getsetappointmentSelected + "';";
+                notesTxtBox.Text + "' WHERE appointment_id = '" + v.getsetappointmentSelected + "';";
 
                 SqlCommand cmd3 = new SqlCommand(query2, constring);
                 cmd3.CommandText = query2;
                 if (cmd3.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Changes Saved!");
+                    constring.Close();
                     Calendar clndr = new Calendar();
                     clndr.Show();
                     this.Hide();
@@ -293,8 +295,6 @@ namespace DentalAppointmentandInformationSystem
                 {
                     MessageBox.Show("Something went wrong. Please try again.");
                 }
-            
-            constring.Close();
         }
 
         private void setStaff1Combo()

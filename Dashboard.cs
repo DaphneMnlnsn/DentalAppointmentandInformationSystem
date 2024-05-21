@@ -17,11 +17,12 @@ namespace DentalAppointmentandInformationSystem
 {
     public partial class Dashboard : Form
     {
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
         Variables v = new Variables();
+        SqlConnection constring;
         public Dashboard()
         {
             InitializeComponent();
+            constring = v.getConnection;
         }
         private void Dashboard_Load(object sender, EventArgs e)
         {

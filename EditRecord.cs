@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace DentalAppointmentandInformationSystem
 {
-    public partial class EditService : UserControl
+    public partial class EditRecord : UserControl
     {
         Variables v = new Variables();
         SqlConnection constring;
 
-        public EditService()
+        public EditRecord()
         {
             InitializeComponent();
             constring = v.getConnection;
@@ -24,15 +24,15 @@ namespace DentalAppointmentandInformationSystem
 
         private void EditService_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void saveSrvcBtn_Click(object sender, EventArgs e)
         {
             constring.Open();
 
-            string query2 = "UPDATE Service SET service_name = '" + srvcNameTxtBox.Text +
-                "', service_price = '" + srvcPriceTxtBox.Text + "' WHERE service_id = '" + v.getsetserviceSelected + "';";
+            string query2 = "UPDATE Record SET teeth_treated = '" + teethTrtdTxtBox.Text +
+                "', price_billed = '" + priceBilledTxtBox.Text + "' WHERE record_id = '" + v.getsetrecordSelected + "';";
 
             SqlCommand cmd3 = new SqlCommand(query2, constring);
             cmd3.CommandText = query2;
@@ -42,8 +42,8 @@ namespace DentalAppointmentandInformationSystem
                 this.Visible = false;
                 this.ParentForm.Hide();
                 constring.Close();
-                Services srvc = new Services();
-                srvc.Show();
+                PatientDetails ptntDetails = new PatientDetails();
+                ptntDetails.Show();
             }
             else
             {
@@ -59,14 +59,14 @@ namespace DentalAppointmentandInformationSystem
         public void setValues()
         {
             constring.Open();
-            string query = "SELECT * FROM Service WHERE service_id =" + int.Parse(v.getsetserviceSelected);
+            string query = "SELECT * FROM Record WHERE record_id =" + int.Parse(v.getsetrecordSelected);
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
             foreach (DataRow row in dt.Rows)
             {
-                srvcNameTxtBox.Text = row["service_name"].ToString();
-                srvcPriceTxtBox.Text = row["service_price"].ToString();
+                teethTrtdTxtBox.Text = row["teeth_treated"].ToString();
+                priceBilledTxtBox.Text = row["price_billed"].ToString();
             }
             constring.Close();
         }

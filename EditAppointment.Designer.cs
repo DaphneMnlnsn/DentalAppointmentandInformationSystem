@@ -461,7 +461,7 @@
             this.savePatientBtn.Name = "savePatientBtn";
             this.savePatientBtn.Size = new System.Drawing.Size(218, 52);
             this.savePatientBtn.TabIndex = 35;
-            this.savePatientBtn.Text = "Set Appointment";
+            this.savePatientBtn.Text = "Save Changes";
             this.savePatientBtn.UseVisualStyleBackColor = false;
             this.savePatientBtn.Click += new System.EventHandler(this.saveAppnmtntBtn_Click);
             // 

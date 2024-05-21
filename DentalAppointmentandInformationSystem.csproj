@@ -132,6 +132,12 @@
     <Compile Include="EditPatient.Designer.cs">
       <DependentUpon>EditPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditRecord.Designer.cs">
+      <DependentUpon>EditRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditService.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditPatient.resx">
       <DependentUpon>EditPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRecord.resx">
+      <DependentUpon>EditRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditService.resx">
       <DependentUpon>EditService.cs</DependentUpon>

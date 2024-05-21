@@ -16,9 +16,11 @@ namespace DentalAppointmentandInformationSystem
     public partial class DashboardDaysNotBlank : UserControl
     {
         Variables v = new Variables();
+        SqlConnection constring;
         public DashboardDaysNotBlank()
         {
             InitializeComponent();
+            constring = v.getConnection;
         }
 
         private void DashboardDaysNotBlank_Load(object sender, EventArgs e)
@@ -32,7 +34,6 @@ namespace DentalAppointmentandInformationSystem
         }
         private void displayAppointment()
         {
-            SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
             constring.Open();
             String sql = "SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + dayLbl.Text + "'";
             SqlCommand cmd = constring.CreateCommand();

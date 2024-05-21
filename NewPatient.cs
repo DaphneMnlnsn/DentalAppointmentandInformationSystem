@@ -17,11 +17,12 @@ namespace DentalAppointmentandInformationSystem
         byte[] bytes;
         string fileName;
         Variables v = new Variables();
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
+        SqlConnection constring;
 
         public NewPatient()
         {
             InitializeComponent();
+            constring = v.getConnection;
         }
         private void NewPatient_Load(object sender, EventArgs e)
         {

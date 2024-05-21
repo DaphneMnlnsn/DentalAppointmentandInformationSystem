@@ -14,14 +14,16 @@ namespace DentalAppointmentandInformationSystem
 {
     public partial class Services : Form
     {
+        Variables v = new Variables();
+        SqlConnection constring;
+
         public Services()
         {
             InitializeComponent();
+            constring = v.getConnection;
         }
 
-        Variables v = new Variables();
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
-
+        
         private void Services_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();

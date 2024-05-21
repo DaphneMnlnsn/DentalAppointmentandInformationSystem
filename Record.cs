@@ -14,19 +14,27 @@ namespace DentalAppointmentandInformationSystem
     public partial class Record : UserControl
     {
         Variables v = new Variables();
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
-
+        string recordID;
         public Record()
         {
             InitializeComponent();
         }
 
-        public void setPatientInfo(string recordDate, string recordsTreat, string recordsTooth, string recordsPrice)
-        { 
+        public void setPatientInfo(string recordID, string recordDate, string recordsTreat, string recordsTooth, string recordsPrice)
+        {
+            this.recordID = recordID;
             records_date.Text = recordDate;
             records_treat.Text = recordsTreat;
             records_tooth.Text = recordsTooth;
             records_price.Text = recordsPrice;
+        }
+
+        private void Record_Click(object sender, EventArgs e)
+        {
+            v.getsetrecordSelected = recordID;
+            PatientDetails mainForm;
+            mainForm = (PatientDetails)this.FindForm();
+            mainForm.editVisible();
         }
     }
 }

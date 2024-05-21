@@ -16,11 +16,12 @@ namespace DentalAppointmentandInformationSystem
     public partial class ServicesList : UserControl
     {
         Variables v = new Variables();
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
+        SqlConnection constring;
 
         public ServicesList()
         {
             InitializeComponent();
+            constring = v.getConnection;
         }
 
         private void ServicesList_Load(object sender, EventArgs e)

@@ -14,11 +14,12 @@ namespace DentalAppointmentandInformationSystem
     public partial class AddService : UserControl
     {
         Variables v = new Variables();
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
+        SqlConnection constring;
 
         public AddService()
         {
             InitializeComponent();
+            constring = v.getConnection;
         }
 
 
@@ -54,7 +55,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("Service added successfully!");
                 this.Visible = false;
-                this.Parent.Hide();
+                this.ParentForm.Hide();
                 Services srvc = new Services();
                 srvc.Show();
             }

@@ -16,12 +16,14 @@ using DentalAppointmentandInformationSystem;
 namespace DentalAppointmentandInformationSystem
 {
     public partial class Login : Form
-    {            
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
+    {
+        Variables v = new Variables();
+        SqlConnection constring;
 
         public Login()
         {
             InitializeComponent();
+            constring = v.getConnection;
         }
 
         private void Login_Load(object sender, EventArgs e)

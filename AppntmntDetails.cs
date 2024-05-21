@@ -16,11 +16,12 @@ namespace DentalAppointmentandInformationSystem
     public partial class AppntmntDetails : Form
     {
         Variables v = new Variables();
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
+        SqlConnection constring;
 
         public AppntmntDetails()
         {
             InitializeComponent();
+            constring = v.getConnection;
         }
 
         private void AppntmntDetails_FormClosing(object sender, FormClosingEventArgs e)

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.deletePtnt = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.doctorPic = new System.Windows.Forms.PictureBox();
             this.dshbrdLbl = new System.Windows.Forms.Label();
@@ -58,13 +59,13 @@
             this.servicesBtn = new System.Windows.Forms.PictureBox();
             this.staffBtn = new System.Windows.Forms.PictureBox();
             this.patientsBtn = new System.Windows.Forms.PictureBox();
-            this.deletePtnt = new System.Windows.Forms.Button();
             this.historyContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.editRecord1 = new DentalAppointmentandInformationSystem.EditRecord();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
@@ -94,6 +95,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1534, 97);
             this.panel2.TabIndex = 71;
+            // 
+            // deletePtnt
+            // 
+            this.deletePtnt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.deletePtnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.deletePtnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deletePtnt.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletePtnt.ForeColor = System.Drawing.SystemColors.Control;
+            this.deletePtnt.Location = new System.Drawing.Point(911, 26);
+            this.deletePtnt.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.deletePtnt.Name = "deletePtnt";
+            this.deletePtnt.Size = new System.Drawing.Size(224, 48);
+            this.deletePtnt.TabIndex = 9;
+            this.deletePtnt.Text = "Delete Patient";
+            this.deletePtnt.UseVisualStyleBackColor = false;
+            this.deletePtnt.Click += new System.EventHandler(this.deletePtnt_Click);
             // 
             // pictureBox5
             // 
@@ -146,6 +164,7 @@
             this.editPatientBtn.TabIndex = 1;
             this.editPatientBtn.Text = "Edit Patient";
             this.editPatientBtn.UseVisualStyleBackColor = false;
+            this.editPatientBtn.Click += new System.EventHandler(this.editPatientBtn_Click);
             // 
             // patientLV
             // 
@@ -296,7 +315,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.99722F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.00278F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 218F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
             this.tableLayoutPanel2.Controls.Add(this.label4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
@@ -315,10 +334,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(934, 1);
+            this.label4.Location = new System.Drawing.Point(928, 1);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 61);
+            this.label4.Size = new System.Drawing.Size(217, 61);
             this.label4.TabIndex = 3;
             this.label4.Text = "PRICE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -329,7 +348,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(714, 1);
+            this.label3.Location = new System.Drawing.Point(708, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(211, 61);
@@ -343,10 +362,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(282, 1);
+            this.label2.Location = new System.Drawing.Point(279, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(423, 61);
+            this.label2.Size = new System.Drawing.Size(420, 61);
             this.label2.TabIndex = 1;
             this.label2.Text = "TREATMENT";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -360,7 +379,7 @@
             this.label1.Location = new System.Drawing.Point(5, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 61);
+            this.label1.Size = new System.Drawing.Size(265, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "DATE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -470,23 +489,6 @@
             this.patientsBtn.TabStop = false;
             this.patientsBtn.Click += new System.EventHandler(this.patientsBtn_Click);
             // 
-            // deletePtnt
-            // 
-            this.deletePtnt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.deletePtnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.deletePtnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deletePtnt.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deletePtnt.ForeColor = System.Drawing.SystemColors.Control;
-            this.deletePtnt.Location = new System.Drawing.Point(911, 26);
-            this.deletePtnt.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.deletePtnt.Name = "deletePtnt";
-            this.deletePtnt.Size = new System.Drawing.Size(224, 48);
-            this.deletePtnt.TabIndex = 9;
-            this.deletePtnt.Text = "Delete Patient";
-            this.deletePtnt.UseVisualStyleBackColor = false;
-            this.deletePtnt.Click += new System.EventHandler(this.deletePtnt_Click);
-            // 
             // historyContainer
             // 
             this.historyContainer.AutoScroll = true;
@@ -513,7 +515,7 @@
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.00278F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 575F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 578F));
             this.tableLayoutPanel3.Controls.Add(this.label7, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(190, 610);
@@ -530,10 +532,10 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(578, 1);
+            this.label7.Location = new System.Drawing.Point(575, 1);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(567, 61);
+            this.label7.Size = new System.Drawing.Size(570, 61);
             this.label7.TabIndex = 3;
             this.label7.Text = "DENTIST";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -547,7 +549,7 @@
             this.label9.Location = new System.Drawing.Point(5, 1);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(564, 61);
+            this.label9.Size = new System.Drawing.Size(561, 61);
             this.label9.TabIndex = 1;
             this.label9.Text = "TREATMENT";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -563,6 +565,13 @@
             this.label11.TabIndex = 91;
             this.label11.Text = "Medical History";
             // 
+            // editRecord1
+            // 
+            this.editRecord1.Location = new System.Drawing.Point(342, 333);
+            this.editRecord1.Name = "editRecord1";
+            this.editRecord1.Size = new System.Drawing.Size(998, 298);
+            this.editRecord1.TabIndex = 92;
+            // 
             // PatientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -570,6 +579,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1534, 911);
+            this.Controls.Add(this.editRecord1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.historyContainer);
             this.Controls.Add(this.label6);
@@ -647,5 +657,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
+        private EditRecord editRecord1;
     }
 }
