@@ -35,6 +35,7 @@
             this.patientGender = new System.Windows.Forms.Label();
             this.patientContact = new System.Windows.Forms.Label();
             this.patientLastVisit = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1322, 90);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1322, 85);
             this.tableLayoutPanel2.TabIndex = 92;
             this.tableLayoutPanel2.Click += new System.EventHandler(this.patientDetails_Click);
             // 
@@ -69,7 +70,7 @@
             this.patientName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.patientName.AutoSize = true;
             this.patientName.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.patientName.Location = new System.Drawing.Point(354, 33);
+            this.patientName.Location = new System.Drawing.Point(354, 30);
             this.patientName.Name = "patientName";
             this.patientName.Size = new System.Drawing.Size(104, 24);
             this.patientName.TabIndex = 80;
@@ -82,7 +83,7 @@
             this.patientId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.patientId.AutoSize = true;
             this.patientId.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.patientId.Location = new System.Drawing.Point(6, 33);
+            this.patientId.Location = new System.Drawing.Point(6, 30);
             this.patientId.Name = "patientId";
             this.patientId.Size = new System.Drawing.Size(104, 24);
             this.patientId.TabIndex = 77;
@@ -95,7 +96,7 @@
             this.patientAge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.patientAge.AutoSize = true;
             this.patientAge.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.patientAge.Location = new System.Drawing.Point(717, 33);
+            this.patientAge.Location = new System.Drawing.Point(717, 30);
             this.patientAge.Name = "patientAge";
             this.patientAge.Size = new System.Drawing.Size(49, 24);
             this.patientAge.TabIndex = 78;
@@ -108,7 +109,7 @@
             this.patientGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.patientGender.AutoSize = true;
             this.patientGender.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.patientGender.Location = new System.Drawing.Point(829, 33);
+            this.patientGender.Location = new System.Drawing.Point(829, 30);
             this.patientGender.Name = "patientGender";
             this.patientGender.Size = new System.Drawing.Size(82, 24);
             this.patientGender.TabIndex = 79;
@@ -121,7 +122,7 @@
             this.patientContact.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.patientContact.AutoSize = true;
             this.patientContact.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.patientContact.Location = new System.Drawing.Point(1189, 33);
+            this.patientContact.Location = new System.Drawing.Point(1189, 30);
             this.patientContact.Name = "patientContact";
             this.patientContact.Size = new System.Drawing.Size(88, 24);
             this.patientContact.TabIndex = 82;
@@ -134,7 +135,7 @@
             this.patientLastVisit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.patientLastVisit.AutoSize = true;
             this.patientLastVisit.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.patientLastVisit.Location = new System.Drawing.Point(999, 33);
+            this.patientLastVisit.Location = new System.Drawing.Point(999, 30);
             this.patientLastVisit.Name = "patientLastVisit";
             this.patientLastVisit.Size = new System.Drawing.Size(99, 24);
             this.patientLastVisit.TabIndex = 83;
@@ -142,11 +143,20 @@
             this.patientLastVisit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.patientLastVisit.Click += new System.EventHandler(this.patientDetails_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(-5, 87);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1341, 74);
+            this.panel1.TabIndex = 93;
+            // 
             // PatientsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "PatientsList";
             this.Size = new System.Drawing.Size(1322, 90);
@@ -165,5 +175,6 @@
         private System.Windows.Forms.Label patientGender;
         private System.Windows.Forms.Label patientContact;
         private System.Windows.Forms.Label patientLastVisit;
+        private System.Windows.Forms.Panel panel1;
     }
 }

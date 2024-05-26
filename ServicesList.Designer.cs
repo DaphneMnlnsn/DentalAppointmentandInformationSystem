@@ -34,6 +34,7 @@
             this.serviceID = new System.Windows.Forms.Label();
             this.editBtn = new System.Windows.Forms.PictureBox();
             this.deleteBtn = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteBtn)).BeginInit();
@@ -41,7 +42,7 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel2.ColumnCount = 5;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 513F));
@@ -58,7 +59,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1150, 69);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1150, 64);
             this.tableLayoutPanel2.TabIndex = 85;
             // 
             // servicePrice
@@ -66,7 +67,7 @@
             this.servicePrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.servicePrice.AutoSize = true;
             this.servicePrice.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.servicePrice.Location = new System.Drawing.Point(723, 19);
+            this.servicePrice.Location = new System.Drawing.Point(723, 16);
             this.servicePrice.Name = "servicePrice";
             this.servicePrice.Size = new System.Drawing.Size(178, 31);
             this.servicePrice.TabIndex = 79;
@@ -77,7 +78,7 @@
             this.serviceName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.serviceName.AutoSize = true;
             this.serviceName.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.serviceName.Location = new System.Drawing.Point(317, 19);
+            this.serviceName.Location = new System.Drawing.Point(317, 16);
             this.serviceName.Name = "serviceName";
             this.serviceName.Size = new System.Drawing.Size(186, 31);
             this.serviceName.TabIndex = 78;
@@ -88,7 +89,7 @@
             this.serviceID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.serviceID.AutoSize = true;
             this.serviceID.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.serviceID.Location = new System.Drawing.Point(7, 19);
+            this.serviceID.Location = new System.Drawing.Point(7, 16);
             this.serviceID.Name = "serviceID";
             this.serviceID.Size = new System.Drawing.Size(140, 31);
             this.serviceID.TabIndex = 77;
@@ -98,7 +99,7 @@
             // 
             this.editBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.editBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.edit;
-            this.editBtn.Location = new System.Drawing.Point(985, 12);
+            this.editBtn.Location = new System.Drawing.Point(985, 9);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(50, 45);
             this.editBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +111,7 @@
             // 
             this.deleteBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.deleteBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.delete;
-            this.deleteBtn.Location = new System.Drawing.Point(1081, 12);
+            this.deleteBtn.Location = new System.Drawing.Point(1081, 9);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(50, 45);
             this.deleteBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,10 +119,19 @@
             this.deleteBtn.TabStop = false;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(-10, 68);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1178, 74);
+            this.panel1.TabIndex = 95;
+            // 
             // ServicesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ServicesList";
@@ -143,5 +153,6 @@
         private System.Windows.Forms.Label serviceID;
         private System.Windows.Forms.PictureBox editBtn;
         private System.Windows.Forms.PictureBox deleteBtn;
+        private System.Windows.Forms.Panel panel1;
     }
 }

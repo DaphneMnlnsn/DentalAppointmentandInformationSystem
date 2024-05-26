@@ -36,12 +36,13 @@
             this.staffRole = new System.Windows.Forms.Label();
             this.contactNum = new System.Windows.Forms.Label();
             this.passwordLbl = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel2.ColumnCount = 7;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 386F));
@@ -62,7 +63,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1322, 91);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1322, 85);
             this.tableLayoutPanel2.TabIndex = 89;
             this.tableLayoutPanel2.Click += new System.EventHandler(this.editStaff_Click);
             // 
@@ -71,7 +72,7 @@
             this.fullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fullName.AutoSize = true;
             this.fullName.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.fullName.Location = new System.Drawing.Point(291, 33);
+            this.fullName.Location = new System.Drawing.Point(291, 30);
             this.fullName.Name = "fullName";
             this.fullName.Size = new System.Drawing.Size(104, 24);
             this.fullName.TabIndex = 80;
@@ -84,7 +85,7 @@
             this.employeeNum.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.employeeNum.AutoSize = true;
             this.employeeNum.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.employeeNum.Location = new System.Drawing.Point(3, 33);
+            this.employeeNum.Location = new System.Drawing.Point(3, 30);
             this.employeeNum.Name = "employeeNum";
             this.employeeNum.Size = new System.Drawing.Size(144, 24);
             this.employeeNum.TabIndex = 77;
@@ -97,7 +98,7 @@
             this.ageLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ageLbl.AutoSize = true;
             this.ageLbl.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.ageLbl.Location = new System.Drawing.Point(550, 33);
+            this.ageLbl.Location = new System.Drawing.Point(550, 30);
             this.ageLbl.Name = "ageLbl";
             this.ageLbl.Size = new System.Drawing.Size(49, 24);
             this.ageLbl.TabIndex = 78;
@@ -110,7 +111,7 @@
             this.birthDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.birthDate.AutoSize = true;
             this.birthDate.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.birthDate.Location = new System.Drawing.Point(646, 33);
+            this.birthDate.Location = new System.Drawing.Point(646, 30);
             this.birthDate.Name = "birthDate";
             this.birthDate.Size = new System.Drawing.Size(101, 24);
             this.birthDate.TabIndex = 79;
@@ -123,7 +124,7 @@
             this.staffRole.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.staffRole.AutoSize = true;
             this.staffRole.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.staffRole.Location = new System.Drawing.Point(818, 33);
+            this.staffRole.Location = new System.Drawing.Point(818, 30);
             this.staffRole.Name = "staffRole";
             this.staffRole.Size = new System.Drawing.Size(105, 24);
             this.staffRole.TabIndex = 81;
@@ -136,7 +137,7 @@
             this.contactNum.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.contactNum.AutoSize = true;
             this.contactNum.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.contactNum.Location = new System.Drawing.Point(1007, 33);
+            this.contactNum.Location = new System.Drawing.Point(1007, 30);
             this.contactNum.Name = "contactNum";
             this.contactNum.Size = new System.Drawing.Size(88, 24);
             this.contactNum.TabIndex = 82;
@@ -149,7 +150,7 @@
             this.passwordLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordLbl.AutoSize = true;
             this.passwordLbl.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.passwordLbl.Location = new System.Drawing.Point(1178, 33);
+            this.passwordLbl.Location = new System.Drawing.Point(1178, 30);
             this.passwordLbl.Name = "passwordLbl";
             this.passwordLbl.Size = new System.Drawing.Size(106, 24);
             this.passwordLbl.TabIndex = 83;
@@ -157,10 +158,19 @@
             this.passwordLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.passwordLbl.Click += new System.EventHandler(this.editStaff_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(-10, 87);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1346, 74);
+            this.panel1.TabIndex = 94;
+            // 
             // StaffList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "StaffList";
             this.Size = new System.Drawing.Size(1322, 90);
@@ -180,5 +190,6 @@
         private System.Windows.Forms.Label staffRole;
         private System.Windows.Forms.Label contactNum;
         private System.Windows.Forms.Label passwordLbl;
+        private System.Windows.Forms.Panel panel1;
     }
 }
