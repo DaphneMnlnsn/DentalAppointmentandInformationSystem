@@ -29,25 +29,32 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveSrvcBtn_Click(object sender, EventArgs e)
         {
-            constring.Open();
-
-            string query2 = "UPDATE Service SET service_name = '" + srvcNameTxtBox.Text +
-                "', service_price = '" + srvcPriceTxtBox.Text + "' WHERE service_id = '" + v.getsetserviceSelected + "';";
-
-            SqlCommand cmd3 = new SqlCommand(query2, constring);
-            cmd3.CommandText = query2;
-            if (cmd3.ExecuteNonQuery() == 1)
+            if (!string.IsNullOrWhiteSpace(srvcNameTxtBox.Text) && !string.IsNullOrWhiteSpace(srvcPriceTxtBox.Text))
             {
-                MessageBox.Show("Changes Saved!");
-                this.Visible = false;
-                this.ParentForm.Hide();
-                constring.Close();
-                Services srvc = new Services();
-                srvc.Show();
+                constring.Open();
+
+                string query2 = "UPDATE Service SET service_name = '" + srvcNameTxtBox.Text +
+                    "', service_price = '" + srvcPriceTxtBox.Text + "' WHERE service_id = '" + v.getsetserviceSelected + "';";
+
+                SqlCommand cmd3 = new SqlCommand(query2, constring);
+                cmd3.CommandText = query2;
+                if (cmd3.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Changes Saved!");
+                    this.Visible = false;
+                    this.ParentForm.Hide();
+                    constring.Close();
+                    Services srvc = new Services();
+                    srvc.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong. Please try again.");
+                }
             }
             else
             {
-                MessageBox.Show("Something went wrong. Please try again.");
+                MessageBox.Show("Please fill out all required fields!");
             }
         }
 

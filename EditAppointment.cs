@@ -239,64 +239,73 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveAppnmtntBtn_Click(object sender, EventArgs e)
         {
-            constring.Open();
-            string staff2, staff3, service2, service3;
-            if (service2Combo.Text == null || service2Combo.Text == "")
+            if (!string.IsNullOrWhiteSpace(service1Combo.Text) &&
+                !string.IsNullOrWhiteSpace(staff1Combo.Text))
             {
-                service2 = "NULL";
-            }
-            else
-            {
-                service2 = service2Combo.SelectedValue.ToString();
-            }
-
-            if (service3Combo.Text == null || service3Combo.Text == "")
-            {
-                service3 = "NULL";
-            }
-            else
-            {
-                service3 = service3Combo.SelectedValue.ToString();
-            }
-            if (staff2Combo.Text == null || staff2Combo.Text == "")
-            {
-                staff2 = "NULL";
-            }
-            else
-            {
-                staff2 = staff2Combo.SelectedValue.ToString();
-            }
-
-            if (staff3Combo.Text == null || staff3Combo.Text == "")
-            {
-                staff3 = "NULL";
-            }
-            else
-            {
-                staff3 = staff3Combo.SelectedValue.ToString();
-            }
-
-            string query2 = "UPDATE Appointment SET appointment_date = '" + appntmntDate.Text +
-                "', appointment_startTime = '" + startTime.Text + "', appointment_endTime = '" + endTime.Text +
-                "', employee_num = '" + staff1Combo.SelectedValue.ToString() + "', employee_num2 = " + staff2 +
-                ", employee_num3 = " + staff3 + ", service_id = '" + service1Combo.SelectedValue.ToString() +
-                "', service_id2 = " + service2 + ", service_id3 = " + service3 + ", appointment_notes = '" +
-                notesTxtBox.Text + "' WHERE appointment_id = '" + v.getsetappointmentSelected + "';";
-
-                SqlCommand cmd3 = new SqlCommand(query2, constring);
-                cmd3.CommandText = query2;
-                if (cmd3.ExecuteNonQuery() == 1)
+                constring.Open();
+                string staff2, staff3, service2, service3;
+                if (service2Combo.Text == null || service2Combo.Text == "")
                 {
-                    MessageBox.Show("Changes Saved!");
-                    constring.Close();
-                    Calendar clndr = new Calendar();
-                    clndr.Show();
-                    this.Hide();
+                    service2 = "NULL";
                 }
                 else
                 {
-                    MessageBox.Show("Something went wrong. Please try again.");
+                    service2 = service2Combo.SelectedValue.ToString();
                 }
+
+                if (service3Combo.Text == null || service3Combo.Text == "")
+                {
+                    service3 = "NULL";
+                }
+                else
+                {
+                    service3 = service3Combo.SelectedValue.ToString();
+                }
+                if (staff2Combo.Text == null || staff2Combo.Text == "")
+                {
+                    staff2 = "NULL";
+                }
+                else
+                {
+                    staff2 = staff2Combo.SelectedValue.ToString();
+                }
+
+                if (staff3Combo.Text == null || staff3Combo.Text == "")
+                {
+                    staff3 = "NULL";
+                }
+                else
+                {
+                    staff3 = staff3Combo.SelectedValue.ToString();
+                }
+
+                string query2 = "UPDATE Appointment SET appointment_date = '" + appntmntDate.Text +
+                    "', appointment_startTime = '" + startTime.Text + "', appointment_endTime = '" + endTime.Text +
+                    "', employee_num = '" + staff1Combo.SelectedValue.ToString() + "', employee_num2 = " + staff2 +
+                    ", employee_num3 = " + staff3 + ", service_id = '" + service1Combo.SelectedValue.ToString() +
+                    "', service_id2 = " + service2 + ", service_id3 = " + service3 + ", appointment_notes = '" +
+                    notesTxtBox.Text + "' WHERE appointment_id = '" + v.getsetappointmentSelected + "';";
+
+                    SqlCommand cmd3 = new SqlCommand(query2, constring);
+                    cmd3.CommandText = query2;
+                    if (cmd3.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Changes Saved!");
+                        constring.Close();
+                        Calendar clndr = new Calendar();
+                        clndr.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something went wrong. Please try again.");
+                    }
+            }
+            else
+            {
+                MessageBox.Show("Please fill out all required fields!");
+            }
+
         }
 
         private void setStaff1Combo()

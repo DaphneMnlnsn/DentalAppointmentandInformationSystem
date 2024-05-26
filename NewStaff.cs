@@ -60,55 +60,63 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveStaffBtn_Click(object sender, EventArgs e)
         {
-            int staffID = 0, staffPassNum = 0;
-            string staffPass = "";
-            constring.Open();
-            SqlCommand cmd = new SqlCommand("SELECT TOP 1 employee_num, employee_role, employee_pass FROM Staff ORDER BY employee_num DESC", constring);
-            SqlDataReader reader1;
-            reader1 = cmd.ExecuteReader();
-            if (reader1.Read())
+            if(!string.IsNullOrWhiteSpace(fnameTxtBox.Text) && !string.IsNullOrWhiteSpace(lnameTxtBox.Text) &&
+                !string.IsNullOrWhiteSpace(phoneTxtBox.Text) && !string.IsNullOrWhiteSpace(ageTxtBox.Text))
             {
-                staffID = reader1.GetInt32(0) + 1;
-                staffPassNum = int.Parse(staffID.ToString()[2] + "" + staffID.ToString()[3] + "" + staffID.ToString()[4]) + 100;
+                int staffID = 0, staffPassNum = 0;
+                string staffPass = "";
+                constring.Open();
+                SqlCommand cmd = new SqlCommand("SELECT TOP 1 employee_num, employee_role, employee_pass FROM Staff ORDER BY employee_num DESC", constring);
+                SqlDataReader reader1;
+                reader1 = cmd.ExecuteReader();
+                if (reader1.Read())
+                {
+                    staffID = reader1.GetInt32(0) + 1;
+                    staffPassNum = int.Parse(staffID.ToString()[2] + "" + staffID.ToString()[3] + "" + staffID.ToString()[4]) + 100;
 
+                }
+                else
+                {
+                    MessageBox.Show("NO DATA FOUND");
+                }
+                reader1.Close();
+                cmd.Dispose();
+
+                if (staffRoleCombo.Text.Equals("Dentist"))
+                {
+                    staffPass += "dentist";
+                    staffPass += staffPassNum.ToString();
+                }
+                if (staffRoleCombo.Text.Equals("Assistant"))
+                {
+                    staffPass += "assist";
+                    staffPass += staffPassNum.ToString();
+                }
+
+                String query = "INSERT INTO Staff VALUES('" + staffID + "','" + lnameTxtBox.Text + "','"
+                    + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + phoneTxtBox.Text + "','" + ageTxtBox.Text + "','"
+                    + (DateTime.Parse(birthDateTxtBox.Text).ToString("MM/dd/yyyy")) + "','" + staffRoleCombo.Text + "','" + staffPass + "');";
+
+                SqlCommand cmd2 = new SqlCommand(query, constring);
+                cmd2.CommandText = query;
+                if (cmd2.ExecuteNonQuery() == 1)
+                {
+                    constring.Close();
+                    MessageBox.Show("Staff Member added!\nThe employee's credentials are:\nEmployee Number: " + staffID + "\nPassword: " + staffPass);
+                    Staff staff = new Staff();
+                    staff.Show();
+                    this.Hide();
+
+                }
+                else
+                {
+                    constring.Close();
+                    MessageBox.Show("Something went wrong. Please try again.");
+                }
             }
             else
             {
-                MessageBox.Show("NO DATA FOUND");
-            }
-            reader1.Close();
-            cmd.Dispose();
-
-            if (staffRoleCombo.Text.Equals("Dentist"))
-            {
-                staffPass += "dentist";
-                staffPass += staffPassNum.ToString();
-            }
-            if (staffRoleCombo.Text.Equals("Assistant"))
-            {
-                staffPass += "assist";
-                staffPass += staffPassNum.ToString();
-            }
-
-            String query = "INSERT INTO Staff VALUES('" + staffID + "','" + lnameTxtBox.Text + "','"
-                + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + phoneTxtBox.Text + "','" + ageTxtBox.Text + "','"
-                + (DateTime.Parse(birthDateTxtBox.Text).ToString("MM/dd/yyyy")) + "','" + staffRoleCombo.Text + "','" + staffPass + "');";
-
-            SqlCommand cmd2 = new SqlCommand(query, constring);
-            cmd2.CommandText = query;
-            if (cmd2.ExecuteNonQuery() == 1)
-            {
-                constring.Close();
-                MessageBox.Show("Staff Member added!\nThe employee's credentials are:\nEmployee Number: " + staffID + "\nPassword: " + staffPass);
-                Staff staff = new Staff();
-                staff.Show();
-                this.Hide();
-
-            }
-            else
-            {
-                constring.Close();
-                MessageBox.Show("Something went wrong. Please try again.");
+                MessageBox.Show("Please fill out all required fields!");
             }
         }
 

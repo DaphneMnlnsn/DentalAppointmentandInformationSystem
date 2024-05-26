@@ -138,27 +138,35 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveStaffBtn_Click(object sender, EventArgs e)
         {
-            constring.Open();
-
-            string query2 = "UPDATE Staff SET employee_fname = '" + fnameTxtBox.Text +
-                "', employee_mname = '" + mnameTxtBox.Text + "', employee_lname = '" + lnameTxtBox.Text +
-                "', employee_contact = '" + phoneTxtBox.Text + "', employee_bdate = '" +
-                birthDateTxtBox.Text + "', employee_age = '" + ageTxtBox.Text + "', employee_pass = '" + passTxtBox.Text +
-                "' WHERE employee_num = '" + v.getsetstaffSelected + "';";
-
-            SqlCommand cmd3 = new SqlCommand(query2, constring);
-            cmd3.CommandText = query2;
-            if (cmd3.ExecuteNonQuery() == 1)
+            if (!string.IsNullOrWhiteSpace(fnameTxtBox.Text) && !string.IsNullOrWhiteSpace(lnameTxtBox.Text) &&
+                !string.IsNullOrWhiteSpace(phoneTxtBox.Text) && !string.IsNullOrWhiteSpace(ageTxtBox.Text) &&
+                !string.IsNullOrWhiteSpace(passTxtBox.Text))
             {
-                MessageBox.Show("Changes Saved!");
-                constring.Close();
-                Staff stff = new Staff();
-                stff.Show();
-                this.Hide();
+                constring.Open();
+                string query2 = "UPDATE Staff SET employee_fname = '" + fnameTxtBox.Text +
+                    "', employee_mname = '" + mnameTxtBox.Text + "', employee_lname = '" + lnameTxtBox.Text +
+                    "', employee_contact = '" + phoneTxtBox.Text + "', employee_bdate = '" +
+                    birthDateTxtBox.Text + "', employee_age = '" + ageTxtBox.Text + "', employee_pass = '" + passTxtBox.Text +
+                    "' WHERE employee_num = '" + v.getsetstaffSelected + "';";
+
+                SqlCommand cmd3 = new SqlCommand(query2, constring);
+                cmd3.CommandText = query2;
+                if (cmd3.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Changes Saved!");
+                    constring.Close();
+                    Staff stff = new Staff();
+                    stff.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong. Please try again.");
+                }
             }
             else
             {
-                MessageBox.Show("Something went wrong. Please try again.");
+                MessageBox.Show("Please fill out all required fields!");
             }
         }
 

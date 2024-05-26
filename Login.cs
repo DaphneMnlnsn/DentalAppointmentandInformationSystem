@@ -70,21 +70,29 @@ namespace DentalAppointmentandInformationSystem
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Staff WHERE employee_num ='" + eNumTxtBox.Text + "' AND employee_pass ='" + passTxtbox.Text + "'", constring);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+            if(!eNumTxtBox.Text.Equals("Employee Number") && !passTxtbox.Text.Equals("Password"))
             {
-                Variables v = new Variables();
-                v.getsetloggedIn = eNumTxtBox.Text;
-                Dashboard dshbrd = new Dashboard();
-                dshbrd.Show();
-                this.Hide();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Staff WHERE employee_num ='" + eNumTxtBox.Text + "' AND employee_pass ='" + passTxtbox.Text + "'", constring);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    Variables v = new Variables();
+                    v.getsetloggedIn = eNumTxtBox.Text;
+                    Dashboard dshbrd = new Dashboard();
+                    dshbrd.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password");
+                }
             }
             else
             {
-                MessageBox.Show("Invalid username or password");
+                MessageBox.Show("Please make sure the information you entered is complete!");
             }
+            
         }
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {

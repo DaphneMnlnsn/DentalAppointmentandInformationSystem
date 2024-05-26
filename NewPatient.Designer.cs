@@ -138,7 +138,7 @@
             this.tableLayoutPanel2.Controls.Add(this.notesTxtBox, 0, 12);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(386, 29);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 20;
+            this.tableLayoutPanel2.RowCount = 21;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -155,12 +155,13 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1107, 871);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1107, 870);
             this.tableLayoutPanel2.TabIndex = 14;
             // 
             // label3
@@ -454,15 +455,15 @@
             // 
             // savePatientBtn
             // 
+            this.savePatientBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.savePatientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(115)))), ((int)(((byte)(247)))));
             this.savePatientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savePatientBtn.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.savePatientBtn.ForeColor = System.Drawing.Color.White;
-            this.savePatientBtn.Location = new System.Drawing.Point(853, 826);
-            this.savePatientBtn.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.savePatientBtn.Location = new System.Drawing.Point(853, 809);
             this.savePatientBtn.Name = "savePatientBtn";
             this.tableLayoutPanel2.SetRowSpan(this.savePatientBtn, 2);
-            this.savePatientBtn.Size = new System.Drawing.Size(221, 42);
+            this.savePatientBtn.Size = new System.Drawing.Size(221, 38);
             this.savePatientBtn.TabIndex = 35;
             this.savePatientBtn.Text = "Save";
             this.savePatientBtn.UseVisualStyleBackColor = false;
@@ -473,7 +474,7 @@
             this.attachFileBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.attachFileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.attachFileBtn.Font = new System.Drawing.Font("Inter", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.attachFileBtn.Location = new System.Drawing.Point(20, 777);
+            this.attachFileBtn.Location = new System.Drawing.Point(20, 769);
             this.attachFileBtn.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.attachFileBtn.Name = "attachFileBtn";
             this.attachFileBtn.Size = new System.Drawing.Size(172, 26);
@@ -488,7 +489,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 753);
+            this.label10.Location = new System.Drawing.Point(15, 745);
             this.label10.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(201, 21);

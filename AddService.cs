@@ -29,39 +29,46 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveServiceBtn_Click(object sender, EventArgs e)
         {
-            int serviceID = 0;
-            constring.Open();
-            SqlCommand cmd = new SqlCommand("SELECT TOP 1 service_id FROM Service ORDER BY service_id DESC", constring);
-            SqlDataReader reader1;
-            reader1 = cmd.ExecuteReader();
-            if (reader1.Read())
+            if (!string.IsNullOrWhiteSpace(srvcNameTxtBox.Text) && !string.IsNullOrWhiteSpace(srvcPriceTxtBox.Text))
             {
-                serviceID = reader1.GetInt32(0) + 1;
+                int serviceID = 0;
+                constring.Open();
+                SqlCommand cmd = new SqlCommand("SELECT TOP 1 service_id FROM Service ORDER BY service_id DESC", constring);
+                SqlDataReader reader1;
+                reader1 = cmd.ExecuteReader();
+                if (reader1.Read())
+                {
+                    serviceID = reader1.GetInt32(0) + 1;
+                }
+                else
+                {
+                    MessageBox.Show("NO DATA FOUND");
+                }
+                reader1.Close();
+                cmd.Dispose();
+
+                String query = "INSERT INTO Service VALUES('" + serviceID + "','" + srvcNameTxtBox.Text + "','"
+                    + srvcPriceTxtBox.Text + "');";
+
+                SqlCommand cmd2 = new SqlCommand(query, constring);
+                cmd2.CommandText = query;
+                if (cmd2.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Service added successfully!");
+                    this.Visible = false;
+                    this.ParentForm.Hide();
+                    constring.Close();
+                    Services srvc = new Services();
+                    srvc.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong. Please try again.");
+                }
             }
             else
             {
-                MessageBox.Show("NO DATA FOUND");
-            }
-            reader1.Close();
-            cmd.Dispose();
-
-            String query = "INSERT INTO Service VALUES('" + serviceID + "','" + srvcNameTxtBox.Text + "','"
-                + srvcPriceTxtBox.Text + "');";
-
-            SqlCommand cmd2 = new SqlCommand(query, constring);
-            cmd2.CommandText = query;
-            if (cmd2.ExecuteNonQuery() == 1)
-            {
-                MessageBox.Show("Service added successfully!");
-                this.Visible = false;
-                this.ParentForm.Hide();
-                constring.Close();
-                Services srvc = new Services();
-                srvc.Show();
-            }
-            else
-            {
-                MessageBox.Show("Something went wrong. Please try again.");
+                MessageBox.Show("Please fill out all required fields!");
             }
         }
 

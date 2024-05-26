@@ -115,101 +115,110 @@ namespace DentalAppointmentandInformationSystem
 
         private void savePatientBtn_Click(object sender, EventArgs e)
         {
-            constring.Open();
-            int appointmentID = 0;
-            string staff2, staff3, service2, service3;
-            SqlCommand command = new SqlCommand("SELECT TOP 1 appointment_id FROM Appointment ORDER BY appointment_id DESC", constring);
-            SqlDataReader read;
-            read = command.ExecuteReader();
-            if (read.Read())
+            if (!string.IsNullOrWhiteSpace(patientCombo.Text) && !string.IsNullOrWhiteSpace(service1Combo.Text) &&
+                !string.IsNullOrWhiteSpace(staff1Combo.Text))
             {
-                appointmentID = read.GetInt32(0) + 1;
+                constring.Open();
+                int appointmentID = 0;
+                string staff2, staff3, service2, service3;
+                SqlCommand command = new SqlCommand("SELECT TOP 1 appointment_id FROM Appointment ORDER BY appointment_id DESC", constring);
+                SqlDataReader read;
+                read = command.ExecuteReader();
+                if (read.Read())
+                {
+                    appointmentID = read.GetInt32(0) + 1;
+                }
+                else
+                {
+                    MessageBox.Show("NO DATA FOUND");
+                }
+                read.Close();
+                if (service2Combo.Text == null || service2Combo.Text == "")
+                {
+                    service2 = "NULL";
+                }
+                else
+                {
+                    service2 = service2Combo.SelectedValue.ToString();
+                }
+
+                if (service3Combo.Text == null || service3Combo.Text == "")
+                {
+                    service3 = "NULL";
+                }
+                else
+                {
+                    service3 = service2Combo.SelectedValue.ToString();
+                }
+                if (staff2Combo.Text == null || staff2Combo.Text == "")
+                {
+                    staff2 = "NULL";
+                }
+                else
+                {
+                    staff2 = staff2Combo.SelectedValue.ToString();
+                }
+
+                if (staff3Combo.Text == null || staff3Combo.Text == "")
+                {
+                    staff3 = "NULL";
+                }
+                else
+                {
+                    staff3 = staff3Combo.SelectedValue.ToString();
+                }
+                string query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + pIDTextBox.Text + "','"
+                    + service1Combo.SelectedValue + "'," + service2 + "," + service3 + ",'" + appntmntDate.Text
+                    + "','" + startTime.Text + "','" + endTime.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "')";
+
+                SqlCommand cmd3 = new SqlCommand(query2, constring);
+                cmd3.CommandText = query2;
+                if (cmd3.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Appointment Created!");
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong. Please try again.");
+                }
+
+                int recordID = 0;
+                SqlCommand com = new SqlCommand("SELECT TOP 1 record_id FROM Record ORDER BY record_id DESC", constring);
+                SqlDataReader re;
+                re = com.ExecuteReader();
+                if (re.Read())
+                {
+                    recordID = re.GetInt32(0) + 1;
+                }
+                else
+                {
+                    MessageBox.Show("NO DATA FOUND");
+                }
+                re.Close();
+
+                string query3 = "INSERT INTO Record VALUES('" + recordID + "','" + pIDTextBox.Text + "','"
+                    + service1Combo.Text + " " + service2Combo.Text + " " + service3Combo.Text + "','" + appointmentID
+                    + "','0','0',NULL);";
+
+                SqlCommand cmd4 = new SqlCommand(query2, constring);
+                cmd4.CommandText = query3;
+                if (cmd4.ExecuteNonQuery() == 1)
+                {
+                    constring.Close();
+                    Calendar clndr = new Calendar();
+                    clndr.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong. Please try again.");
+                }
             }
             else
             {
-                MessageBox.Show("NO DATA FOUND");
-            }
-            read.Close();
-            if (service2Combo.Text == null || service2Combo.Text == "")
-            {
-                service2 = "NULL";
-            }
-            else
-            {
-                service2 = service2Combo.SelectedValue.ToString();
+                MessageBox.Show("Please fill out all required fields!");
             }
 
-            if (service3Combo.Text == null || service3Combo.Text == "")
-            {
-                service3 = "NULL";
-            }
-            else
-            {
-                service3 = service2Combo.SelectedValue.ToString();
-            }
-            if (staff2Combo.Text == null || staff2Combo.Text == "")
-            {
-                staff2 = "NULL";
-            }
-            else
-            {
-                staff2 = staff2Combo.SelectedValue.ToString();
-            }
-
-            if (staff3Combo.Text == null || staff3Combo.Text == "")
-            {
-                staff3 = "NULL";
-            }
-            else
-            {
-                staff3 = staff3Combo.SelectedValue.ToString();
-            }
-            string query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + pIDTextBox.Text + "','"
-                + service1Combo.SelectedValue + "'," + service2 + "," + service3 + ",'" + appntmntDate.Text
-                + "','" + startTime.Text + "','" + endTime.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "')";
-
-            SqlCommand cmd3 = new SqlCommand(query2, constring);
-            cmd3.CommandText = query2;
-            if (cmd3.ExecuteNonQuery() == 1)
-            {
-                MessageBox.Show("Appointment Created!");
-            }
-            else
-            {
-                MessageBox.Show("Something went wrong. Please try again.");
-            }
-
-            int recordID = 0;
-            SqlCommand com = new SqlCommand("SELECT TOP 1 record_id FROM Record ORDER BY record_id DESC", constring);
-            SqlDataReader re;
-            re = com.ExecuteReader();
-            if (re.Read())
-            {
-                recordID = re.GetInt32(0) + 1;
-            }
-            else
-            {
-                MessageBox.Show("NO DATA FOUND");
-            }
-            re.Close();
-
-            string query3 = "INSERT INTO Record VALUES('" + recordID + "','" + pIDTextBox.Text + "','"
-                + service1Combo.Text + " " + service2Combo.Text + " " + service3Combo.Text + "','" + appointmentID
-                + "','0','0',NULL);";
-
-            SqlCommand cmd4 = new SqlCommand(query2, constring);
-            cmd4.CommandText = query3;
-            if (cmd4.ExecuteNonQuery() == 1)
-            {
-                constring.Close();
-                Calendar clndr = new Calendar();
-                clndr.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Something went wrong. Please try again.");
-            }
         }
 
         private void patientCombo_Click(object sender, EventArgs e)
