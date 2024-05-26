@@ -22,7 +22,6 @@ namespace DentalAppointmentandInformationSystem
             constring = v.getConnection;
         }
 
-
         private void AddService_Load(object sender, EventArgs e)
         {
 
@@ -56,6 +55,7 @@ namespace DentalAppointmentandInformationSystem
                 MessageBox.Show("Service added successfully!");
                 this.Visible = false;
                 this.ParentForm.Hide();
+                constring.Close();
                 Services srvc = new Services();
                 srvc.Show();
             }
@@ -63,7 +63,6 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("Something went wrong. Please try again.");
             }
-            constring.Close();
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)

@@ -48,22 +48,24 @@ namespace DentalAppointmentandInformationSystem
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this service?", "Confirm Delete", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+                v.getsetserviceSelected = serviceID.Text;
                 constring.Open();
-                string query = "DELETE FROM Service WHERE service_id =" + v.getsetserviceSelected;
+                string query = "DELETE FROM Service WHERE service_id ='" + v.getsetserviceSelected + "';";
                 SqlCommand cmd = new SqlCommand(query, constring);
                 cmd.CommandText = query;
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Service Deleted Successfully!");
+                    constring.Close();
                     Services srvcs = new Services();
                     srvcs.Show();
                     this.ParentForm.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("DATA NOT DELETED SUCCESSFULLY");
+                    MessageBox.Show("Service cannot be deleted because it is included in a patient's record!");
                 }
-                constring.Close();
+                
             }
         }
     }

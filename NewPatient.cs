@@ -144,10 +144,11 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("Patient added successfully!");
             }
+            constring.Close();
             Patients patients = new Patients();
             patients.Show();
             this.Hide();
-            constring.Close();
+            
         }
         private void NewPatient_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -184,12 +185,14 @@ namespace DentalAppointmentandInformationSystem
             {
                 if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
+                    constring.Close();
                     Staff stf = new Staff();
                     stf.Show();
                     this.Hide();
                 }
                 else
                 {
+                    constring.Close();
                     MessageBox.Show("You do not have the authorization to open this!");
                 }
             }
@@ -197,7 +200,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("NO DATA FOUND");
             }
-            constring.Close();
+            
         }
 
         private void servicesBtn_Click(object sender, EventArgs e)

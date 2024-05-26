@@ -89,7 +89,8 @@ namespace DentalAppointmentandInformationSystem
             if (reader1.Read())
             {
                 if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
-                {
+                {   
+                    constring.Close();
                     Staff stf = new Staff();
                     stf.Show();
                     this.Hide();
@@ -97,13 +98,13 @@ namespace DentalAppointmentandInformationSystem
                 else
                 {
                     MessageBox.Show("You do not have the authorization to open this!");
+                    constring.Close();
                 }
             }
             else
             {
                 MessageBox.Show("NO DATA FOUND");
             }
-            constring.Close();
         }
 
         private void servicesBtn_Click(object sender, EventArgs e)
@@ -239,6 +240,7 @@ namespace DentalAppointmentandInformationSystem
             cmd4.CommandText = query3;
             if (cmd4.ExecuteNonQuery() == 1)
             {
+                constring.Close();
                 Calendar clndr = new Calendar();
                 clndr.Show();
                 this.Hide();
@@ -247,7 +249,6 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("Something went wrong. Please try again.");
             }
-            constring.Close();
         }
 
         private void staff1Combo_Click(object sender, EventArgs e)

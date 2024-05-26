@@ -98,6 +98,7 @@ namespace DentalAppointmentandInformationSystem
             cmd2.CommandText = query;
             if (cmd2.ExecuteNonQuery() == 1)
             {
+                constring.Close();
                 MessageBox.Show("Staff Member added!\nThe employee's credentials are:\nEmployee Number: " + staffID + "\nPassword: " + staffPass);
                 Staff staff = new Staff();
                 staff.Show();
@@ -106,9 +107,9 @@ namespace DentalAppointmentandInformationSystem
             }
             else
             {
+                constring.Close();
                 MessageBox.Show("Something went wrong. Please try again.");
             }
-            constring.Close();
         }
 
         private void dashboardBtn_Click(object sender, EventArgs e)
@@ -141,12 +142,14 @@ namespace DentalAppointmentandInformationSystem
             {
                 if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
+                    constring.Close();
                     Staff stf = new Staff();
                     stf.Show();
                     this.Hide();
                 }
                 else
                 {
+                    constring.Close();
                     MessageBox.Show("You do not have the authorization to open this!");
                 }
             }
@@ -154,7 +157,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("NO DATA FOUND");
             }
-            constring.Close();
+            
         }
 
         private void servicesBtn_Click(object sender, EventArgs e)

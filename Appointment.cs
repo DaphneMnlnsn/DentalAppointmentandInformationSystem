@@ -59,6 +59,7 @@ namespace DentalAppointmentandInformationSystem
                 cmd2.ExecuteNonQuery();
                 if (cmd.ExecuteNonQuery() == 1)
                 {
+                    constring.Close();
                     MessageBox.Show("Appointment Deleted Successfully!");
                     Calendar clndr = new Calendar();
                     clndr.Show();
@@ -68,7 +69,6 @@ namespace DentalAppointmentandInformationSystem
                 {
                     MessageBox.Show("DATA NOT DELETED SUCCESSFULLY");
                 }
-                constring.Close();
             }
         }
     }
