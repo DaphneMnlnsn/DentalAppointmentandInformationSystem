@@ -59,6 +59,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("NO DATA FOUND");
             }
+            reader1.Close();
         }
 
         private void displayPatientDetails()
@@ -151,7 +152,7 @@ namespace DentalAppointmentandInformationSystem
                             {
                                 recordsTreat += ", " + readService3["service_id3"].ToString();
                             }
-                            
+                            readService3.Close();
                         }
                     }
                     
@@ -212,6 +213,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("NO DATA FOUND");
             }
+            reader1.Close();
         }
 
         private void servicesBtn_Click(object sender, EventArgs e)
@@ -240,14 +242,15 @@ namespace DentalAppointmentandInformationSystem
                     DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this patient? \nAll records of the patient will be deleted!", "Confirm Delete", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        string query = "DELETE FROM Appointment WHERE patient_id =" + v.getsetpatientSelected;
-                        SqlCommand cmdd = new SqlCommand(query, constring);
-                        cmdd.CommandText = query;
-                        cmdd.ExecuteNonQuery();
+                        reader1.Close();
                         string query2 = "DELETE FROM Record WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd2 = new SqlCommand(query2, constring);
                         cmd2.CommandText = query2;
                         cmd2.ExecuteNonQuery();
+                        string query = "DELETE FROM Appointment WHERE patient_id =" + v.getsetpatientSelected;
+                        SqlCommand cmdd = new SqlCommand(query, constring);
+                        cmdd.CommandText = query;
+                        cmdd.ExecuteNonQuery();
                         string query3 = "DELETE FROM History WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd3 = new SqlCommand(query3, constring);
                         cmd3.CommandText = query3;
@@ -279,6 +282,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("NO DATA FOUND");
             }
+            
             
         }
     }
