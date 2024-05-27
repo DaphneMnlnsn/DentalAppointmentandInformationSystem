@@ -43,8 +43,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.addService1 = new DentalAppointmentandInformationSystem.AddService();
             this.editService1 = new DentalAppointmentandInformationSystem.EditService();
+            this.addService1 = new DentalAppointmentandInformationSystem.AddService();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchTxtBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptntsBtn)).BeginInit();
@@ -54,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -196,7 +199,7 @@
             // 
             this.servicesContainer.AutoScroll = true;
             this.servicesContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.servicesContainer.Location = new System.Drawing.Point(276, 246);
+            this.servicesContainer.Location = new System.Drawing.Point(276, 282);
             this.servicesContainer.Name = "servicesContainer";
             this.servicesContainer.Size = new System.Drawing.Size(1150, 593);
             this.servicesContainer.TabIndex = 86;
@@ -206,9 +209,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(4, 29);
+            this.label1.Location = new System.Drawing.Point(15, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 31);
+            this.label1.Size = new System.Drawing.Size(114, 62);
             this.label1.TabIndex = 77;
             this.label1.Text = "Service ID";
             // 
@@ -217,7 +220,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(312, 29);
+            this.label2.Location = new System.Drawing.Point(308, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(186, 31);
             this.label2.TabIndex = 78;
@@ -228,7 +231,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(719, 29);
+            this.label3.Location = new System.Drawing.Point(715, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 31);
             this.label3.TabIndex = 79;
@@ -243,25 +246,17 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 513F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(276, 159);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(276, 193);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1150, 90);
             this.tableLayoutPanel2.TabIndex = 84;
-            // 
-            // addService1
-            // 
-            this.addService1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addService1.Location = new System.Drawing.Point(351, 302);
-            this.addService1.Name = "addService1";
-            this.addService1.Size = new System.Drawing.Size(998, 298);
-            this.addService1.TabIndex = 9;
             // 
             // editService1
             // 
@@ -271,11 +266,41 @@
             this.editService1.Size = new System.Drawing.Size(998, 298);
             this.editService1.TabIndex = 87;
             // 
+            // addService1
+            // 
+            this.addService1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addService1.Location = new System.Drawing.Point(351, 302);
+            this.addService1.Name = "addService1";
+            this.addService1.Size = new System.Drawing.Size(998, 298);
+            this.addService1.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.search;
+            this.pictureBox1.Location = new System.Drawing.Point(1388, 129);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 94;
+            this.pictureBox1.TabStop = false;
+            // 
+            // searchTxtBox
+            // 
+            this.searchTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchTxtBox.Font = new System.Drawing.Font("Inter Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxtBox.Location = new System.Drawing.Point(976, 128);
+            this.searchTxtBox.Name = "searchTxtBox";
+            this.searchTxtBox.Size = new System.Drawing.Size(448, 32);
+            this.searchTxtBox.TabIndex = 93;
+            // 
             // Services
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1534, 911);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.searchTxtBox);
             this.Controls.Add(this.editService1);
             this.Controls.Add(this.addService1);
             this.Controls.Add(this.servicesContainer);
@@ -298,7 +323,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -320,5 +347,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private EditService editService1;
         private System.Windows.Forms.PictureBox dshbrdbtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox searchTxtBox;
     }
 }

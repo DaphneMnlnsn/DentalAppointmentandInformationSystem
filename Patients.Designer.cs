@@ -46,6 +46,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchTxtBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).BeginInit();
@@ -55,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -197,7 +200,7 @@
             // 
             this.staffContainer.AutoScroll = true;
             this.staffContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.staffContainer.Location = new System.Drawing.Point(190, 246);
+            this.staffContainer.Location = new System.Drawing.Point(190, 282);
             this.staffContainer.Name = "staffContainer";
             this.staffContainer.Size = new System.Drawing.Size(1322, 607);
             this.staffContainer.TabIndex = 92;
@@ -212,14 +215,14 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.patient_id, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label5, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 4, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(190, 159);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(190, 193);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -233,7 +236,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(333, 29);
+            this.label1.Location = new System.Drawing.Point(332, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 31);
             this.label1.TabIndex = 80;
@@ -245,7 +248,7 @@
             this.patient_id.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.patient_id.AutoSize = true;
             this.patient_id.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.patient_id.Location = new System.Drawing.Point(6, 14);
+            this.patient_id.Location = new System.Drawing.Point(5, 14);
             this.patient_id.Name = "patient_id";
             this.patient_id.Size = new System.Drawing.Size(104, 62);
             this.patient_id.TabIndex = 77;
@@ -257,7 +260,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(702, 29);
+            this.label2.Location = new System.Drawing.Point(701, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 31);
             this.label2.TabIndex = 78;
@@ -269,7 +272,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(810, 29);
+            this.label3.Location = new System.Drawing.Point(809, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 31);
             this.label3.TabIndex = 79;
@@ -293,18 +296,40 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(977, 29);
+            this.label4.Location = new System.Drawing.Point(976, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 31);
             this.label4.TabIndex = 83;
             this.label4.Text = "Last Visit";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.search;
+            this.pictureBox1.Location = new System.Drawing.Point(1476, 129);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 95;
+            this.pictureBox1.TabStop = false;
+            // 
+            // searchTxtBox
+            // 
+            this.searchTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchTxtBox.Font = new System.Drawing.Font("Inter Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxtBox.Location = new System.Drawing.Point(1064, 128);
+            this.searchTxtBox.Name = "searchTxtBox";
+            this.searchTxtBox.Size = new System.Drawing.Size(448, 32);
+            this.searchTxtBox.TabIndex = 94;
+            // 
             // Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1537, 920);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.searchTxtBox);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.staffContainer);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -326,7 +351,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -350,5 +377,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox dshbrdBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox searchTxtBox;
     }
 }
