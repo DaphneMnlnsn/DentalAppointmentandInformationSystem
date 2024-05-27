@@ -119,45 +119,48 @@ namespace DentalAppointmentandInformationSystem
                     SqlDataAdapter da3 = new SqlDataAdapter(sql3, constring);
                     da3.Fill(apps);
 
-                    string recordsDate = "", recordsTreat = "", recordsTooth, recordsPrice;
+                    string recordsDate = "", recordsTreat = "", recordsTooth;
+                    float recordsPrice = 0;
                     foreach (DataRow row3 in apps.Rows)
                     {
                         recordsDate += DateTime.Parse(row3["appointment_date"].ToString()).ToString("MM/dd/yyyy");
 
-                        SqlCommand retrieveService = new SqlCommand("SELECT service_name FROM Service WHERE service_id = '" + row3["service_id"].ToString() + "'", constring);
+                        SqlCommand retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id"].ToString() + "'", constring);
                         SqlDataReader readService;
                         readService = retrieveService.ExecuteReader();
                         if (readService.Read())
                         {
                             recordsTreat += readService["service_name"].ToString();
+                            recordsPrice += float.Parse(readService["service_price"].ToString());
                         }
                         readService.Close();
                         if (!string.IsNullOrEmpty(row3["service_id2"].ToString()))
                         {
-                            SqlCommand retrieveService2 = new SqlCommand("SELECT service_name FROM Service WHERE service_id = '" + row3["service_id2"].ToString() + "'", constring);
+                            SqlCommand retrieveService2 = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id2"].ToString() + "'", constring);
                             SqlDataReader readService2;
                             readService2 = retrieveService2.ExecuteReader();
                             if (readService2.Read())
                             {
                                 recordsTreat += ", " + readService2["service_name"].ToString();
+                                recordsPrice += float.Parse(readService2["service_price"].ToString());
                             }
                             readService2.Close();
                         }
                         if (!string.IsNullOrEmpty(row3["service_id3"].ToString()))
                         {
-                            SqlCommand retrieveService3 = new SqlCommand("SELECT service_name FROM Service WHERE service_id = '" + row3["service_id3"].ToString() + "'", constring);
+                            SqlCommand retrieveService3 = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id3"].ToString() + "'", constring);
                             SqlDataReader readService3;
                             readService3 = retrieveService3.ExecuteReader();
                             if (readService3.Read())
                             {
                                 recordsTreat += ", " + readService3["service_id3"].ToString();
+                                recordsPrice += float.Parse(readService3["service_price"].ToString());
                             }
                             readService3.Close();
                         }
                     }
                     
                     recordsTooth = row2["teeth_treated"].ToString();
-                    recordsPrice = row2["price_billed"].ToString();
 
                     Record record = new Record();
                     record.setPatientInfo(row2["record_id"].ToString(), recordsDate, recordsTreat, recordsTooth, recordsPrice);

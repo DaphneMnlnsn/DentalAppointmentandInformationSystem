@@ -534,10 +534,13 @@
             this.birthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.birthDate.Location = new System.Drawing.Point(20, 367);
             this.birthDate.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.birthDate.MaxDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.birthDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.birthDate.Name = "birthDate";
             this.birthDate.Size = new System.Drawing.Size(425, 29);
             this.birthDate.TabIndex = 59;
-            this.birthDate.Value = new System.DateTime(2024, 5, 15, 0, 0, 0, 0);
+            this.birthDate.Value = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.birthDate.Leave += new System.EventHandler(this.birthDate_Leave);
             // 
             // addressTxtBox
             // 

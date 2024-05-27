@@ -90,9 +90,9 @@ namespace DentalAppointmentandInformationSystem
             }
             else
             {
-                MessageBox.Show("Please make sure the information you entered is complete!");
+                MessageBox.Show("Please make sure the data you entered is complete!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            
+
         }
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {

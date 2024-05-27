@@ -550,9 +550,13 @@
             this.birthDateTxtBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.birthDateTxtBox.Location = new System.Drawing.Point(579, 205);
             this.birthDateTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.birthDateTxtBox.MaxDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.birthDateTxtBox.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.birthDateTxtBox.Name = "birthDateTxtBox";
             this.birthDateTxtBox.Size = new System.Drawing.Size(200, 29);
             this.birthDateTxtBox.TabIndex = 36;
+            this.birthDateTxtBox.Value = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.birthDateTxtBox.Leave += new System.EventHandler(this.birthDateTxtBox_Leave);
             // 
             // saveStaffBtn
             // 

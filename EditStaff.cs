@@ -166,7 +166,7 @@ namespace DentalAppointmentandInformationSystem
             }
             else
             {
-                MessageBox.Show("Please fill out all required fields!");
+                MessageBox.Show("Please fill out all required fields!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -193,6 +193,25 @@ namespace DentalAppointmentandInformationSystem
                 }
                 
             }
+        }
+        private int CalculateAge(DateTime dateOfBirth)
+        {
+            DateTime today = DateTime.Today;
+            int age = today.Year - dateOfBirth.Year;
+
+            if (dateOfBirth.Date > today.AddYears(-age))
+            {
+                age--;
+            }
+
+            return age;
+        }
+
+        private void birthDateTxtBox_Leave(object sender, EventArgs e)
+        {
+            ageTxtBox.ReadOnly = false;
+            ageTxtBox.Text = CalculateAge(DateTime.Parse(birthDateTxtBox.Text)).ToString();
+            ageTxtBox.ReadOnly = true;
         }
     }
 }

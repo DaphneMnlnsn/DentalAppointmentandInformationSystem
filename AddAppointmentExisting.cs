@@ -216,7 +216,7 @@ namespace DentalAppointmentandInformationSystem
             }
             else
             {
-                MessageBox.Show("Please fill out all required fields!");
+                MessageBox.Show("Please fill out all required fields!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }

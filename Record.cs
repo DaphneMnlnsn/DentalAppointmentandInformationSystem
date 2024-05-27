@@ -20,13 +20,13 @@ namespace DentalAppointmentandInformationSystem
             InitializeComponent();
         }
 
-        public void setPatientInfo(string recordID, string recordDate, string recordsTreat, string recordsTooth, string recordsPrice)
+        public void setPatientInfo(string recordID, string recordDate, string recordsTreat, string recordsTooth, float recordsPrice)
         {
             this.recordID = recordID;
             records_date.Text = recordDate;
             records_treat.Text = recordsTreat;
             records_tooth.Text = recordsTooth;
-            records_price.Text = recordsPrice;
+            records_price.Text = recordsPrice.ToString();
         }
 
         private void Record_Click(object sender, EventArgs e)
