@@ -315,7 +315,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.99722F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.00278F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 226F));
             this.tableLayoutPanel2.Controls.Add(this.label4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
@@ -334,10 +334,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(928, 1);
+            this.label4.Location = new System.Drawing.Point(926, 1);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(217, 61);
+            this.label4.Size = new System.Drawing.Size(219, 61);
             this.label4.TabIndex = 3;
             this.label4.Text = "PRICE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -348,7 +348,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(708, 1);
+            this.label3.Location = new System.Drawing.Point(706, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(211, 61);
@@ -362,10 +362,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(279, 1);
+            this.label2.Location = new System.Drawing.Point(278, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(420, 61);
+            this.label2.Size = new System.Drawing.Size(419, 61);
             this.label2.TabIndex = 1;
             this.label2.Text = "TREATMENT";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -379,7 +379,7 @@
             this.label1.Location = new System.Drawing.Point(5, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 61);
+            this.label1.Size = new System.Drawing.Size(264, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "DATE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -515,7 +515,7 @@
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.00278F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 578F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 579F));
             this.tableLayoutPanel3.Controls.Add(this.label7, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(190, 610);
@@ -532,10 +532,10 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(575, 1);
+            this.label7.Location = new System.Drawing.Point(574, 1);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(570, 61);
+            this.label7.Size = new System.Drawing.Size(571, 61);
             this.label7.TabIndex = 3;
             this.label7.Text = "DENTIST";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -549,7 +549,7 @@
             this.label9.Location = new System.Drawing.Point(5, 1);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(561, 61);
+            this.label9.Size = new System.Drawing.Size(560, 61);
             this.label9.TabIndex = 1;
             this.label9.Text = "TREATMENT";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -567,6 +567,7 @@
             // 
             // editRecord1
             // 
+            this.editRecord1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.editRecord1.Location = new System.Drawing.Point(342, 333);
             this.editRecord1.Name = "editRecord1";
             this.editRecord1.Size = new System.Drawing.Size(998, 298);

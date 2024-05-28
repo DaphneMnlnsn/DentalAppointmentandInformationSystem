@@ -242,10 +242,27 @@ namespace DentalAppointmentandInformationSystem
             {
                 if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this patient? \nAll records of the patient will be deleted!", "Confirm Delete", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this patient?\nThis will be moved to the trash bin.", "Confirm Delete", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
                         reader1.Close();
+                        string querya4 = "INSERT INTO Patient_Archive SELECT * FROM Patient WHERE patient_id =" + v.getsetpatientSelected;
+                        SqlCommand cmda4 = new SqlCommand(querya4, constring);
+                        cmda4.CommandText = querya4;
+                        cmda4.ExecuteNonQuery();
+                        string querya = "INSERT INTO Appointment_Archive SELECT * FROM Appointment WHERE patient_id =" + v.getsetpatientSelected;
+                        SqlCommand cmdda = new SqlCommand(querya, constring);
+                        cmdda.CommandText = querya;
+                        cmdda.ExecuteNonQuery();
+                        string querya2 = "INSERT INTO Record_Archive SELECT * FROM Record WHERE patient_id =" + v.getsetpatientSelected;
+                        SqlCommand cmda2 = new SqlCommand(querya2, constring);
+                        cmda2.CommandText = querya2;
+                        cmda2.ExecuteNonQuery();
+                        string querya3 = "INSERT INTO History_Archive SELECT * FROM History WHERE patient_id =" + v.getsetpatientSelected;
+                        SqlCommand cmda3 = new SqlCommand(querya3, constring);
+                        cmda3.CommandText = querya3;
+                        cmda3.ExecuteNonQuery();
+
                         string query2 = "DELETE FROM Record WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd2 = new SqlCommand(query2, constring);
                         cmd2.CommandText = query2;
@@ -263,7 +280,7 @@ namespace DentalAppointmentandInformationSystem
                         cmd4.CommandText = query4;
                         if (cmd4.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("Patient Deleted Successfully!");
+                            MessageBox.Show("Patient has been added to the Trash Bin/Archives!");
                             constring.Close();
                             Patients ptnt = new Patients();
                             ptnt.Show();

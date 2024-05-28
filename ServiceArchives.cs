@@ -12,18 +12,18 @@ using System.Windows.Forms;
 
 namespace DentalAppointmentandInformationSystem
 {
-    public partial class Services : Form
+    public partial class ServiceArchives : Form
     {
         Variables v = new Variables();
         SqlConnection constring;
 
-        public Services()
+        public ServiceArchives()
         {
             InitializeComponent();
             constring = v.getConnection;
         }
 
-        
+
         private void Services_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
@@ -31,8 +31,6 @@ namespace DentalAppointmentandInformationSystem
 
         private void Services_Load(object sender, EventArgs e)
         {
-            addService1.Visible = false;
-            editService1.Visible = false;
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
 
@@ -42,7 +40,7 @@ namespace DentalAppointmentandInformationSystem
         private void displayServices()
         {
             constring.Open();
-            string sql = "SELECT * FROM Service";
+            string sql = "SELECT * FROM Service_Archive";
             DataTable services = new DataTable("services");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(services);
@@ -65,7 +63,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void ptntsBtn_Click(object sender, EventArgs e)
         {
-            Patients patients = new Patients();
+            PatientArchives patients = new PatientArchives();
             patients.Show();
             this.Hide();
         }
@@ -81,7 +79,7 @@ namespace DentalAppointmentandInformationSystem
                 if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
                     constring.Close();
-                    Staff stf = new Staff();
+                    StaffArchives stf = new StaffArchives();
                     stf.Show();
                     this.Hide();
                 }
@@ -95,31 +93,13 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("NO DATA FOUND");
             }
-            
-        }
 
-        private void addServiceBtn_Click(object sender, EventArgs e)
-        {
-            addService1.Visible = true;
-        }
-
-        public void editVisible()
-        {
-            editService1.Visible = true;
-            editService1.setValues();
         }
 
         private void dshbrdbtn_Click(object sender, EventArgs e)
         {
             Dashboard dshbrd = new Dashboard();
             dshbrd.Show();
-            this.Hide();
-        }
-
-        private void binBtn_Click(object sender, EventArgs e)
-        {
-            ServiceArchives servArch = new ServiceArchives();
-            servArch.Show();
             this.Hide();
         }
     }

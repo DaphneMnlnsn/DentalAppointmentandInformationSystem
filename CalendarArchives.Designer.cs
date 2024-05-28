@@ -1,6 +1,6 @@
 ﻿namespace DentalAppointmentandInformationSystem
 {
-    partial class Calendar
+    partial class CalendarArchives
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnnewappointment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.binBtn = new System.Windows.Forms.Panel();
-            this.binPic = new System.Windows.Forms.PictureBox();
-            this.binLbl = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.monthLbl = new System.Windows.Forms.Label();
             this.btnnext = new System.Windows.Forms.Button();
@@ -57,8 +53,6 @@
             this.patientBtn = new System.Windows.Forms.PictureBox();
             this.dshbrdBtn = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.binBtn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.binPic)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -70,27 +64,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdBtn)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnnewappointment
-            // 
-            this.btnnewappointment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnnewappointment.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnnewappointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnnewappointment.Font = new System.Drawing.Font("Inter Medium", 10F, System.Drawing.FontStyle.Bold);
-            this.btnnewappointment.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnnewappointment.Location = new System.Drawing.Point(1163, 26);
-            this.btnnewappointment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnnewappointment.Name = "btnnewappointment";
-            this.btnnewappointment.Size = new System.Drawing.Size(224, 48);
-            this.btnnewappointment.TabIndex = 1;
-            this.btnnewappointment.Text = "+ New Appointment";
-            this.btnnewappointment.UseVisualStyleBackColor = false;
-            this.btnnewappointment.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.binBtn);
             this.panel1.Controls.Add(this.tableLayoutPanel3);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.daycontainer);
@@ -107,39 +83,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1201, 803);
             this.panel1.TabIndex = 67;
-            // 
-            // binBtn
-            // 
-            this.binBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.binBtn.Controls.Add(this.binPic);
-            this.binBtn.Controls.Add(this.binLbl);
-            this.binBtn.Location = new System.Drawing.Point(7, 22);
-            this.binBtn.Name = "binBtn";
-            this.binBtn.Size = new System.Drawing.Size(169, 32);
-            this.binBtn.TabIndex = 97;
-            this.binBtn.Click += new System.EventHandler(this.binBtn_Click);
-            // 
-            // binPic
-            // 
-            this.binPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.newBin;
-            this.binPic.Location = new System.Drawing.Point(112, -1);
-            this.binPic.Name = "binPic";
-            this.binPic.Size = new System.Drawing.Size(42, 32);
-            this.binPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.binPic.TabIndex = 1;
-            this.binPic.TabStop = false;
-            this.binPic.Click += new System.EventHandler(this.binBtn_Click);
-            // 
-            // binLbl
-            // 
-            this.binLbl.AutoSize = true;
-            this.binLbl.Font = new System.Drawing.Font("Inter Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.binLbl.Location = new System.Drawing.Point(13, 4);
-            this.binLbl.Name = "binLbl";
-            this.binLbl.Size = new System.Drawing.Size(99, 24);
-            this.binLbl.TabIndex = 0;
-            this.binLbl.Text = "Trash Bin";
-            this.binLbl.Click += new System.EventHandler(this.binBtn_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -354,9 +297,9 @@
             this.dshbrdLbl.Font = new System.Drawing.Font("Metrophobic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dshbrdLbl.Location = new System.Drawing.Point(193, 22);
             this.dshbrdLbl.Name = "dshbrdLbl";
-            this.dshbrdLbl.Size = new System.Drawing.Size(170, 50);
+            this.dshbrdLbl.Size = new System.Drawing.Size(407, 50);
             this.dshbrdLbl.TabIndex = 5;
-            this.dshbrdLbl.Text = "Calendar";
+            this.dshbrdLbl.Text = "Archived Appointments";
             this.dshbrdLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -365,7 +308,6 @@
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.doctorPic);
             this.panel2.Controls.Add(this.dshbrdLbl);
-            this.panel2.Controls.Add(this.btnnewappointment);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -375,7 +317,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox5.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.calendar;
+            this.pictureBox5.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.newBin;
             this.pictureBox5.Location = new System.Drawing.Point(38, 10);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(84, 77);
@@ -464,7 +406,7 @@
             this.dshbrdBtn.TabStop = false;
             this.dshbrdBtn.Click += new System.EventHandler(this.dshbrdBtn_Click);
             // 
-            // Calendar
+            // CalendarArchives
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -476,16 +418,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(1559, 976);
-            this.Name = "Calendar";
+            this.Name = "CalendarArchives";
             this.Text = "Calendar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Calendar_FormClosing);
-            this.Load += new System.EventHandler(this.Calendar_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CalendarArchives_FormClosing);
+            this.Load += new System.EventHandler(this.CalendarArchives_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.binBtn.ResumeLayout(false);
-            this.binBtn.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.binPic)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -502,7 +441,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnnewappointment;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label monthLbl;
@@ -527,8 +465,5 @@
         private System.Windows.Forms.PictureBox servicesBtn;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox dshbrdBtn;
-        private System.Windows.Forms.Panel binBtn;
-        private System.Windows.Forms.PictureBox binPic;
-        private System.Windows.Forms.Label binLbl;
     }
 }

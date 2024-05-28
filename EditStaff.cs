@@ -172,16 +172,19 @@ namespace DentalAppointmentandInformationSystem
 
         private void deleteStffBtn_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this staff record?", "Confirm Delete", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this staff record?\nThis will be moved to the trash bin.", "Confirm Delete", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 constring.Open();
-                string query = "DELETE FROM Staff WHERE employee_num =" + v.getsetstaffSelected;
+                string query = "INSERT INTO Staff_Archive SELECT * FROM Staff WHERE employee_num =" + v.getsetstaffSelected;
                 SqlCommand cmd = new SqlCommand(query, constring);
                 cmd.CommandText = query;
-                if (cmd.ExecuteNonQuery() == 1)
+                string query2 = "DELETE FROM Staff WHERE employee_num =" + v.getsetstaffSelected;
+                SqlCommand cmd2 = new SqlCommand(query2, constring);
+                cmd2.CommandText = query2;
+                if (cmd.ExecuteNonQuery() == 1 && cmd2.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Staff Deleted Successfully!");
+                    MessageBox.Show("Staff Records have been moved to the Trash Bin/Archives!");
                     constring.Close();
                     Staff stff = new Staff();
                     stff.Show();

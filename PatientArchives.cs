@@ -11,22 +11,22 @@ using System.Windows.Forms;
 
 namespace DentalAppointmentandInformationSystem
 {
-    public partial class Patients : Form
+    public partial class PatientArchives : Form
     {
         Variables v = new Variables();
         SqlConnection constring;
 
-        public Patients()
+        public PatientArchives()
         {
             InitializeComponent();
             constring = v.getConnection;
         }
-        private void Patients_FormClosing(object sender, FormClosingEventArgs e)
+        private void PatientArchives_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
 
-        private void Patients_Load(object sender, EventArgs e)
+        private void PatientArchives_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
@@ -36,7 +36,7 @@ namespace DentalAppointmentandInformationSystem
         private void displayPatient()
         {
             constring.Open();
-            string sql = "SELECT * FROM Patient";
+            string sql = "SELECT * FROM Patient_Archive";
             DataTable patients = new DataTable("patients");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(patients);
@@ -60,7 +60,7 @@ namespace DentalAppointmentandInformationSystem
                 reader1 = cmd.ExecuteReader();
                 if (reader1.Read())
                 {
-                        lastVisit += (DateTime.Parse(reader1["appointment_date"].ToString()).ToString("MM/dd/yyyy")).ToString();
+                    lastVisit += (DateTime.Parse(reader1["appointment_date"].ToString()).ToString("MM/dd/yyyy")).ToString();
                 }
                 reader1.Close();
                 patient.setPatientInfo(row["patient_id"].ToString(), patient_fullname, row["patient_age"].ToString(),
@@ -102,7 +102,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("NO DATA FOUND");
             }
-            
+
         }
 
         private void servicesBtn_Click(object sender, EventArgs e)
@@ -116,20 +116,6 @@ namespace DentalAppointmentandInformationSystem
         {
             Dashboard dshbrd = new Dashboard();
             dshbrd.Show();
-            this.Hide();
-        }
-
-        private void newPtntBtn_Click(object sender, EventArgs e)
-        {
-            NewPatient newptnt = new NewPatient();
-            newptnt.Show();
-            this.Hide();
-        }
-
-        private void binBtn_Click(object sender, EventArgs e)
-        {
-            PatientArchives patientArch = new PatientArchives();
-            patientArch.Show();
             this.Hide();
         }
     }

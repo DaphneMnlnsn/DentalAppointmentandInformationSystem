@@ -1,6 +1,6 @@
 ﻿namespace DentalAppointmentandInformationSystem
 {
-    partial class Staff
+    partial class StaffArchives
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@
         {
             this.dshbrdLbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddStaff = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.staffContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,9 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.searchTxtBox = new System.Windows.Forms.TextBox();
-            this.binBtn = new System.Windows.Forms.Panel();
-            this.binLbl = new System.Windows.Forms.Label();
-            this.binPic = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.servicesBtn = new System.Windows.Forms.PictureBox();
             this.patientBtn = new System.Windows.Forms.PictureBox();
@@ -55,8 +51,6 @@
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.binBtn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.binPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBtn)).BeginInit();
@@ -75,15 +69,14 @@
             this.dshbrdLbl.Font = new System.Drawing.Font("Metrophobic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dshbrdLbl.Location = new System.Drawing.Point(193, 22);
             this.dshbrdLbl.Name = "dshbrdLbl";
-            this.dshbrdLbl.Size = new System.Drawing.Size(213, 50);
+            this.dshbrdLbl.Size = new System.Drawing.Size(271, 50);
             this.dshbrdLbl.TabIndex = 5;
-            this.dshbrdLbl.Text = "List of Staff";
+            this.dshbrdLbl.Text = "Archived Staffs";
             this.dshbrdLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.panel1.Controls.Add(this.btnAddStaff);
             this.panel1.Controls.Add(this.doctorPic);
             this.panel1.Controls.Add(this.dshbrdLbl);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -92,23 +85,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1537, 97);
             this.panel1.TabIndex = 6;
-            // 
-            // btnAddStaff
-            // 
-            this.btnAddStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddStaff.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStaff.Font = new System.Drawing.Font("Inter Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddStaff.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddStaff.Location = new System.Drawing.Point(1162, 26);
-            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(224, 48);
-            this.btnAddStaff.TabIndex = 8;
-            this.btnAddStaff.Text = "+ Add Staff";
-            this.btnAddStaff.UseVisualStyleBackColor = false;
-            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -207,9 +183,9 @@
             this.employee_no.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.employee_no.AutoSize = true;
             this.employee_no.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.employee_no.Location = new System.Drawing.Point(10, 14);
+            this.employee_no.Location = new System.Drawing.Point(6, 14);
             this.employee_no.Name = "employee_no";
-            this.employee_no.Size = new System.Drawing.Size(120, 62);
+            this.employee_no.Size = new System.Drawing.Size(135, 62);
             this.employee_no.TabIndex = 77;
             this.employee_no.Text = "Employee No.";
             this.employee_no.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -219,7 +195,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(263, 29);
+            this.label1.Location = new System.Drawing.Point(267, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 31);
             this.label1.TabIndex = 80;
@@ -232,7 +208,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 7;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 383F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 376F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
@@ -258,49 +234,16 @@
             // 
             this.searchTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchTxtBox.Font = new System.Drawing.Font("Inter Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxtBox.Location = new System.Drawing.Point(872, 128);
+            this.searchTxtBox.Location = new System.Drawing.Point(1062, 128);
             this.searchTxtBox.Name = "searchTxtBox";
             this.searchTxtBox.Size = new System.Drawing.Size(448, 32);
             this.searchTxtBox.TabIndex = 91;
-            // 
-            // binBtn
-            // 
-            this.binBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.binBtn.Controls.Add(this.binPic);
-            this.binBtn.Controls.Add(this.binLbl);
-            this.binBtn.Location = new System.Drawing.Point(1337, 128);
-            this.binBtn.Name = "binBtn";
-            this.binBtn.Size = new System.Drawing.Size(169, 32);
-            this.binBtn.TabIndex = 97;
-            this.binBtn.Click += new System.EventHandler(this.binBtn_Click);
-            // 
-            // binLbl
-            // 
-            this.binLbl.AutoSize = true;
-            this.binLbl.Font = new System.Drawing.Font("Inter Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.binLbl.Location = new System.Drawing.Point(13, 4);
-            this.binLbl.Name = "binLbl";
-            this.binLbl.Size = new System.Drawing.Size(99, 24);
-            this.binLbl.TabIndex = 0;
-            this.binLbl.Text = "Trash Bin";
-            this.binLbl.Click += new System.EventHandler(this.binBtn_Click);
-            // 
-            // binPic
-            // 
-            this.binPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.newBin;
-            this.binPic.Location = new System.Drawing.Point(112, -1);
-            this.binPic.Name = "binPic";
-            this.binPic.Size = new System.Drawing.Size(42, 32);
-            this.binPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.binPic.TabIndex = 1;
-            this.binPic.TabStop = false;
-            this.binPic.Click += new System.EventHandler(this.binBtn_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(1284, 129);
+            this.pictureBox1.Location = new System.Drawing.Point(1474, 129);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -369,7 +312,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox4.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.staffs;
+            this.pictureBox4.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.newBin;
             this.pictureBox4.Location = new System.Drawing.Point(38, 6);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(84, 85);
@@ -377,13 +320,12 @@
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             // 
-            // Staff
+            // StaffArchives
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1537, 920);
-            this.Controls.Add(this.binBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.searchTxtBox);
             this.Controls.Add(this.staffContainer);
@@ -391,8 +333,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(1559, 976);
-            this.Name = "Staff";
-            this.Text = "Staff";
+            this.Name = "StaffArchives";
+            this.Text = "Staff Archives";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Staff_FormClosing);
             this.Load += new System.EventHandler(this.Staff_Load);
@@ -401,9 +343,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.binBtn.ResumeLayout(false);
-            this.binBtn.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.binPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicesBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBtn)).EndInit();
@@ -434,12 +373,8 @@
         private System.Windows.Forms.Label employee_no;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button btnAddStaff;
         private System.Windows.Forms.PictureBox dshbrdBtn;
         private System.Windows.Forms.TextBox searchTxtBox;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel binBtn;
-        private System.Windows.Forms.PictureBox binPic;
-        private System.Windows.Forms.Label binLbl;
     }
 }

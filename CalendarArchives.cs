@@ -13,17 +13,17 @@ using System.Windows.Forms;
 
 namespace DentalAppointmentandInformationSystem
 {
-    public partial class Calendar : Form
+    public partial class CalendarArchives : Form
     {
         Variables v = new Variables();
         SqlConnection constring;
-        public Calendar()
+        public CalendarArchives()
         {
             InitializeComponent();
             constring = v.getConnection;
         }
 
-        private void Calendar_Load(object sender, EventArgs e)
+        private void CalendarArchives_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
@@ -50,30 +50,10 @@ namespace DentalAppointmentandInformationSystem
 
             for (int i = 1; i <= days; i++)
             {
-                UserControlDays userControlDays = new UserControlDays();
+                UserControlDaysArchived userControlDays = new UserControlDaysArchived();
                 userControlDays.days(i);
                 daycontainer.Controls.Add(userControlDays);
             }
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string message = "Does the patient have an existing record?";
-            string caption = "Appointment Creation";
-            var result = MessageBox.Show(message, caption,
-                                         MessageBoxButtons.YesNo,
-                                         MessageBoxIcon.Question);
-            if (result == DialogResult.No)
-            {
-                AddAppointment addappointment = new AddAppointment();
-                addappointment.Show();
-            }
-            else
-            {
-                AddAppointmentExisting addappointmentE = new AddAppointmentExisting();
-                addappointmentE.Show();
-            }
-            this.Hide();
-
         }
 
         private void btnprevious_Click(object sender, EventArgs e)
@@ -96,7 +76,7 @@ namespace DentalAppointmentandInformationSystem
 
             for (int i = 1; i <= days; i++)
             {
-                UserControlDays userControlDays = new UserControlDays();
+                UserControlDaysArchived userControlDays = new UserControlDaysArchived();
                 userControlDays.days(i);
                 daycontainer.Controls.Add(userControlDays);
             }
@@ -122,7 +102,7 @@ namespace DentalAppointmentandInformationSystem
 
             for (int i = 1; i <= days; i++)
             {
-                UserControlDays userControlDays = new UserControlDays();
+                UserControlDaysArchived userControlDays = new UserControlDaysArchived();
                 userControlDays.days(i);
                 daycontainer.Controls.Add(userControlDays);
             }
@@ -157,19 +137,19 @@ namespace DentalAppointmentandInformationSystem
 
         private void patientBtn_Click(object sender, EventArgs e)
         {
-            Patients patient = new Patients();
+            PatientArchives patient = new PatientArchives();
             patient.Show();
             this.Hide();
         }
 
         private void servicesBtn_Click(object sender, EventArgs e)
         {
-            Services services = new Services();
+            ServiceArchives services = new ServiceArchives();
             services.Show();
             this.Hide();
         }
 
-        private void Calendar_FormClosing(object sender, FormClosingEventArgs e)
+        private void CalendarArchives_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
@@ -178,13 +158,6 @@ namespace DentalAppointmentandInformationSystem
         {
             Dashboard dshbrd = new Dashboard();
             dshbrd.Show();
-            this.Hide();
-        }
-
-        private void binBtn_Click(object sender, EventArgs e)
-        {
-            CalendarArchives calArch = new CalendarArchives();
-            calArch.Show();
             this.Hide();
         }
     }

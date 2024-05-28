@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace DentalAppointmentandInformationSystem
 {
-    public partial class Staff : Form
+    public partial class StaffArchives : Form
     {
         Variables v = new Variables();
         SqlConnection constring;
 
-        public Staff()
+        public StaffArchives()
         {
             InitializeComponent();
             constring = v.getConnection;
@@ -37,7 +37,7 @@ namespace DentalAppointmentandInformationSystem
         private void displayStaff()
         {
             constring.Open();
-            string sql = "SELECT * FROM Staff";
+            string sql = "SELECT * FROM Staff_Archive";
             DataTable staffs = new DataTable("staffs");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(staffs);
@@ -72,22 +72,15 @@ namespace DentalAppointmentandInformationSystem
 
         private void patientBtn_Click(object sender, EventArgs e)
         {
-            Patients patients = new Patients();
+            PatientArchives patients = new PatientArchives();
             patients.Show();
             this.Hide();
         }
 
         private void servicesBtn_Click(object sender, EventArgs e)
         {
-            Services srvcs = new Services();
+            ServiceArchives srvcs = new ServiceArchives();
             srvcs.Show();
-            this.Hide();
-        }
-
-        private void btnAddStaff_Click(object sender, EventArgs e)
-        {
-            NewStaff newStaff = new NewStaff();
-            newStaff.Show();
             this.Hide();
         }
 
@@ -95,13 +88,6 @@ namespace DentalAppointmentandInformationSystem
         {
             Dashboard dshbrd = new Dashboard();
             dshbrd.Show();
-            this.Hide();
-        }
-
-        private void binBtn_Click(object sender, EventArgs e)
-        {
-            StaffArchives staffArch = new StaffArchives();
-            staffArch.Show();
             this.Hide();
         }
     }

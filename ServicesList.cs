@@ -75,16 +75,19 @@ namespace DentalAppointmentandInformationSystem
                 if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
                     reader1.Close();
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this service?", "Confirm Delete", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this service?\nThis will be moved to the trash bin.", "Confirm Delete", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
                         v.getsetserviceSelected = serviceID.Text;
-                        string query = "DELETE FROM Service WHERE service_id ='" + v.getsetserviceSelected + "';";
+                        string query = "INSERT INTO Service_Archive SELECT * FROM Service WHERE service_id =" + v.getsetserviceSelected;
                         SqlCommand cmdd = new SqlCommand(query, constring);
                         cmdd.CommandText = query;
-                        if (cmdd.ExecuteNonQuery() == 1)
+                        string query2 = "DELETE FROM Service WHERE service_id ='" + v.getsetserviceSelected + "';";
+                        SqlCommand cmd2 = new SqlCommand(query2, constring);
+                        cmd2.CommandText = query2;
+                        if (cmdd.ExecuteNonQuery() == 1 && cmd2.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("Service Deleted Successfully!");
+                            MessageBox.Show("Service have been moved to the Trash Bin/Archives!");
                             constring.Close();
                             Services srvcs = new Services();
                             srvcs.Show();

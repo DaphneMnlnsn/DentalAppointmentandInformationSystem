@@ -85,17 +85,35 @@
     <Compile Include="AppntmntDetails.Designer.cs">
       <DependentUpon>AppntmntDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppntmntDetailsArchived.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppntmntDetailsArchived.Designer.cs">
+      <DependentUpon>AppntmntDetailsArchived.cs</DependentUpon>
+    </Compile>
     <Compile Include="Appointment.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Appointment.Designer.cs">
       <DependentUpon>Appointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppointmentArchived.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppointmentArchived.Designer.cs">
+      <DependentUpon>AppointmentArchived.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calendar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Calendar.Designer.cs">
       <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarArchives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalendarArchives.Designer.cs">
+      <DependentUpon>CalendarArchives.cs</DependentUpon>
     </Compile>
     <Compile Include="DAISdBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -168,6 +186,12 @@
     <Compile Include="NewStaff.Designer.cs">
       <DependentUpon>NewStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="PatientArchives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientArchives.Designer.cs">
+      <DependentUpon>PatientArchives.cs</DependentUpon>
+    </Compile>
     <Compile Include="PatientDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +218,12 @@
     <Compile Include="Record.Designer.cs">
       <DependentUpon>Record.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServiceArchives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceArchives.Designer.cs">
+      <DependentUpon>ServiceArchives.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +241,12 @@
     </Compile>
     <Compile Include="Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffArchives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffArchives.Designer.cs">
+      <DependentUpon>StaffArchives.cs</DependentUpon>
     </Compile>
     <Compile Include="StaffList.cs">
       <SubType>UserControl</SubType>
@@ -230,6 +266,12 @@
     <Compile Include="UserControlDays.Designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlDaysArchived.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDaysArchived.Designer.cs">
+      <DependentUpon>UserControlDaysArchived.cs</DependentUpon>
+    </Compile>
     <Compile Include="Variables.cs" />
     <EmbeddedResource Include="AddAppointment.resx">
       <DependentUpon>AddAppointment.cs</DependentUpon>
@@ -243,8 +285,14 @@
     <EmbeddedResource Include="Appointment.resx">
       <DependentUpon>Appointment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppointmentArchived.resx">
+      <DependentUpon>AppointmentArchived.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalendarArchives.resx">
+      <DependentUpon>CalendarArchives.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardDaysNotBlank.resx">
       <DependentUpon>DashboardDaysNotBlank.cs</DependentUpon>
@@ -273,6 +321,9 @@
     <EmbeddedResource Include="NewStaff.resx">
       <DependentUpon>NewStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PatientArchives.resx">
+      <DependentUpon>PatientArchives.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PatientDetails.resx">
       <DependentUpon>PatientDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +346,9 @@
     <EmbeddedResource Include="Record.resx">
       <DependentUpon>Record.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ServiceArchives.resx">
+      <DependentUpon>ServiceArchives.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Services.resx">
       <DependentUpon>Services.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffArchives.resx">
+      <DependentUpon>StaffArchives.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffList.resx">
       <DependentUpon>StaffList.cs</DependentUpon>
@@ -377,6 +434,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>DAISdB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\newBin.png" />
+    <None Include="Resources\bin.png" />
+    <None Include="Resources\restore.png" />
     <None Include="Resources\male.png" />
     <None Include="Resources\female.png" />
     <None Include="Resources\back.png" />
