@@ -194,6 +194,7 @@
             this.fnameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fnameTxtBox.Location = new System.Drawing.Point(20, 84);
             this.fnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.fnameTxtBox.MaxLength = 100;
             this.fnameTxtBox.Name = "fnameTxtBox";
             this.fnameTxtBox.Size = new System.Drawing.Size(404, 30);
             this.fnameTxtBox.TabIndex = 25;
@@ -270,6 +271,7 @@
             this.phoneTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneTxtBox.Location = new System.Drawing.Point(477, 151);
             this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.phoneTxtBox.MaxLength = 13;
             this.phoneTxtBox.Name = "phoneTxtBox";
             this.phoneTxtBox.Size = new System.Drawing.Size(292, 30);
             this.phoneTxtBox.TabIndex = 36;
@@ -295,6 +297,7 @@
             this.lnameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnameTxtBox.Location = new System.Drawing.Point(20, 222);
             this.lnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.lnameTxtBox.MaxLength = 100;
             this.lnameTxtBox.Name = "lnameTxtBox";
             this.lnameTxtBox.Size = new System.Drawing.Size(404, 30);
             this.lnameTxtBox.TabIndex = 23;
@@ -320,6 +323,7 @@
             this.mnameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnameTxtBox.Location = new System.Drawing.Point(20, 151);
             this.mnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.mnameTxtBox.MaxLength = 100;
             this.mnameTxtBox.Name = "mnameTxtBox";
             this.mnameTxtBox.Size = new System.Drawing.Size(404, 30);
             this.mnameTxtBox.TabIndex = 49;
@@ -373,7 +377,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(331, 22);
             this.label13.TabIndex = 50;
-            this.label13.Text = "AGE *";
+            this.label13.Text = "AGE";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ageTxtBox
@@ -533,6 +537,7 @@
             this.cpersonNumTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpersonNumTxtBox.Location = new System.Drawing.Point(477, 300);
             this.cpersonNumTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.cpersonNumTxtBox.MaxLength = 13;
             this.cpersonNumTxtBox.Name = "cpersonNumTxtBox";
             this.cpersonNumTxtBox.Size = new System.Drawing.Size(558, 30);
             this.cpersonNumTxtBox.TabIndex = 56;
@@ -544,6 +549,7 @@
             this.contactPrsnTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactPrsnTxtBox.Location = new System.Drawing.Point(20, 300);
             this.contactPrsnTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.contactPrsnTxtBox.MaxLength = 100;
             this.contactPrsnTxtBox.Name = "contactPrsnTxtBox";
             this.contactPrsnTxtBox.Size = new System.Drawing.Size(403, 30);
             this.contactPrsnTxtBox.TabIndex = 55;
@@ -736,6 +742,7 @@
             this.addressTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressTxtBox.Location = new System.Drawing.Point(809, 222);
             this.addressTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.addressTxtBox.MaxLength = 200;
             this.addressTxtBox.Name = "addressTxtBox";
             this.addressTxtBox.Size = new System.Drawing.Size(309, 30);
             this.addressTxtBox.TabIndex = 76;

@@ -303,6 +303,7 @@
             this.phoneTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneTxtBox.Location = new System.Drawing.Point(579, 106);
             this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.phoneTxtBox.MaxLength = 13;
             this.phoneTxtBox.Name = "phoneTxtBox";
             this.phoneTxtBox.Size = new System.Drawing.Size(495, 32);
             this.phoneTxtBox.TabIndex = 12;
@@ -391,6 +392,7 @@
             this.cpersonNumTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpersonNumTxtBox.Location = new System.Drawing.Point(579, 454);
             this.cpersonNumTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.cpersonNumTxtBox.MaxLength = 13;
             this.cpersonNumTxtBox.Name = "cpersonNumTxtBox";
             this.cpersonNumTxtBox.Size = new System.Drawing.Size(495, 32);
             this.cpersonNumTxtBox.TabIndex = 16;
