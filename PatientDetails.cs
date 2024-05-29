@@ -122,7 +122,6 @@ namespace DentalAppointmentandInformationSystem
                     da3.Fill(apps);
 
                     string recordsDate = "", recordsTreat = "", recordsTooth;
-                    float recordsPrice = 0;
                     foreach (DataRow row3 in apps.Rows)
                     {
                         recordsDate += DateTime.Parse(row3["appointment_date"].ToString()).ToString("MM/dd/yyyy");
@@ -133,7 +132,6 @@ namespace DentalAppointmentandInformationSystem
                         if (readService.Read())
                         {
                             recordsTreat += readService["service_name"].ToString();
-                            recordsPrice += float.Parse(readService["service_price"].ToString());
                         }
                         readService.Close();
                         if (!string.IsNullOrEmpty(row3["service_id2"].ToString()))
@@ -144,7 +142,6 @@ namespace DentalAppointmentandInformationSystem
                             if (readService2.Read())
                             {
                                 recordsTreat += ", " + readService2["service_name"].ToString();
-                                recordsPrice += float.Parse(readService2["service_price"].ToString());
                             }
                             readService2.Close();
                         }
@@ -156,14 +153,13 @@ namespace DentalAppointmentandInformationSystem
                             if (readService3.Read())
                             {
                                 recordsTreat += ", " + readService3["service_name"].ToString();
-                                recordsPrice += float.Parse(readService3["service_price"].ToString());
                             }
                             readService3.Close();
                         }
                     }
                     
                     recordsTooth = row2["teeth_treated"].ToString();
-
+                    float recordsPrice = float.Parse(row2["price_billed"].ToString());
                     Record record = new Record();
                     record.setPatientInfo(row2["record_id"].ToString(), recordsDate, recordsTreat, recordsTooth, recordsPrice);
                     recordContainer.Controls.Add(record);

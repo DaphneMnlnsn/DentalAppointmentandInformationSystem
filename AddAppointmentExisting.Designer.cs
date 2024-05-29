@@ -716,6 +716,7 @@
             // patientCombo
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.patientCombo, 2);
+            this.patientCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.patientCombo.FormattingEnabled = true;
             this.patientCombo.Location = new System.Drawing.Point(490, 111);
             this.patientCombo.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);

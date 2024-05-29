@@ -50,7 +50,7 @@ namespace DentalAppointmentandInformationSystem
             foreach (DataRow row in services.Rows)
             {
                 ServicesList service = new ServicesList();
-                service.setServiceInfo(row["service_id"].ToString(), row["service_name"].ToString(), double.Parse(row["service_price"].ToString()).ToString("N0"));
+                service.setServiceInfo(row["service_id"].ToString(), row["service_name"].ToString(), float.Parse(row["service_price"].ToString()));
                 servicesContainer.Controls.Add(service);
             }
             constring.Close();

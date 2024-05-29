@@ -45,10 +45,22 @@ namespace DentalAppointmentandInformationSystem
                     if (dialogResult == DialogResult.Yes)
                     {
                         v.getsetpatientSelected = patientId.Text;
-                        string query2 = "DELETE FROM Patient_Archive WHERE patient_id ='" + v.getsetpatientSelected + "';";
+                        string query2 = "DELETE FROM Record_Archive WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd2 = new SqlCommand(query2, constring);
                         cmd2.CommandText = query2;
-                        if (cmd2.ExecuteNonQuery() == 1)
+                        cmd2.ExecuteNonQuery();
+                        string query = "DELETE FROM Appointment_Archive WHERE patient_id =" + v.getsetpatientSelected;
+                        SqlCommand cmdd = new SqlCommand(query, constring);
+                        cmdd.CommandText = query;
+                        cmdd.ExecuteNonQuery();
+                        string query3 = "DELETE FROM History_Archive WHERE patient_id =" + v.getsetpatientSelected;
+                        SqlCommand cmd3 = new SqlCommand(query3, constring);
+                        cmd3.CommandText = query3;
+                        cmd3.ExecuteNonQuery();
+                        string query4 = "DELETE FROM Patient_Archive WHERE patient_id =" + v.getsetpatientSelected;
+                        SqlCommand cmd4 = new SqlCommand(query4, constring);
+                        cmd4.CommandText = query4;
+                        if (cmd4.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("Patient deleted permanently!");
                             constring.Close();

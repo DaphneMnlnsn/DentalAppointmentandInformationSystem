@@ -31,25 +31,37 @@ namespace DentalAppointmentandInformationSystem
         {
             if (!string.IsNullOrWhiteSpace(teethTrtdTxtBox.Text) && !string.IsNullOrWhiteSpace(priceBilledTxtBox.Text))
             {
-                constring.Open();
+                float num;
+                int num2;
+                bool checkInput = float.TryParse(priceBilledTxtBox.Text, out num);
+                bool checkInput2 = int.TryParse(teethTrtdTxtBox.Text, out num2);
 
-                string query2 = "UPDATE Record SET teeth_treated = '" + teethTrtdTxtBox.Text +
-                    "', price_billed = '" + priceBilledTxtBox.Text + "' WHERE record_id = '" + v.getsetrecordSelected + "';";
-
-                SqlCommand cmd3 = new SqlCommand(query2, constring);
-                cmd3.CommandText = query2;
-                if (cmd3.ExecuteNonQuery() == 1)
+                if (checkInput == true && checkInput2 == true)
                 {
-                    MessageBox.Show("Changes Saved!");
-                    this.Visible = false;
-                    this.ParentForm.Hide();
-                    constring.Close();
-                    PatientDetails ptntDetails = new PatientDetails();
-                    ptntDetails.Show();
+                    constring.Open();
+
+                    string query2 = "UPDATE Record SET teeth_treated = '" + teethTrtdTxtBox.Text +
+                        "', price_billed = '" + priceBilledTxtBox.Text + "' WHERE record_id = '" + v.getsetrecordSelected + "';";
+
+                    SqlCommand cmd3 = new SqlCommand(query2, constring);
+                    cmd3.CommandText = query2;
+                    if (cmd3.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Changes Saved!");
+                        this.Visible = false;
+                        this.ParentForm.Hide();
+                        constring.Close();
+                        PatientDetails ptntDetails = new PatientDetails();
+                        ptntDetails.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something went wrong. Please try again.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Something went wrong. Please try again.");
+                    MessageBox.Show("Please input a number!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else

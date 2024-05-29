@@ -203,7 +203,6 @@ namespace DentalAppointmentandInformationSystem
                     service1Combo.Text = read["service_name"].ToString();
                     service1Combo.SelectedValue = row["service_id"];
                     read.Dispose();
-                    read.Dispose();
                     if (row["service_id2"].ToString() != null || row["service_id2"].ToString() != " ")
                     {
                         string sql3 = "SELECT * FROM Service WHERE service_id = " + "'" + row["service_id2"].ToString() + "'";
@@ -217,8 +216,7 @@ namespace DentalAppointmentandInformationSystem
                         reader3.Dispose();
                         cmd4.Dispose();
                     }
-                    
-                    else if (row["service_id3"].ToString() != null || row["service_id3"].ToString() != "")
+                    if (row["service_id3"].ToString() != null || row["service_id3"].ToString() != "")
                     {
                         string sql4 = "SELECT * FROM Service WHERE service_id = " + "'" + row["service_id3"].ToString() + "'";
                         SqlCommand cmd5 = constring.CreateCommand();
@@ -239,55 +237,116 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveAppnmtntBtn_Click(object sender, EventArgs e)
         {
+            constring.Open();
+            string compareQuery = "SELECT COUNT(*) FROM Appointment WHERE appointment_date = '" + appntmntDate.Text +
+                "' AND appointment_startTime = '" + startTime.Text + "' AND appointment_endTime = '" + endTime.Text + 
+                "' AND patient_id != '" + pIDTextBox.Text + "';";
+            SqlCommand compareCmd = new SqlCommand(compareQuery, constring);
+            int userCount = (int)compareCmd.ExecuteScalar();
+            constring.Close();
+
             if (!string.IsNullOrWhiteSpace(service1Combo.Text) &&
                 !string.IsNullOrWhiteSpace(staff1Combo.Text))
             {
-                constring.Open();
-                string staff2, staff3, service2, service3;
-                if (service2Combo.Text == null || service2Combo.Text == "")
+                if (userCount <= 0)
                 {
-                    service2 = "NULL";
-                }
-                else
-                {
-                    service2 = service2Combo.SelectedValue.ToString();
-                }
+                    constring.Open();
+                    string staff2, staff3, service2, service3;
+                    if (service2Combo.Text == null || service2Combo.Text == "")
+                    {
+                        service2 = "NULL";
+                    }
+                    else
+                    {
+                        service2 = service2Combo.SelectedValue.ToString();
+                    }
 
-                if (service3Combo.Text == null || service3Combo.Text == "")
-                {
-                    service3 = "NULL";
-                }
-                else
-                {
-                    service3 = service3Combo.SelectedValue.ToString();
-                }
-                if (staff2Combo.Text == null || staff2Combo.Text == "")
-                {
-                    staff2 = "NULL";
-                }
-                else
-                {
-                    staff2 = staff2Combo.SelectedValue.ToString();
-                }
+                    if (service3Combo.Text == null || service3Combo.Text == "")
+                    {
+                        service3 = "NULL";
+                    }
+                    else
+                    {
+                        service3 = service3Combo.SelectedValue.ToString();
+                    }
+                    if (staff2Combo.Text == null || staff2Combo.Text == "")
+                    {
+                        staff2 = "NULL";
+                    }
+                    else
+                    {
+                        staff2 = staff2Combo.SelectedValue.ToString();
+                    }
 
-                if (staff3Combo.Text == null || staff3Combo.Text == "")
-                {
-                    staff3 = "NULL";
-                }
-                else
-                {
-                    staff3 = staff3Combo.SelectedValue.ToString();
-                }
+                    if (staff3Combo.Text == null || staff3Combo.Text == "")
+                    {
+                        staff3 = "NULL";
+                    }
+                    else
+                    {
+                        staff3 = staff3Combo.SelectedValue.ToString();
+                    }
 
-                string query2 = "UPDATE Appointment SET appointment_date = '" + appntmntDate.Text +
-                    "', appointment_startTime = '" + startTime.Text + "', appointment_endTime = '" + endTime.Text +
-                    "', employee_num = '" + staff1Combo.SelectedValue.ToString() + "', employee_num2 = " + staff2 +
-                    ", employee_num3 = " + staff3 + ", service_id = '" + service1Combo.SelectedValue.ToString() +
-                    "', service_id2 = " + service2 + ", service_id3 = " + service3 + ", appointment_notes = '" +
-                    notesTxtBox.Text + "' WHERE appointment_id = '" + v.getsetappointmentSelected + "';";
+                    string query2 = "UPDATE Appointment SET appointment_date = '" + appntmntDate.Text +
+                        "', appointment_startTime = '" + startTime.Text + "', appointment_endTime = '" + endTime.Text +
+                        "', employee_num = '" + staff1Combo.SelectedValue.ToString() + "', employee_num2 = " + staff2 +
+                        ", employee_num3 = " + staff3 + ", service_id = '" + service1Combo.SelectedValue.ToString() +
+                        "', service_id2 = " + service2 + ", service_id3 = " + service3 + ", appointment_notes = '" +
+                        notesTxtBox.Text + "' WHERE appointment_id = '" + v.getsetappointmentSelected + "';";
 
                     SqlCommand cmd3 = new SqlCommand(query2, constring);
                     cmd3.CommandText = query2;
+
+                    string sql3 = "SELECT * FROM Appointment WHERE patient_id = " + pIDTextBox.Text + " AND appointment_date = '" + appntmntDate.Text + "'";
+                    DataTable apps = new DataTable("appointments");
+                    SqlDataAdapter da3 = new SqlDataAdapter(sql3, constring);
+                    da3.Fill(apps);
+
+                    string recordsDate = "";
+                    float recordsPrice = 0;
+                    foreach (DataRow row3 in apps.Rows)
+                    {
+                        recordsDate += DateTime.Parse(row3["appointment_date"].ToString()).ToString("MM/dd/yyyy");
+
+                        SqlCommand retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id"].ToString() + "'", constring);
+                        SqlDataReader readService;
+                        readService = retrieveService.ExecuteReader();
+                        if (readService.Read())
+                        {
+                            recordsPrice += float.Parse(readService["service_price"].ToString());
+                        }
+                        readService.Close();
+                        if (!string.IsNullOrEmpty(row3["service_id2"].ToString()))
+                        {
+                            SqlCommand retrieveService2 = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id2"].ToString() + "'", constring);
+                            SqlDataReader readService2;
+                            readService2 = retrieveService2.ExecuteReader();
+                            if (readService2.Read())
+                            {
+                                recordsPrice += float.Parse(readService2["service_price"].ToString());
+                            }
+                            readService2.Close();
+                        }
+                        if (!string.IsNullOrEmpty(row3["service_id3"].ToString()))
+                        {
+                            SqlCommand retrieveService3 = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id3"].ToString() + "'", constring);
+                            SqlDataReader readService3;
+                            readService3 = retrieveService3.ExecuteReader();
+                            if (readService3.Read())
+                            {
+                                recordsPrice += float.Parse(readService3["service_price"].ToString());
+                            }
+                            readService3.Close();
+                        }
+                    }
+
+                    string query3 = "UPDATE Record SET price_billed = '" + recordsPrice + "' WHERE patient_id = '" + pIDTextBox.Text +
+                        "' AND appointment_id = '" + v.getsetappointmentSelected + "';";
+
+                    SqlCommand cmd4 = new SqlCommand(query2, constring);
+                    cmd4.CommandText = query3;
+                    cmd4.ExecuteNonQuery();
+
                     if (cmd3.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Changes Saved!");
@@ -300,6 +359,11 @@ namespace DentalAppointmentandInformationSystem
                     {
                         MessageBox.Show("Something went wrong. Please try again.");
                     }
+                }
+                else
+                {
+                    MessageBox.Show("This appointment schedule is taken! Please select another date or time.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             else
             {

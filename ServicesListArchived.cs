@@ -28,11 +28,11 @@ namespace DentalAppointmentandInformationSystem
         {
         }
 
-        public void setServiceInfo(string service_id, string service_name, string service_price)
+        public void setServiceInfo(string service_id, string service_name, float service_price)
         {
             serviceID.Text = service_id;
             serviceName.Text = service_name;
-            servicePrice.Text = service_price;
+            servicePrice.Text = service_price.ToString();
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
