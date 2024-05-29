@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace DentalAppointmentandInformationSystem
 {
-    public partial class AddService : UserControl
+    public partial class AddHistory : UserControl
     {
         Variables v = new Variables();
         SqlConnection constring;
 
-        public AddService()
+        public AddHistory()
         {
             InitializeComponent();
             constring = v.getConnection;
@@ -27,18 +27,23 @@ namespace DentalAppointmentandInformationSystem
 
         }
 
-        private void saveServiceBtn_Click(object sender, EventArgs e)
+        private void cancelBtn_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(srvcNameTxtBox.Text) && !string.IsNullOrWhiteSpace(srvcPriceTxtBox.Text))
+            this.Visible = false;
+        }
+
+        private void saveHistoryBtn_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(pastTrtmntTxtBox.Text) && !string.IsNullOrWhiteSpace(dentistNameTxtBox.Text))
             {
-                int serviceID = 0;
+                int historyID = 0;
                 constring.Open();
-                SqlCommand cmd = new SqlCommand("SELECT TOP 1 service_id AS ID FROM (SELECT service_id FROM Service UNION ALL SELECT service_id FROM Service_Archive) combinedid ORDER BY service_id DESC", constring);
+                SqlCommand cmd = new SqlCommand("SELECT TOP 1 history_id AS ID FROM (SELECT history_id FROM History UNION ALL SELECT history_id FROM History_Archive) combinedid ORDER BY history_id DESC", constring);
                 SqlDataReader reader1;
                 reader1 = cmd.ExecuteReader();
                 if (reader1.Read())
                 {
-                    serviceID = reader1.GetInt32(0) + 1;
+                    historyID = reader1.GetInt32(0) + 1;
                 }
                 else
                 {
@@ -47,19 +52,19 @@ namespace DentalAppointmentandInformationSystem
                 reader1.Close();
                 cmd.Dispose();
 
-                String query = "INSERT INTO Service VALUES('" + serviceID + "','" + srvcNameTxtBox.Text + "','"
-                    + srvcPriceTxtBox.Text + "');";
+                String query = "INSERT INTO History VALUES('" + historyID + "','" + v.getsetpatientSelected + "','',NULL,'" + dentistNameTxtBox.Text + "','"
+                    + pastTrtmntTxtBox.Text + "');";
 
                 SqlCommand cmd2 = new SqlCommand(query, constring);
                 cmd2.CommandText = query;
                 if (cmd2.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Service added successfully!");
+                    MessageBox.Show("History added successfully!");
                     this.Visible = false;
                     this.ParentForm.Hide();
                     constring.Close();
-                    Services srvc = new Services();
-                    srvc.Show();
+                    PatientDetails ptntdeets = new PatientDetails();
+                    ptntdeets.Show();
                 }
                 else
                 {
@@ -70,11 +75,6 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("Please fill out all required fields!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-        }
-
-        private void cancelBtn_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
         }
     }
 }

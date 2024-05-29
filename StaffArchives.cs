@@ -44,7 +44,7 @@ namespace DentalAppointmentandInformationSystem
 
             foreach (DataRow row in staffs.Rows)
             {
-                StaffList staff = new StaffList();
+                StaffListArchived staff = new StaffListArchived();
                 string employee_fullname = "";
                 if (row["employee_mname"].ToString().Equals(null) || row["employee_mname"].ToString().Equals(""))
                 {
@@ -65,7 +65,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void clndrBtn_Click(object sender, EventArgs e)
         {
-            Calendar clndr = new Calendar();
+            CalendarArchives clndr = new CalendarArchives();
             clndr.Show();
             this.Hide();
         }

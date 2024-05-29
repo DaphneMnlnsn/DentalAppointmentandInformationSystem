@@ -43,7 +43,7 @@ namespace DentalAppointmentandInformationSystem
 
             foreach (DataRow row in patients.Rows)
             {
-                PatientsList patient = new PatientsList();
+                PatientsListArchived patient = new PatientsListArchived();
                 string patient_fullname = "";
                 if (row["patient_mname"].ToString().Equals(null) || row["patient_mname"].ToString().Equals(""))
                 {
@@ -72,7 +72,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void clndrBtn_Click(object sender, EventArgs e)
         {
-            Calendar clndr = new Calendar();
+            CalendarArchives clndr = new CalendarArchives();
             clndr.Show();
             this.Hide();
         }
@@ -88,7 +88,7 @@ namespace DentalAppointmentandInformationSystem
                 if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
                     constring.Close();
-                    Staff stf = new Staff();
+                    StaffArchives stf = new StaffArchives();
                     stf.Show();
                     this.Hide();
                 }
@@ -107,7 +107,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void servicesBtn_Click(object sender, EventArgs e)
         {
-            Services srvcs = new Services();
+            ServiceArchives srvcs = new ServiceArchives();
             srvcs.Show();
             this.Hide();
         }

@@ -40,6 +40,8 @@
             this.searchTxtBox = new System.Windows.Forms.TextBox();
             this.binBtn = new System.Windows.Forms.Panel();
             this.binLbl = new System.Windows.Forms.Label();
+            this.editService1 = new DentalAppointmentandInformationSystem.EditService();
+            this.addService1 = new DentalAppointmentandInformationSystem.AddService();
             this.binPic = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.staffBtn = new System.Windows.Forms.PictureBox();
@@ -48,8 +50,6 @@
             this.dshbrdbtn = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.doctorPic = new System.Windows.Forms.PictureBox();
-            this.editService1 = new DentalAppointmentandInformationSystem.EditService();
-            this.addService1 = new DentalAppointmentandInformationSystem.AddService();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -144,7 +144,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(12, 14);
+            this.label1.Location = new System.Drawing.Point(11, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 62);
             this.label1.TabIndex = 77;
@@ -156,7 +156,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(296, 29);
+            this.label2.Location = new System.Drawing.Point(293, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(186, 31);
             this.label2.TabIndex = 78;
@@ -167,7 +167,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(703, 29);
+            this.label3.Location = new System.Drawing.Point(700, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 31);
             this.label3.TabIndex = 79;
@@ -182,7 +182,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 513F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
@@ -224,6 +224,22 @@
             this.binLbl.TabIndex = 0;
             this.binLbl.Text = "Trash Bin";
             this.binLbl.Click += new System.EventHandler(this.binBtn_Click);
+            // 
+            // editService1
+            // 
+            this.editService1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.editService1.Location = new System.Drawing.Point(351, 302);
+            this.editService1.Name = "editService1";
+            this.editService1.Size = new System.Drawing.Size(998, 298);
+            this.editService1.TabIndex = 87;
+            // 
+            // addService1
+            // 
+            this.addService1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addService1.Location = new System.Drawing.Point(351, 302);
+            this.addService1.Name = "addService1";
+            this.addService1.Size = new System.Drawing.Size(998, 298);
+            this.addService1.TabIndex = 9;
             // 
             // binPic
             // 
@@ -316,22 +332,6 @@
             this.doctorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.doctorPic.TabIndex = 7;
             this.doctorPic.TabStop = false;
-            // 
-            // editService1
-            // 
-            this.editService1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.editService1.Location = new System.Drawing.Point(351, 302);
-            this.editService1.Name = "editService1";
-            this.editService1.Size = new System.Drawing.Size(998, 298);
-            this.editService1.TabIndex = 87;
-            // 
-            // addService1
-            // 
-            this.addService1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addService1.Location = new System.Drawing.Point(351, 302);
-            this.addService1.Name = "addService1";
-            this.addService1.Size = new System.Drawing.Size(998, 298);
-            this.addService1.TabIndex = 9;
             // 
             // Services
             // 

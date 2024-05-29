@@ -66,7 +66,7 @@ namespace DentalAppointmentandInformationSystem
                 int staffID = 0, staffPassNum = 0;
                 string staffPass = "";
                 constring.Open();
-                SqlCommand cmd = new SqlCommand("SELECT TOP 1 employee_num, employee_role, employee_pass FROM Staff ORDER BY employee_num DESC", constring);
+                SqlCommand cmd = new SqlCommand("SELECT TOP 1 employee_num, employee_role, employee_pass FROM (SELECT * FROM Staff UNION ALL SELECT * FROM Staff_Archive) combinedid ORDER BY employee_num DESC", constring);
                 SqlDataReader reader1;
                 reader1 = cmd.ExecuteReader();
                 if (reader1.Read())

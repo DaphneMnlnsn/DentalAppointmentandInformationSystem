@@ -65,7 +65,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.addHistoryBtn = new System.Windows.Forms.Label();
+            this.addHistory1 = new DentalAppointmentandInformationSystem.AddHistory();
             this.editRecord1 = new DentalAppointmentandInformationSystem.EditRecord();
+            this.editHistory1 = new DentalAppointmentandInformationSystem.EditHistory();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
@@ -315,7 +318,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.99722F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.00278F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 226F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 256F));
             this.tableLayoutPanel2.Controls.Add(this.label4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
@@ -334,10 +337,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(926, 1);
+            this.label4.Location = new System.Drawing.Point(896, 1);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(219, 61);
+            this.label4.Size = new System.Drawing.Size(249, 61);
             this.label4.TabIndex = 3;
             this.label4.Text = "PRICE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -348,7 +351,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(706, 1);
+            this.label3.Location = new System.Drawing.Point(676, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(211, 61);
@@ -362,10 +365,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(278, 1);
+            this.label2.Location = new System.Drawing.Point(267, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(419, 61);
+            this.label2.Size = new System.Drawing.Size(400, 61);
             this.label2.TabIndex = 1;
             this.label2.Text = "TREATMENT";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -379,7 +382,7 @@
             this.label1.Location = new System.Drawing.Point(5, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 61);
+            this.label1.Size = new System.Drawing.Size(253, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "DATE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -515,7 +518,7 @@
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.00278F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 579F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 594F));
             this.tableLayoutPanel3.Controls.Add(this.label7, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(190, 610);
@@ -532,10 +535,10 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(574, 1);
+            this.label7.Location = new System.Drawing.Point(559, 1);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(571, 61);
+            this.label7.Size = new System.Drawing.Size(586, 61);
             this.label7.TabIndex = 3;
             this.label7.Text = "DENTIST";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -549,7 +552,7 @@
             this.label9.Location = new System.Drawing.Point(5, 1);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(560, 61);
+            this.label9.Size = new System.Drawing.Size(545, 61);
             this.label9.TabIndex = 1;
             this.label9.Text = "TREATMENT";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -565,13 +568,42 @@
             this.label11.TabIndex = 91;
             this.label11.Text = "Medical History";
             // 
+            // addHistoryBtn
+            // 
+            this.addHistoryBtn.AutoSize = true;
+            this.addHistoryBtn.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addHistoryBtn.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.addHistoryBtn.Location = new System.Drawing.Point(1208, 577);
+            this.addHistoryBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.addHistoryBtn.Name = "addHistoryBtn";
+            this.addHistoryBtn.Size = new System.Drawing.Size(128, 21);
+            this.addHistoryBtn.TabIndex = 93;
+            this.addHistoryBtn.Text = "+ Add History";
+            this.addHistoryBtn.Click += new System.EventHandler(this.addHistoryBtn_Click);
+            // 
+            // addHistory1
+            // 
+            this.addHistory1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addHistory1.Location = new System.Drawing.Point(343, 309);
+            this.addHistory1.Name = "addHistory1";
+            this.addHistory1.Size = new System.Drawing.Size(998, 298);
+            this.addHistory1.TabIndex = 94;
+            // 
             // editRecord1
             // 
             this.editRecord1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.editRecord1.Location = new System.Drawing.Point(342, 333);
+            this.editRecord1.Location = new System.Drawing.Point(342, 308);
             this.editRecord1.Name = "editRecord1";
             this.editRecord1.Size = new System.Drawing.Size(998, 298);
             this.editRecord1.TabIndex = 92;
+            // 
+            // editHistory1
+            // 
+            this.editHistory1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.editHistory1.Location = new System.Drawing.Point(345, 311);
+            this.editHistory1.Name = "editHistory1";
+            this.editHistory1.Size = new System.Drawing.Size(998, 298);
+            this.editHistory1.TabIndex = 84;
             // 
             // PatientDetails
             // 
@@ -580,7 +612,10 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1534, 911);
+            this.Controls.Add(this.editHistory1);
+            this.Controls.Add(this.addHistory1);
             this.Controls.Add(this.editRecord1);
+            this.Controls.Add(this.addHistoryBtn);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.historyContainer);
             this.Controls.Add(this.label6);
@@ -659,5 +694,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private EditRecord editRecord1;
+        private System.Windows.Forms.Label addHistoryBtn;
+        private AddHistory addHistory1;
+        private EditHistory editHistory1;
     }
 }

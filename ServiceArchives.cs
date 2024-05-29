@@ -47,7 +47,7 @@ namespace DentalAppointmentandInformationSystem
 
             foreach (DataRow row in services.Rows)
             {
-                ServicesList service = new ServicesList();
+                ServicesListArchived service = new ServicesListArchived();
                 service.setServiceInfo(row["service_id"].ToString(), row["service_name"].ToString(), double.Parse(row["service_price"].ToString()).ToString("N0"));
                 servicesContainer.Controls.Add(service);
             }
@@ -56,7 +56,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void clndrBtn_Click(object sender, EventArgs e)
         {
-            Calendar clndr = new Calendar();
+            CalendarArchives clndr = new CalendarArchives();
             clndr.Show();
             this.Hide();
         }

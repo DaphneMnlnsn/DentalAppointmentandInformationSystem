@@ -48,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -72,6 +74,12 @@
     </Compile>
     <Compile Include="AddAppointmentExisting.Designer.cs">
       <DependentUpon>AddAppointmentExisting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddHistory.Designer.cs">
+      <DependentUpon>AddHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="AddService.cs">
       <SubType>UserControl</SubType>
@@ -144,6 +152,12 @@
     <Compile Include="EditAppointment.Designer.cs">
       <DependentUpon>EditAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditHistory.Designer.cs">
+      <DependentUpon>EditHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +206,12 @@
     <Compile Include="PatientArchives.Designer.cs">
       <DependentUpon>PatientArchives.cs</DependentUpon>
     </Compile>
+    <Compile Include="PatientDentalHistoryItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatientDentalHistoryItem.Designer.cs">
+      <DependentUpon>PatientDentalHistoryItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="PatientDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +229,12 @@
     </Compile>
     <Compile Include="PatientsList.Designer.cs">
       <DependentUpon>PatientsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsListArchived.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatientsListArchived.Designer.cs">
+      <DependentUpon>PatientsListArchived.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -236,6 +262,12 @@
     <Compile Include="ServicesList.Designer.cs">
       <DependentUpon>ServicesList.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServicesListArchived.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ServicesListArchived.Designer.cs">
+      <DependentUpon>ServicesListArchived.cs</DependentUpon>
+    </Compile>
     <Compile Include="Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +285,12 @@
     </Compile>
     <Compile Include="StaffList.Designer.cs">
       <DependentUpon>StaffList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffListArchived.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffListArchived.Designer.cs">
+      <DependentUpon>StaffListArchived.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlBlank.cs">
       <SubType>UserControl</SubType>
@@ -279,6 +317,9 @@
     <EmbeddedResource Include="AddAppointmentExisting.resx">
       <DependentUpon>AddAppointmentExisting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddHistory.resx">
+      <DependentUpon>AddHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddService.resx">
       <DependentUpon>AddService.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditAppointment.resx">
       <DependentUpon>EditAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditHistory.resx">
+      <DependentUpon>EditHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditPatient.resx">
       <DependentUpon>EditPatient.cs</DependentUpon>
@@ -324,6 +368,9 @@
     <EmbeddedResource Include="PatientArchives.resx">
       <DependentUpon>PatientArchives.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PatientDentalHistoryItem.resx">
+      <DependentUpon>PatientDentalHistoryItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PatientDetails.resx">
       <DependentUpon>PatientDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PatientsList.resx">
       <DependentUpon>PatientsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsListArchived.resx">
+      <DependentUpon>PatientsListArchived.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -355,6 +405,9 @@
     <EmbeddedResource Include="ServicesList.resx">
       <DependentUpon>ServicesList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ServicesListArchived.resx">
+      <DependentUpon>ServicesListArchived.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffList.resx">
       <DependentUpon>StaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffListArchived.resx">
+      <DependentUpon>StaffListArchived.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DAISdBDataSet.xsc">
       <DependentUpon>DAISdBDataSet.xsd</DependentUpon>

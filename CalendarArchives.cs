@@ -119,7 +119,7 @@ namespace DentalAppointmentandInformationSystem
                 if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
                     constring.Close();
-                    Staff stf = new Staff();
+                    StaffArchives stf = new StaffArchives();
                     stf.Show();
                     this.Hide();
                 }

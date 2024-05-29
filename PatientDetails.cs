@@ -29,6 +29,8 @@ namespace DentalAppointmentandInformationSystem
         private void PatientDetails_Load(object sender, EventArgs e)
         {
             editRecord1.Visible = false;
+            editHistory1.Visible = false;
+            addHistory1.Visible = false;
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             displayPatientDetails();
@@ -153,7 +155,7 @@ namespace DentalAppointmentandInformationSystem
                             readService3 = retrieveService3.ExecuteReader();
                             if (readService3.Read())
                             {
-                                recordsTreat += ", " + readService3["service_id3"].ToString();
+                                recordsTreat += ", " + readService3["service_name"].ToString();
                                 recordsPrice += float.Parse(readService3["service_price"].ToString());
                             }
                             readService3.Close();
@@ -165,6 +167,19 @@ namespace DentalAppointmentandInformationSystem
                     Record record = new Record();
                     record.setPatientInfo(row2["record_id"].ToString(), recordsDate, recordsTreat, recordsTooth, recordsPrice);
                     recordContainer.Controls.Add(record);
+                }
+
+                string sql4 = "SELECT * FROM History WHERE patient_id = " + v.getsetpatientSelected;
+                DataTable history = new DataTable("history");
+                SqlDataAdapter da4 = new SqlDataAdapter(sql4, constring);
+                da4.Fill(history);
+
+                foreach (DataRow row4 in history.Rows)
+                {
+                    PatientDentalHistoryItem dentalHistory = new PatientDentalHistoryItem();
+                    dentalHistory.setDentalHistory(row4["history_id"].ToString(), row4["past_treatment"].ToString(), row4["dentist_name"].ToString());
+                    historyContainer.Controls.Add(dentalHistory);
+
                 }
             }
             constring.Close();
@@ -230,6 +245,12 @@ namespace DentalAppointmentandInformationSystem
         {
             editRecord1.Visible = true;
             editRecord1.setValues();
+        }
+
+        public void editHistoryVisible()
+        {
+            editHistory1.Visible = true;
+            editHistory1.setValues();
         }
 
         private void deletePtnt_Click(object sender, EventArgs e)
@@ -302,8 +323,11 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("NO DATA FOUND");
             }
-            
-            
+        }
+
+        private void addHistoryBtn_Click(object sender, EventArgs e)
+        {
+            addHistory1.Visible = true;
         }
     }
 }
