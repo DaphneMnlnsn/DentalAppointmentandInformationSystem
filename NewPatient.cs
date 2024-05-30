@@ -15,8 +15,6 @@ namespace DentalAppointmentandInformationSystem
 {
     public partial class NewPatient : Form
     {
-        byte[] bytes;
-        string fileName;
         Variables v = new Variables();
         SqlConnection constring;
 
@@ -55,7 +53,7 @@ namespace DentalAppointmentandInformationSystem
             };
             genderCombo.DataSource = items;
         }
-        private void attachFileBtn_Click(object sender, EventArgs e)
+        /*private void attachFileBtn_Click(object sender, EventArgs e)
         {
             openFileDialog1.InitialDirectory = "C://Documents";
             openFileDialog1.Title = "Select medical record file.";
@@ -70,7 +68,7 @@ namespace DentalAppointmentandInformationSystem
                     attachFileBtn.Text = fileName;
                 }
             }
-        }
+        }*/
 
         private void savePatientBtn_Click(object sender, EventArgs e)
         {
@@ -94,7 +92,7 @@ namespace DentalAppointmentandInformationSystem
                     string gender = genderCombo.Items[genderCombo.SelectedIndex].ToString();
                     int patientID = 0;
                     constring.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 patient_id AS ID FROM (SELECT patient_id FROM Patient UNION ALL SELECT patient_id FROM Patient_Archive) combinedid ORDER BY patient_id DESC", constring);
+                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 patient_id FROM Patient ORDER BY patient_id DESC", constring);
                     SqlDataReader reader1;
                     reader1 = cmd.ExecuteReader();
                     if (reader1.Read())
@@ -108,10 +106,10 @@ namespace DentalAppointmentandInformationSystem
                     reader1.Close();
                     cmd.Dispose();
 
-                    string query = "INSERT INTO Patient(patient_id, patient_lname, patient_mname, patient_fname, patient_age, patient_gender, patient_bdate, patient_cnum, patient_email, patient_address, patient_cperson, patient_cpernum, patient_notes) VALUES('" + patientID + "','" + lnameTxtBox.Text + "','"
+                    string query = "INSERT INTO Patient VALUES('" + patientID + "','" + lnameTxtBox.Text + "','"
                         + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + ageTxtBox.Text + "','" + gender
                         + "','" + birthDate.Text + "','" + phoneTxtBox.Text + "','" + emailTxtBox.Text + "','"
-                        + addressTxtBox.Text + "','" + contactPrsnTxtBox.Text + "','" + cpersonNumTxtBox.Text + "','" + notesTxtBox.Text + "');";
+                        + addressTxtBox.Text + "','" + contactPrsnTxtBox.Text + "','" + cpersonNumTxtBox.Text + "','" + notesTxtBox.Text + "',1);";
 
                     SqlCommand cmd2 = new SqlCommand(query, constring);
                     cmd2.CommandText = query;
@@ -123,10 +121,10 @@ namespace DentalAppointmentandInformationSystem
                         MessageBox.Show("Something went wrong. Please try again.");
                     }
 
-                    if ((!string.IsNullOrEmpty(dentistTxtBox.Text)) && (!string.IsNullOrEmpty(pastTreatTxtBox.Text)))
+                    /*if ((!string.IsNullOrEmpty(dentistTxtBox.Text)) && (!string.IsNullOrEmpty(pastTreatTxtBox.Text)))
                     {
                         int historyID = 0;
-                        SqlCommand cm = new SqlCommand("SELECT TOP 1 history_id AS ID FROM (SELECT history_id FROM History UNION ALL SELECT history_id FROM History_Archive) combinedid ORDER BY history_id DESC", constring);
+                        SqlCommand cm = new SqlCommand("SELECT TOP 1 history_id FROM History ORDER BY history_id DESC", constring);
                         SqlDataReader read;
                         read = cm.ExecuteReader();
                         if (read.Read())
@@ -142,7 +140,7 @@ namespace DentalAppointmentandInformationSystem
                         if (attachFileBtn.Text.Equals("+ Add Attachment"))
                         {
                             SqlCommand command = new SqlCommand("INSERT INTO History VALUES ('" + historyID + "','" + patientID +
-                                "',NULL,NULL,'" + dentistTxtBox.Text + "','" + pastTreatTxtBox.Text + "')", constring);
+                                "',NULL,NULL,'" + dentistTxtBox.Text + "','" + pastTreatTxtBox.Text + "',1)", constring);
                             if (command.ExecuteNonQuery() == 1)
                             {
                                 MessageBox.Show("Patient added successfully!");
@@ -151,7 +149,7 @@ namespace DentalAppointmentandInformationSystem
                         else
                         {
                             SqlCommand command = new SqlCommand("INSERT INTO History VALUES ('" + historyID + "','" + patientID +
-                               "','" + fileName + "',CONVERT(varbinary, '" + bytes + "'),'" + dentistTxtBox.Text + "','" + pastTreatTxtBox.Text + "')", constring);
+                               "','" + fileName + "',CONVERT(varbinary, '" + bytes + "',1),'" + dentistTxtBox.Text + "','" + pastTreatTxtBox.Text + "')", constring);
                             if (command.ExecuteNonQuery() == 1)
                             {
                                 MessageBox.Show("Patient added successfully!");
@@ -161,7 +159,7 @@ namespace DentalAppointmentandInformationSystem
                     else
                     {
                         MessageBox.Show("Patient added successfully!");
-                    }
+                    }*/
                     constring.Close();
                     Patients patients = new Patients();
                     patients.Show();

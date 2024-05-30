@@ -45,24 +45,24 @@ namespace DentalAppointmentandInformationSystem
                     if (dialogResult == DialogResult.Yes)
                     {
                         v.getsetpatientSelected = patientId.Text;
-                        string query2 = "DELETE FROM Record_Archive WHERE patient_id =" + v.getsetpatientSelected;
+                        string query2 = "DELETE FROM Record WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd2 = new SqlCommand(query2, constring);
                         cmd2.CommandText = query2;
                         cmd2.ExecuteNonQuery();
-                        string query = "DELETE FROM Appointment_Archive WHERE patient_id =" + v.getsetpatientSelected;
+                        string query = "DELETE FROM Appointment WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmdd = new SqlCommand(query, constring);
                         cmdd.CommandText = query;
                         cmdd.ExecuteNonQuery();
-                        string query3 = "DELETE FROM History_Archive WHERE patient_id =" + v.getsetpatientSelected;
+                        /*string query3 = "DELETE FROM History WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd3 = new SqlCommand(query3, constring);
                         cmd3.CommandText = query3;
-                        cmd3.ExecuteNonQuery();
-                        string query4 = "DELETE FROM Patient_Archive WHERE patient_id =" + v.getsetpatientSelected;
+                        cmd3.ExecuteNonQuery();*/
+                        string query4 = "DELETE FROM Patient WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd4 = new SqlCommand(query4, constring);
                         cmd4.CommandText = query4;
                         if (cmd4.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("Patient deleted permanently!");
+                            MessageBox.Show("Patient record deleted permanently!");
                             constring.Close();
                             Patients ptnt = new Patients();
                             ptnt.Show();
@@ -91,36 +91,20 @@ namespace DentalAppointmentandInformationSystem
             if (dialogResult == DialogResult.Yes)
             {
                 v.getsetpatientSelected = patientId.Text;
-                string querya4 = "INSERT INTO Patient SELECT * FROM Patient_Archive WHERE patient_id =" + v.getsetpatientSelected;
-                SqlCommand cmda4 = new SqlCommand(querya4, constring);
-                cmda4.CommandText = querya4;
-                cmda4.ExecuteNonQuery();
-                string querya = "INSERT INTO Appointment SELECT * FROM Appointment_Archive WHERE patient_id =" + v.getsetpatientSelected;
-                SqlCommand cmdda = new SqlCommand(querya, constring);
-                cmdda.CommandText = querya;
-                cmdda.ExecuteNonQuery();
-                string querya2 = "INSERT INTO Record SELECT * FROM Record_Archive WHERE patient_id =" + v.getsetpatientSelected;
-                SqlCommand cmda2 = new SqlCommand(querya2, constring);
-                cmda2.CommandText = querya2;
-                cmda2.ExecuteNonQuery();
-                string querya3 = "INSERT INTO History SELECT * FROM History_Archive WHERE patient_id =" + v.getsetpatientSelected;
-                SqlCommand cmda3 = new SqlCommand(querya3, constring);
-                cmda3.CommandText = querya3;
-                cmda3.ExecuteNonQuery();
 
-                string query2 = "DELETE FROM Record_Archive WHERE patient_id =" + v.getsetpatientSelected;
+                string query2 = "UPDATE Record SET status = 1 WHERE patient_id =" + v.getsetpatientSelected;
                 SqlCommand cmd2 = new SqlCommand(query2, constring);
                 cmd2.CommandText = query2;
                 cmd2.ExecuteNonQuery();
-                string query = "DELETE FROM Appointment_Archive WHERE patient_id =" + v.getsetpatientSelected;
+                string query = "UPDATE Appointment SET status = 1 WHERE patient_id =" + v.getsetpatientSelected;
                 SqlCommand cmdd = new SqlCommand(query, constring);
                 cmdd.CommandText = query;
                 cmdd.ExecuteNonQuery();
-                string query3 = "DELETE FROM History_Archive WHERE patient_id =" + v.getsetpatientSelected;
+                /*string query3 = "UPDATE History SET status = 1 WHERE patient_id =" + v.getsetpatientSelected;
                 SqlCommand cmd3 = new SqlCommand(query3, constring);
                 cmd3.CommandText = query3;
-                cmd3.ExecuteNonQuery();
-                string query4 = "DELETE FROM Patient_Archive WHERE patient_id =" + v.getsetpatientSelected;
+                cmd3.ExecuteNonQuery();*/
+                string query4 = "UPDATE Patient SET status = 1 WHERE patient_id =" + v.getsetpatientSelected;
                 SqlCommand cmd4 = new SqlCommand(query4, constring);
                 cmd4.CommandText = query4;
                 if (cmd4.ExecuteNonQuery() == 1)

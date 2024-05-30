@@ -113,20 +113,6 @@ namespace DentalAppointmentandInformationSystem
                 cpersonNumTxtBox.Text = row["patient_cpernum"].ToString();
                 notesTxtBox.Text = row["patient_notes"].ToString();
             }
-
-            string queryy = "SELECT * FROM History WHERE patient_id =" + int.Parse(v.getsetpatientSelected);
-            SqlDataAdapter adpty = new SqlDataAdapter(queryy, constring);
-            DataTable dtt = new DataTable();
-            adpty.Fill(dtt);
-            foreach (DataRow row in dtt.Rows)
-            {
-                dentistTxtBox.Text = row["dentist_name"].ToString();
-                pastTreatTxtBox.Text = row["past_treatment"].ToString();
-                if (row["medhistory_fileName"] != null )
-                {
-                    attachFileBtn.Text = row["medhistory_filename"].ToString();
-                }
-            }
             constring.Close();
         }
 
@@ -184,7 +170,7 @@ namespace DentalAppointmentandInformationSystem
                 {
                     fileName = Path.GetFileName(openFileDialog1.FileName);
                     bytes = File.ReadAllBytes(openFileDialog1.FileName);
-                    attachFileBtn.Text = fileName;
+                    //attachFileBtn.Text = fileName;
                 }
             }
         }
@@ -218,83 +204,7 @@ namespace DentalAppointmentandInformationSystem
                         "' WHERE patient_id = '" + v.getsetpatientSelected + "';";
 
                     SqlCommand cmd3 = new SqlCommand(query2, constring);
-                    cmd3.ExecuteNonQuery();
-
-                    if (!string.IsNullOrWhiteSpace(dentistTxtBox.Text) && !string.IsNullOrWhiteSpace(pastTreatTxtBox.Text))
-                    {
-                        int historyID = 0;
-                        SqlCommand cm = new SqlCommand("SELECT history_id FROM History WHERE patient_id = '" + pIDTextBox.Text + "'", constring);
-                        SqlDataReader read;
-                        read = cm.ExecuteReader();
-                        if (read.Read())
-                        {
-                            historyID = read.GetInt32(0);
-                            read.Close();
-                            cm.Dispose();
-                            if (attachFileBtn.Text.Equals("+ Add Attachment"))
-                            {
-                                SqlCommand command = new SqlCommand("UPDATE History SET dentist_name = '" +
-                                    dentistTxtBox.Text + "', past_treatment = '" + pastTreatTxtBox +
-                                    "' WHERE patient_id = " + pIDTextBox.Text + ";", constring);
-                                if (command.ExecuteNonQuery() == 1)
-                                {
-                                    MessageBox.Show("Changes saved!");
-                                }
-                            }
-                            else
-                            {
-                                SqlCommand command = new SqlCommand("UPDATE History SET medhistory_filename = '" + fileName +
-                                    "',med_history = CONVERT(varbinary, '" + bytes +
-                                     "'), dentist_name = '" + dentistTxtBox.Text + "', past_treatment = '" +
-                                     pastTreatTxtBox.Text + "' WHERE patient_id = " + pIDTextBox.Text + ";", constring);
-                                if (command.ExecuteNonQuery() == 1)
-                                {
-                                    MessageBox.Show("Changes saved!");
-                                }
-                            }
-                        }
-                        else
-                        {
-                            read.Close(); cm.Dispose();
-                            int historyIDNew = 0;
-                            SqlCommand cmNew = new SqlCommand("SELECT TOP 1 history_id FROM History ORDER BY history_id DESC", constring);
-                            SqlDataReader readNew;
-                            readNew = cmNew.ExecuteReader();
-                            if (readNew.Read())
-                            {
-                                historyIDNew = readNew.GetInt32(0) + 1;
-                            }
-                            else
-                            {
-                                MessageBox.Show("NO DATA FOUND");
-                            }
-                            readNew.Close();
-                            cmNew.Dispose();
-                            if (attachFileBtn.Text.Equals("+ Add Attachment"))
-                            {
-                                SqlCommand command = new SqlCommand("INSERT INTO History VALUES ('" + historyIDNew + "','" + pIDTextBox.Text +
-                                    "',NULL,NULL,'" + dentistTxtBox.Text + "','" + pastTreatTxtBox.Text + "')", constring);
-                                if (command.ExecuteNonQuery() == 1)
-                                {
-                                    MessageBox.Show("History added successfully!");
-                                }
-                            }
-                            else
-                            {
-                                SqlCommand command = new SqlCommand("INSERT INTO History VALUES ('" + historyIDNew + "','" + pIDTextBox.Text +
-                                   "','" + fileName + "',CONVERT(varbinary, '" + bytes + "'),'" + dentistTxtBox.Text + "','" + pastTreatTxtBox.Text + "')", constring);
-                                if (command.ExecuteNonQuery() == 1)
-                                {
-                                    MessageBox.Show("History added successfully!");
-                                }
-                            }
-                        }
-                        constring.Close();
-                        PatientDetails pDetails = new PatientDetails();
-                        pDetails.Show();
-                        this.Hide();
-                    }
-                    else
+                    if(cmd3.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Changes saved!");
                         constring.Close();

@@ -130,7 +130,7 @@ namespace DentalAppointmentandInformationSystem
                     constring.Open();
                     int appointmentID = 0;
                     string staff2, staff3, service2, service3;
-                    SqlCommand command = new SqlCommand("SELECT TOP 1 appointment_id AS ID FROM (SELECT appointment_id FROM Appointment UNION ALL SELECT appointment_id FROM Appointment_Archive) combinedid ORDER BY appointment_id DESC", constring);
+                    SqlCommand command = new SqlCommand("SELECT TOP 1 appointment_id FROM Appointment ORDER BY appointment_id DESC", constring);
                     SqlDataReader read;
                     read = command.ExecuteReader();
                     if (read.Read())
@@ -178,7 +178,8 @@ namespace DentalAppointmentandInformationSystem
                     }
                     string query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + pIDTextBox.Text + "','"
                         + service1Combo.SelectedValue + "'," + service2 + "," + service3 + ",'" + appntmntDate.Text
-                        + "','" + startTime.Text + "','" + endTime.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "')";
+                        + "','" + startTime.Text + "','" + endTime.Text + "','" + staff1Combo.SelectedValue + "'," + 
+                        staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "',1)";
 
                     SqlCommand cmd3 = new SqlCommand(query2, constring);
                     cmd3.CommandText = query2;
@@ -192,7 +193,7 @@ namespace DentalAppointmentandInformationSystem
                     }
 
                     int recordID = 0;
-                    SqlCommand com = new SqlCommand("SELECT TOP 1 record_id AS ID FROM (SELECT record_id FROM Record UNION ALL SELECT record_id FROM Record_Archive) combinedid ORDER BY record_id DESC", constring);
+                    SqlCommand com = new SqlCommand("SELECT TOP 1 record_id FROM Record ORDER BY record_id DESC", constring);
                     SqlDataReader re;
                     re = com.ExecuteReader();
                     if (re.Read())
@@ -250,7 +251,7 @@ namespace DentalAppointmentandInformationSystem
 
                     string query3 = "INSERT INTO Record VALUES('" + recordID + "','" + pIDTextBox.Text + "','"
                         + service1Combo.Text + " " + service2Combo.Text + " " + service3Combo.Text + "','" + appointmentID
-                        + "','0','" + recordsPrice + "',NULL);";
+                        + "','0','" + recordsPrice + "',NULL,1);";
 
                     SqlCommand cmd4 = new SqlCommand(query3, constring);
                     cmd4.CommandText = query3;

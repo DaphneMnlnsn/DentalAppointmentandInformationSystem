@@ -37,7 +37,7 @@ namespace DentalAppointmentandInformationSystem
         private void displayStaff()
         {
             constring.Open();
-            string sql = "SELECT * FROM Staff_Archive";
+            string sql = "SELECT * FROM Staff WHERE status = 0";
             DataTable staffs = new DataTable("staffs");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(staffs);

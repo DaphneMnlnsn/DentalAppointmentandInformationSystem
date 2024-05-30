@@ -33,17 +33,15 @@ namespace DentalAppointmentandInformationSystem
         }
         private void restoreStaff_Click(object sender, EventArgs e)
         {
+            constring.Open();
             DialogResult dialogResult = MessageBox.Show("Restore this staff record?", "Confirm Restore", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 v.getsetstaffSelected = employeeNum.Text;
-                string query = "INSERT INTO Staff SELECT * FROM Staff_Archive WHERE employee_num =" + v.getsetstaffSelected;
-                SqlCommand cmdd = new SqlCommand(query, constring);
-                cmdd.CommandText = query;
-                string query2 = "DELETE FROM Staff_Archive WHERE employee_num ='" + v.getsetstaffSelected + "';";
+                string query2 = "UPDATE Staff SET status = 1 WHERE employee_num ='" + v.getsetstaffSelected + "';";
                 SqlCommand cmd2 = new SqlCommand(query2, constring);
                 cmd2.CommandText = query2;
-                if (cmdd.ExecuteNonQuery() == 1 && cmd2.ExecuteNonQuery() == 1)
+                if (cmd2.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Staff record successfully restored!");
                     constring.Close();
@@ -68,7 +66,7 @@ namespace DentalAppointmentandInformationSystem
                 if (dialogResult == DialogResult.Yes)
                 {
                     v.getsetstaffSelected = employeeNum.Text;
-                    string query2 = "DELETE FROM Staff_Archive WHERE employee_num ='" + v.getsetstaffSelected + "';";
+                    string query2 = "DELETE FROM Staff WHERE employee_num ='" + v.getsetstaffSelected + "';";
                     SqlCommand cmd2 = new SqlCommand(query2, constring);
                     cmd2.CommandText = query2;
                     if (cmd2.ExecuteNonQuery() == 1)

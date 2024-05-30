@@ -29,8 +29,6 @@ namespace DentalAppointmentandInformationSystem
         private void PatientDetails_Load(object sender, EventArgs e)
         {
             editRecord1.Visible = false;
-            editHistory1.Visible = false;
-            addHistory1.Visible = false;
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             displayPatientDetails();
@@ -108,22 +106,28 @@ namespace DentalAppointmentandInformationSystem
                 patientCnum.Text = "Contact Number: " + row["patient_cnum"].ToString();
                 patientCper.Text = "Contact Person: " + row["patient_cperson"].ToString();
                 patientLV.Text = "Last Visit: " + lastVisit.ToString();
+                patientNotes.Text = row["patient_notes"].ToString();
 
-                string sql2 = "SELECT * FROM Record WHERE patient_id = " + v.getsetpatientSelected;
+                string sql2 = "SELECT * FROM Record WHERE patient_id = " + v.getsetpatientSelected + " AND status = 1";
                 DataTable records = new DataTable("record");
                 SqlDataAdapter da2 = new SqlDataAdapter(sql2, constring);
                 da2.Fill(records);
+                
 
                 foreach (DataRow row2 in records.Rows)
                 {
-                    string sql3 = "SELECT * FROM Appointment WHERE patient_id = " + v.getsetpatientSelected;
+                    float recordsPrice;
+                    string recordsDate = "", recordsTreat = "", recordsTooth;
+                    string sql3 = "SELECT * FROM Appointment WHERE appointment_id = '" + row2["appointment_id"].ToString() + "'";
                     DataTable apps = new DataTable("appointments");
                     SqlDataAdapter da3 = new SqlDataAdapter(sql3, constring);
                     da3.Fill(apps);
+                    recordsTooth = row2["teeth_treated"].ToString();
+                    recordsPrice = float.Parse(row2["price_billed"].ToString());
 
-                    string recordsDate = "", recordsTreat = "", recordsTooth;
                     foreach (DataRow row3 in apps.Rows)
                     {
+                        
                         recordsDate += DateTime.Parse(row3["appointment_date"].ToString()).ToString("MM/dd/yyyy");
 
                         SqlCommand retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id"].ToString() + "'", constring);
@@ -156,15 +160,13 @@ namespace DentalAppointmentandInformationSystem
                             }
                             readService3.Close();
                         }
+                        
                     }
-                    
-                    recordsTooth = row2["teeth_treated"].ToString();
-                    float recordsPrice = float.Parse(row2["price_billed"].ToString());
                     Record record = new Record();
                     record.setPatientInfo(row2["record_id"].ToString(), recordsDate, recordsTreat, recordsTooth, recordsPrice);
                     recordContainer.Controls.Add(record);
                 }
-
+                /*
                 string sql4 = "SELECT * FROM History WHERE patient_id = " + v.getsetpatientSelected;
                 DataTable history = new DataTable("history");
                 SqlDataAdapter da4 = new SqlDataAdapter(sql4, constring);
@@ -176,7 +178,7 @@ namespace DentalAppointmentandInformationSystem
                     dentalHistory.setDentalHistory(row4["history_id"].ToString(), row4["past_treatment"].ToString(), row4["dentist_name"].ToString());
                     historyContainer.Controls.Add(dentalHistory);
 
-                }
+                }*/
             }
             constring.Close();
         }
@@ -243,11 +245,11 @@ namespace DentalAppointmentandInformationSystem
             editRecord1.setValues();
         }
 
-        public void editHistoryVisible()
+       /* public void editHistoryVisible()
         {
             editHistory1.Visible = true;
             editHistory1.setValues();
-        }
+        }*/
 
         private void deletePtnt_Click(object sender, EventArgs e)
         {
@@ -263,36 +265,20 @@ namespace DentalAppointmentandInformationSystem
                     if (dialogResult == DialogResult.Yes)
                     {
                         reader1.Close();
-                        string querya4 = "INSERT INTO Patient_Archive SELECT * FROM Patient WHERE patient_id =" + v.getsetpatientSelected;
-                        SqlCommand cmda4 = new SqlCommand(querya4, constring);
-                        cmda4.CommandText = querya4;
-                        cmda4.ExecuteNonQuery();
-                        string querya = "INSERT INTO Appointment_Archive SELECT * FROM Appointment WHERE patient_id =" + v.getsetpatientSelected;
-                        SqlCommand cmdda = new SqlCommand(querya, constring);
-                        cmdda.CommandText = querya;
-                        cmdda.ExecuteNonQuery();
-                        string querya2 = "INSERT INTO Record_Archive SELECT * FROM Record WHERE patient_id =" + v.getsetpatientSelected;
-                        SqlCommand cmda2 = new SqlCommand(querya2, constring);
-                        cmda2.CommandText = querya2;
-                        cmda2.ExecuteNonQuery();
-                        string querya3 = "INSERT INTO History_Archive SELECT * FROM History WHERE patient_id =" + v.getsetpatientSelected;
-                        SqlCommand cmda3 = new SqlCommand(querya3, constring);
-                        cmda3.CommandText = querya3;
-                        cmda3.ExecuteNonQuery();
 
-                        string query2 = "DELETE FROM Record WHERE patient_id =" + v.getsetpatientSelected;
+                        string query2 = "UPDATE Record SET status = 0 WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd2 = new SqlCommand(query2, constring);
                         cmd2.CommandText = query2;
                         cmd2.ExecuteNonQuery();
-                        string query = "DELETE FROM Appointment WHERE patient_id =" + v.getsetpatientSelected;
+                        string query = "UPDATE Appointment SET status = 0 WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmdd = new SqlCommand(query, constring);
                         cmdd.CommandText = query;
                         cmdd.ExecuteNonQuery();
-                        string query3 = "DELETE FROM History WHERE patient_id =" + v.getsetpatientSelected;
+                        /*string query3 = "UPDATE History SET status = 0 WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd3 = new SqlCommand(query3, constring);
                         cmd3.CommandText = query3;
-                        cmd3.ExecuteNonQuery();
-                        string query4 = "DELETE FROM Patient WHERE patient_id =" + v.getsetpatientSelected;
+                        cmd3.ExecuteNonQuery();*/
+                        string query4 = "UPDATE Patient SET status = 0 WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd4 = new SqlCommand(query4, constring);
                         cmd4.CommandText = query4;
                         if (cmd4.ExecuteNonQuery() == 1)
@@ -321,9 +307,9 @@ namespace DentalAppointmentandInformationSystem
             }
         }
 
-        private void addHistoryBtn_Click(object sender, EventArgs e)
+        /*private void addHistoryBtn_Click(object sender, EventArgs e)
         {
             addHistory1.Visible = true;
-        }
+        }*/
     }
 }

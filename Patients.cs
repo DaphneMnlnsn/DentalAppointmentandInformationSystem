@@ -36,7 +36,7 @@ namespace DentalAppointmentandInformationSystem
         private void displayPatient()
         {
             constring.Open();
-            string sql = "SELECT * FROM Patient";
+            string sql = "SELECT * FROM Patient WHERE status = 1";
             DataTable patients = new DataTable("patients");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(patients);

@@ -66,7 +66,7 @@ namespace DentalAppointmentandInformationSystem
                 int staffID = 0, staffPassNum = 0;
                 string staffPass = "";
                 constring.Open();
-                SqlCommand cmd = new SqlCommand("SELECT TOP 1 employee_num, employee_role, employee_pass FROM (SELECT * FROM Staff UNION ALL SELECT * FROM Staff_Archive) combinedid ORDER BY employee_num DESC", constring);
+                SqlCommand cmd = new SqlCommand("SELECT TOP 1 employee_num, employee_role, employee_pass FROM Staff ORDER BY employee_num DESC", constring);
                 SqlDataReader reader1;
                 reader1 = cmd.ExecuteReader();
                 if (reader1.Read())
@@ -95,7 +95,7 @@ namespace DentalAppointmentandInformationSystem
 
                 String query = "INSERT INTO Staff VALUES('" + staffID + "','" + lnameTxtBox.Text + "','"
                     + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + phoneTxtBox.Text + "','" + ageTxtBox.Text + "','"
-                    + (DateTime.Parse(birthDateTxtBox.Text).ToString("MM/dd/yyyy")) + "','" + staffRoleCombo.Text + "','" + staffPass + "');";
+                    + (DateTime.Parse(birthDateTxtBox.Text).ToString("MM/dd/yyyy")) + "','" + staffRoleCombo.Text + "','" + staffPass + "',1);";
 
                 SqlCommand cmd2 = new SqlCommand(query, constring);
                 cmd2.CommandText = query;

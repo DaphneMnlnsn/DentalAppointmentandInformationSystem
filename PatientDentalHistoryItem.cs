@@ -27,10 +27,10 @@ namespace DentalAppointmentandInformationSystem
 
         private void PatientDentalHistoryItem_Click(object sender, EventArgs e)
         {
-            v.getsethistorySelected = historyID;
+            /*v.getsethistorySelected = historyID;
             PatientDetails mainForm;
             mainForm = (PatientDetails)this.FindForm();
-            mainForm.editHistoryVisible();
+            mainForm.editHistoryVisible();*/
         }
     }
 }

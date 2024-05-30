@@ -72,7 +72,7 @@ namespace DentalAppointmentandInformationSystem
         {
             if(!eNumTxtBox.Text.Equals("Employee Number") && !passTxtbox.Text.Equals("Password"))
             {
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Staff WHERE employee_num ='" + eNumTxtBox.Text + "' AND employee_pass ='" + passTxtbox.Text + "'", constring);
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Staff WHERE employee_num ='" + eNumTxtBox.Text + "' AND employee_pass ='" + passTxtbox.Text + "' AND status = 1", constring);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 if (dt.Rows[0][0].ToString() == "1")

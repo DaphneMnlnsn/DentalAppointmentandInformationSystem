@@ -42,11 +42,11 @@ namespace DentalAppointmentandInformationSystem
             {
                 constring.Open();
 
-                string query2 = "DELETE FROM Record_Archive WHERE appointment_id =" + appntmntIDLbl.Text;
+                string query2 = "DELETE FROM Record WHERE appointment_id =" + appntmntIDLbl.Text;
                 SqlCommand cmd2 = new SqlCommand(query2, constring);
                 cmd2.CommandText = query2;
                 cmd2.ExecuteNonQuery();
-                string query = "DELETE FROM Appointment_Archive WHERE appointment_id =" + appntmntIDLbl.Text;
+                string query = "DELETE FROM Appointment WHERE appointment_id =" + appntmntIDLbl.Text;
                 SqlCommand cmd = new SqlCommand(query, constring);
                 cmd.CommandText = query;
                 if (cmd.ExecuteNonQuery() == 1)
@@ -70,20 +70,12 @@ namespace DentalAppointmentandInformationSystem
             if (dialogResult == DialogResult.Yes)
             {
                 constring.Open();
-                string querya = "INSERT INTO Appointment SELECT * FROM Appointment_Archive WHERE appointment_id =" + appntmntIDLbl.Text;
-                SqlCommand cmda = new SqlCommand(querya, constring);
-                cmda.CommandText = querya;
-                cmda.ExecuteNonQuery();
-                string querya2 = "INSERT INTO Record SELECT * FROM Record_Archive WHERE appointment_id =" + appntmntIDLbl.Text;
-                SqlCommand cmda2 = new SqlCommand(querya2, constring);
-                cmda2.CommandText = querya2;
-                cmda2.ExecuteNonQuery();
 
-                string query2 = "DELETE FROM Record_Archive WHERE appointment_id =" + appntmntIDLbl.Text;
+                string query2 = "UPDATE Record SET status = 1 WHERE appointment_id =" + appntmntIDLbl.Text;
                 SqlCommand cmd2 = new SqlCommand(query2, constring);
                 cmd2.CommandText = query2;
                 cmd2.ExecuteNonQuery();
-                string query = "DELETE FROM Appointment_Archive WHERE appointment_id =" + appntmntIDLbl.Text;
+                string query = "UPDATE Appointment SET status = 1 WHERE appointment_id =" + appntmntIDLbl.Text;
                 SqlCommand cmd = new SqlCommand(query, constring);
                 cmd.CommandText = query;
                 if (cmd.ExecuteNonQuery() == 1)

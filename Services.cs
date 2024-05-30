@@ -42,7 +42,7 @@ namespace DentalAppointmentandInformationSystem
         private void displayServices()
         {
             constring.Open();
-            string sql = "SELECT * FROM Service";
+            string sql = "SELECT * FROM Service WHERE status = 1";
             DataTable services = new DataTable("services");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(services);

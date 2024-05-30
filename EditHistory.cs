@@ -31,7 +31,7 @@ namespace DentalAppointmentandInformationSystem
         {
             if (!string.IsNullOrWhiteSpace(pastTrtmntTxtBox.Text) && !string.IsNullOrWhiteSpace(dentistNameTxtBox.Text))
             {
-                constring.Open();
+                /*constring.Open();
 
                 string query2 = "UPDATE History SET past_treatment = '" + pastTrtmntTxtBox.Text +
                     "', dentist_name = '" + dentistNameTxtBox.Text + "' WHERE history_id = '" + v.getsethistorySelected + "';";
@@ -50,7 +50,7 @@ namespace DentalAppointmentandInformationSystem
                 else
                 {
                     MessageBox.Show("Something went wrong. Please try again.");
-                }
+                }*/
             }
             else
             {
@@ -65,7 +65,7 @@ namespace DentalAppointmentandInformationSystem
 
         public void setValues()
         {
-            constring.Open();
+            /*constring.Open();
             string query = "SELECT * FROM History WHERE history_id =" + int.Parse(v.getsethistorySelected);
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -76,6 +76,7 @@ namespace DentalAppointmentandInformationSystem
                 dentistNameTxtBox.Text = row["dentist_name"].ToString();
             }
             constring.Close();
+            */
         }
     }
 }

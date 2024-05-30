@@ -61,7 +61,7 @@ namespace DentalAppointmentandInformationSystem
         private void displayAppointments()
         {
             constring.Open();
-            string sql = "SELECT * FROM Appointment_Archive WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + v.getsetDay + "'";
+            string sql = "SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + v.getsetDay + "' AND status = 0";
             DataTable appointments = new DataTable("appointments");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(appointments);
@@ -114,7 +114,7 @@ namespace DentalAppointmentandInformationSystem
                         reader4.Dispose();
                         cmd4.Dispose();
                     }
-                    string sql5 = "SELECT * FROM (SELECT * FROM Patient UNION ALL SELECT * FROM Patient_Archive) combinedid WHERE patient_id = " + "'" + patient_id + "'";
+                    string sql5 = "SELECT * FROM Patient WHERE patient_id = " + "'" + patient_id + "'";
                     SqlCommand cmd5 = constring.CreateCommand();
                     string patient_name;
                     cmd5.CommandText = sql5;

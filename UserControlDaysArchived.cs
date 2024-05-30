@@ -34,7 +34,7 @@ namespace DentalAppointmentandInformationSystem
         private void displayAppointment()
         {
             constring.Open();
-            string sql = "SELECT * FROM Appointment_Archive WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + lbldays.Text + "'";
+            string sql = "SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + lbldays.Text + "' AND status = 0";
             SqlCommand cmd = constring.CreateCommand();
             cmd.CommandText = sql;
             SqlDataReader reader = cmd.ExecuteReader();

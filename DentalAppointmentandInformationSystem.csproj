@@ -335,6 +335,9 @@
     <EmbeddedResource Include="CalendarArchives.resx">
       <DependentUpon>CalendarArchives.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashboardDaysNotBlank.resx">
       <DependentUpon>DashboardDaysNotBlank.cs</DependentUpon>
     </EmbeddedResource>

@@ -339,7 +339,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(373, 22);
             this.label12.TabIndex = 48;
-            this.label12.Text = "MIDDLE NAME *";
+            this.label12.Text = "MIDDLE NAME";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2

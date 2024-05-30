@@ -50,7 +50,7 @@ namespace DentalAppointmentandInformationSystem
                     if (dialogResult == DialogResult.Yes)
                     {
                         v.getsetserviceSelected = serviceID.Text;
-                        string query2 = "DELETE FROM Service_Archive WHERE service_id ='" + v.getsetserviceSelected + "';";
+                        string query2 = "DELETE FROM Service WHERE service_id ='" + v.getsetserviceSelected + "';";
                         SqlCommand cmd2 = new SqlCommand(query2, constring);
                         cmd2.CommandText = query2;
                         if (cmd2.ExecuteNonQuery() == 1)
@@ -84,13 +84,10 @@ namespace DentalAppointmentandInformationSystem
             if (dialogResult == DialogResult.Yes)
             {
                 v.getsetserviceSelected = serviceID.Text;
-                string query = "INSERT INTO Service SELECT * FROM Service_Archive WHERE service_id =" + v.getsetserviceSelected;
-                SqlCommand cmdd = new SqlCommand(query, constring);
-                cmdd.CommandText = query;
-                string query2 = "DELETE FROM Service_Archive WHERE service_id ='" + v.getsetserviceSelected + "';";
+                string query2 = "UPDATE Service SET status = 1 WHERE service_id ='" + v.getsetserviceSelected + "';";
                 SqlCommand cmd2 = new SqlCommand(query2, constring);
                 cmd2.CommandText = query2;
-                if (cmdd.ExecuteNonQuery() == 1 && cmd2.ExecuteNonQuery() == 1)
+                if (cmd2.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Service successfully restored!");
                     constring.Close();

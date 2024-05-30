@@ -79,15 +79,12 @@ namespace DentalAppointmentandInformationSystem
                     if (dialogResult == DialogResult.Yes)
                     {
                         v.getsetserviceSelected = serviceID.Text;
-                        string query = "INSERT INTO Service_Archive SELECT * FROM Service WHERE service_id =" + v.getsetserviceSelected;
-                        SqlCommand cmdd = new SqlCommand(query, constring);
-                        cmdd.CommandText = query;
-                        string query2 = "DELETE FROM Service WHERE service_id ='" + v.getsetserviceSelected + "';";
+                        string query2 = "UPDATE Service SET status = 0 WHERE service_id ='" + v.getsetserviceSelected + "';";
                         SqlCommand cmd2 = new SqlCommand(query2, constring);
                         cmd2.CommandText = query2;
-                        if (cmdd.ExecuteNonQuery() == 1 && cmd2.ExecuteNonQuery() == 1)
+                        if (cmd2.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("Service have been moved to the Trash Bin/Archives!");
+                            MessageBox.Show("Service successfully moved to the Trash Bin/Archives!");
                             constring.Close();
                             Services srvcs = new Services();
                             srvcs.Show();

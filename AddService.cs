@@ -38,7 +38,7 @@ namespace DentalAppointmentandInformationSystem
                 {
                     int serviceID = 0;
                     constring.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 service_id AS ID FROM (SELECT service_id FROM Service UNION ALL SELECT service_id FROM Service_Archive) combinedid ORDER BY service_id DESC", constring);
+                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 service_id FROM Service ORDER BY service_id DESC", constring);
                     SqlDataReader reader1;
                     reader1 = cmd.ExecuteReader();
                     if (reader1.Read())
@@ -53,7 +53,7 @@ namespace DentalAppointmentandInformationSystem
                     cmd.Dispose();
 
                     String query = "INSERT INTO Service VALUES('" + serviceID + "','" + srvcNameTxtBox.Text + "','"
-                        + srvcPriceTxtBox.Text + "');";
+                        + srvcPriceTxtBox.Text + "',1);";
 
                     SqlCommand cmd2 = new SqlCommand(query, constring);
                     cmd2.CommandText = query;

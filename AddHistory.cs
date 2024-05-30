@@ -38,7 +38,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 int historyID = 0;
                 constring.Open();
-                SqlCommand cmd = new SqlCommand("SELECT TOP 1 history_id AS ID FROM (SELECT history_id FROM History UNION ALL SELECT history_id FROM History_Archive) combinedid ORDER BY history_id DESC", constring);
+                SqlCommand cmd = new SqlCommand("SELECT TOP 1 history_id FROM History ORDER BY history_id DESC", constring);
                 SqlDataReader reader1;
                 reader1 = cmd.ExecuteReader();
                 if (reader1.Read())
@@ -53,7 +53,7 @@ namespace DentalAppointmentandInformationSystem
                 cmd.Dispose();
 
                 String query = "INSERT INTO History VALUES('" + historyID + "','" + v.getsetpatientSelected + "','',NULL,'" + dentistNameTxtBox.Text + "','"
-                    + pastTrtmntTxtBox.Text + "');";
+                    + pastTrtmntTxtBox.Text + "',1);";
 
                 SqlCommand cmd2 = new SqlCommand(query, constring);
                 cmd2.CommandText = query;

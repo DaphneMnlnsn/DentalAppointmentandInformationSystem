@@ -176,15 +176,12 @@ namespace DentalAppointmentandInformationSystem
             if (dialogResult == DialogResult.Yes)
             {
                 constring.Open();
-                string query = "INSERT INTO Staff_Archive SELECT * FROM Staff WHERE employee_num =" + v.getsetstaffSelected;
-                SqlCommand cmd = new SqlCommand(query, constring);
-                cmd.CommandText = query;
-                string query2 = "DELETE FROM Staff WHERE employee_num =" + v.getsetstaffSelected;
+                string query2 = "UPDATE Staff SET status = 0 WHERE employee_num =" + v.getsetstaffSelected;
                 SqlCommand cmd2 = new SqlCommand(query2, constring);
                 cmd2.CommandText = query2;
-                if (cmd.ExecuteNonQuery() == 1 && cmd2.ExecuteNonQuery() == 1)
+                if (cmd2.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Staff Records have been moved to the Trash Bin/Archives!");
+                    MessageBox.Show("Staff Record succesfully moved to the Trash Bin/Archives!");
                     constring.Close();
                     Staff stff = new Staff();
                     stff.Show();
