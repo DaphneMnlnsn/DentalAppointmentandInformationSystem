@@ -64,6 +64,7 @@ namespace DentalAppointmentandInformationSystem
             if (string.IsNullOrEmpty(passTxtbox.Text))
             {
                 passTxtbox.Text = "Password";
+                passTxtbox.PasswordChar = '\0';
                 passTxtbox.ForeColor = Color.FromArgb(217, 217, 217);
             }
         }
@@ -102,6 +103,15 @@ namespace DentalAppointmentandInformationSystem
         private void forgotPassLbl_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Please ask your administrator for a password reset.");
+        }
+
+        private void passTxtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = e.SuppressKeyPress = true;
+                loginBtn.PerformClick();
+            }
         }
     }
 }

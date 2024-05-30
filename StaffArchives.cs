@@ -97,5 +97,48 @@ namespace DentalAppointmentandInformationSystem
             stff.Show();
             this.Hide();
         }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            constring.Open();
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE (employee_num LIKE @StaffID OR employee_fname LIKE @FirstName"
+                + " OR employee_mname LIKE @MiddleName OR employee_lname LIKE @LastName OR employee_age LIKE @Age OR"
+                + " employee_contact LIKE @Contact OR employee_bdate LIKE @Birthdate OR employee_role LIKE @Role) AND status = 0", constring))
+            {
+                cmd.Parameters.AddWithValue("StaffID", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("FirstName", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("MiddleName", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("LastName", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("Age", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("Contact", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("Birthdate", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("Role", string.Format("%{0}%", searchTxtBox.Text));
+
+                DataTable staffs = new DataTable("staffs");
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(staffs);
+                staffContainer.Controls.Clear();
+
+                foreach (DataRow row in staffs.Rows)
+                {
+                    StaffList staff = new StaffList();
+                    string employee_fullname = "";
+                    if (row["employee_mname"].ToString().Equals(null) || row["employee_mname"].ToString().Equals(""))
+                    {
+                        employee_fullname = row["employee_fname"].ToString() + " " + row["employee_lname"].ToString();
+                    }
+                    else
+                    {
+                        employee_fullname = row["employee_fname"].ToString() + " " + row["employee_mname"].ToString() + " " + row["employee_lname"].ToString();
+
+                    }
+                    staff.setStaffInfo(row["employee_num"].ToString(), employee_fullname, row["employee_age"].ToString(),
+                        ((DateTime)row["employee_bdate"]).ToString("MM/dd/yyyy"), row["employee_role"].ToString(), row["employee_contact"].ToString(),
+                        row["employee_pass"].ToString());
+                    staffContainer.Controls.Add(staff);
+                }
+                constring.Close();
+            }
+        }
     }
 }

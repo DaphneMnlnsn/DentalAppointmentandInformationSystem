@@ -125,5 +125,60 @@ namespace DentalAppointmentandInformationSystem
             ptnt.Show();
             this.Hide();
         }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            constring.Open();
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Patient WHERE (patient_id LIKE @PatientID OR patient_fname LIKE @FirstName"
+                + " OR patient_mname LIKE @MiddleName OR patient_lname LIKE @LastName OR patient_age LIKE @Age OR patient_gender LIKE @Gender OR"
+                + " patient_cnum LIKE @Contact OR patient_bdate LIKE @Birthdate OR patient_email LIKE @Email OR patient_address LIKE @Address"
+                + " OR patient_cperson LIKE @ContactPerson OR patient_cpernum LIKE @ContactPersonNum) AND status = 0", constring))
+            {
+                cmd.Parameters.AddWithValue("PatientID", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("FirstName", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("MiddleName", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("LastName", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("Age", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("Gender", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("Contact", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("Birthdate", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("Email", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("Address", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("ContactPerson", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("ContactPersonNum", string.Format("%{0}%", searchTxtBox.Text));
+
+                DataTable patients = new DataTable("patients");
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(patients);
+                staffContainer.Controls.Clear();
+                foreach (DataRow row in patients.Rows)
+                {
+                    PatientsList patient = new PatientsList();
+                    string patient_fullname = "";
+                    if (row["patient_mname"].ToString().Equals(null) || row["patient_mname"].ToString().Equals(""))
+                    {
+                        patient_fullname = row["patient_fname"].ToString() + " " + row["patient_lname"].ToString();
+                    }
+                    else
+                    {
+                        patient_fullname = row["patient_fname"].ToString() + " " + row["patient_mname"].ToString() + " " + row["patient_lname"].ToString();
+
+                    }
+                    string lastVisit = "";
+                    SqlCommand cmdd = new SqlCommand("SELECT TOP 1 appointment_date FROM Appointment WHERE patient_id = '" + row["patient_id"].ToString() + "' ORDER BY appointment_id DESC", constring);
+                    SqlDataReader reader1;
+                    reader1 = cmdd.ExecuteReader();
+                    if (reader1.Read())
+                    {
+                        lastVisit += (DateTime.Parse(reader1["appointment_date"].ToString()).ToString("MM/dd/yyyy")).ToString();
+                    }
+                    reader1.Close();
+                    patient.setPatientInfo(row["patient_id"].ToString(), patient_fullname, row["patient_age"].ToString(),
+                        row["patient_gender"].ToString(), lastVisit, row["patient_cnum"].ToString());
+                    staffContainer.Controls.Add(patient);
+                }
+                constring.Close();
+            }
+        }
     }
 }

@@ -186,6 +186,7 @@
             this.passTxtbox.TabIndex = 19;
             this.passTxtbox.Text = "Password";
             this.passTxtbox.Enter += new System.EventHandler(this.passTxtbox_Enter);
+            this.passTxtbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passTxtBox_KeyDown);
             this.passTxtbox.Leave += new System.EventHandler(this.passTxtbox_Leave);
             // 
             // pictureBox3
@@ -250,6 +251,7 @@
             this.eNumTxtBox.TabIndex = 17;
             this.eNumTxtBox.Text = "Employee Number";
             this.eNumTxtBox.Enter += new System.EventHandler(this.eNumTxtBox_Enter);
+            this.eNumTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passTxtBox_KeyDown);
             this.eNumTxtBox.Leave += new System.EventHandler(this.eNumTxtBox_Leave);
             // 
             // loginBtn

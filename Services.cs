@@ -122,5 +122,30 @@ namespace DentalAppointmentandInformationSystem
             servArch.Show();
             this.Hide();
         }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            constring.Open();
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Service WHERE (service_id LIKE @ServiceID OR"
+                + " service_name LIKE @ServiceName OR service_price LIKE @ServicePrice) AND status = 1", constring))
+            {
+                cmd.Parameters.AddWithValue("ServiceID", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("ServiceName", string.Format("%{0}%", searchTxtBox.Text));
+                cmd.Parameters.AddWithValue("ServicePrice", string.Format("%{0}%", searchTxtBox.Text));
+
+                DataTable services = new DataTable("services");
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(services);
+                servicesContainer.Controls.Clear();
+
+                foreach (DataRow row in services.Rows)
+                {
+                    ServicesList service = new ServicesList();
+                    service.setServiceInfo(row["service_id"].ToString(), row["service_name"].ToString(), float.Parse(row["service_price"].ToString()));
+                    servicesContainer.Controls.Add(service);
+                }
+                constring.Close();
+            }
+        }
     }
 }
