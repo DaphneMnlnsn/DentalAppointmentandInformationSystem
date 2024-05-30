@@ -34,6 +34,7 @@
             this.clndrBtn = new System.Windows.Forms.PictureBox();
             this.dshbrdbtn = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dshbrdLbl = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.doctorPic = new System.Windows.Forms.PictureBox();
             this.servicesContainer = new System.Windows.Forms.FlowLayoutPanel();
@@ -43,7 +44,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.searchTxtBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dshbrdLbl = new System.Windows.Forms.Label();
+            this.backBtn = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptntsBtn)).BeginInit();
@@ -54,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -138,6 +140,20 @@
             this.panel2.Size = new System.Drawing.Size(1534, 97);
             this.panel2.TabIndex = 73;
             // 
+            // dshbrdLbl
+            // 
+            this.dshbrdLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dshbrdLbl.AutoSize = true;
+            this.dshbrdLbl.Font = new System.Drawing.Font("Metrophobic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dshbrdLbl.Location = new System.Drawing.Point(194, 27);
+            this.dshbrdLbl.Name = "dshbrdLbl";
+            this.dshbrdLbl.Size = new System.Drawing.Size(313, 50);
+            this.dshbrdLbl.TabIndex = 9;
+            this.dshbrdLbl.Text = "Archived Services";
+            this.dshbrdLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -174,7 +190,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(13, 14);
+            this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 62);
             this.label1.TabIndex = 77;
@@ -186,7 +202,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(297, 29);
+            this.label2.Location = new System.Drawing.Point(296, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(186, 31);
             this.label2.TabIndex = 78;
@@ -197,7 +213,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(704, 29);
+            this.label3.Location = new System.Drawing.Point(703, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 31);
             this.label3.TabIndex = 79;
@@ -212,7 +228,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 513F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
@@ -244,25 +260,24 @@
             this.pictureBox1.TabIndex = 94;
             this.pictureBox1.TabStop = false;
             // 
-            // dshbrdLbl
+            // backBtn
             // 
-            this.dshbrdLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dshbrdLbl.AutoSize = true;
-            this.dshbrdLbl.Font = new System.Drawing.Font("Metrophobic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dshbrdLbl.Location = new System.Drawing.Point(194, 27);
-            this.dshbrdLbl.Name = "dshbrdLbl";
-            this.dshbrdLbl.Size = new System.Drawing.Size(313, 50);
-            this.dshbrdLbl.TabIndex = 9;
-            this.dshbrdLbl.Text = "Archived Services";
-            this.dshbrdLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.back;
+            this.backBtn.Location = new System.Drawing.Point(276, 119);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(56, 55);
+            this.backBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backBtn.TabIndex = 95;
+            this.backBtn.TabStop = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // ServiceArchives
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1534, 911);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.searchTxtBox);
             this.Controls.Add(this.servicesContainer);
@@ -286,6 +301,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,5 +324,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox searchTxtBox;
         private System.Windows.Forms.Label dshbrdLbl;
+        private System.Windows.Forms.PictureBox backBtn;
     }
 }

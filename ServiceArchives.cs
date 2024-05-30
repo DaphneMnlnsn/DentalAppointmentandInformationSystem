@@ -102,5 +102,12 @@ namespace DentalAppointmentandInformationSystem
             dshbrd.Show();
             this.Hide();
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Services srvc = new Services();
+            srvc.Show();
+            this.Hide();
+        }
     }
 }

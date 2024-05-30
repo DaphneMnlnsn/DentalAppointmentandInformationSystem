@@ -15,6 +15,7 @@ namespace DentalAppointmentandInformationSystem
     {
         Variables v = new Variables();
         SqlConnection constring;
+        string filePath = "";
         public PatientDetails()
         {
             InitializeComponent();
@@ -307,9 +308,22 @@ namespace DentalAppointmentandInformationSystem
             }
         }
 
-        /*private void addHistoryBtn_Click(object sender, EventArgs e)
+        private void openDental_Click(object sender, EventArgs e)
         {
-            addHistory1.Visible = true;
-        }*/
+            DentalRecord dr = new DentalRecord();
+            dr.Show();
+            this.Hide();
+        }
+
+        private void addAttachment_Click(object sender, EventArgs e)
+        {
+            PatientDetailsAttachment pda = new PatientDetailsAttachment();
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Pdf Files |*.pdf;|Image Files| *.jpg; *.jpeg; *.png;";
+            openFile.ShowDialog();
+            filePath = openFile.FileName;
+            pda.setAttachment(System.IO.Path.GetFileName(openFile.FileName));
+            attachmentContainer.Controls.Add(pda);
+        }
     }
 }

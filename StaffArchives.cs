@@ -90,5 +90,12 @@ namespace DentalAppointmentandInformationSystem
             dshbrd.Show();
             this.Hide();
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Staff stff = new Staff();
+            stff.Show();
+            this.Hide();
+        }
     }
 }

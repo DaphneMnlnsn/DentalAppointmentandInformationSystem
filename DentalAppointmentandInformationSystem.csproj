@@ -111,6 +111,12 @@
     <Compile Include="AppointmentArchived.Designer.cs">
       <DependentUpon>AppointmentArchived.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttachmentDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttachmentDisplay.Designer.cs">
+      <DependentUpon>AttachmentDisplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,12 @@
     </Compile>
     <Compile Include="DashboardDaysNotBlank.Designer.cs">
       <DependentUpon>DashboardDaysNotBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DentalRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DentalRecord.Designer.cs">
+      <DependentUpon>DentalRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="EditAppointment.cs">
       <SubType>Form</SubType>
@@ -217,6 +229,12 @@
     </Compile>
     <Compile Include="PatientDetails.Designer.cs">
       <DependentUpon>PatientDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDetailsAttachment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatientDetailsAttachment.Designer.cs">
+      <DependentUpon>PatientDetailsAttachment.cs</DependentUpon>
     </Compile>
     <Compile Include="Patients.cs">
       <SubType>Form</SubType>
@@ -329,6 +347,9 @@
     <EmbeddedResource Include="AppointmentArchived.resx">
       <DependentUpon>AppointmentArchived.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AttachmentDisplay.resx">
+      <DependentUpon>AttachmentDisplay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardDaysNotBlank.resx">
       <DependentUpon>DashboardDaysNotBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DentalRecord.resx">
+      <DependentUpon>DentalRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditAppointment.resx">
       <DependentUpon>EditAppointment.cs</DependentUpon>
@@ -376,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PatientDetails.resx">
       <DependentUpon>PatientDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientDetailsAttachment.resx">
+      <DependentUpon>PatientDetailsAttachment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patients.resx">
       <DependentUpon>Patients.cs</DependentUpon>

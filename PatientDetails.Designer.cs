@@ -44,6 +44,8 @@
             this.patientAge = new System.Windows.Forms.Label();
             this.patientName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.patientNotes = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.picBoxFemale = new System.Windows.Forms.PictureBox();
             this.picBoxMale = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -59,13 +61,12 @@
             this.servicesBtn = new System.Windows.Forms.PictureBox();
             this.staffBtn = new System.Windows.Forms.PictureBox();
             this.patientsBtn = new System.Windows.Forms.PictureBox();
-            this.fileContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.attachmentContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.openDental = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.patientNotes = new System.Windows.Forms.Label();
             this.editRecord1 = new DentalAppointmentandInformationSystem.EditRecord();
+            this.addAttachment = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
@@ -287,6 +288,28 @@
             this.panel1.Size = new System.Drawing.Size(1372, 228);
             this.panel1.TabIndex = 83;
             // 
+            // patientNotes
+            // 
+            this.patientNotes.AutoSize = true;
+            this.patientNotes.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientNotes.Location = new System.Drawing.Point(983, 109);
+            this.patientNotes.Margin = new System.Windows.Forms.Padding(0);
+            this.patientNotes.Name = "patientNotes";
+            this.patientNotes.Size = new System.Drawing.Size(190, 21);
+            this.patientNotes.TabIndex = 85;
+            this.patientNotes.Text = "<patient notes here>";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(983, 78);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 21);
+            this.label7.TabIndex = 84;
+            this.label7.Text = "Patient Notes:";
+            // 
             // picBoxFemale
             // 
             this.picBoxFemale.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.female;
@@ -316,7 +339,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.99722F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.00278F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 280F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 286F));
             this.tableLayoutPanel2.Controls.Add(this.label4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
@@ -335,10 +358,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(872, 1);
+            this.label4.Location = new System.Drawing.Point(866, 1);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(273, 61);
+            this.label4.Size = new System.Drawing.Size(279, 61);
             this.label4.TabIndex = 3;
             this.label4.Text = "PRICE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -349,7 +372,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(652, 1);
+            this.label3.Location = new System.Drawing.Point(646, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(211, 61);
@@ -363,10 +386,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(257, 1);
+            this.label2.Location = new System.Drawing.Point(255, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(386, 61);
+            this.label2.Size = new System.Drawing.Size(382, 61);
             this.label2.TabIndex = 1;
             this.label2.Text = "TREATMENT";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -380,7 +403,7 @@
             this.label1.Location = new System.Drawing.Point(5, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 61);
+            this.label1.Size = new System.Drawing.Size(241, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "DATE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -490,15 +513,14 @@
             this.patientsBtn.TabStop = false;
             this.patientsBtn.Click += new System.EventHandler(this.patientsBtn_Click);
             // 
-            // fileContainer
+            // attachmentContainer
             // 
-            this.fileContainer.AutoScroll = true;
-            this.fileContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fileContainer.Location = new System.Drawing.Point(191, 782);
-            this.fileContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.fileContainer.Name = "fileContainer";
-            this.fileContainer.Size = new System.Drawing.Size(1149, 108);
-            this.fileContainer.TabIndex = 90;
+            this.attachmentContainer.AutoScroll = true;
+            this.attachmentContainer.Location = new System.Drawing.Point(191, 782);
+            this.attachmentContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.attachmentContainer.Name = "attachmentContainer";
+            this.attachmentContainer.Size = new System.Drawing.Size(1149, 108);
+            this.attachmentContainer.TabIndex = 90;
             // 
             // label6
             // 
@@ -537,28 +559,7 @@
             this.openDental.TabIndex = 10;
             this.openDental.Text = "Show Dental Record";
             this.openDental.UseVisualStyleBackColor = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(983, 78);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 21);
-            this.label7.TabIndex = 84;
-            this.label7.Text = "Patient Notes:";
-            // 
-            // patientNotes
-            // 
-            this.patientNotes.AutoSize = true;
-            this.patientNotes.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientNotes.Location = new System.Drawing.Point(983, 109);
-            this.patientNotes.Margin = new System.Windows.Forms.Padding(0);
-            this.patientNotes.Name = "patientNotes";
-            this.patientNotes.Size = new System.Drawing.Size(190, 21);
-            this.patientNotes.TabIndex = 85;
-            this.patientNotes.Text = "<patient notes here>";
+            this.openDental.Click += new System.EventHandler(this.openDental_Click);
             // 
             // editRecord1
             // 
@@ -568,6 +569,19 @@
             this.editRecord1.Size = new System.Drawing.Size(998, 298);
             this.editRecord1.TabIndex = 92;
             // 
+            // addAttachment
+            // 
+            this.addAttachment.AutoSize = true;
+            this.addAttachment.Font = new System.Drawing.Font("Inter Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addAttachment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(105)))), ((int)(((byte)(247)))));
+            this.addAttachment.Location = new System.Drawing.Point(369, 746);
+            this.addAttachment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.addAttachment.Name = "addAttachment";
+            this.addAttachment.Size = new System.Drawing.Size(62, 21);
+            this.addAttachment.TabIndex = 93;
+            this.addAttachment.Text = "+ Add";
+            this.addAttachment.Click += new System.EventHandler(this.addAttachment_Click);
+            // 
             // PatientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -575,10 +589,11 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1534, 911);
+            this.Controls.Add(this.addAttachment);
             this.Controls.Add(this.openDental);
             this.Controls.Add(this.editRecord1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.fileContainer);
+            this.Controls.Add(this.attachmentContainer);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.recordContainer);
             this.Controls.Add(this.label5);
@@ -645,12 +660,13 @@
         private System.Windows.Forms.PictureBox dshbrdBtn;
         private System.Windows.Forms.PictureBox patientsBtn;
         private System.Windows.Forms.Button deletePtnt;
-        private System.Windows.Forms.FlowLayoutPanel fileContainer;
+        private System.Windows.Forms.FlowLayoutPanel attachmentContainer;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private EditRecord editRecord1;
         private System.Windows.Forms.Button openDental;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label patientNotes;
+        private System.Windows.Forms.Label addAttachment;
     }
 }

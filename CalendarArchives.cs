@@ -160,5 +160,12 @@ namespace DentalAppointmentandInformationSystem
             dshbrd.Show();
             this.Hide();
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Calendar clndr = new Calendar();
+            clndr.Show();
+            this.Hide();
+        }
     }
 }

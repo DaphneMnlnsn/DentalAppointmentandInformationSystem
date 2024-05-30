@@ -52,6 +52,7 @@
             this.staffBtn = new System.Windows.Forms.PictureBox();
             this.patientBtn = new System.Windows.Forms.PictureBox();
             this.dshbrdBtn = new System.Windows.Forms.PictureBox();
+            this.backBtn = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -62,11 +63,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.backBtn);
             this.panel1.Controls.Add(this.tableLayoutPanel3);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.daycontainer);
@@ -91,7 +94,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.21121F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.78879F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
             this.tableLayoutPanel3.Controls.Add(this.monthLbl, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnnext, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnprevious, 2, 0);
@@ -117,7 +120,7 @@
             this.monthLbl.Location = new System.Drawing.Point(3, 0);
             this.monthLbl.Margin = new System.Windows.Forms.Padding(3, 0, 24, 0);
             this.monthLbl.Name = "monthLbl";
-            this.monthLbl.Size = new System.Drawing.Size(783, 70);
+            this.monthLbl.Size = new System.Drawing.Size(782, 70);
             this.monthLbl.TabIndex = 16;
             this.monthLbl.Text = "Calendar";
             this.monthLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,7 +129,7 @@
             // 
             this.btnnext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnnext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnnext.Location = new System.Drawing.Point(919, 14);
+            this.btnnext.Location = new System.Drawing.Point(918, 14);
             this.btnnext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnnext.Name = "btnnext";
             this.btnnext.Size = new System.Drawing.Size(83, 42);
@@ -139,7 +142,7 @@
             // 
             this.btnprevious.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnprevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnprevious.Location = new System.Drawing.Point(816, 14);
+            this.btnprevious.Location = new System.Drawing.Point(815, 14);
             this.btnprevious.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnprevious.Name = "btnprevious";
             this.btnprevious.Size = new System.Drawing.Size(83, 42);
@@ -406,6 +409,18 @@
             this.dshbrdBtn.TabStop = false;
             this.dshbrdBtn.Click += new System.EventHandler(this.dshbrdBtn_Click);
             // 
+            // backBtn
+            // 
+            this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.back;
+            this.backBtn.Location = new System.Drawing.Point(12, 10);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(56, 55);
+            this.backBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backBtn.TabIndex = 71;
+            this.backBtn.TabStop = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // CalendarArchives
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -436,6 +451,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -465,5 +481,6 @@
         private System.Windows.Forms.PictureBox servicesBtn;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox dshbrdBtn;
+        private System.Windows.Forms.PictureBox backBtn;
     }
 }
