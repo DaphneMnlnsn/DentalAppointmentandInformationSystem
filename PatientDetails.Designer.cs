@@ -30,8 +30,6 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.deletePtnt = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.doctorPic = new System.Windows.Forms.PictureBox();
             this.dshbrdLbl = new System.Windows.Forms.Label();
             this.editPatientBtn = new System.Windows.Forms.Button();
             this.patientLV = new System.Windows.Forms.Label();
@@ -46,8 +44,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.patientNotes = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.picBoxFemale = new System.Windows.Forms.PictureBox();
-            this.picBoxMale = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,30 +52,35 @@
             this.label5 = new System.Windows.Forms.Label();
             this.recordContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.attachmentContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.openDental = new System.Windows.Forms.Button();
+            this.addAttachment = new System.Windows.Forms.Label();
+            this.archiveBtn = new System.Windows.Forms.Label();
+            this.picBoxFemale = new System.Windows.Forms.PictureBox();
+            this.picBoxMale = new System.Windows.Forms.PictureBox();
             this.clndrbtn = new System.Windows.Forms.PictureBox();
             this.dshbrdBtn = new System.Windows.Forms.PictureBox();
             this.servicesBtn = new System.Windows.Forms.PictureBox();
             this.staffBtn = new System.Windows.Forms.PictureBox();
             this.patientsBtn = new System.Windows.Forms.PictureBox();
-            this.attachmentContainer = new System.Windows.Forms.FlowLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.openDental = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.doctorPic = new System.Windows.Forms.PictureBox();
             this.editRecord1 = new DentalAppointmentandInformationSystem.EditRecord();
-            this.addAttachment = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxFemale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxMale)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFemale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clndrbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -112,28 +113,6 @@
             this.deletePtnt.Text = "Delete Patient";
             this.deletePtnt.UseVisualStyleBackColor = false;
             this.deletePtnt.Click += new System.EventHandler(this.deletePtnt_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox5.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.person_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(36, 9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(84, 77);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
-            // doctorPic
-            // 
-            this.doctorPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.doctorPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.profile_icon;
-            this.doctorPic.Location = new System.Drawing.Point(1434, 12);
-            this.doctorPic.Name = "doctorPic";
-            this.doctorPic.Size = new System.Drawing.Size(76, 69);
-            this.doctorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.doctorPic.TabIndex = 7;
-            this.doctorPic.TabStop = false;
             // 
             // dshbrdLbl
             // 
@@ -290,12 +269,11 @@
             // 
             // patientNotes
             // 
-            this.patientNotes.AutoSize = true;
             this.patientNotes.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientNotes.Location = new System.Drawing.Point(983, 109);
+            this.patientNotes.Location = new System.Drawing.Point(983, 110);
             this.patientNotes.Margin = new System.Windows.Forms.Padding(0);
             this.patientNotes.Name = "patientNotes";
-            this.patientNotes.Size = new System.Drawing.Size(190, 21);
+            this.patientNotes.Size = new System.Drawing.Size(190, 82);
             this.patientNotes.TabIndex = 85;
             this.patientNotes.Text = "<patient notes here>";
             // 
@@ -310,36 +288,14 @@
             this.label7.TabIndex = 84;
             this.label7.Text = "Patient Notes:";
             // 
-            // picBoxFemale
-            // 
-            this.picBoxFemale.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.female;
-            this.picBoxFemale.Location = new System.Drawing.Point(52, 39);
-            this.picBoxFemale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.picBoxFemale.Name = "picBoxFemale";
-            this.picBoxFemale.Size = new System.Drawing.Size(147, 151);
-            this.picBoxFemale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxFemale.TabIndex = 83;
-            this.picBoxFemale.TabStop = false;
-            // 
-            // picBoxMale
-            // 
-            this.picBoxMale.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.male;
-            this.picBoxMale.Location = new System.Drawing.Point(52, 40);
-            this.picBoxMale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.picBoxMale.Name = "picBoxMale";
-            this.picBoxMale.Size = new System.Drawing.Size(147, 151);
-            this.picBoxMale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxMale.TabIndex = 74;
-            this.picBoxMale.TabStop = false;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.99722F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.00278F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 288F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 285F));
             this.tableLayoutPanel2.Controls.Add(this.label4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
@@ -358,10 +314,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(864, 1);
+            this.label4.Location = new System.Drawing.Point(867, 1);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(281, 61);
+            this.label4.Size = new System.Drawing.Size(278, 61);
             this.label4.TabIndex = 3;
             this.label4.Text = "PRICE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -372,10 +328,10 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(644, 1);
+            this.label3.Location = new System.Drawing.Point(671, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 61);
+            this.label3.Size = new System.Drawing.Size(187, 61);
             this.label3.TabIndex = 2;
             this.label3.Text = "TOOTH #";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -386,10 +342,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(254, 1);
+            this.label2.Location = new System.Drawing.Point(265, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(381, 61);
+            this.label2.Size = new System.Drawing.Size(397, 61);
             this.label2.TabIndex = 1;
             this.label2.Text = "TREATMENT";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -403,7 +359,7 @@
             this.label1.Location = new System.Drawing.Point(5, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 61);
+            this.label1.Size = new System.Drawing.Size(251, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "DATE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -452,6 +408,101 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(162, 814);
             this.tableLayoutPanel1.TabIndex = 87;
+            // 
+            // attachmentContainer
+            // 
+            this.attachmentContainer.AutoScroll = true;
+            this.attachmentContainer.Location = new System.Drawing.Point(191, 782);
+            this.attachmentContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.attachmentContainer.Name = "attachmentContainer";
+            this.attachmentContainer.Size = new System.Drawing.Size(1149, 108);
+            this.attachmentContainer.TabIndex = 90;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(184, 617);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(179, 29);
+            this.label6.TabIndex = 89;
+            this.label6.Text = "Dental Record";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(185, 742);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(164, 29);
+            this.label11.TabIndex = 91;
+            this.label11.Text = "Attachments";
+            // 
+            // openDental
+            // 
+            this.openDental.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.openDental.BackColor = System.Drawing.Color.RoyalBlue;
+            this.openDental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openDental.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openDental.ForeColor = System.Drawing.SystemColors.Control;
+            this.openDental.Location = new System.Drawing.Point(190, 669);
+            this.openDental.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.openDental.Name = "openDental";
+            this.openDental.Size = new System.Drawing.Size(290, 48);
+            this.openDental.TabIndex = 10;
+            this.openDental.Text = "Show Dental Record";
+            this.openDental.UseVisualStyleBackColor = false;
+            this.openDental.Click += new System.EventHandler(this.openDental_Click);
+            // 
+            // addAttachment
+            // 
+            this.addAttachment.AutoSize = true;
+            this.addAttachment.Font = new System.Drawing.Font("Inter Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addAttachment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(105)))), ((int)(((byte)(247)))));
+            this.addAttachment.Location = new System.Drawing.Point(369, 746);
+            this.addAttachment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.addAttachment.Name = "addAttachment";
+            this.addAttachment.Size = new System.Drawing.Size(62, 21);
+            this.addAttachment.TabIndex = 93;
+            this.addAttachment.Text = "+ Add";
+            this.addAttachment.Click += new System.EventHandler(this.addAttachment_Click);
+            // 
+            // archiveBtn
+            // 
+            this.archiveBtn.AutoSize = true;
+            this.archiveBtn.Font = new System.Drawing.Font("Inter Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.archiveBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(105)))), ((int)(((byte)(247)))));
+            this.archiveBtn.Location = new System.Drawing.Point(1208, 746);
+            this.archiveBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.archiveBtn.Name = "archiveBtn";
+            this.archiveBtn.Size = new System.Drawing.Size(132, 21);
+            this.archiveBtn.TabIndex = 94;
+            this.archiveBtn.Text = "Archived Files";
+            this.archiveBtn.Click += new System.EventHandler(this.archiveBtn_Click);
+            // 
+            // picBoxFemale
+            // 
+            this.picBoxFemale.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.female;
+            this.picBoxFemale.Location = new System.Drawing.Point(52, 39);
+            this.picBoxFemale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picBoxFemale.Name = "picBoxFemale";
+            this.picBoxFemale.Size = new System.Drawing.Size(147, 151);
+            this.picBoxFemale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxFemale.TabIndex = 83;
+            this.picBoxFemale.TabStop = false;
+            // 
+            // picBoxMale
+            // 
+            this.picBoxMale.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.male;
+            this.picBoxMale.Location = new System.Drawing.Point(52, 40);
+            this.picBoxMale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picBoxMale.Name = "picBoxMale";
+            this.picBoxMale.Size = new System.Drawing.Size(147, 151);
+            this.picBoxMale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxMale.TabIndex = 74;
+            this.picBoxMale.TabStop = false;
             // 
             // clndrbtn
             // 
@@ -513,73 +564,35 @@
             this.patientsBtn.TabStop = false;
             this.patientsBtn.Click += new System.EventHandler(this.patientsBtn_Click);
             // 
-            // attachmentContainer
+            // pictureBox5
             // 
-            this.attachmentContainer.AutoScroll = true;
-            this.attachmentContainer.Location = new System.Drawing.Point(191, 782);
-            this.attachmentContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.attachmentContainer.Name = "attachmentContainer";
-            this.attachmentContainer.Size = new System.Drawing.Size(1149, 108);
-            this.attachmentContainer.TabIndex = 90;
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox5.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.person_icon;
+            this.pictureBox5.Location = new System.Drawing.Point(36, 9);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(84, 77);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
             // 
-            // label6
+            // doctorPic
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(184, 617);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(179, 29);
-            this.label6.TabIndex = 89;
-            this.label6.Text = "Dental Record";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(185, 742);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(164, 29);
-            this.label11.TabIndex = 91;
-            this.label11.Text = "Attachments";
-            // 
-            // openDental
-            // 
-            this.openDental.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.openDental.BackColor = System.Drawing.Color.RoyalBlue;
-            this.openDental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openDental.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openDental.ForeColor = System.Drawing.SystemColors.Control;
-            this.openDental.Location = new System.Drawing.Point(190, 669);
-            this.openDental.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.openDental.Name = "openDental";
-            this.openDental.Size = new System.Drawing.Size(290, 48);
-            this.openDental.TabIndex = 10;
-            this.openDental.Text = "Show Dental Record";
-            this.openDental.UseVisualStyleBackColor = false;
-            this.openDental.Click += new System.EventHandler(this.openDental_Click);
+            this.doctorPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.doctorPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.profile_icon;
+            this.doctorPic.Location = new System.Drawing.Point(1434, 12);
+            this.doctorPic.Name = "doctorPic";
+            this.doctorPic.Size = new System.Drawing.Size(76, 69);
+            this.doctorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.doctorPic.TabIndex = 7;
+            this.doctorPic.TabStop = false;
             // 
             // editRecord1
             // 
             this.editRecord1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.editRecord1.Location = new System.Drawing.Point(342, 326);
+            this.editRecord1.Location = new System.Drawing.Point(342, 343);
             this.editRecord1.Name = "editRecord1";
             this.editRecord1.Size = new System.Drawing.Size(998, 298);
             this.editRecord1.TabIndex = 92;
-            // 
-            // addAttachment
-            // 
-            this.addAttachment.AutoSize = true;
-            this.addAttachment.Font = new System.Drawing.Font("Inter Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addAttachment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(105)))), ((int)(((byte)(247)))));
-            this.addAttachment.Location = new System.Drawing.Point(369, 746);
-            this.addAttachment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.addAttachment.Name = "addAttachment";
-            this.addAttachment.Size = new System.Drawing.Size(62, 21);
-            this.addAttachment.TabIndex = 93;
-            this.addAttachment.Text = "+ Add";
-            this.addAttachment.Click += new System.EventHandler(this.addAttachment_Click);
             // 
             // PatientDetails
             // 
@@ -588,6 +601,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1534, 911);
+            this.Controls.Add(this.archiveBtn);
             this.Controls.Add(this.addAttachment);
             this.Controls.Add(this.openDental);
             this.Controls.Add(this.editRecord1);
@@ -608,20 +622,20 @@
             this.Load += new System.EventHandler(this.PatientDetails_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxFemale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxMale)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFemale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clndrbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicesBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -667,5 +681,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label patientNotes;
         private System.Windows.Forms.Label addAttachment;
+        private System.Windows.Forms.Label archiveBtn;
     }
 }

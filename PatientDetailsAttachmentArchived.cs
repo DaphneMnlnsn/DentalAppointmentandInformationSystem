@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace DentalAppointmentandInformationSystem
 {
-    public partial class PatientDetailsAttachment : UserControl
+    public partial class PatientDetailsAttachmentArchived : UserControl
     {
         Variables v = new Variables();
         SqlConnection constring;
         string attachmentSelected;
-        public PatientDetailsAttachment()
+        public PatientDetailsAttachmentArchived()
         {
             InitializeComponent();
             constring = v.getConnection;
@@ -40,16 +40,38 @@ namespace DentalAppointmentandInformationSystem
         {
             v.getsetattachmentSelected = attachmentSelected;
             constring.Open();
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this service?\nThis will be moved to the Trash Bin/Archives!", "Confirm Delete", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this service permanently?\nYou will not be able to retrieve this!", "Confirm Delete", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE [File] SET status = 0 WHERE file_id = '" + v.getsetattachmentSelected + "'", constring);
+                SqlCommand cmd = new SqlCommand("DELETE FROM [File] WHERE file_id = '" + v.getsetattachmentSelected + "'", constring);
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("File successfully deleted!");
+                    MessageBox.Show("File permanently deleted!");
                     constring.Close();
                     PatientDetails pd = new PatientDetails();
                     pd.Show();
+                }
+            }
+            constring.Close();
+        }
+
+        private void restoreBtn_Click(object sender, EventArgs e)
+        {
+            v.getsetattachmentSelected = attachmentSelected;
+            constring.Open();
+            DialogResult dialogResult = MessageBox.Show("Restore this patient file?", "Confirm Restore", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string query2 = "UPDATE [File] SET status = 1 WHERE file_id ='" + v.getsetattachmentSelected + "';";
+                SqlCommand cmd2 = new SqlCommand(query2, constring);
+                cmd2.CommandText = query2;
+                if (cmd2.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("File successfully restored!");
+                    constring.Close();
+                    PatientDetails ptd = new PatientDetails();
+                    ptd.Show();
+                    this.ParentForm.Hide();
                 }
             }
             constring.Close();

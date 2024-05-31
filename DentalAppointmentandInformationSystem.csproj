@@ -194,6 +194,12 @@
     <Compile Include="EditStaff.Designer.cs">
       <DependentUpon>EditStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileArchives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileArchives.Designer.cs">
+      <DependentUpon>FileArchives.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,12 @@
     </Compile>
     <Compile Include="PatientDetailsAttachment.Designer.cs">
       <DependentUpon>PatientDetailsAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDetailsAttachmentArchived.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatientDetailsAttachmentArchived.Designer.cs">
+      <DependentUpon>PatientDetailsAttachmentArchived.cs</DependentUpon>
     </Compile>
     <Compile Include="Patients.cs">
       <SubType>Form</SubType>
@@ -383,6 +395,9 @@
     <EmbeddedResource Include="EditStaff.resx">
       <DependentUpon>EditStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FileArchives.resx">
+      <DependentUpon>FileArchives.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -403,6 +418,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PatientDetailsAttachment.resx">
       <DependentUpon>PatientDetailsAttachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientDetailsAttachmentArchived.resx">
+      <DependentUpon>PatientDetailsAttachmentArchived.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patients.resx">
       <DependentUpon>Patients.cs</DependentUpon>

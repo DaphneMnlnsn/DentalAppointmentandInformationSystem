@@ -15,7 +15,6 @@ namespace DentalAppointmentandInformationSystem
     {
         Variables v = new Variables();
         SqlConnection constring;
-        string filePath = "";
         public PatientDetails()
         {
             InitializeComponent();
@@ -113,7 +112,7 @@ namespace DentalAppointmentandInformationSystem
                 DataTable records = new DataTable("record");
                 SqlDataAdapter da2 = new SqlDataAdapter(sql2, constring);
                 da2.Fill(records);
-                
+
 
                 foreach (DataRow row2 in records.Rows)
                 {
@@ -128,7 +127,7 @@ namespace DentalAppointmentandInformationSystem
 
                     foreach (DataRow row3 in apps.Rows)
                     {
-                        
+
                         recordsDate += DateTime.Parse(row3["appointment_date"].ToString()).ToString("MM/dd/yyyy");
 
                         SqlCommand retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id"].ToString() + "'", constring);
@@ -161,25 +160,38 @@ namespace DentalAppointmentandInformationSystem
                             }
                             readService3.Close();
                         }
-                        
+
                     }
                     Record record = new Record();
                     record.setPatientInfo(row2["record_id"].ToString(), recordsDate, recordsTreat, recordsTooth, recordsPrice);
                     recordContainer.Controls.Add(record);
                 }
-                /*
-                string sql4 = "SELECT * FROM History WHERE patient_id = " + v.getsetpatientSelected;
-                DataTable history = new DataTable("history");
-                SqlDataAdapter da4 = new SqlDataAdapter(sql4, constring);
-                da4.Fill(history);
 
-                foreach (DataRow row4 in history.Rows)
+                string sqll = "SELECT * FROM [File] WHERE patient_id = " + v.getsetpatientSelected + " AND status = 1";
+                DataTable files = new DataTable("file");
+                SqlDataAdapter daa = new SqlDataAdapter(sqll, constring);
+                daa.Fill(files);
+
+
+                foreach (DataRow roww in files.Rows)
                 {
-                    PatientDentalHistoryItem dentalHistory = new PatientDentalHistoryItem();
-                    dentalHistory.setDentalHistory(row4["history_id"].ToString(), row4["past_treatment"].ToString(), row4["dentist_name"].ToString());
-                    historyContainer.Controls.Add(dentalHistory);
+                    PatientDetailsAttachment pda = new PatientDetailsAttachment();
+                    pda.setAttachment(roww["file_id"].ToString(), roww["file_name"].ToString());
+                    attachmentContainer.Controls.Add(pda);
+                    /*
+                    string sql4 = "SELECT * FROM History WHERE patient_id = " + v.getsetpatientSelected;
+                    DataTable history = new DataTable("history");
+                    SqlDataAdapter da4 = new SqlDataAdapter(sql4, constring);
+                    da4.Fill(history);
 
-                }*/
+                    foreach (DataRow row4 in history.Rows)
+                    {
+                        PatientDentalHistoryItem dentalHistory = new PatientDentalHistoryItem();
+                        dentalHistory.setDentalHistory(row4["history_id"].ToString(), row4["past_treatment"].ToString(), row4["dentist_name"].ToString());
+                        historyContainer.Controls.Add(dentalHistory);
+
+                    }*/
+                }
             }
             constring.Close();
         }
@@ -317,13 +329,47 @@ namespace DentalAppointmentandInformationSystem
 
         private void addAttachment_Click(object sender, EventArgs e)
         {
-            PatientDetailsAttachment pda = new PatientDetailsAttachment();
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.Filter = "Pdf Files |*.pdf;|Image Files| *.jpg; *.jpeg; *.png;";
-            openFile.ShowDialog();
-            filePath = openFile.FileName;
-            pda.setAttachment(System.IO.Path.GetFileName(openFile.FileName));
-            attachmentContainer.Controls.Add(pda);
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                int fileID = 0;
+                constring.Open();
+                SqlCommand cmd = new SqlCommand("SELECT TOP 1 file_id FROM [File] ORDER BY file_id DESC", constring);
+                SqlDataReader reader1;
+                reader1 = cmd.ExecuteReader();
+                if (reader1.Read())
+                {
+                    fileID = reader1.GetInt32(0) + 1;
+                }
+                else
+                {
+                    MessageBox.Show("NO DATA FOUND");
+                }
+                reader1.Close();
+                cmd.Dispose();
+
+                string query = "INSERT INTO [File] VALUES('" + fileID + "','" + v.getsetpatientSelected + "','"
+                    + System.IO.Path.GetFileName(openFile.FileName) + "','" + openFile.FileName + "',1);";
+                SqlCommand addAttach = new SqlCommand(query, constring);
+                if (addAttach.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("File added!");
+                    constring.Close();
+                    PatientDetails pd = new PatientDetails();
+                    pd.Show();
+                    this.Hide();
+                }
+                constring.Close();
+            }
+        }
+
+        private void archiveBtn_Click(object sender, EventArgs e)
+        {
+            FileArchives file = new FileArchives();
+            file.Show();
+            this.Hide();
         }
     }
 }

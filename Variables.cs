@@ -18,6 +18,7 @@ namespace DentalAppointmentandInformationSystem
         private static string staffSelected;
         private static string serviceSelected;
         private static string recordSelected;
+        private static string attachmentSelected;
         private static SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
 
 
@@ -73,6 +74,12 @@ namespace DentalAppointmentandInformationSystem
         {
             get { return recordSelected; }
             set { recordSelected = value; }
+        }
+
+        public string getsetattachmentSelected
+        {
+            get { return attachmentSelected; }
+            set { attachmentSelected = value; }
         }
 
         public SqlConnection getConnection
