@@ -239,8 +239,8 @@ namespace DentalAppointmentandInformationSystem
         {
             constring.Open();
             string compareQuery = "SELECT COUNT(*) FROM Appointment WHERE appointment_date = '" + appntmntDate.Text +
-                "' AND appointment_startTime = '" + startTime.Text + "' AND appointment_endTime = '" + endTime.Text + 
-                "' AND patient_id != '" + pIDTextBox.Text + "';";
+                "' AND ('" + startTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime) AND ('"
+                + endTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime)";
             SqlCommand compareCmd = new SqlCommand(compareQuery, constring);
             int userCount = (int)compareCmd.ExecuteScalar();
             constring.Close();
@@ -374,7 +374,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setStaff1Combo()
         {
-            string query = "SELECT * FROM Staff";
+            string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -386,7 +386,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setStaff2Combo()
         {
-            string query = "SELECT * FROM Staff";
+            string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -398,7 +398,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setStaff3Combo()
         {
-            string query = "SELECT * FROM Staff";
+            string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -410,7 +410,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setService1Combo()
         {
-            string query = "SELECT * FROM Service";
+            string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -421,7 +421,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setService2Combo()
         {
-            string query = "SELECT * FROM Service";
+            string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -432,7 +432,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setService3Combo()
         {
-            string query = "SELECT * FROM Service";
+            string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);

@@ -65,7 +65,7 @@ namespace DentalAppointmentandInformationSystem
         {
             Dashboard dshbrd = new Dashboard();
             dshbrd.Show();
-            dshbrd.Hide();
+            this.Hide();
         }
         private void apptclndrBtn_Click(object sender, EventArgs e)
         {
@@ -131,7 +131,8 @@ namespace DentalAppointmentandInformationSystem
 
             constring.Open();
             string compareQuery = "SELECT COUNT(*) FROM Appointment WHERE appointment_date = '" + appntmntDate.Text +
-                "' AND appointment_startTime = '" + startTime.Text + "' AND appointment_endTime = '" + endTime.Text + "';";
+                "' AND ('" + startTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime) AND ('"
+                + endTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime)";
             SqlCommand compareCmd = new SqlCommand(compareQuery, constring);
             int userCount = (int)compareCmd.ExecuteScalar();
             constring.Close();
@@ -304,7 +305,7 @@ namespace DentalAppointmentandInformationSystem
                         }
                         string query3 = "INSERT INTO Record VALUES('" + recordID + "','" + patientID + "','"
                             + service1Combo.Text + " " + service2Combo.Text + " " + service3Combo.Text + "','" + appointmentID
-                            + "','0','" + recordsPrice + "',NULL,1);";
+                            + "','0','" + recordsPrice + "',1);";
 
                         SqlCommand cmd4 = new SqlCommand(query3, constring);
                         cmd4.CommandText = query3;
@@ -335,7 +336,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staff1Combo_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM Staff";
+            string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -347,7 +348,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staff2Combo_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM Staff";
+            string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -359,7 +360,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staff3Combo_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM Staff";
+            string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -371,7 +372,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void service1Combo_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM Service";
+            string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -382,7 +383,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void service2Combo_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM Service";
+            string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -393,7 +394,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void service3Combo_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM Service";
+            string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
