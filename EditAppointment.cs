@@ -52,6 +52,10 @@ namespace DentalAppointmentandInformationSystem
                 MessageBox.Show("NO DATA FOUND");
             }
             constring.Close();
+            startTime.MinDate = DateTime.Parse("9:00:00");
+            endTime.MinDate = DateTime.Parse("9:30:00");
+            startTime.MaxDate = DateTime.Parse("16:30:00");
+            endTime.MaxDate = DateTime.Parse("17:00:00");
             setService1Combo();
             setService2Combo();
             setService3Combo();
@@ -59,8 +63,6 @@ namespace DentalAppointmentandInformationSystem
             setStaff2Combo();
             setStaff3Combo();
             setValues();
-            
-            
         }
 
         private void dashboard_Click(object sender, EventArgs e)
