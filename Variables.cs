@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DentalAppointmentandInformationSystem
 {
@@ -19,8 +20,7 @@ namespace DentalAppointmentandInformationSystem
         private static string serviceSelected;
         private static string recordSelected;
         private static string attachmentSelected;
-        private static SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daph\source\repos\DentalAppointmentandInformationSystem\DAISdB.mdf;Integrated Security=True");
-
+        private static SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\DAISdB.mdf;Integrated Security=True");
 
         public string getsetloggedIn
         {

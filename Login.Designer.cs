@@ -154,8 +154,8 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.092731F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.93233F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.43108F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.280702F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.29323F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.894309F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.38211F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(502, 492);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
@@ -167,9 +167,9 @@
             this.forgotPassLbl.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel2.SetColumnSpan(this.forgotPassLbl, 2);
             this.forgotPassLbl.Font = new System.Drawing.Font("Inter Medium Italic", 9F, System.Drawing.FontStyle.Bold);
-            this.forgotPassLbl.Location = new System.Drawing.Point(326, 285);
+            this.forgotPassLbl.Location = new System.Drawing.Point(326, 284);
             this.forgotPassLbl.Name = "forgotPassLbl";
-            this.forgotPassLbl.Size = new System.Drawing.Size(166, 21);
+            this.forgotPassLbl.Size = new System.Drawing.Size(166, 28);
             this.forgotPassLbl.TabIndex = 20;
             this.forgotPassLbl.Text = "Forgot Password?";
             this.forgotPassLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -180,7 +180,7 @@
             this.passTxtbox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.passTxtbox.Font = new System.Drawing.Font("Inter", 13F);
             this.passTxtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.passTxtbox.Location = new System.Drawing.Point(75, 235);
+            this.passTxtbox.Location = new System.Drawing.Point(75, 234);
             this.passTxtbox.Name = "passTxtbox";
             this.passTxtbox.Size = new System.Drawing.Size(417, 39);
             this.passTxtbox.TabIndex = 19;
@@ -258,7 +258,7 @@
             // 
             this.loginBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loginBtn.Font = new System.Drawing.Font("Inter SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.loginBtn.Location = new System.Drawing.Point(184, 374);
+            this.loginBtn.Location = new System.Drawing.Point(184, 377);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(199, 49);
             this.loginBtn.TabIndex = 21;
