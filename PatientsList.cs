@@ -25,7 +25,7 @@ namespace DentalAppointmentandInformationSystem
             patientAge.Text = patient_age;
             patientGender.Text = patient_gender;
             patientLastVisit.Text = patient_lv;
-            patientContact.Text = patient_contact;
+            patientContact.Text = "09" + patient_contact;
         }
 
         private void patientDetails_Click(object sender, EventArgs e)

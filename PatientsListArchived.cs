@@ -28,7 +28,7 @@ namespace DentalAppointmentandInformationSystem
             patientAge.Text = patient_age;
             patientGender.Text = patient_gender;
             patientLastVisit.Text = patient_lv;
-            patientContact.Text = patient_contact;
+            patientContact.Text = "09" + patient_contact;
         }
         private void deleteBtn_Click(object sender, EventArgs e)
         {
@@ -53,10 +53,10 @@ namespace DentalAppointmentandInformationSystem
                         SqlCommand cmdd = new SqlCommand(query, constring);
                         cmdd.CommandText = query;
                         cmdd.ExecuteNonQuery();
-                        /*string query3 = "DELETE FROM History WHERE patient_id =" + v.getsetpatientSelected;
+                        string query3 = "DELETE FROM [File] WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd3 = new SqlCommand(query3, constring);
                         cmd3.CommandText = query3;
-                        cmd3.ExecuteNonQuery();*/
+                        cmd3.ExecuteNonQuery();
                         string query4 = "DELETE FROM Patient WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd4 = new SqlCommand(query4, constring);
                         cmd4.CommandText = query4;

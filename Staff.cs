@@ -56,8 +56,7 @@ namespace DentalAppointmentandInformationSystem
 
                 }
                 staff.setStaffInfo(row["employee_num"].ToString(), employee_fullname, row["employee_age"].ToString(),
-                    ((DateTime)row["employee_bdate"]).ToString("MM/dd/yyyy"), row["employee_role"].ToString(), row["employee_contact"].ToString(),
-                    row["employee_pass"].ToString());
+                    ((DateTime)row["employee_bdate"]).ToString("MM/dd/yyyy"), row["employee_role"].ToString(), row["employee_contact"].ToString());
                 staffContainer.Controls.Add(staff);
             }
             constring.Close();
@@ -140,8 +139,7 @@ namespace DentalAppointmentandInformationSystem
 
                     }
                     staff.setStaffInfo(row["employee_num"].ToString(), employee_fullname, row["employee_age"].ToString(),
-                        ((DateTime)row["employee_bdate"]).ToString("MM/dd/yyyy"), row["employee_role"].ToString(), row["employee_contact"].ToString(),
-                        row["employee_pass"].ToString());
+                        ((DateTime)row["employee_bdate"]).ToString("MM/dd/yyyy"), row["employee_role"].ToString(), row["employee_contact"].ToString());
                     staffContainer.Controls.Add(staff);
                 }
                 constring.Close();

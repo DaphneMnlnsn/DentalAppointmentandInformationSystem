@@ -240,7 +240,7 @@ namespace DentalAppointmentandInformationSystem
             constring.Open();
             string compareQuery = "SELECT COUNT(*) FROM Appointment WHERE appointment_date = '" + appntmntDate.Text +
                 "' AND ('" + startTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime) AND ('"
-                + endTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime)";
+                + endTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime) AND appointment_id != '" + v.getsetappointmentSelected + "'";
             SqlCommand compareCmd = new SqlCommand(compareQuery, constring);
             int userCount = (int)compareCmd.ExecuteScalar();
             constring.Close();

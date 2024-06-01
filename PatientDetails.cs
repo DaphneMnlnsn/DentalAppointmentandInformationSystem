@@ -103,8 +103,9 @@ namespace DentalAppointmentandInformationSystem
                 patientBday.Text = "Birthdate: " + DateTime.Parse(row["patient_bdate"].ToString()).ToString("MM/dd/yyyy");
                 patientAddress.Text = "Address: " + row["patient_address"].ToString();
                 patientEmail.Text = "Email Address: " + row["patient_email"].ToString();
-                patientCnum.Text = "Contact Number: " + row["patient_cnum"].ToString();
+                patientCnum.Text = "Contact Number: 09" + row["patient_cnum"].ToString();
                 patientCper.Text = "Contact Person: " + row["patient_cperson"].ToString();
+                contactPNumLbl.Text = "Contact Person Number: 09" + row["patient_cpernum"].ToString();
                 patientLV.Text = "Last Visit: " + lastVisit.ToString();
                 patientNotes.Text = row["patient_notes"].ToString();
 
@@ -287,10 +288,10 @@ namespace DentalAppointmentandInformationSystem
                         SqlCommand cmdd = new SqlCommand(query, constring);
                         cmdd.CommandText = query;
                         cmdd.ExecuteNonQuery();
-                        /*string query3 = "UPDATE History SET status = 0 WHERE patient_id =" + v.getsetpatientSelected;
+                        string query3 = "UPDATE [File] SET status = 0 WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd3 = new SqlCommand(query3, constring);
                         cmd3.CommandText = query3;
-                        cmd3.ExecuteNonQuery();*/
+                        cmd3.ExecuteNonQuery();
                         string query4 = "UPDATE Patient SET status = 0 WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd4 = new SqlCommand(query4, constring);
                         cmd4.CommandText = query4;

@@ -53,12 +53,13 @@ namespace DentalAppointmentandInformationSystem
                 MessageBox.Show("NO DATA FOUND");
             }
             constring.Close();
-            setValues();
             List<string> items = new List<string>()
             {
                 "Female", "Male"
             };
             genderCombo.DataSource = items;
+            setValues();
+            
         }
 
         private void dashboard_Click(object sender, EventArgs e)
@@ -102,11 +103,11 @@ namespace DentalAppointmentandInformationSystem
                 }
                 reader2.Dispose();
                 cmd2.Dispose();
-
+                
                 phoneTxtBox.Text = row["patient_cnum"].ToString();
                 ageTxtBox.Text = row["patient_age"].ToString();
-                genderCombo.Text = row["patient_gender"].ToString();
                 emailTxtBox.Text = row["patient_email"].ToString();
+                genderCombo.Text = row["patient_gender"].ToString();
                 birthDate.Text = row["patient_bdate"].ToString();
                 addressTxtBox.Text = row["patient_address"].ToString();
                 contactPrsnTxtBox.Text = row["patient_cperson"].ToString();

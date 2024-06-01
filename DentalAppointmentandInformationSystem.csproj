@@ -538,6 +538,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>DAISdB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\teeth chart.png" />
+    <None Include="Resources\top_tooth.png" />
+    <None Include="Resources\right_tooth.png" />
+    <None Include="Resources\left_tooth.png" />
+    <None Include="Resources\full_tooth.png" />
+    <None Include="Resources\center_tooth.png" />
+    <None Include="Resources\bottom_tooth.png" />
+    <None Include="Resources\blank_tooth.png" />
     <None Include="Resources\newBin.png" />
     <None Include="Resources\bin.png" />
     <None Include="Resources\restore.png" />

@@ -56,8 +56,7 @@ namespace DentalAppointmentandInformationSystem
 
                 }
                 staff.setStaffInfo(row["employee_num"].ToString(), employee_fullname, row["employee_age"].ToString(),
-                    ((DateTime)row["employee_bdate"]).ToString("MM/dd/yyyy"), row["employee_role"].ToString(), row["employee_contact"].ToString(),
-                    row["employee_pass"].ToString());
+                    ((DateTime)row["employee_bdate"]).ToString("MM/dd/yyyy"), row["employee_role"].ToString(), row["employee_contact"].ToString());
                 staffContainer.Controls.Add(staff);
             }
             constring.Close();
@@ -121,7 +120,7 @@ namespace DentalAppointmentandInformationSystem
 
                 foreach (DataRow row in staffs.Rows)
                 {
-                    StaffList staff = new StaffList();
+                    StaffListArchived staff = new StaffListArchived();
                     string employee_fullname = "";
                     if (row["employee_mname"].ToString().Equals(null) || row["employee_mname"].ToString().Equals(""))
                     {
@@ -133,8 +132,7 @@ namespace DentalAppointmentandInformationSystem
 
                     }
                     staff.setStaffInfo(row["employee_num"].ToString(), employee_fullname, row["employee_age"].ToString(),
-                        ((DateTime)row["employee_bdate"]).ToString("MM/dd/yyyy"), row["employee_role"].ToString(), row["employee_contact"].ToString(),
-                        row["employee_pass"].ToString());
+                        ((DateTime)row["employee_bdate"]).ToString("MM/dd/yyyy"), row["employee_role"].ToString(), row["employee_contact"].ToString());
                     staffContainer.Controls.Add(staff);
                 }
                 constring.Close();

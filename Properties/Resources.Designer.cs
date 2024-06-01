@@ -93,9 +93,39 @@ namespace DentalAppointmentandInformationSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blank_tooth {
+            get {
+                object obj = ResourceManager.GetObject("blank_tooth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bottom_tooth {
+            get {
+                object obj = ResourceManager.GetObject("bottom_tooth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar {
             get {
                 object obj = ResourceManager.GetObject("calendar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap center_tooth {
+            get {
+                object obj = ResourceManager.GetObject("center_tooth", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -141,12 +171,32 @@ namespace DentalAppointmentandInformationSystem.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap full_tooth {
+            get {
+                object obj = ResourceManager.GetObject("full_tooth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] Inter_VariableFont_slnt_wght {
             get {
                 object obj = ResourceManager.GetObject("Inter_VariableFont_slnt_wght", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_tooth {
+            get {
+                object obj = ResourceManager.GetObject("left_tooth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -253,6 +303,16 @@ namespace DentalAppointmentandInformationSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap right_tooth {
+            get {
+                object obj = ResourceManager.GetObject("right_tooth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
@@ -276,6 +336,26 @@ namespace DentalAppointmentandInformationSystem.Properties {
         internal static System.Drawing.Bitmap staffs {
             get {
                 object obj = ResourceManager.GetObject("staffs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teeth_chart {
+            get {
+                object obj = ResourceManager.GetObject("teeth_chart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap top_tooth {
+            get {
+                object obj = ResourceManager.GetObject("top_tooth", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

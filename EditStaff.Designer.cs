@@ -62,6 +62,7 @@
             this.fnameTxtBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.deleteStffBtn = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffPic)).BeginInit();
@@ -326,13 +327,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.AutoSize = true;
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
-            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnCount = 6;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 270F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 257F));
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 269F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.saveStaffBtn, 3, 9);
             this.tableLayoutPanel2.Controls.Add(this.label12, 0, 4);
@@ -342,13 +343,15 @@
             this.tableLayoutPanel2.Controls.Add(this.passTxtBox, 3, 7);
             this.tableLayoutPanel2.Controls.Add(this.label7, 3, 6);
             this.tableLayoutPanel2.Controls.Add(this.birthDateTxtBox, 3, 5);
-            this.tableLayoutPanel2.Controls.Add(this.ageTxtBox, 4, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 4, 4);
             this.tableLayoutPanel2.Controls.Add(this.label6, 3, 4);
-            this.tableLayoutPanel2.Controls.Add(this.phoneTxtBox, 3, 3);
             this.tableLayoutPanel2.Controls.Add(this.fnameTxtBox, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label4, 3, 2);
             this.tableLayoutPanel2.Controls.Add(this.deleteStffBtn, 1, 9);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 5, 4);
+            this.tableLayoutPanel2.Controls.Add(this.ageTxtBox, 5, 5);
+            this.tableLayoutPanel2.Controls.Add(this.phoneTxtBox, 4, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label21, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(389, 141);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 12;
@@ -377,7 +380,7 @@
             this.label3.Location = new System.Drawing.Point(15, 122);
             this.label3.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 21);
+            this.label3.Size = new System.Drawing.Size(181, 21);
             this.label3.TabIndex = 4;
             this.label3.Text = "FIRST NAME *";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -388,7 +391,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.label2, 5);
+            this.tableLayoutPanel2.SetColumnSpan(this.label2, 6);
             this.label2.Font = new System.Drawing.Font("Inter", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 11);
             this.label2.Name = "label2";
@@ -401,10 +404,11 @@
             // 
             this.saveStaffBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.saveStaffBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(115)))), ((int)(((byte)(247)))));
+            this.tableLayoutPanel2.SetColumnSpan(this.saveStaffBtn, 2);
             this.saveStaffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveStaffBtn.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveStaffBtn.ForeColor = System.Drawing.Color.White;
-            this.saveStaffBtn.Location = new System.Drawing.Point(626, 428);
+            this.saveStaffBtn.Location = new System.Drawing.Point(614, 428);
             this.saveStaffBtn.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.saveStaffBtn.Name = "saveStaffBtn";
             this.saveStaffBtn.Size = new System.Drawing.Size(221, 49);
@@ -422,9 +426,9 @@
             this.label12.Location = new System.Drawing.Point(15, 209);
             this.label12.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(201, 21);
+            this.label12.Size = new System.Drawing.Size(181, 21);
             this.label12.TabIndex = 24;
-            this.label12.Text = "MIDDLE NAME *";
+            this.label12.Text = "MIDDLE NAME";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // mnameTxtBox
@@ -434,8 +438,9 @@
             this.mnameTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnameTxtBox.Location = new System.Drawing.Point(20, 233);
             this.mnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.mnameTxtBox.MaxLength = 100;
             this.mnameTxtBox.Name = "mnameTxtBox";
-            this.mnameTxtBox.Size = new System.Drawing.Size(466, 32);
+            this.mnameTxtBox.Size = new System.Drawing.Size(446, 32);
             this.mnameTxtBox.TabIndex = 25;
             // 
             // lbl3
@@ -447,7 +452,7 @@
             this.lbl3.Location = new System.Drawing.Point(15, 296);
             this.lbl3.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(201, 21);
+            this.lbl3.Size = new System.Drawing.Size(181, 21);
             this.lbl3.TabIndex = 22;
             this.lbl3.Text = "LAST NAME *";
             this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -459,39 +464,44 @@
             this.lnameTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnameTxtBox.Location = new System.Drawing.Point(20, 320);
             this.lnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.lnameTxtBox.MaxLength = 100;
             this.lnameTxtBox.Name = "lnameTxtBox";
-            this.lnameTxtBox.Size = new System.Drawing.Size(466, 32);
+            this.lnameTxtBox.Size = new System.Drawing.Size(446, 32);
             this.lnameTxtBox.TabIndex = 23;
             // 
             // passTxtBox
             // 
             this.passTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel2.SetColumnSpan(this.passTxtBox, 2);
+            this.tableLayoutPanel2.SetColumnSpan(this.passTxtBox, 3);
             this.passTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passTxtBox.Location = new System.Drawing.Point(637, 320);
+            this.passTxtBox.Location = new System.Drawing.Point(617, 320);
             this.passTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.passTxtBox.MaxLength = 30;
             this.passTxtBox.Name = "passTxtBox";
-            this.passTxtBox.Size = new System.Drawing.Size(430, 32);
+            this.passTxtBox.Size = new System.Drawing.Size(354, 32);
             this.passTxtBox.TabIndex = 37;
+            this.passTxtBox.UseSystemPasswordChar = true;
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.label7, 2);
             this.label7.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(632, 296);
+            this.label7.Location = new System.Drawing.Point(612, 296);
             this.label7.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(215, 21);
+            this.label7.Size = new System.Drawing.Size(223, 21);
             this.label7.TabIndex = 15;
             this.label7.Text = "PASSWORD *";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // birthDateTxtBox
             // 
+            this.tableLayoutPanel2.SetColumnSpan(this.birthDateTxtBox, 2);
             this.birthDateTxtBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.birthDateTxtBox.Location = new System.Drawing.Point(637, 233);
+            this.birthDateTxtBox.Location = new System.Drawing.Point(617, 233);
             this.birthDateTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.birthDateTxtBox.MaxDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             this.birthDateTxtBox.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
@@ -505,10 +515,10 @@
             // 
             this.ageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ageTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageTxtBox.Location = new System.Drawing.Point(870, 233);
+            this.ageTxtBox.Location = new System.Drawing.Point(858, 233);
             this.ageTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.ageTxtBox.Name = "ageTxtBox";
-            this.ageTxtBox.Size = new System.Drawing.Size(197, 32);
+            this.ageTxtBox.Size = new System.Drawing.Size(113, 32);
             this.ageTxtBox.TabIndex = 10;
             // 
             // label5
@@ -517,10 +527,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(865, 209);
+            this.label5.Location = new System.Drawing.Point(853, 209);
             this.label5.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(239, 21);
+            this.label5.Size = new System.Drawing.Size(251, 21);
             this.label5.TabIndex = 8;
             this.label5.Text = "AGE *";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -530,11 +540,12 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.label6, 2);
             this.label6.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(632, 209);
+            this.label6.Location = new System.Drawing.Point(612, 209);
             this.label6.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(215, 21);
+            this.label6.Size = new System.Drawing.Size(223, 21);
             this.label6.TabIndex = 13;
             this.label6.Text = "DATE OF BIRTH *";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -542,12 +553,12 @@
             // phoneTxtBox
             // 
             this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel2.SetColumnSpan(this.phoneTxtBox, 2);
             this.phoneTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTxtBox.Location = new System.Drawing.Point(637, 146);
-            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.phoneTxtBox.Location = new System.Drawing.Point(657, 146);
+            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.phoneTxtBox.MaxLength = 9;
             this.phoneTxtBox.Name = "phoneTxtBox";
-            this.phoneTxtBox.Size = new System.Drawing.Size(466, 32);
+            this.phoneTxtBox.Size = new System.Drawing.Size(178, 32);
             this.phoneTxtBox.TabIndex = 7;
             // 
             // fnameTxtBox
@@ -557,6 +568,7 @@
             this.fnameTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fnameTxtBox.Location = new System.Drawing.Point(20, 146);
             this.fnameTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.fnameTxtBox.MaxLength = 100;
             this.fnameTxtBox.Name = "fnameTxtBox";
             this.fnameTxtBox.Size = new System.Drawing.Size(430, 32);
             this.fnameTxtBox.TabIndex = 12;
@@ -566,11 +578,12 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.label4, 2);
             this.label4.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(632, 122);
+            this.label4.Location = new System.Drawing.Point(612, 122);
             this.label4.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 21);
+            this.label4.Size = new System.Drawing.Size(223, 21);
             this.label4.TabIndex = 11;
             this.label4.Text = "PHONE *";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -582,7 +595,7 @@
             this.deleteStffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteStffBtn.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteStffBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteStffBtn.Location = new System.Drawing.Point(265, 428);
+            this.deleteStffBtn.Location = new System.Drawing.Point(245, 428);
             this.deleteStffBtn.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.deleteStffBtn.Name = "deleteStffBtn";
             this.deleteStffBtn.Size = new System.Drawing.Size(221, 49);
@@ -590,6 +603,19 @@
             this.deleteStffBtn.Text = "Delete Record";
             this.deleteStffBtn.UseVisualStyleBackColor = false;
             this.deleteStffBtn.Click += new System.EventHandler(this.deleteStffBtn_Click);
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(620, 150);
+            this.label21.Margin = new System.Windows.Forms.Padding(15, 7, 3, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(34, 21);
+            this.label21.TabIndex = 78;
+            this.label21.Text = "09";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // EditStaff
             // 
@@ -656,5 +682,6 @@
         private System.Windows.Forms.Button saveStaffBtn;
         private System.Windows.Forms.TextBox passTxtBox;
         private System.Windows.Forms.Button deleteStffBtn;
+        private System.Windows.Forms.Label label21;
     }
 }

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cancelbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.srvcNameTxtBox = new System.Windows.Forms.TextBox();
             this.srvcPriceTxtBox = new System.Windows.Forms.TextBox();
             this.saveSrvcBtn = new System.Windows.Forms.Button();
+            this.cancelbtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,22 +62,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 99F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(999, 300);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // cancelbtn
-            // 
-            this.cancelbtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cancelbtn.BackColor = System.Drawing.Color.Gray;
-            this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelbtn.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelbtn.ForeColor = System.Drawing.Color.White;
-            this.cancelbtn.Location = new System.Drawing.Point(643, 221);
-            this.cancelbtn.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.Size = new System.Drawing.Size(221, 49);
-            this.cancelbtn.TabIndex = 86;
-            this.cancelbtn.Text = "Cancel";
-            this.cancelbtn.UseVisualStyleBackColor = false;
-            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
             // label1
             // 
@@ -125,6 +109,7 @@
             this.srvcNameTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.srvcNameTxtBox.Location = new System.Drawing.Point(40, 128);
             this.srvcNameTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.srvcNameTxtBox.MaxLength = 50;
             this.srvcNameTxtBox.Name = "srvcNameTxtBox";
             this.srvcNameTxtBox.Size = new System.Drawing.Size(430, 32);
             this.srvcNameTxtBox.TabIndex = 81;
@@ -154,6 +139,22 @@
             this.saveSrvcBtn.Text = "Save";
             this.saveSrvcBtn.UseVisualStyleBackColor = false;
             this.saveSrvcBtn.Click += new System.EventHandler(this.saveSrvcBtn_Click);
+            // 
+            // cancelbtn
+            // 
+            this.cancelbtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cancelbtn.BackColor = System.Drawing.Color.Gray;
+            this.cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelbtn.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelbtn.ForeColor = System.Drawing.Color.White;
+            this.cancelbtn.Location = new System.Drawing.Point(643, 221);
+            this.cancelbtn.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.cancelbtn.Name = "cancelbtn";
+            this.cancelbtn.Size = new System.Drawing.Size(221, 49);
+            this.cancelbtn.TabIndex = 86;
+            this.cancelbtn.Text = "Cancel";
+            this.cancelbtn.UseVisualStyleBackColor = false;
+            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
             // EditService
             // 

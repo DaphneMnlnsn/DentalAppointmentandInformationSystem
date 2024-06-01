@@ -707,6 +707,7 @@
             this.tableLayoutPanel2.SetColumnSpan(this.notesTxtBox, 5);
             this.notesTxtBox.Location = new System.Drawing.Point(20, 503);
             this.notesTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.notesTxtBox.MaxLength = 500;
             this.notesTxtBox.Name = "notesTxtBox";
             this.tableLayoutPanel2.SetRowSpan(this.notesTxtBox, 2);
             this.notesTxtBox.Size = new System.Drawing.Size(1061, 132);
