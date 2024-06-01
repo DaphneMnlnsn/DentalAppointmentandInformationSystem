@@ -57,7 +57,7 @@ namespace DentalAppointmentandInformationSystem
                         {
                             MessageBox.Show("Service deleted permanently!");
                             constring.Close();
-                            Services srvcs = new Services();
+                            ServiceArchives srvcs = new ServiceArchives();
                             srvcs.Show();
                             this.ParentForm.Hide();
                         }
@@ -91,7 +91,7 @@ namespace DentalAppointmentandInformationSystem
                 {
                     MessageBox.Show("Service successfully restored!");
                     constring.Close();
-                    Services srvcs = new Services();
+                    ServiceArchives srvcs = new ServiceArchives();
                     srvcs.Show();
                     this.ParentForm.Hide();
                 }

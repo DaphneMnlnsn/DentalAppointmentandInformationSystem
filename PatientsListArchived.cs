@@ -64,7 +64,7 @@ namespace DentalAppointmentandInformationSystem
                         {
                             MessageBox.Show("Patient record deleted permanently!");
                             constring.Close();
-                            Patients ptnt = new Patients();
+                            PatientArchives ptnt = new PatientArchives();
                             ptnt.Show();
                             this.ParentForm.Hide();
                         }
@@ -111,7 +111,7 @@ namespace DentalAppointmentandInformationSystem
                 {
                     MessageBox.Show("Patient record successfully restored!");
                     constring.Close();
-                    Patients ptnt = new Patients();
+                    PatientArchives ptnt = new PatientArchives();
                     ptnt.Show();
                     this.ParentForm.Hide();
                 }

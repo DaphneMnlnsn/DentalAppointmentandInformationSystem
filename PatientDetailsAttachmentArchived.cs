@@ -48,7 +48,7 @@ namespace DentalAppointmentandInformationSystem
                 {
                     MessageBox.Show("File permanently deleted!");
                     constring.Close();
-                    PatientDetails pd = new PatientDetails();
+                    FileArchives pd = new FileArchives();
                     pd.Show();
                 }
             }
@@ -69,7 +69,7 @@ namespace DentalAppointmentandInformationSystem
                 {
                     MessageBox.Show("File successfully restored!");
                     constring.Close();
-                    PatientDetails ptd = new PatientDetails();
+                    FileArchives ptd = new FileArchives();
                     ptd.Show();
                     this.ParentForm.Hide();
                 }

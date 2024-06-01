@@ -358,9 +358,10 @@ namespace DentalAppointmentandInformationSystem
                 {
                     MessageBox.Show("File added!");
                     constring.Close();
+                    this.Hide();
                     PatientDetails pd = new PatientDetails();
                     pd.Show();
-                    this.Hide();
+                    
                 }
                 constring.Close();
             }

@@ -43,7 +43,7 @@ namespace DentalAppointmentandInformationSystem
                 {
                     MessageBox.Show("Staff record successfully restored!");
                     constring.Close();
-                    Staff staff = new Staff();
+                    StaffArchives staff = new StaffArchives();
                     staff.Show();
                     this.ParentForm.Hide();
                 }
@@ -71,7 +71,7 @@ namespace DentalAppointmentandInformationSystem
                     {
                         MessageBox.Show("Staff record deleted permanently!");
                         constring.Close();
-                        Staff srvcs = new Staff();
+                        StaffArchives srvcs = new StaffArchives();
                         srvcs.Show();
                         this.ParentForm.Hide();
                     }
