@@ -164,6 +164,12 @@
     <Compile Include="EditAppointment.Designer.cs">
       <DependentUpon>EditAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditDentalRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDentalRecord.Designer.cs">
+      <DependentUpon>EditDentalRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditHistory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -379,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditAppointment.resx">
       <DependentUpon>EditAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDentalRecord.resx">
+      <DependentUpon>EditDentalRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditHistory.resx">
       <DependentUpon>EditHistory.cs</DependentUpon>

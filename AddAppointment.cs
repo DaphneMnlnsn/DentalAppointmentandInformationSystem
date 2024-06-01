@@ -59,9 +59,9 @@ namespace DentalAppointmentandInformationSystem
                 "Female", "Male"
             };
             genderCombo.DataSource = items;
-            startTime.MinDate = DateTime.Parse("9:00:00");
-            endTime.MinDate = DateTime.Parse("9:30:00");
-            startTime.MaxDate = DateTime.Parse("16:30:00");
+            startTime.MinDate = DateTime.Parse("10:00:00");
+            endTime.MinDate = DateTime.Parse("11:00:00");
+            startTime.MaxDate = DateTime.Parse("16:00:00");
             endTime.MaxDate = DateTime.Parse("17:00:00");
         }
 

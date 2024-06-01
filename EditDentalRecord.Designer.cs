@@ -1,6 +1,6 @@
 ﻿namespace DentalAppointmentandInformationSystem
 {
-    partial class DentalRecord
+    partial class EditDentalRecord
     {
         /// <summary>
         /// Required designer variable.
@@ -205,7 +205,6 @@
             this.textBox105 = new System.Windows.Forms.TextBox();
             this.textBox106 = new System.Windows.Forms.TextBox();
             this.textBox107 = new System.Windows.Forms.TextBox();
-            this.editDentalRecBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
@@ -278,15 +277,14 @@
             this.dshbrdLbl.Font = new System.Drawing.Font("Metrophobic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dshbrdLbl.Location = new System.Drawing.Point(194, 22);
             this.dshbrdLbl.Name = "dshbrdLbl";
-            this.dshbrdLbl.Size = new System.Drawing.Size(387, 50);
+            this.dshbrdLbl.Size = new System.Drawing.Size(463, 50);
             this.dshbrdLbl.TabIndex = 5;
-            this.dshbrdLbl.Text = "Patient Dental Record";
+            this.dshbrdLbl.Text = "Edit Patient Dental Record";
             this.dshbrdLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.panel2.Controls.Add(this.editDentalRecBtn);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.doctorPic);
             this.panel2.Controls.Add(this.dshbrdLbl);
@@ -2287,24 +2285,7 @@
             this.textBox107.Size = new System.Drawing.Size(58, 31);
             this.textBox107.TabIndex = 295;
             // 
-            // editDentalRecBtn
-            // 
-            this.editDentalRecBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.editDentalRecBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.editDentalRecBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editDentalRecBtn.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editDentalRecBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.editDentalRecBtn.Location = new System.Drawing.Point(1150, 24);
-            this.editDentalRecBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.editDentalRecBtn.Name = "editDentalRecBtn";
-            this.editDentalRecBtn.Size = new System.Drawing.Size(268, 48);
-            this.editDentalRecBtn.TabIndex = 9;
-            this.editDentalRecBtn.Text = "Edit Dental Record";
-            this.editDentalRecBtn.UseVisualStyleBackColor = false;
-            this.editDentalRecBtn.Click += new System.EventHandler(this.editDentalRecBtn_Click);
-            // 
-            // DentalRecord
+            // EditDentalRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -2484,7 +2465,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(1556, 967);
             this.MinimumSize = new System.Drawing.Size(1554, 958);
-            this.Name = "DentalRecord";
+            this.Name = "EditDentalRecord";
             this.Text = "Dental Record";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Calendar_FormClosing);
@@ -2734,6 +2715,5 @@
         private System.Windows.Forms.TextBox textBox105;
         private System.Windows.Forms.TextBox textBox106;
         private System.Windows.Forms.TextBox textBox107;
-        private System.Windows.Forms.Button editDentalRecBtn;
     }
 }

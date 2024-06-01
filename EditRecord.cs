@@ -32,11 +32,9 @@ namespace DentalAppointmentandInformationSystem
             if (!string.IsNullOrWhiteSpace(teethTrtdTxtBox.Text) && !string.IsNullOrWhiteSpace(priceBilledTxtBox.Text))
             {
                 float num;
-                int num2;
                 bool checkInput = float.TryParse(priceBilledTxtBox.Text, out num);
-                bool checkInput2 = int.TryParse(teethTrtdTxtBox.Text, out num2);
 
-                if (checkInput == true && checkInput2 == true)
+                if (checkInput == true)
                 {
                     constring.Open();
 

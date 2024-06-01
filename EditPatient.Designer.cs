@@ -50,8 +50,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.contactPrsnTxtBox = new System.Windows.Forms.TextBox();
-            this.cpersonNumTxtBox = new System.Windows.Forms.TextBox();
             this.emailTxtBox = new System.Windows.Forms.TextBox();
             this.birthDate = new System.Windows.Forms.DateTimePicker();
             this.addressTxtBox = new System.Windows.Forms.TextBox();
@@ -61,17 +59,19 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pIDTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.phoneTxtBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.patientCombo = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.genderCombo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ageTxtBox = new System.Windows.Forms.TextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.phoneTxtBox = new System.Windows.Forms.TextBox();
+            this.contactPrsnTxtBox = new System.Windows.Forms.TextBox();
+            this.cpersonNumTxtBox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.savePatientBtn = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffPic)).BeginInit();
@@ -471,29 +471,6 @@
             this.label16.Text = "CONTACT PERSON NUMBER *";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // contactPrsnTxtBox
-            // 
-            this.contactPrsnTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel2.SetColumnSpan(this.contactPrsnTxtBox, 2);
-            this.contactPrsnTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactPrsnTxtBox.Location = new System.Drawing.Point(20, 454);
-            this.contactPrsnTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.contactPrsnTxtBox.MaxLength = 100;
-            this.contactPrsnTxtBox.Name = "contactPrsnTxtBox";
-            this.contactPrsnTxtBox.Size = new System.Drawing.Size(396, 32);
-            this.contactPrsnTxtBox.TabIndex = 29;
-            // 
-            // cpersonNumTxtBox
-            // 
-            this.cpersonNumTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpersonNumTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpersonNumTxtBox.Location = new System.Drawing.Point(602, 454);
-            this.cpersonNumTxtBox.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.cpersonNumTxtBox.MaxLength = 9;
-            this.cpersonNumTxtBox.Name = "cpersonNumTxtBox";
-            this.cpersonNumTxtBox.Size = new System.Drawing.Size(298, 32);
-            this.cpersonNumTxtBox.TabIndex = 16;
-            // 
             // emailTxtBox
             // 
             this.emailTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -616,17 +593,6 @@
             this.label4.Text = "PHONE *";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // phoneTxtBox
-            // 
-            this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phoneTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTxtBox.Location = new System.Drawing.Point(68, 193);
-            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.phoneTxtBox.MaxLength = 9;
-            this.phoneTxtBox.Name = "phoneTxtBox";
-            this.phoneTxtBox.Size = new System.Drawing.Size(362, 32);
-            this.phoneTxtBox.TabIndex = 12;
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -700,6 +666,7 @@
             // 
             this.ageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel2.SetColumnSpan(this.ageTxtBox, 2);
+            this.ageTxtBox.Enabled = false;
             this.ageTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ageTxtBox.Location = new System.Drawing.Point(559, 193);
             this.ageTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
@@ -707,9 +674,39 @@
             this.ageTxtBox.Size = new System.Drawing.Size(204, 32);
             this.ageTxtBox.TabIndex = 10;
             // 
-            // openFileDialog1
+            // phoneTxtBox
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phoneTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneTxtBox.Location = new System.Drawing.Point(68, 193);
+            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.phoneTxtBox.MaxLength = 9;
+            this.phoneTxtBox.Name = "phoneTxtBox";
+            this.phoneTxtBox.Size = new System.Drawing.Size(362, 32);
+            this.phoneTxtBox.TabIndex = 12;
+            // 
+            // contactPrsnTxtBox
+            // 
+            this.contactPrsnTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel2.SetColumnSpan(this.contactPrsnTxtBox, 2);
+            this.contactPrsnTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactPrsnTxtBox.Location = new System.Drawing.Point(20, 454);
+            this.contactPrsnTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.contactPrsnTxtBox.MaxLength = 100;
+            this.contactPrsnTxtBox.Name = "contactPrsnTxtBox";
+            this.contactPrsnTxtBox.Size = new System.Drawing.Size(396, 32);
+            this.contactPrsnTxtBox.TabIndex = 29;
+            // 
+            // cpersonNumTxtBox
+            // 
+            this.cpersonNumTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpersonNumTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpersonNumTxtBox.Location = new System.Drawing.Point(602, 454);
+            this.cpersonNumTxtBox.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.cpersonNumTxtBox.MaxLength = 9;
+            this.cpersonNumTxtBox.Name = "cpersonNumTxtBox";
+            this.cpersonNumTxtBox.Size = new System.Drawing.Size(298, 32);
+            this.cpersonNumTxtBox.TabIndex = 16;
             // 
             // label21
             // 
@@ -753,6 +750,10 @@
             this.savePatientBtn.Text = "Save";
             this.savePatientBtn.UseVisualStyleBackColor = false;
             this.savePatientBtn.Click += new System.EventHandler(this.savePatientBtn_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // EditPatient
             // 

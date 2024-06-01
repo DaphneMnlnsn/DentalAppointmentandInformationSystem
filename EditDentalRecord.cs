@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace DentalAppointmentandInformationSystem
 {
-    public partial class DentalRecord : Form
+    public partial class EditDentalRecord : Form
     {
         Variables v = new Variables();
         SqlConnection constring;
-        public DentalRecord()
+        public EditDentalRecord()
         {
             InitializeComponent();
             constring = v.getConnection;
@@ -86,13 +86,6 @@ namespace DentalAppointmentandInformationSystem
         {
             CalendarArchives calArch = new CalendarArchives();
             calArch.Show();
-            this.Hide();
-        }
-
-        private void editDentalRecBtn_Click(object sender, EventArgs e)
-        {
-            EditDentalRecord editDR = new EditDentalRecord();
-            editDR.Show();
             this.Hide();
         }
     }
