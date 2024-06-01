@@ -174,7 +174,8 @@ namespace DentalAppointmentandInformationSystem
                         string query = "INSERT INTO Patient VALUES('" + patientID + "','" + lnameTxtBox.Text + "','"
                             + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + ageTxtBox.Text + "','" + gender
                             + "','" + birthDate.Text + "','" + phoneTxtBox.Text + "','" + emailTxtBox.Text + "','"
-                            + addressTxtBox.Text + "','" + contactPrsnTxtBox.Text + "','" + cpersonNumTxtBox.Text + "','',1)";
+                            + addressTxtBox.Text + "','" + contactPrsnTxtBox.Text + "','" + cpersonNumTxtBox.Text + "','"
+                            + patientNotesTxtBox.Text + "','','','','',1)";
 
                         SqlCommand cmd2 = new SqlCommand(query, constring);
                         cmd2.CommandText = query;
