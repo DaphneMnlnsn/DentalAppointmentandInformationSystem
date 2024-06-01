@@ -256,5 +256,11 @@ namespace DentalAppointmentandInformationSystem
             ageTxtBox.Text = CalculateAge(DateTime.Parse(birthDate.Text)).ToString();
             ageTxtBox.ReadOnly = true;
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            new Patients().Show();
+            this.Hide();
+        }
     }
 }

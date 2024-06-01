@@ -442,5 +442,11 @@ namespace DentalAppointmentandInformationSystem
             service3Combo.DisplayMember = "service_name";
             service3Combo.ValueMember = "service_id";
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            new AppntmntDetails().Show();
+            this.Hide();
+        }
     }
 }

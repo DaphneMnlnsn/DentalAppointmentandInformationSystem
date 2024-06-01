@@ -39,22 +39,24 @@
             this.lbl3 = new System.Windows.Forms.Label();
             this.lnameTxtBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.phoneTxtBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.contactPrsnTxtBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.ageTxtBox = new System.Windows.Forms.TextBox();
-            this.cpersonNumTxtBox = new System.Windows.Forms.TextBox();
             this.emailTxtBox = new System.Windows.Forms.TextBox();
             this.genderCombo = new System.Windows.Forms.ComboBox();
             this.birthDate = new System.Windows.Forms.DateTimePicker();
             this.addressTxtBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.savePatientBtn = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.notesTxtBox = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ageTxtBox = new System.Windows.Forms.TextBox();
+            this.contactPrsnTxtBox = new System.Windows.Forms.TextBox();
+            this.phoneTxtBox = new System.Windows.Forms.TextBox();
+            this.cpersonNumTxtBox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.savePatientBtn = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.logoutBtn = new System.Windows.Forms.Label();
@@ -72,8 +74,7 @@
             this.dshboardBtn = new System.Windows.Forms.Label();
             this.dshbrdPic = new System.Windows.Forms.PictureBox();
             this.srvcsPic = new System.Windows.Forms.PictureBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.backBtn = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).BeginInit();
@@ -83,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -289,17 +291,6 @@
             this.label4.Text = "PHONE *";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // phoneTxtBox
-            // 
-            this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phoneTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTxtBox.Location = new System.Drawing.Point(598, 106);
-            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.phoneTxtBox.MaxLength = 9;
-            this.phoneTxtBox.Name = "phoneTxtBox";
-            this.phoneTxtBox.Size = new System.Drawing.Size(231, 32);
-            this.phoneTxtBox.TabIndex = 12;
-            // 
             // label14
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -344,53 +335,6 @@
             this.label13.TabIndex = 26;
             this.label13.Text = "GENDER *";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // contactPrsnTxtBox
-            // 
-            this.contactPrsnTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel2.SetColumnSpan(this.contactPrsnTxtBox, 2);
-            this.contactPrsnTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactPrsnTxtBox.Location = new System.Drawing.Point(20, 454);
-            this.contactPrsnTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.contactPrsnTxtBox.MaxLength = 100;
-            this.contactPrsnTxtBox.Name = "contactPrsnTxtBox";
-            this.contactPrsnTxtBox.Size = new System.Drawing.Size(410, 32);
-            this.contactPrsnTxtBox.TabIndex = 29;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(857, 169);
-            this.label5.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(247, 21);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "AGE *";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ageTxtBox
-            // 
-            this.ageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ageTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageTxtBox.Location = new System.Drawing.Point(862, 193);
-            this.ageTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.ageTxtBox.Name = "ageTxtBox";
-            this.ageTxtBox.Size = new System.Drawing.Size(204, 32);
-            this.ageTxtBox.TabIndex = 10;
-            // 
-            // cpersonNumTxtBox
-            // 
-            this.cpersonNumTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpersonNumTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpersonNumTxtBox.Location = new System.Drawing.Point(598, 454);
-            this.cpersonNumTxtBox.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.cpersonNumTxtBox.MaxLength = 9;
-            this.cpersonNumTxtBox.Name = "cpersonNumTxtBox";
-            this.cpersonNumTxtBox.Size = new System.Drawing.Size(241, 32);
-            this.cpersonNumTxtBox.TabIndex = 16;
             // 
             // emailTxtBox
             // 
@@ -456,22 +400,6 @@
             this.label11.Text = "ADDRESS *";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // savePatientBtn
-            // 
-            this.savePatientBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.savePatientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(115)))), ((int)(((byte)(247)))));
-            this.savePatientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.savePatientBtn.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savePatientBtn.ForeColor = System.Drawing.Color.White;
-            this.savePatientBtn.Location = new System.Drawing.Point(845, 712);
-            this.savePatientBtn.Name = "savePatientBtn";
-            this.tableLayoutPanel2.SetRowSpan(this.savePatientBtn, 2);
-            this.savePatientBtn.Size = new System.Drawing.Size(221, 38);
-            this.savePatientBtn.TabIndex = 35;
-            this.savePatientBtn.Text = "Save";
-            this.savePatientBtn.UseVisualStyleBackColor = false;
-            this.savePatientBtn.Click += new System.EventHandler(this.savePatientBtn_Click);
-            // 
             // label15
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -496,6 +424,106 @@
             this.notesTxtBox.Size = new System.Drawing.Size(1046, 82);
             this.notesTxtBox.TabIndex = 74;
             this.notesTxtBox.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(857, 169);
+            this.label5.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(247, 21);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "AGE *";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ageTxtBox
+            // 
+            this.ageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ageTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageTxtBox.Location = new System.Drawing.Point(862, 193);
+            this.ageTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.ageTxtBox.Name = "ageTxtBox";
+            this.ageTxtBox.Size = new System.Drawing.Size(204, 32);
+            this.ageTxtBox.TabIndex = 10;
+            // 
+            // contactPrsnTxtBox
+            // 
+            this.contactPrsnTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel2.SetColumnSpan(this.contactPrsnTxtBox, 2);
+            this.contactPrsnTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactPrsnTxtBox.Location = new System.Drawing.Point(20, 454);
+            this.contactPrsnTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.contactPrsnTxtBox.MaxLength = 100;
+            this.contactPrsnTxtBox.Name = "contactPrsnTxtBox";
+            this.contactPrsnTxtBox.Size = new System.Drawing.Size(410, 32);
+            this.contactPrsnTxtBox.TabIndex = 29;
+            // 
+            // phoneTxtBox
+            // 
+            this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phoneTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneTxtBox.Location = new System.Drawing.Point(598, 106);
+            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.phoneTxtBox.MaxLength = 9;
+            this.phoneTxtBox.Name = "phoneTxtBox";
+            this.phoneTxtBox.Size = new System.Drawing.Size(231, 32);
+            this.phoneTxtBox.TabIndex = 12;
+            // 
+            // cpersonNumTxtBox
+            // 
+            this.cpersonNumTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpersonNumTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpersonNumTxtBox.Location = new System.Drawing.Point(598, 454);
+            this.cpersonNumTxtBox.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.cpersonNumTxtBox.MaxLength = 9;
+            this.cpersonNumTxtBox.Name = "cpersonNumTxtBox";
+            this.cpersonNumTxtBox.Size = new System.Drawing.Size(241, 32);
+            this.cpersonNumTxtBox.TabIndex = 16;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(561, 458);
+            this.label21.Margin = new System.Windows.Forms.Padding(15, 7, 3, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(34, 21);
+            this.label21.TabIndex = 78;
+            this.label21.Text = "09";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(561, 110);
+            this.label8.Margin = new System.Windows.Forms.Padding(15, 7, 3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 21);
+            this.label8.TabIndex = 79;
+            this.label8.Text = "09";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // savePatientBtn
+            // 
+            this.savePatientBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.savePatientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(115)))), ((int)(((byte)(247)))));
+            this.savePatientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.savePatientBtn.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savePatientBtn.ForeColor = System.Drawing.Color.White;
+            this.savePatientBtn.Location = new System.Drawing.Point(845, 712);
+            this.savePatientBtn.Name = "savePatientBtn";
+            this.tableLayoutPanel2.SetRowSpan(this.savePatientBtn, 2);
+            this.savePatientBtn.Size = new System.Drawing.Size(221, 38);
+            this.savePatientBtn.TabIndex = 35;
+            this.savePatientBtn.Text = "Save";
+            this.savePatientBtn.UseVisualStyleBackColor = false;
+            this.savePatientBtn.Click += new System.EventHandler(this.savePatientBtn_Click);
             // 
             // openFileDialog1
             // 
@@ -747,31 +775,18 @@
             this.srvcsPic.TabStop = false;
             this.srvcsPic.Click += new System.EventHandler(this.servicesBtn_Click);
             // 
-            // label21
+            // backBtn
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(561, 458);
-            this.label21.Margin = new System.Windows.Forms.Padding(15, 7, 3, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(34, 21);
-            this.label21.TabIndex = 78;
-            this.label21.Text = "09";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(561, 110);
-            this.label8.Margin = new System.Windows.Forms.Padding(15, 7, 3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 21);
-            this.label8.TabIndex = 79;
-            this.label8.Text = "09";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backBtn.BackColor = System.Drawing.Color.White;
+            this.backBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.back;
+            this.backBtn.Location = new System.Drawing.Point(402, 29);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(56, 55);
+            this.backBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backBtn.TabIndex = 72;
+            this.backBtn.TabStop = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // NewPatient
             // 
@@ -779,6 +794,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(1537, 920);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.MaximumSize = new System.Drawing.Size(1559, 976);
@@ -798,6 +814,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -850,5 +867,6 @@
         private System.Windows.Forms.RichTextBox notesTxtBox;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox backBtn;
     }
 }

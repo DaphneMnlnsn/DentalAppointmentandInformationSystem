@@ -71,6 +71,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.notesTxtBox = new System.Windows.Forms.RichTextBox();
             this.patientCombo = new System.Windows.Forms.ComboBox();
+            this.backBtn = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffPic)).BeginInit();
@@ -80,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -720,11 +722,25 @@
             this.patientCombo.Size = new System.Drawing.Size(425, 29);
             this.patientCombo.TabIndex = 81;
             // 
+            // backBtn
+            // 
+            this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
+            this.backBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.back;
+            this.backBtn.Location = new System.Drawing.Point(387, 55);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(56, 55);
+            this.backBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backBtn.TabIndex = 73;
+            this.backBtn.TabStop = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // EditAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1537, 920);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(1559, 976);
@@ -744,6 +760,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -794,5 +811,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.RichTextBox notesTxtBox;
         private System.Windows.Forms.ComboBox patientCombo;
+        private System.Windows.Forms.PictureBox backBtn;
     }
 }

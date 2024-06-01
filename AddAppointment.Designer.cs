@@ -33,18 +33,13 @@
             this.label15 = new System.Windows.Forms.Label();
             this.emailTxtBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.phoneTxtBox = new System.Windows.Forms.TextBox();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lnameTxtBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.mnameTxtBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.genderCombo = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.ageTxtBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -52,27 +47,36 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cpersonNumTxtBox = new System.Windows.Forms.TextBox();
             this.contactPrsnTxtBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.birthDate = new System.Windows.Forms.DateTimePicker();
             this.appntmntDate = new System.Windows.Forms.DateTimePicker();
             this.startTime = new System.Windows.Forms.DateTimePicker();
-            this.endTime = new System.Windows.Forms.DateTimePicker();
             this.staff1Combo = new System.Windows.Forms.ComboBox();
             this.staff2Combo = new System.Windows.Forms.ComboBox();
             this.staff3Combo = new System.Windows.Forms.ComboBox();
             this.service1Combo = new System.Windows.Forms.ComboBox();
             this.service2Combo = new System.Windows.Forms.ComboBox();
             this.service3Combo = new System.Windows.Forms.ComboBox();
-            this.savePatientBtn = new System.Windows.Forms.Button();
             this.notesTxtBox = new System.Windows.Forms.RichTextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.addressTxtBox = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.genderCombo = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.ageTxtBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.endTime = new System.Windows.Forms.DateTimePicker();
+            this.phoneTxtBox = new System.Windows.Forms.TextBox();
+            this.birthDate = new System.Windows.Forms.DateTimePicker();
+            this.cpersonNumTxtBox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.savePatientBtn = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.patientNotesTxtBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.logoutBtn = new System.Windows.Forms.Label();
             this.logoutPic = new System.Windows.Forms.PictureBox();
@@ -89,10 +93,7 @@
             this.dshboardBtn = new System.Windows.Forms.Label();
             this.dshbrdPic = new System.Windows.Forms.PictureBox();
             this.srvcsPic = new System.Windows.Forms.PictureBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.patientNotesTxtBox = new System.Windows.Forms.TextBox();
+            this.backBtn = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).BeginInit();
@@ -102,6 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -249,20 +251,6 @@
             this.label3.Text = "FIRST NAME *";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(792, 127);
-            this.label14.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(343, 22);
-            this.label14.TabIndex = 28;
-            this.label14.Text = "GENDER*";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -277,17 +265,6 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "PHONE*";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // phoneTxtBox
-            // 
-            this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phoneTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTxtBox.Location = new System.Drawing.Point(494, 151);
-            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
-            this.phoneTxtBox.MaxLength = 9;
-            this.phoneTxtBox.Name = "phoneTxtBox";
-            this.phoneTxtBox.Size = new System.Drawing.Size(260, 30);
-            this.phoneTxtBox.TabIndex = 36;
             // 
             // lbl3
             // 
@@ -370,39 +347,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "New Appointment";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // genderCombo
-            // 
-            this.genderCombo.FormattingEnabled = true;
-            this.genderCombo.Location = new System.Drawing.Point(797, 152);
-            this.genderCombo.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.genderCombo.Name = "genderCombo";
-            this.genderCombo.Size = new System.Drawing.Size(187, 29);
-            this.genderCombo.TabIndex = 18;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(792, 60);
-            this.label13.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(343, 22);
-            this.label13.TabIndex = 50;
-            this.label13.Text = "AGE";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ageTxtBox
-            // 
-            this.ageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ageTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageTxtBox.Location = new System.Drawing.Point(797, 84);
-            this.ageTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.ageTxtBox.Name = "ageTxtBox";
-            this.ageTxtBox.Size = new System.Drawing.Size(104, 30);
-            this.ageTxtBox.TabIndex = 51;
             // 
             // label11
             // 
@@ -505,20 +449,6 @@
             this.label17.Text = "SERVICE TO AVAIL*";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(792, 361);
-            this.label18.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(343, 22);
-            this.label18.TabIndex = 53;
-            this.label18.Text = "APPOINTMENT END TIME*";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label16
             // 
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -548,17 +478,6 @@
             this.label9.Text = "DENTAL APPOINTMENT DATE*";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cpersonNumTxtBox
-            // 
-            this.cpersonNumTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpersonNumTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpersonNumTxtBox.Location = new System.Drawing.Point(494, 300);
-            this.cpersonNumTxtBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
-            this.cpersonNumTxtBox.MaxLength = 9;
-            this.cpersonNumTxtBox.Name = "cpersonNumTxtBox";
-            this.cpersonNumTxtBox.Size = new System.Drawing.Size(280, 30);
-            this.cpersonNumTxtBox.TabIndex = 56;
-            // 
             // contactPrsnTxtBox
             // 
             this.contactPrsnTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -586,20 +505,6 @@
             this.label20.Text = "CONTACT PERSON NUMBER *";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // birthDate
-            // 
-            this.tableLayoutPanel2.SetColumnSpan(this.birthDate, 2);
-            this.birthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.birthDate.Location = new System.Drawing.Point(457, 85);
-            this.birthDate.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.birthDate.MaxDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
-            this.birthDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.birthDate.Name = "birthDate";
-            this.birthDate.Size = new System.Drawing.Size(309, 29);
-            this.birthDate.TabIndex = 58;
-            this.birthDate.Value = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
-            this.birthDate.Leave += new System.EventHandler(this.birthDate_Leave);
-            // 
             // appntmntDate
             // 
             this.appntmntDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -621,17 +526,6 @@
             this.startTime.Size = new System.Drawing.Size(317, 29);
             this.startTime.TabIndex = 60;
             this.startTime.Value = new System.DateTime(2024, 5, 15, 0, 0, 0, 0);
-            // 
-            // endTime
-            // 
-            this.endTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.endTime.Location = new System.Drawing.Point(797, 386);
-            this.endTime.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.endTime.Name = "endTime";
-            this.endTime.ShowUpDown = true;
-            this.endTime.Size = new System.Drawing.Size(318, 29);
-            this.endTime.TabIndex = 61;
-            this.endTime.Value = new System.DateTime(2024, 5, 15, 0, 0, 0, 0);
             // 
             // staff1Combo
             // 
@@ -701,22 +595,6 @@
             this.service3Combo.TabIndex = 67;
             this.service3Combo.Click += new System.EventHandler(this.service3Combo_Click);
             // 
-            // savePatientBtn
-            // 
-            this.savePatientBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.savePatientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(115)))), ((int)(((byte)(247)))));
-            this.savePatientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.savePatientBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savePatientBtn.ForeColor = System.Drawing.Color.White;
-            this.savePatientBtn.Location = new System.Drawing.Point(873, 809);
-            this.savePatientBtn.Margin = new System.Windows.Forms.Padding(95, 3, 3, 3);
-            this.savePatientBtn.Name = "savePatientBtn";
-            this.savePatientBtn.Size = new System.Drawing.Size(260, 43);
-            this.savePatientBtn.TabIndex = 35;
-            this.savePatientBtn.Text = "Set Appointment";
-            this.savePatientBtn.UseVisualStyleBackColor = false;
-            this.savePatientBtn.Click += new System.EventHandler(this.savePatientBtn_Click);
-            // 
             // notesTxtBox
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.notesTxtBox, 4);
@@ -743,6 +621,17 @@
             this.label23.Text = "APPOINTMENT NOTES";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // addressTxtBox
+            // 
+            this.addressTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addressTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTxtBox.Location = new System.Drawing.Point(797, 222);
+            this.addressTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.addressTxtBox.MaxLength = 200;
+            this.addressTxtBox.Name = "addressTxtBox";
+            this.addressTxtBox.Size = new System.Drawing.Size(309, 30);
+            this.addressTxtBox.TabIndex = 76;
+            // 
             // label24
             // 
             this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -757,16 +646,180 @@
             this.label24.Text = "ADDRESS *";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // addressTxtBox
+            // genderCombo
             // 
-            this.addressTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addressTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressTxtBox.Location = new System.Drawing.Point(797, 222);
-            this.addressTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.addressTxtBox.MaxLength = 200;
-            this.addressTxtBox.Name = "addressTxtBox";
-            this.addressTxtBox.Size = new System.Drawing.Size(309, 30);
-            this.addressTxtBox.TabIndex = 76;
+            this.genderCombo.FormattingEnabled = true;
+            this.genderCombo.Location = new System.Drawing.Point(797, 152);
+            this.genderCombo.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.genderCombo.Name = "genderCombo";
+            this.genderCombo.Size = new System.Drawing.Size(187, 29);
+            this.genderCombo.TabIndex = 18;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(792, 127);
+            this.label14.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(343, 22);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "GENDER*";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ageTxtBox
+            // 
+            this.ageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ageTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageTxtBox.Location = new System.Drawing.Point(797, 84);
+            this.ageTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.ageTxtBox.Name = "ageTxtBox";
+            this.ageTxtBox.Size = new System.Drawing.Size(104, 30);
+            this.ageTxtBox.TabIndex = 51;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(792, 60);
+            this.label13.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(343, 22);
+            this.label13.TabIndex = 50;
+            this.label13.Text = "AGE";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(792, 361);
+            this.label18.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(343, 22);
+            this.label18.TabIndex = 53;
+            this.label18.Text = "APPOINTMENT END TIME*";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // endTime
+            // 
+            this.endTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.endTime.Location = new System.Drawing.Point(797, 386);
+            this.endTime.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.endTime.Name = "endTime";
+            this.endTime.ShowUpDown = true;
+            this.endTime.Size = new System.Drawing.Size(318, 29);
+            this.endTime.TabIndex = 61;
+            this.endTime.Value = new System.DateTime(2024, 5, 15, 0, 0, 0, 0);
+            // 
+            // phoneTxtBox
+            // 
+            this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phoneTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneTxtBox.Location = new System.Drawing.Point(494, 151);
+            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
+            this.phoneTxtBox.MaxLength = 9;
+            this.phoneTxtBox.Name = "phoneTxtBox";
+            this.phoneTxtBox.Size = new System.Drawing.Size(260, 30);
+            this.phoneTxtBox.TabIndex = 36;
+            // 
+            // birthDate
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.birthDate, 2);
+            this.birthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.birthDate.Location = new System.Drawing.Point(457, 85);
+            this.birthDate.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.birthDate.MaxDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.birthDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.birthDate.Name = "birthDate";
+            this.birthDate.Size = new System.Drawing.Size(309, 29);
+            this.birthDate.TabIndex = 58;
+            this.birthDate.Value = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.birthDate.Leave += new System.EventHandler(this.birthDate_Leave);
+            // 
+            // cpersonNumTxtBox
+            // 
+            this.cpersonNumTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpersonNumTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpersonNumTxtBox.Location = new System.Drawing.Point(494, 300);
+            this.cpersonNumTxtBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
+            this.cpersonNumTxtBox.MaxLength = 9;
+            this.cpersonNumTxtBox.Name = "cpersonNumTxtBox";
+            this.cpersonNumTxtBox.Size = new System.Drawing.Size(280, 30);
+            this.cpersonNumTxtBox.TabIndex = 56;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(457, 156);
+            this.label21.Margin = new System.Windows.Forms.Padding(15, 7, 3, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(34, 21);
+            this.label21.TabIndex = 77;
+            this.label21.Text = "09";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(457, 305);
+            this.label22.Margin = new System.Windows.Forms.Padding(15, 7, 3, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(34, 21);
+            this.label22.TabIndex = 78;
+            this.label22.Text = "09";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // savePatientBtn
+            // 
+            this.savePatientBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.savePatientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(115)))), ((int)(((byte)(247)))));
+            this.savePatientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.savePatientBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savePatientBtn.ForeColor = System.Drawing.Color.White;
+            this.savePatientBtn.Location = new System.Drawing.Point(873, 809);
+            this.savePatientBtn.Margin = new System.Windows.Forms.Padding(95, 3, 3, 3);
+            this.savePatientBtn.Name = "savePatientBtn";
+            this.savePatientBtn.Size = new System.Drawing.Size(260, 43);
+            this.savePatientBtn.TabIndex = 35;
+            this.savePatientBtn.Text = "Set Appointment";
+            this.savePatientBtn.UseVisualStyleBackColor = false;
+            this.savePatientBtn.Click += new System.EventHandler(this.savePatientBtn_Click);
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(792, 276);
+            this.label25.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(343, 22);
+            this.label25.TabIndex = 79;
+            this.label25.Text = "PATIENT NOTES";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // patientNotesTxtBox
+            // 
+            this.patientNotesTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.patientNotesTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientNotesTxtBox.Location = new System.Drawing.Point(797, 300);
+            this.patientNotesTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.patientNotesTxtBox.MaxLength = 500;
+            this.patientNotesTxtBox.Name = "patientNotesTxtBox";
+            this.patientNotesTxtBox.Size = new System.Drawing.Size(309, 30);
+            this.patientNotesTxtBox.TabIndex = 80;
             // 
             // tableLayoutPanel1
             // 
@@ -1014,62 +1067,25 @@
             this.srvcsPic.TabStop = false;
             this.srvcsPic.Click += new System.EventHandler(this.servicesBtn_Click);
             // 
-            // label21
+            // backBtn
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(457, 156);
-            this.label21.Margin = new System.Windows.Forms.Padding(15, 7, 3, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(34, 21);
-            this.label21.TabIndex = 77;
-            this.label21.Text = "09";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(457, 305);
-            this.label22.Margin = new System.Windows.Forms.Padding(15, 7, 3, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(34, 21);
-            this.label22.TabIndex = 78;
-            this.label22.Text = "09";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(792, 276);
-            this.label25.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(343, 22);
-            this.label25.TabIndex = 79;
-            this.label25.Text = "PATIENT NOTES";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // patientNotesTxtBox
-            // 
-            this.patientNotesTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.patientNotesTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientNotesTxtBox.Location = new System.Drawing.Point(797, 300);
-            this.patientNotesTxtBox.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.patientNotesTxtBox.MaxLength = 500;
-            this.patientNotesTxtBox.Name = "patientNotesTxtBox";
-            this.patientNotesTxtBox.Size = new System.Drawing.Size(309, 30);
-            this.patientNotesTxtBox.TabIndex = 80;
+            this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
+            this.backBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.back;
+            this.backBtn.Location = new System.Drawing.Point(392, 18);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 49);
+            this.backBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backBtn.TabIndex = 81;
+            this.backBtn.TabStop = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // AddAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1537, 920);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1090,6 +1106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1161,5 +1178,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox patientNotesTxtBox;
+        private System.Windows.Forms.PictureBox backBtn;
     }
 }

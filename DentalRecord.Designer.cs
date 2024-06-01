@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DentalRecord));
             this.dshbrdLbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.editDentalRecBtn = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.doctorPic = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -99,113 +101,113 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox31 = new System.Windows.Forms.TextBox();
             this.textBox81 = new System.Windows.Forms.TextBox();
-            this.textBox90 = new System.Windows.Forms.TextBox();
-            this.textBox82 = new System.Windows.Forms.TextBox();
-            this.textBox83 = new System.Windows.Forms.TextBox();
-            this.textBox84 = new System.Windows.Forms.TextBox();
-            this.textBox85 = new System.Windows.Forms.TextBox();
-            this.textBox86 = new System.Windows.Forms.TextBox();
-            this.textBox87 = new System.Windows.Forms.TextBox();
-            this.textBox88 = new System.Windows.Forms.TextBox();
-            this.textBox89 = new System.Windows.Forms.TextBox();
-            this.textBox91 = new System.Windows.Forms.TextBox();
-            this.textBox92 = new System.Windows.Forms.TextBox();
-            this.textBox93 = new System.Windows.Forms.TextBox();
-            this.textBox94 = new System.Windows.Forms.TextBox();
-            this.textBox95 = new System.Windows.Forms.TextBox();
-            this.textBox96 = new System.Windows.Forms.TextBox();
-            this.textBox97 = new System.Windows.Forms.TextBox();
-            this.textBox98 = new System.Windows.Forms.TextBox();
-            this.textBox99 = new System.Windows.Forms.TextBox();
-            this.textBox100 = new System.Windows.Forms.TextBox();
-            this.textBox101 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
-            this.textBox47 = new System.Windows.Forms.TextBox();
+            this.TM85 = new System.Windows.Forms.TextBox();
+            this.S85 = new System.Windows.Forms.TextBox();
+            this.S84 = new System.Windows.Forms.TextBox();
+            this.TM84 = new System.Windows.Forms.TextBox();
+            this.S83 = new System.Windows.Forms.TextBox();
+            this.TM83 = new System.Windows.Forms.TextBox();
+            this.S75 = new System.Windows.Forms.TextBox();
+            this.TM75 = new System.Windows.Forms.TextBox();
+            this.S74 = new System.Windows.Forms.TextBox();
+            this.TM74 = new System.Windows.Forms.TextBox();
+            this.S73 = new System.Windows.Forms.TextBox();
+            this.TM73 = new System.Windows.Forms.TextBox();
+            this.S71 = new System.Windows.Forms.TextBox();
+            this.TM71 = new System.Windows.Forms.TextBox();
+            this.S81 = new System.Windows.Forms.TextBox();
+            this.TM81 = new System.Windows.Forms.TextBox();
+            this.S82 = new System.Windows.Forms.TextBox();
+            this.TM82 = new System.Windows.Forms.TextBox();
+            this.S72 = new System.Windows.Forms.TextBox();
+            this.TM72 = new System.Windows.Forms.TextBox();
+            this.S18 = new System.Windows.Forms.TextBox();
+            this.TM18 = new System.Windows.Forms.TextBox();
+            this.S17 = new System.Windows.Forms.TextBox();
+            this.TM17 = new System.Windows.Forms.TextBox();
+            this.S16 = new System.Windows.Forms.TextBox();
+            this.TM16 = new System.Windows.Forms.TextBox();
+            this.S15 = new System.Windows.Forms.TextBox();
+            this.TM15 = new System.Windows.Forms.TextBox();
+            this.S14 = new System.Windows.Forms.TextBox();
+            this.TM14 = new System.Windows.Forms.TextBox();
+            this.S13 = new System.Windows.Forms.TextBox();
+            this.TM13 = new System.Windows.Forms.TextBox();
+            this.S12 = new System.Windows.Forms.TextBox();
+            this.TM12 = new System.Windows.Forms.TextBox();
+            this.S11 = new System.Windows.Forms.TextBox();
+            this.TM11 = new System.Windows.Forms.TextBox();
+            this.S21 = new System.Windows.Forms.TextBox();
+            this.TM21 = new System.Windows.Forms.TextBox();
+            this.S28 = new System.Windows.Forms.TextBox();
+            this.TM28 = new System.Windows.Forms.TextBox();
+            this.S27 = new System.Windows.Forms.TextBox();
+            this.TM27 = new System.Windows.Forms.TextBox();
+            this.S26 = new System.Windows.Forms.TextBox();
+            this.TM26 = new System.Windows.Forms.TextBox();
+            this.S25 = new System.Windows.Forms.TextBox();
+            this.TM25 = new System.Windows.Forms.TextBox();
+            this.S24 = new System.Windows.Forms.TextBox();
+            this.TM24 = new System.Windows.Forms.TextBox();
+            this.S23 = new System.Windows.Forms.TextBox();
+            this.TM23 = new System.Windows.Forms.TextBox();
+            this.S22 = new System.Windows.Forms.TextBox();
+            this.TM22 = new System.Windows.Forms.TextBox();
+            this.S51 = new System.Windows.Forms.TextBox();
+            this.TM51 = new System.Windows.Forms.TextBox();
+            this.S52 = new System.Windows.Forms.TextBox();
+            this.TM52 = new System.Windows.Forms.TextBox();
+            this.S53 = new System.Windows.Forms.TextBox();
+            this.TM53 = new System.Windows.Forms.TextBox();
+            this.S54 = new System.Windows.Forms.TextBox();
+            this.TM54 = new System.Windows.Forms.TextBox();
+            this.S55 = new System.Windows.Forms.TextBox();
+            this.TM55 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox48 = new System.Windows.Forms.TextBox();
-            this.textBox49 = new System.Windows.Forms.TextBox();
-            this.textBox50 = new System.Windows.Forms.TextBox();
-            this.textBox102 = new System.Windows.Forms.TextBox();
-            this.textBox103 = new System.Windows.Forms.TextBox();
-            this.textBox104 = new System.Windows.Forms.TextBox();
+            this.S61 = new System.Windows.Forms.TextBox();
+            this.TM61 = new System.Windows.Forms.TextBox();
+            this.S65 = new System.Windows.Forms.TextBox();
+            this.TM65 = new System.Windows.Forms.TextBox();
+            this.S64 = new System.Windows.Forms.TextBox();
+            this.TM64 = new System.Windows.Forms.TextBox();
+            this.S63 = new System.Windows.Forms.TextBox();
+            this.TM63 = new System.Windows.Forms.TextBox();
+            this.S62 = new System.Windows.Forms.TextBox();
+            this.TM62 = new System.Windows.Forms.TextBox();
             this.t = new System.Windows.Forms.PictureBox();
-            this.textBox52 = new System.Windows.Forms.TextBox();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.textBox54 = new System.Windows.Forms.TextBox();
-            this.textBox55 = new System.Windows.Forms.TextBox();
-            this.textBox56 = new System.Windows.Forms.TextBox();
-            this.textBox57 = new System.Windows.Forms.TextBox();
-            this.textBox58 = new System.Windows.Forms.TextBox();
-            this.textBox59 = new System.Windows.Forms.TextBox();
-            this.textBox60 = new System.Windows.Forms.TextBox();
-            this.textBox61 = new System.Windows.Forms.TextBox();
-            this.textBox62 = new System.Windows.Forms.TextBox();
-            this.textBox63 = new System.Windows.Forms.TextBox();
-            this.textBox64 = new System.Windows.Forms.TextBox();
-            this.textBox65 = new System.Windows.Forms.TextBox();
-            this.textBox66 = new System.Windows.Forms.TextBox();
-            this.textBox67 = new System.Windows.Forms.TextBox();
-            this.textBox68 = new System.Windows.Forms.TextBox();
-            this.textBox69 = new System.Windows.Forms.TextBox();
-            this.textBox70 = new System.Windows.Forms.TextBox();
-            this.textBox71 = new System.Windows.Forms.TextBox();
-            this.textBox72 = new System.Windows.Forms.TextBox();
-            this.textBox73 = new System.Windows.Forms.TextBox();
-            this.textBox74 = new System.Windows.Forms.TextBox();
-            this.textBox75 = new System.Windows.Forms.TextBox();
-            this.textBox76 = new System.Windows.Forms.TextBox();
-            this.textBox77 = new System.Windows.Forms.TextBox();
-            this.textBox78 = new System.Windows.Forms.TextBox();
-            this.textBox79 = new System.Windows.Forms.TextBox();
-            this.textBox80 = new System.Windows.Forms.TextBox();
-            this.textBox105 = new System.Windows.Forms.TextBox();
-            this.textBox106 = new System.Windows.Forms.TextBox();
-            this.textBox107 = new System.Windows.Forms.TextBox();
-            this.editDentalRecBtn = new System.Windows.Forms.Button();
+            this.S38 = new System.Windows.Forms.TextBox();
+            this.TM38 = new System.Windows.Forms.TextBox();
+            this.S37 = new System.Windows.Forms.TextBox();
+            this.TM37 = new System.Windows.Forms.TextBox();
+            this.S36 = new System.Windows.Forms.TextBox();
+            this.TM36 = new System.Windows.Forms.TextBox();
+            this.S35 = new System.Windows.Forms.TextBox();
+            this.TM35 = new System.Windows.Forms.TextBox();
+            this.S34 = new System.Windows.Forms.TextBox();
+            this.TM34 = new System.Windows.Forms.TextBox();
+            this.S33 = new System.Windows.Forms.TextBox();
+            this.TM33 = new System.Windows.Forms.TextBox();
+            this.S32 = new System.Windows.Forms.TextBox();
+            this.TM32 = new System.Windows.Forms.TextBox();
+            this.S31 = new System.Windows.Forms.TextBox();
+            this.TM31 = new System.Windows.Forms.TextBox();
+            this.S41 = new System.Windows.Forms.TextBox();
+            this.TM41 = new System.Windows.Forms.TextBox();
+            this.S42 = new System.Windows.Forms.TextBox();
+            this.TM42 = new System.Windows.Forms.TextBox();
+            this.S43 = new System.Windows.Forms.TextBox();
+            this.TM43 = new System.Windows.Forms.TextBox();
+            this.S44 = new System.Windows.Forms.TextBox();
+            this.TM44 = new System.Windows.Forms.TextBox();
+            this.S45 = new System.Windows.Forms.TextBox();
+            this.TM45 = new System.Windows.Forms.TextBox();
+            this.S46 = new System.Windows.Forms.TextBox();
+            this.TM46 = new System.Windows.Forms.TextBox();
+            this.S47 = new System.Windows.Forms.TextBox();
+            this.TM47 = new System.Windows.Forms.TextBox();
+            this.S48 = new System.Windows.Forms.TextBox();
+            this.TM48 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
@@ -295,6 +297,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1534, 97);
             this.panel2.TabIndex = 69;
+            // 
+            // editDentalRecBtn
+            // 
+            this.editDentalRecBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.editDentalRecBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.editDentalRecBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editDentalRecBtn.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editDentalRecBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.editDentalRecBtn.Location = new System.Drawing.Point(1125, 24);
+            this.editDentalRecBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.editDentalRecBtn.Name = "editDentalRecBtn";
+            this.editDentalRecBtn.Size = new System.Drawing.Size(281, 48);
+            this.editDentalRecBtn.TabIndex = 327;
+            this.editDentalRecBtn.Text = "Edit Dental Record";
+            this.editDentalRecBtn.UseVisualStyleBackColor = false;
+            this.editDentalRecBtn.Click += new System.EventHandler(this.editDentalRecBtn_Click);
             // 
             // pictureBox5
             // 
@@ -417,9 +436,9 @@
             this.label4.Location = new System.Drawing.Point(1190, 371);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(231, 21);
+            this.label4.Size = new System.Drawing.Size(263, 21);
             this.label4.TabIndex = 76;
-            this.label4.Text = "Restorations & Prosthetics";
+            this.label4.Text = "Restorations and Prosthetics";
             // 
             // label5
             // 
@@ -1119,687 +1138,687 @@
             this.textBox81.Size = new System.Drawing.Size(49, 26);
             this.textBox81.TabIndex = 223;
             // 
-            // textBox90
-            // 
-            this.textBox90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox90.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox90.Location = new System.Drawing.Point(416, 825);
-            this.textBox90.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox90.MaxLength = 1;
-            this.textBox90.Name = "textBox90";
-            this.textBox90.Size = new System.Drawing.Size(58, 27);
-            this.textBox90.TabIndex = 214;
-            // 
-            // textBox82
-            // 
-            this.textBox82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox82.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox82.Location = new System.Drawing.Point(416, 855);
-            this.textBox82.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox82.MaxLength = 1;
-            this.textBox82.Name = "textBox82";
-            this.textBox82.Size = new System.Drawing.Size(58, 27);
-            this.textBox82.TabIndex = 224;
-            // 
-            // textBox83
-            // 
-            this.textBox83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox83.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox83.Location = new System.Drawing.Point(472, 855);
-            this.textBox83.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox83.MaxLength = 1;
-            this.textBox83.Name = "textBox83";
-            this.textBox83.Size = new System.Drawing.Size(58, 27);
-            this.textBox83.TabIndex = 226;
-            // 
-            // textBox84
-            // 
-            this.textBox84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox84.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox84.Location = new System.Drawing.Point(472, 825);
-            this.textBox84.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox84.MaxLength = 1;
-            this.textBox84.Name = "textBox84";
-            this.textBox84.Size = new System.Drawing.Size(58, 27);
-            this.textBox84.TabIndex = 225;
-            // 
-            // textBox85
-            // 
-            this.textBox85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox85.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox85.Location = new System.Drawing.Point(530, 855);
-            this.textBox85.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox85.MaxLength = 1;
-            this.textBox85.Name = "textBox85";
-            this.textBox85.Size = new System.Drawing.Size(58, 27);
-            this.textBox85.TabIndex = 228;
-            // 
-            // textBox86
-            // 
-            this.textBox86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox86.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox86.Location = new System.Drawing.Point(530, 825);
-            this.textBox86.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox86.MaxLength = 1;
-            this.textBox86.Name = "textBox86";
-            this.textBox86.Size = new System.Drawing.Size(58, 27);
-            this.textBox86.TabIndex = 227;
-            // 
-            // textBox87
-            // 
-            this.textBox87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox87.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox87.Location = new System.Drawing.Point(916, 855);
-            this.textBox87.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox87.MaxLength = 1;
-            this.textBox87.Name = "textBox87";
-            this.textBox87.Size = new System.Drawing.Size(58, 27);
-            this.textBox87.TabIndex = 234;
-            // 
-            // textBox88
-            // 
-            this.textBox88.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox88.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox88.Location = new System.Drawing.Point(916, 825);
-            this.textBox88.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox88.MaxLength = 1;
-            this.textBox88.Name = "textBox88";
-            this.textBox88.Size = new System.Drawing.Size(58, 27);
-            this.textBox88.TabIndex = 233;
-            // 
-            // textBox89
-            // 
-            this.textBox89.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox89.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox89.Location = new System.Drawing.Point(860, 855);
-            this.textBox89.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox89.MaxLength = 1;
-            this.textBox89.Name = "textBox89";
-            this.textBox89.Size = new System.Drawing.Size(58, 27);
-            this.textBox89.TabIndex = 232;
-            // 
-            // textBox91
-            // 
-            this.textBox91.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox91.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox91.Location = new System.Drawing.Point(860, 825);
-            this.textBox91.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox91.MaxLength = 1;
-            this.textBox91.Name = "textBox91";
-            this.textBox91.Size = new System.Drawing.Size(58, 27);
-            this.textBox91.TabIndex = 231;
-            // 
-            // textBox92
-            // 
-            this.textBox92.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox92.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox92.Location = new System.Drawing.Point(802, 855);
-            this.textBox92.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox92.MaxLength = 1;
-            this.textBox92.Name = "textBox92";
-            this.textBox92.Size = new System.Drawing.Size(58, 27);
-            this.textBox92.TabIndex = 230;
-            // 
-            // textBox93
-            // 
-            this.textBox93.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox93.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox93.Location = new System.Drawing.Point(802, 825);
-            this.textBox93.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox93.MaxLength = 1;
-            this.textBox93.Name = "textBox93";
-            this.textBox93.Size = new System.Drawing.Size(58, 27);
-            this.textBox93.TabIndex = 229;
-            // 
-            // textBox94
-            // 
-            this.textBox94.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox94.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox94.Location = new System.Drawing.Point(698, 855);
-            this.textBox94.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox94.MaxLength = 1;
-            this.textBox94.Name = "textBox94";
-            this.textBox94.Size = new System.Drawing.Size(56, 27);
-            this.textBox94.TabIndex = 240;
-            // 
-            // textBox95
-            // 
-            this.textBox95.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox95.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox95.Location = new System.Drawing.Point(698, 825);
-            this.textBox95.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox95.MaxLength = 1;
-            this.textBox95.Name = "textBox95";
-            this.textBox95.Size = new System.Drawing.Size(56, 27);
-            this.textBox95.TabIndex = 239;
-            // 
-            // textBox96
-            // 
-            this.textBox96.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox96.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox96.Location = new System.Drawing.Point(644, 855);
-            this.textBox96.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox96.MaxLength = 1;
-            this.textBox96.Name = "textBox96";
-            this.textBox96.Size = new System.Drawing.Size(50, 27);
-            this.textBox96.TabIndex = 238;
-            // 
-            // textBox97
-            // 
-            this.textBox97.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox97.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox97.Location = new System.Drawing.Point(644, 825);
-            this.textBox97.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox97.MaxLength = 1;
-            this.textBox97.Name = "textBox97";
-            this.textBox97.Size = new System.Drawing.Size(50, 27);
-            this.textBox97.TabIndex = 237;
-            // 
-            // textBox98
-            // 
-            this.textBox98.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox98.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox98.Location = new System.Drawing.Point(586, 855);
-            this.textBox98.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox98.MaxLength = 1;
-            this.textBox98.Name = "textBox98";
-            this.textBox98.Size = new System.Drawing.Size(58, 27);
-            this.textBox98.TabIndex = 236;
-            // 
-            // textBox99
-            // 
-            this.textBox99.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox99.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox99.Location = new System.Drawing.Point(586, 825);
-            this.textBox99.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox99.MaxLength = 1;
-            this.textBox99.Name = "textBox99";
-            this.textBox99.Size = new System.Drawing.Size(58, 27);
-            this.textBox99.TabIndex = 235;
-            // 
-            // textBox100
-            // 
-            this.textBox100.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox100.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox100.Location = new System.Drawing.Point(752, 855);
-            this.textBox100.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox100.MaxLength = 1;
-            this.textBox100.Name = "textBox100";
-            this.textBox100.Size = new System.Drawing.Size(56, 27);
-            this.textBox100.TabIndex = 242;
-            // 
-            // textBox101
-            // 
-            this.textBox101.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox101.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox101.Location = new System.Drawing.Point(752, 825);
-            this.textBox101.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox101.MaxLength = 1;
-            this.textBox101.Name = "textBox101";
-            this.textBox101.Size = new System.Drawing.Size(56, 27);
-            this.textBox101.TabIndex = 241;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(250, 380);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.MaxLength = 1;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(58, 31);
-            this.textBox2.TabIndex = 244;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(250, 346);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.MaxLength = 1;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(58, 31);
-            this.textBox3.TabIndex = 243;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(308, 380);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.MaxLength = 1;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(58, 31);
-            this.textBox1.TabIndex = 246;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(308, 346);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.MaxLength = 1;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(58, 31);
-            this.textBox4.TabIndex = 245;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(363, 380);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.MaxLength = 1;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(58, 31);
-            this.textBox5.TabIndex = 248;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(363, 346);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.MaxLength = 1;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(58, 31);
-            this.textBox6.TabIndex = 247;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(418, 380);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox7.MaxLength = 1;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(58, 31);
-            this.textBox7.TabIndex = 250;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(418, 346);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox8.MaxLength = 1;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(58, 31);
-            this.textBox8.TabIndex = 249;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(476, 380);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox9.MaxLength = 1;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(58, 31);
-            this.textBox9.TabIndex = 252;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(476, 346);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox10.MaxLength = 1;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(58, 31);
-            this.textBox10.TabIndex = 251;
-            // 
-            // textBox11
-            // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(532, 380);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox11.MaxLength = 1;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(58, 31);
-            this.textBox11.TabIndex = 254;
-            // 
-            // textBox12
-            // 
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(532, 346);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox12.MaxLength = 1;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(58, 31);
-            this.textBox12.TabIndex = 253;
-            // 
-            // textBox13
-            // 
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(586, 380);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox13.MaxLength = 1;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(58, 31);
-            this.textBox13.TabIndex = 256;
-            // 
-            // textBox14
-            // 
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox14.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(586, 346);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox14.MaxLength = 1;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(58, 31);
-            this.textBox14.TabIndex = 255;
-            // 
-            // textBox15
-            // 
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox15.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(640, 380);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox15.MaxLength = 1;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(53, 31);
-            this.textBox15.TabIndex = 258;
-            // 
-            // textBox16
-            // 
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox16.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(640, 346);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox16.MaxLength = 1;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(53, 31);
-            this.textBox16.TabIndex = 257;
-            // 
-            // textBox17
-            // 
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox17.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(698, 380);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox17.MaxLength = 1;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(52, 31);
-            this.textBox17.TabIndex = 260;
-            // 
-            // textBox18
-            // 
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox18.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(698, 346);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox18.MaxLength = 1;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(52, 31);
-            this.textBox18.TabIndex = 259;
-            // 
-            // textBox19
-            // 
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox19.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(1083, 380);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox19.MaxLength = 1;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(58, 31);
-            this.textBox19.TabIndex = 274;
-            // 
-            // textBox20
-            // 
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox20.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(1083, 346);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox20.MaxLength = 1;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(58, 31);
-            this.textBox20.TabIndex = 273;
-            // 
-            // textBox21
-            // 
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox21.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(1029, 380);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox21.MaxLength = 1;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(58, 31);
-            this.textBox21.TabIndex = 272;
-            // 
-            // textBox22
-            // 
-            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox22.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(1029, 346);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox22.MaxLength = 1;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(58, 31);
-            this.textBox22.TabIndex = 271;
-            // 
-            // textBox23
-            // 
-            this.textBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox23.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(972, 380);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox23.MaxLength = 1;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(58, 31);
-            this.textBox23.TabIndex = 270;
-            // 
-            // textBox24
-            // 
-            this.textBox24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox24.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(972, 346);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox24.MaxLength = 1;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(58, 31);
-            this.textBox24.TabIndex = 269;
-            // 
-            // textBox25
-            // 
-            this.textBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox25.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox25.Location = new System.Drawing.Point(915, 380);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox25.MaxLength = 1;
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(58, 31);
-            this.textBox25.TabIndex = 268;
-            // 
-            // textBox26
-            // 
-            this.textBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox26.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox26.Location = new System.Drawing.Point(915, 346);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox26.MaxLength = 1;
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(58, 31);
-            this.textBox26.TabIndex = 267;
-            // 
-            // textBox27
-            // 
-            this.textBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox27.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox27.Location = new System.Drawing.Point(860, 380);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox27.MaxLength = 1;
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(58, 31);
-            this.textBox27.TabIndex = 266;
-            // 
-            // textBox28
-            // 
-            this.textBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox28.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox28.Location = new System.Drawing.Point(860, 346);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox28.MaxLength = 1;
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(58, 31);
-            this.textBox28.TabIndex = 265;
-            // 
-            // textBox29
-            // 
-            this.textBox29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox29.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox29.Location = new System.Drawing.Point(804, 380);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox29.MaxLength = 1;
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(58, 31);
-            this.textBox29.TabIndex = 264;
-            // 
-            // textBox30
-            // 
-            this.textBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox30.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox30.Location = new System.Drawing.Point(804, 346);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox30.MaxLength = 1;
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(58, 31);
-            this.textBox30.TabIndex = 263;
-            // 
-            // textBox32
-            // 
-            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox32.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox32.Location = new System.Drawing.Point(747, 380);
-            this.textBox32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox32.MaxLength = 1;
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(58, 31);
-            this.textBox32.TabIndex = 262;
-            // 
-            // textBox33
-            // 
-            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox33.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox33.Location = new System.Drawing.Point(747, 346);
-            this.textBox33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox33.MaxLength = 1;
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(58, 31);
-            this.textBox33.TabIndex = 261;
-            // 
-            // textBox38
-            // 
-            this.textBox38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox38.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox38.Location = new System.Drawing.Point(639, 162);
-            this.textBox38.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox38.MaxLength = 1;
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(54, 31);
-            this.textBox38.TabIndex = 284;
-            // 
-            // textBox39
-            // 
-            this.textBox39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox39.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox39.Location = new System.Drawing.Point(639, 128);
-            this.textBox39.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox39.MaxLength = 1;
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(54, 31);
-            this.textBox39.TabIndex = 283;
-            // 
-            // textBox40
-            // 
-            this.textBox40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox40.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox40.Location = new System.Drawing.Point(582, 162);
-            this.textBox40.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox40.MaxLength = 1;
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(58, 31);
-            this.textBox40.TabIndex = 282;
-            // 
-            // textBox41
-            // 
-            this.textBox41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox41.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox41.Location = new System.Drawing.Point(582, 128);
-            this.textBox41.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox41.MaxLength = 1;
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(58, 31);
-            this.textBox41.TabIndex = 281;
-            // 
-            // textBox42
-            // 
-            this.textBox42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox42.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox42.Location = new System.Drawing.Point(526, 162);
-            this.textBox42.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox42.MaxLength = 1;
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(58, 31);
-            this.textBox42.TabIndex = 280;
-            // 
-            // textBox43
-            // 
-            this.textBox43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox43.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox43.Location = new System.Drawing.Point(526, 128);
-            this.textBox43.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox43.MaxLength = 1;
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(58, 31);
-            this.textBox43.TabIndex = 279;
-            // 
-            // textBox44
-            // 
-            this.textBox44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox44.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox44.Location = new System.Drawing.Point(471, 162);
-            this.textBox44.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox44.MaxLength = 1;
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(58, 31);
-            this.textBox44.TabIndex = 278;
-            // 
-            // textBox45
-            // 
-            this.textBox45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox45.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox45.Location = new System.Drawing.Point(471, 128);
-            this.textBox45.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox45.MaxLength = 1;
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(58, 31);
-            this.textBox45.TabIndex = 277;
-            // 
-            // textBox46
-            // 
-            this.textBox46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox46.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox46.Location = new System.Drawing.Point(414, 162);
-            this.textBox46.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox46.MaxLength = 1;
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(58, 31);
-            this.textBox46.TabIndex = 276;
-            // 
-            // textBox47
-            // 
-            this.textBox47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox47.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox47.Location = new System.Drawing.Point(414, 128);
-            this.textBox47.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox47.MaxLength = 1;
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(58, 31);
-            this.textBox47.TabIndex = 275;
+            // TM85
+            // 
+            this.TM85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM85.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM85.Location = new System.Drawing.Point(416, 825);
+            this.TM85.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM85.MaxLength = 3;
+            this.TM85.Name = "TM85";
+            this.TM85.Size = new System.Drawing.Size(58, 27);
+            this.TM85.TabIndex = 214;
+            // 
+            // S85
+            // 
+            this.S85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S85.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S85.Location = new System.Drawing.Point(416, 855);
+            this.S85.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S85.MaxLength = 1;
+            this.S85.Name = "S85";
+            this.S85.Size = new System.Drawing.Size(58, 27);
+            this.S85.TabIndex = 224;
+            // 
+            // S84
+            // 
+            this.S84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S84.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S84.Location = new System.Drawing.Point(472, 855);
+            this.S84.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S84.MaxLength = 1;
+            this.S84.Name = "S84";
+            this.S84.Size = new System.Drawing.Size(58, 27);
+            this.S84.TabIndex = 226;
+            // 
+            // TM84
+            // 
+            this.TM84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM84.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM84.Location = new System.Drawing.Point(472, 825);
+            this.TM84.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM84.MaxLength = 3;
+            this.TM84.Name = "TM84";
+            this.TM84.Size = new System.Drawing.Size(58, 27);
+            this.TM84.TabIndex = 225;
+            // 
+            // S83
+            // 
+            this.S83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S83.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S83.Location = new System.Drawing.Point(530, 855);
+            this.S83.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S83.MaxLength = 1;
+            this.S83.Name = "S83";
+            this.S83.Size = new System.Drawing.Size(58, 27);
+            this.S83.TabIndex = 228;
+            // 
+            // TM83
+            // 
+            this.TM83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM83.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM83.Location = new System.Drawing.Point(530, 825);
+            this.TM83.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM83.MaxLength = 3;
+            this.TM83.Name = "TM83";
+            this.TM83.Size = new System.Drawing.Size(58, 27);
+            this.TM83.TabIndex = 227;
+            // 
+            // S75
+            // 
+            this.S75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S75.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S75.Location = new System.Drawing.Point(916, 855);
+            this.S75.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S75.MaxLength = 1;
+            this.S75.Name = "S75";
+            this.S75.Size = new System.Drawing.Size(58, 27);
+            this.S75.TabIndex = 234;
+            // 
+            // TM75
+            // 
+            this.TM75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM75.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM75.Location = new System.Drawing.Point(916, 825);
+            this.TM75.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM75.MaxLength = 3;
+            this.TM75.Name = "TM75";
+            this.TM75.Size = new System.Drawing.Size(58, 27);
+            this.TM75.TabIndex = 233;
+            // 
+            // S74
+            // 
+            this.S74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S74.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S74.Location = new System.Drawing.Point(860, 855);
+            this.S74.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S74.MaxLength = 1;
+            this.S74.Name = "S74";
+            this.S74.Size = new System.Drawing.Size(58, 27);
+            this.S74.TabIndex = 232;
+            // 
+            // TM74
+            // 
+            this.TM74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM74.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM74.Location = new System.Drawing.Point(860, 825);
+            this.TM74.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM74.MaxLength = 3;
+            this.TM74.Name = "TM74";
+            this.TM74.Size = new System.Drawing.Size(58, 27);
+            this.TM74.TabIndex = 231;
+            // 
+            // S73
+            // 
+            this.S73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S73.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S73.Location = new System.Drawing.Point(802, 855);
+            this.S73.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S73.MaxLength = 1;
+            this.S73.Name = "S73";
+            this.S73.Size = new System.Drawing.Size(58, 27);
+            this.S73.TabIndex = 230;
+            // 
+            // TM73
+            // 
+            this.TM73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM73.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM73.Location = new System.Drawing.Point(802, 825);
+            this.TM73.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM73.MaxLength = 3;
+            this.TM73.Name = "TM73";
+            this.TM73.Size = new System.Drawing.Size(58, 27);
+            this.TM73.TabIndex = 229;
+            // 
+            // S71
+            // 
+            this.S71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S71.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S71.Location = new System.Drawing.Point(698, 855);
+            this.S71.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S71.MaxLength = 1;
+            this.S71.Name = "S71";
+            this.S71.Size = new System.Drawing.Size(56, 27);
+            this.S71.TabIndex = 240;
+            // 
+            // TM71
+            // 
+            this.TM71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM71.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM71.Location = new System.Drawing.Point(698, 825);
+            this.TM71.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM71.MaxLength = 3;
+            this.TM71.Name = "TM71";
+            this.TM71.Size = new System.Drawing.Size(56, 27);
+            this.TM71.TabIndex = 239;
+            // 
+            // S81
+            // 
+            this.S81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S81.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S81.Location = new System.Drawing.Point(644, 855);
+            this.S81.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S81.MaxLength = 1;
+            this.S81.Name = "S81";
+            this.S81.Size = new System.Drawing.Size(50, 27);
+            this.S81.TabIndex = 238;
+            // 
+            // TM81
+            // 
+            this.TM81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM81.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM81.Location = new System.Drawing.Point(644, 825);
+            this.TM81.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM81.MaxLength = 3;
+            this.TM81.Name = "TM81";
+            this.TM81.Size = new System.Drawing.Size(50, 27);
+            this.TM81.TabIndex = 237;
+            // 
+            // S82
+            // 
+            this.S82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S82.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S82.Location = new System.Drawing.Point(586, 855);
+            this.S82.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S82.MaxLength = 1;
+            this.S82.Name = "S82";
+            this.S82.Size = new System.Drawing.Size(58, 27);
+            this.S82.TabIndex = 236;
+            // 
+            // TM82
+            // 
+            this.TM82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM82.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM82.Location = new System.Drawing.Point(586, 825);
+            this.TM82.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM82.MaxLength = 3;
+            this.TM82.Name = "TM82";
+            this.TM82.Size = new System.Drawing.Size(58, 27);
+            this.TM82.TabIndex = 235;
+            // 
+            // S72
+            // 
+            this.S72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S72.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S72.Location = new System.Drawing.Point(752, 855);
+            this.S72.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S72.MaxLength = 1;
+            this.S72.Name = "S72";
+            this.S72.Size = new System.Drawing.Size(56, 27);
+            this.S72.TabIndex = 242;
+            // 
+            // TM72
+            // 
+            this.TM72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM72.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM72.Location = new System.Drawing.Point(752, 825);
+            this.TM72.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM72.MaxLength = 3;
+            this.TM72.Name = "TM72";
+            this.TM72.Size = new System.Drawing.Size(56, 27);
+            this.TM72.TabIndex = 241;
+            // 
+            // S18
+            // 
+            this.S18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S18.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S18.Location = new System.Drawing.Point(250, 380);
+            this.S18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S18.MaxLength = 1;
+            this.S18.Name = "S18";
+            this.S18.Size = new System.Drawing.Size(58, 31);
+            this.S18.TabIndex = 244;
+            // 
+            // TM18
+            // 
+            this.TM18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM18.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM18.Location = new System.Drawing.Point(250, 346);
+            this.TM18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM18.MaxLength = 3;
+            this.TM18.Name = "TM18";
+            this.TM18.Size = new System.Drawing.Size(58, 31);
+            this.TM18.TabIndex = 243;
+            // 
+            // S17
+            // 
+            this.S17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S17.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S17.Location = new System.Drawing.Point(308, 380);
+            this.S17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S17.MaxLength = 1;
+            this.S17.Name = "S17";
+            this.S17.Size = new System.Drawing.Size(58, 31);
+            this.S17.TabIndex = 246;
+            // 
+            // TM17
+            // 
+            this.TM17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM17.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM17.Location = new System.Drawing.Point(308, 346);
+            this.TM17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM17.MaxLength = 3;
+            this.TM17.Name = "TM17";
+            this.TM17.Size = new System.Drawing.Size(58, 31);
+            this.TM17.TabIndex = 245;
+            // 
+            // S16
+            // 
+            this.S16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S16.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S16.Location = new System.Drawing.Point(363, 380);
+            this.S16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S16.MaxLength = 1;
+            this.S16.Name = "S16";
+            this.S16.Size = new System.Drawing.Size(58, 31);
+            this.S16.TabIndex = 248;
+            // 
+            // TM16
+            // 
+            this.TM16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM16.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM16.Location = new System.Drawing.Point(363, 346);
+            this.TM16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM16.MaxLength = 3;
+            this.TM16.Name = "TM16";
+            this.TM16.Size = new System.Drawing.Size(58, 31);
+            this.TM16.TabIndex = 247;
+            // 
+            // S15
+            // 
+            this.S15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S15.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S15.Location = new System.Drawing.Point(418, 380);
+            this.S15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S15.MaxLength = 1;
+            this.S15.Name = "S15";
+            this.S15.Size = new System.Drawing.Size(58, 31);
+            this.S15.TabIndex = 250;
+            // 
+            // TM15
+            // 
+            this.TM15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM15.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM15.Location = new System.Drawing.Point(418, 346);
+            this.TM15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM15.MaxLength = 3;
+            this.TM15.Name = "TM15";
+            this.TM15.Size = new System.Drawing.Size(58, 31);
+            this.TM15.TabIndex = 249;
+            // 
+            // S14
+            // 
+            this.S14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S14.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S14.Location = new System.Drawing.Point(476, 380);
+            this.S14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S14.MaxLength = 1;
+            this.S14.Name = "S14";
+            this.S14.Size = new System.Drawing.Size(58, 31);
+            this.S14.TabIndex = 252;
+            // 
+            // TM14
+            // 
+            this.TM14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM14.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM14.Location = new System.Drawing.Point(476, 346);
+            this.TM14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM14.MaxLength = 3;
+            this.TM14.Name = "TM14";
+            this.TM14.Size = new System.Drawing.Size(58, 31);
+            this.TM14.TabIndex = 251;
+            // 
+            // S13
+            // 
+            this.S13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S13.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S13.Location = new System.Drawing.Point(532, 380);
+            this.S13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S13.MaxLength = 1;
+            this.S13.Name = "S13";
+            this.S13.Size = new System.Drawing.Size(58, 31);
+            this.S13.TabIndex = 254;
+            // 
+            // TM13
+            // 
+            this.TM13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM13.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM13.Location = new System.Drawing.Point(532, 346);
+            this.TM13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM13.MaxLength = 3;
+            this.TM13.Name = "TM13";
+            this.TM13.Size = new System.Drawing.Size(58, 31);
+            this.TM13.TabIndex = 253;
+            // 
+            // S12
+            // 
+            this.S12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S12.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S12.Location = new System.Drawing.Point(586, 380);
+            this.S12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S12.MaxLength = 1;
+            this.S12.Name = "S12";
+            this.S12.Size = new System.Drawing.Size(58, 31);
+            this.S12.TabIndex = 256;
+            // 
+            // TM12
+            // 
+            this.TM12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM12.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM12.Location = new System.Drawing.Point(586, 346);
+            this.TM12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM12.MaxLength = 3;
+            this.TM12.Name = "TM12";
+            this.TM12.Size = new System.Drawing.Size(58, 31);
+            this.TM12.TabIndex = 255;
+            // 
+            // S11
+            // 
+            this.S11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S11.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S11.Location = new System.Drawing.Point(640, 380);
+            this.S11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S11.MaxLength = 1;
+            this.S11.Name = "S11";
+            this.S11.Size = new System.Drawing.Size(53, 31);
+            this.S11.TabIndex = 258;
+            // 
+            // TM11
+            // 
+            this.TM11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM11.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM11.Location = new System.Drawing.Point(640, 346);
+            this.TM11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM11.MaxLength = 3;
+            this.TM11.Name = "TM11";
+            this.TM11.Size = new System.Drawing.Size(53, 31);
+            this.TM11.TabIndex = 257;
+            // 
+            // S21
+            // 
+            this.S21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S21.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S21.Location = new System.Drawing.Point(698, 380);
+            this.S21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S21.MaxLength = 1;
+            this.S21.Name = "S21";
+            this.S21.Size = new System.Drawing.Size(52, 31);
+            this.S21.TabIndex = 260;
+            // 
+            // TM21
+            // 
+            this.TM21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM21.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM21.Location = new System.Drawing.Point(698, 346);
+            this.TM21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM21.MaxLength = 3;
+            this.TM21.Name = "TM21";
+            this.TM21.Size = new System.Drawing.Size(52, 31);
+            this.TM21.TabIndex = 259;
+            // 
+            // S28
+            // 
+            this.S28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S28.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S28.Location = new System.Drawing.Point(1083, 380);
+            this.S28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S28.MaxLength = 1;
+            this.S28.Name = "S28";
+            this.S28.Size = new System.Drawing.Size(58, 31);
+            this.S28.TabIndex = 274;
+            // 
+            // TM28
+            // 
+            this.TM28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM28.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM28.Location = new System.Drawing.Point(1083, 346);
+            this.TM28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM28.MaxLength = 3;
+            this.TM28.Name = "TM28";
+            this.TM28.Size = new System.Drawing.Size(58, 31);
+            this.TM28.TabIndex = 273;
+            // 
+            // S27
+            // 
+            this.S27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S27.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S27.Location = new System.Drawing.Point(1029, 380);
+            this.S27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S27.MaxLength = 1;
+            this.S27.Name = "S27";
+            this.S27.Size = new System.Drawing.Size(58, 31);
+            this.S27.TabIndex = 272;
+            // 
+            // TM27
+            // 
+            this.TM27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM27.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM27.Location = new System.Drawing.Point(1029, 346);
+            this.TM27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM27.MaxLength = 3;
+            this.TM27.Name = "TM27";
+            this.TM27.Size = new System.Drawing.Size(58, 31);
+            this.TM27.TabIndex = 271;
+            // 
+            // S26
+            // 
+            this.S26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S26.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S26.Location = new System.Drawing.Point(972, 380);
+            this.S26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S26.MaxLength = 1;
+            this.S26.Name = "S26";
+            this.S26.Size = new System.Drawing.Size(58, 31);
+            this.S26.TabIndex = 270;
+            // 
+            // TM26
+            // 
+            this.TM26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM26.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM26.Location = new System.Drawing.Point(972, 346);
+            this.TM26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM26.MaxLength = 3;
+            this.TM26.Name = "TM26";
+            this.TM26.Size = new System.Drawing.Size(58, 31);
+            this.TM26.TabIndex = 269;
+            // 
+            // S25
+            // 
+            this.S25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S25.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S25.Location = new System.Drawing.Point(915, 380);
+            this.S25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S25.MaxLength = 1;
+            this.S25.Name = "S25";
+            this.S25.Size = new System.Drawing.Size(58, 31);
+            this.S25.TabIndex = 268;
+            // 
+            // TM25
+            // 
+            this.TM25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM25.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM25.Location = new System.Drawing.Point(915, 346);
+            this.TM25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM25.MaxLength = 3;
+            this.TM25.Name = "TM25";
+            this.TM25.Size = new System.Drawing.Size(58, 31);
+            this.TM25.TabIndex = 267;
+            // 
+            // S24
+            // 
+            this.S24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S24.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S24.Location = new System.Drawing.Point(860, 380);
+            this.S24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S24.MaxLength = 1;
+            this.S24.Name = "S24";
+            this.S24.Size = new System.Drawing.Size(58, 31);
+            this.S24.TabIndex = 266;
+            // 
+            // TM24
+            // 
+            this.TM24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM24.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM24.Location = new System.Drawing.Point(860, 346);
+            this.TM24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM24.MaxLength = 3;
+            this.TM24.Name = "TM24";
+            this.TM24.Size = new System.Drawing.Size(58, 31);
+            this.TM24.TabIndex = 265;
+            // 
+            // S23
+            // 
+            this.S23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S23.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S23.Location = new System.Drawing.Point(804, 380);
+            this.S23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S23.MaxLength = 1;
+            this.S23.Name = "S23";
+            this.S23.Size = new System.Drawing.Size(58, 31);
+            this.S23.TabIndex = 264;
+            // 
+            // TM23
+            // 
+            this.TM23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM23.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM23.Location = new System.Drawing.Point(804, 346);
+            this.TM23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM23.MaxLength = 3;
+            this.TM23.Name = "TM23";
+            this.TM23.Size = new System.Drawing.Size(58, 31);
+            this.TM23.TabIndex = 263;
+            // 
+            // S22
+            // 
+            this.S22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S22.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S22.Location = new System.Drawing.Point(747, 380);
+            this.S22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S22.MaxLength = 1;
+            this.S22.Name = "S22";
+            this.S22.Size = new System.Drawing.Size(58, 31);
+            this.S22.TabIndex = 262;
+            // 
+            // TM22
+            // 
+            this.TM22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM22.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM22.Location = new System.Drawing.Point(747, 346);
+            this.TM22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM22.MaxLength = 3;
+            this.TM22.Name = "TM22";
+            this.TM22.Size = new System.Drawing.Size(58, 31);
+            this.TM22.TabIndex = 261;
+            // 
+            // S51
+            // 
+            this.S51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S51.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S51.Location = new System.Drawing.Point(639, 162);
+            this.S51.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S51.MaxLength = 1;
+            this.S51.Name = "S51";
+            this.S51.Size = new System.Drawing.Size(54, 31);
+            this.S51.TabIndex = 284;
+            // 
+            // TM51
+            // 
+            this.TM51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM51.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM51.Location = new System.Drawing.Point(639, 128);
+            this.TM51.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM51.MaxLength = 3;
+            this.TM51.Name = "TM51";
+            this.TM51.Size = new System.Drawing.Size(54, 31);
+            this.TM51.TabIndex = 283;
+            // 
+            // S52
+            // 
+            this.S52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S52.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S52.Location = new System.Drawing.Point(582, 162);
+            this.S52.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S52.MaxLength = 1;
+            this.S52.Name = "S52";
+            this.S52.Size = new System.Drawing.Size(58, 31);
+            this.S52.TabIndex = 282;
+            // 
+            // TM52
+            // 
+            this.TM52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM52.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM52.Location = new System.Drawing.Point(582, 128);
+            this.TM52.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM52.MaxLength = 3;
+            this.TM52.Name = "TM52";
+            this.TM52.Size = new System.Drawing.Size(58, 31);
+            this.TM52.TabIndex = 281;
+            // 
+            // S53
+            // 
+            this.S53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S53.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S53.Location = new System.Drawing.Point(526, 162);
+            this.S53.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S53.MaxLength = 1;
+            this.S53.Name = "S53";
+            this.S53.Size = new System.Drawing.Size(58, 31);
+            this.S53.TabIndex = 280;
+            // 
+            // TM53
+            // 
+            this.TM53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM53.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM53.Location = new System.Drawing.Point(526, 128);
+            this.TM53.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM53.MaxLength = 3;
+            this.TM53.Name = "TM53";
+            this.TM53.Size = new System.Drawing.Size(58, 31);
+            this.TM53.TabIndex = 279;
+            // 
+            // S54
+            // 
+            this.S54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S54.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S54.Location = new System.Drawing.Point(471, 162);
+            this.S54.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S54.MaxLength = 1;
+            this.S54.Name = "S54";
+            this.S54.Size = new System.Drawing.Size(58, 31);
+            this.S54.TabIndex = 278;
+            // 
+            // TM54
+            // 
+            this.TM54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM54.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM54.Location = new System.Drawing.Point(471, 128);
+            this.TM54.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM54.MaxLength = 3;
+            this.TM54.Name = "TM54";
+            this.TM54.Size = new System.Drawing.Size(58, 31);
+            this.TM54.TabIndex = 277;
+            // 
+            // S55
+            // 
+            this.S55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S55.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S55.Location = new System.Drawing.Point(414, 162);
+            this.S55.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S55.MaxLength = 1;
+            this.S55.Name = "S55";
+            this.S55.Size = new System.Drawing.Size(58, 31);
+            this.S55.TabIndex = 276;
+            // 
+            // TM55
+            // 
+            this.TM55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM55.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM55.Location = new System.Drawing.Point(414, 128);
+            this.TM55.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM55.MaxLength = 3;
+            this.TM55.Name = "TM55";
+            this.TM55.Size = new System.Drawing.Size(58, 31);
+            this.TM55.TabIndex = 275;
             // 
             // label2
             // 
@@ -1814,115 +1833,115 @@
     "\nIm - Impacted Tooth\r\nSp - Supernumerary Tooth\r\nRf - Roof Fragment\r\nUn - Unerupt" +
     "ed";
             // 
-            // textBox34
+            // S61
             // 
-            this.textBox34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox34.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox34.Location = new System.Drawing.Point(698, 162);
-            this.textBox34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox34.MaxLength = 1;
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(54, 31);
-            this.textBox34.TabIndex = 286;
+            this.S61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S61.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S61.Location = new System.Drawing.Point(698, 162);
+            this.S61.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S61.MaxLength = 1;
+            this.S61.Name = "S61";
+            this.S61.Size = new System.Drawing.Size(54, 31);
+            this.S61.TabIndex = 286;
             // 
-            // textBox35
+            // TM61
             // 
-            this.textBox35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox35.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox35.Location = new System.Drawing.Point(698, 128);
-            this.textBox35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox35.MaxLength = 1;
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(54, 31);
-            this.textBox35.TabIndex = 285;
+            this.TM61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM61.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM61.Location = new System.Drawing.Point(698, 128);
+            this.TM61.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM61.MaxLength = 3;
+            this.TM61.Name = "TM61";
+            this.TM61.Size = new System.Drawing.Size(54, 31);
+            this.TM61.TabIndex = 285;
             // 
-            // textBox36
+            // S65
             // 
-            this.textBox36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox36.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox36.Location = new System.Drawing.Point(918, 162);
-            this.textBox36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox36.MaxLength = 1;
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(58, 31);
-            this.textBox36.TabIndex = 294;
+            this.S65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S65.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S65.Location = new System.Drawing.Point(918, 162);
+            this.S65.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S65.MaxLength = 1;
+            this.S65.Name = "S65";
+            this.S65.Size = new System.Drawing.Size(58, 31);
+            this.S65.TabIndex = 294;
             // 
-            // textBox37
+            // TM65
             // 
-            this.textBox37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox37.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox37.Location = new System.Drawing.Point(918, 128);
-            this.textBox37.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox37.MaxLength = 1;
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(58, 31);
-            this.textBox37.TabIndex = 293;
+            this.TM65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM65.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM65.Location = new System.Drawing.Point(918, 128);
+            this.TM65.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM65.MaxLength = 3;
+            this.TM65.Name = "TM65";
+            this.TM65.Size = new System.Drawing.Size(58, 31);
+            this.TM65.TabIndex = 293;
             // 
-            // textBox48
+            // S64
             // 
-            this.textBox48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox48.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox48.Location = new System.Drawing.Point(862, 162);
-            this.textBox48.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox48.MaxLength = 1;
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(58, 31);
-            this.textBox48.TabIndex = 292;
+            this.S64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S64.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S64.Location = new System.Drawing.Point(862, 162);
+            this.S64.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S64.MaxLength = 1;
+            this.S64.Name = "S64";
+            this.S64.Size = new System.Drawing.Size(58, 31);
+            this.S64.TabIndex = 292;
             // 
-            // textBox49
+            // TM64
             // 
-            this.textBox49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox49.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox49.Location = new System.Drawing.Point(862, 128);
-            this.textBox49.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox49.MaxLength = 1;
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(58, 31);
-            this.textBox49.TabIndex = 291;
+            this.TM64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM64.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM64.Location = new System.Drawing.Point(862, 128);
+            this.TM64.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM64.MaxLength = 3;
+            this.TM64.Name = "TM64";
+            this.TM64.Size = new System.Drawing.Size(58, 31);
+            this.TM64.TabIndex = 291;
             // 
-            // textBox50
+            // S63
             // 
-            this.textBox50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox50.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox50.Location = new System.Drawing.Point(807, 162);
-            this.textBox50.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox50.MaxLength = 1;
-            this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new System.Drawing.Size(58, 31);
-            this.textBox50.TabIndex = 290;
+            this.S63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S63.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S63.Location = new System.Drawing.Point(807, 162);
+            this.S63.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S63.MaxLength = 1;
+            this.S63.Name = "S63";
+            this.S63.Size = new System.Drawing.Size(58, 31);
+            this.S63.TabIndex = 290;
             // 
-            // textBox102
+            // TM63
             // 
-            this.textBox102.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox102.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox102.Location = new System.Drawing.Point(807, 128);
-            this.textBox102.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox102.MaxLength = 1;
-            this.textBox102.Name = "textBox102";
-            this.textBox102.Size = new System.Drawing.Size(58, 31);
-            this.textBox102.TabIndex = 289;
+            this.TM63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM63.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM63.Location = new System.Drawing.Point(807, 128);
+            this.TM63.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM63.MaxLength = 3;
+            this.TM63.Name = "TM63";
+            this.TM63.Size = new System.Drawing.Size(58, 31);
+            this.TM63.TabIndex = 289;
             // 
-            // textBox103
+            // S62
             // 
-            this.textBox103.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox103.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox103.Location = new System.Drawing.Point(750, 162);
-            this.textBox103.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox103.MaxLength = 1;
-            this.textBox103.Name = "textBox103";
-            this.textBox103.Size = new System.Drawing.Size(58, 31);
-            this.textBox103.TabIndex = 288;
+            this.S62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S62.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S62.Location = new System.Drawing.Point(750, 162);
+            this.S62.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S62.MaxLength = 1;
+            this.S62.Name = "S62";
+            this.S62.Size = new System.Drawing.Size(58, 31);
+            this.S62.TabIndex = 288;
             // 
-            // textBox104
+            // TM62
             // 
-            this.textBox104.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox104.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox104.Location = new System.Drawing.Point(750, 128);
-            this.textBox104.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox104.MaxLength = 1;
-            this.textBox104.Name = "textBox104";
-            this.textBox104.Size = new System.Drawing.Size(58, 31);
-            this.textBox104.TabIndex = 287;
+            this.TM62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM62.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM62.Location = new System.Drawing.Point(750, 128);
+            this.TM62.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM62.MaxLength = 3;
+            this.TM62.Name = "TM62";
+            this.TM62.Size = new System.Drawing.Size(58, 31);
+            this.TM62.TabIndex = 287;
             // 
             // t
             // 
@@ -1935,374 +1954,368 @@
             this.t.TabIndex = 71;
             this.t.TabStop = false;
             // 
-            // textBox52
-            // 
-            this.textBox52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox52.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox52.Location = new System.Drawing.Point(1083, 683);
-            this.textBox52.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox52.MaxLength = 1;
-            this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new System.Drawing.Size(58, 31);
-            this.textBox52.TabIndex = 326;
-            // 
-            // textBox53
-            // 
-            this.textBox53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox53.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox53.Location = new System.Drawing.Point(1083, 649);
-            this.textBox53.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox53.MaxLength = 1;
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(58, 31);
-            this.textBox53.TabIndex = 325;
-            // 
-            // textBox54
-            // 
-            this.textBox54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox54.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox54.Location = new System.Drawing.Point(1029, 683);
-            this.textBox54.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox54.MaxLength = 1;
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(58, 31);
-            this.textBox54.TabIndex = 324;
-            // 
-            // textBox55
-            // 
-            this.textBox55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox55.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox55.Location = new System.Drawing.Point(1029, 649);
-            this.textBox55.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox55.MaxLength = 1;
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(58, 31);
-            this.textBox55.TabIndex = 323;
-            // 
-            // textBox56
-            // 
-            this.textBox56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox56.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox56.Location = new System.Drawing.Point(972, 683);
-            this.textBox56.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox56.MaxLength = 1;
-            this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new System.Drawing.Size(58, 31);
-            this.textBox56.TabIndex = 322;
-            // 
-            // textBox57
-            // 
-            this.textBox57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox57.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox57.Location = new System.Drawing.Point(972, 649);
-            this.textBox57.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox57.MaxLength = 1;
-            this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new System.Drawing.Size(58, 31);
-            this.textBox57.TabIndex = 321;
-            // 
-            // textBox58
-            // 
-            this.textBox58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox58.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox58.Location = new System.Drawing.Point(915, 683);
-            this.textBox58.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox58.MaxLength = 1;
-            this.textBox58.Name = "textBox58";
-            this.textBox58.Size = new System.Drawing.Size(58, 31);
-            this.textBox58.TabIndex = 320;
-            // 
-            // textBox59
-            // 
-            this.textBox59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox59.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox59.Location = new System.Drawing.Point(915, 649);
-            this.textBox59.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox59.MaxLength = 1;
-            this.textBox59.Name = "textBox59";
-            this.textBox59.Size = new System.Drawing.Size(58, 31);
-            this.textBox59.TabIndex = 319;
-            // 
-            // textBox60
-            // 
-            this.textBox60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox60.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox60.Location = new System.Drawing.Point(860, 683);
-            this.textBox60.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox60.MaxLength = 1;
-            this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new System.Drawing.Size(58, 31);
-            this.textBox60.TabIndex = 318;
-            // 
-            // textBox61
-            // 
-            this.textBox61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox61.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox61.Location = new System.Drawing.Point(860, 649);
-            this.textBox61.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox61.MaxLength = 1;
-            this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(58, 31);
-            this.textBox61.TabIndex = 317;
-            // 
-            // textBox62
-            // 
-            this.textBox62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox62.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox62.Location = new System.Drawing.Point(804, 683);
-            this.textBox62.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox62.MaxLength = 1;
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(58, 31);
-            this.textBox62.TabIndex = 316;
-            // 
-            // textBox63
-            // 
-            this.textBox63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox63.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox63.Location = new System.Drawing.Point(804, 649);
-            this.textBox63.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox63.MaxLength = 1;
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(58, 31);
-            this.textBox63.TabIndex = 315;
-            // 
-            // textBox64
-            // 
-            this.textBox64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox64.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox64.Location = new System.Drawing.Point(747, 683);
-            this.textBox64.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox64.MaxLength = 1;
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(58, 31);
-            this.textBox64.TabIndex = 314;
-            // 
-            // textBox65
-            // 
-            this.textBox65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox65.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox65.Location = new System.Drawing.Point(747, 649);
-            this.textBox65.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox65.MaxLength = 1;
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(58, 31);
-            this.textBox65.TabIndex = 313;
-            // 
-            // textBox66
-            // 
-            this.textBox66.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox66.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox66.Location = new System.Drawing.Point(698, 683);
-            this.textBox66.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox66.MaxLength = 1;
-            this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new System.Drawing.Size(52, 31);
-            this.textBox66.TabIndex = 312;
-            // 
-            // textBox67
-            // 
-            this.textBox67.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox67.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox67.Location = new System.Drawing.Point(698, 649);
-            this.textBox67.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox67.MaxLength = 1;
-            this.textBox67.Name = "textBox67";
-            this.textBox67.Size = new System.Drawing.Size(52, 31);
-            this.textBox67.TabIndex = 311;
-            // 
-            // textBox68
-            // 
-            this.textBox68.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox68.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox68.Location = new System.Drawing.Point(640, 683);
-            this.textBox68.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox68.MaxLength = 1;
-            this.textBox68.Name = "textBox68";
-            this.textBox68.Size = new System.Drawing.Size(53, 31);
-            this.textBox68.TabIndex = 310;
-            // 
-            // textBox69
-            // 
-            this.textBox69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox69.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox69.Location = new System.Drawing.Point(640, 649);
-            this.textBox69.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox69.MaxLength = 1;
-            this.textBox69.Name = "textBox69";
-            this.textBox69.Size = new System.Drawing.Size(53, 31);
-            this.textBox69.TabIndex = 309;
-            // 
-            // textBox70
-            // 
-            this.textBox70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox70.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox70.Location = new System.Drawing.Point(586, 683);
-            this.textBox70.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox70.MaxLength = 1;
-            this.textBox70.Name = "textBox70";
-            this.textBox70.Size = new System.Drawing.Size(58, 31);
-            this.textBox70.TabIndex = 308;
-            // 
-            // textBox71
-            // 
-            this.textBox71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox71.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox71.Location = new System.Drawing.Point(586, 649);
-            this.textBox71.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox71.MaxLength = 1;
-            this.textBox71.Name = "textBox71";
-            this.textBox71.Size = new System.Drawing.Size(58, 31);
-            this.textBox71.TabIndex = 307;
-            // 
-            // textBox72
-            // 
-            this.textBox72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox72.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox72.Location = new System.Drawing.Point(532, 683);
-            this.textBox72.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox72.MaxLength = 1;
-            this.textBox72.Name = "textBox72";
-            this.textBox72.Size = new System.Drawing.Size(58, 31);
-            this.textBox72.TabIndex = 306;
-            // 
-            // textBox73
-            // 
-            this.textBox73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox73.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox73.Location = new System.Drawing.Point(532, 649);
-            this.textBox73.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox73.MaxLength = 1;
-            this.textBox73.Name = "textBox73";
-            this.textBox73.Size = new System.Drawing.Size(58, 31);
-            this.textBox73.TabIndex = 305;
-            // 
-            // textBox74
-            // 
-            this.textBox74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox74.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox74.Location = new System.Drawing.Point(476, 683);
-            this.textBox74.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox74.MaxLength = 1;
-            this.textBox74.Name = "textBox74";
-            this.textBox74.Size = new System.Drawing.Size(58, 31);
-            this.textBox74.TabIndex = 304;
-            // 
-            // textBox75
-            // 
-            this.textBox75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox75.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox75.Location = new System.Drawing.Point(476, 649);
-            this.textBox75.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox75.MaxLength = 1;
-            this.textBox75.Name = "textBox75";
-            this.textBox75.Size = new System.Drawing.Size(58, 31);
-            this.textBox75.TabIndex = 303;
-            // 
-            // textBox76
-            // 
-            this.textBox76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox76.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox76.Location = new System.Drawing.Point(418, 683);
-            this.textBox76.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox76.MaxLength = 1;
-            this.textBox76.Name = "textBox76";
-            this.textBox76.Size = new System.Drawing.Size(58, 31);
-            this.textBox76.TabIndex = 302;
-            // 
-            // textBox77
-            // 
-            this.textBox77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox77.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox77.Location = new System.Drawing.Point(418, 649);
-            this.textBox77.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox77.MaxLength = 1;
-            this.textBox77.Name = "textBox77";
-            this.textBox77.Size = new System.Drawing.Size(58, 31);
-            this.textBox77.TabIndex = 301;
-            // 
-            // textBox78
-            // 
-            this.textBox78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox78.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox78.Location = new System.Drawing.Point(363, 683);
-            this.textBox78.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox78.MaxLength = 1;
-            this.textBox78.Name = "textBox78";
-            this.textBox78.Size = new System.Drawing.Size(58, 31);
-            this.textBox78.TabIndex = 300;
-            // 
-            // textBox79
-            // 
-            this.textBox79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox79.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox79.Location = new System.Drawing.Point(363, 649);
-            this.textBox79.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox79.MaxLength = 1;
-            this.textBox79.Name = "textBox79";
-            this.textBox79.Size = new System.Drawing.Size(58, 31);
-            this.textBox79.TabIndex = 299;
-            // 
-            // textBox80
-            // 
-            this.textBox80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox80.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox80.Location = new System.Drawing.Point(308, 683);
-            this.textBox80.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox80.MaxLength = 1;
-            this.textBox80.Name = "textBox80";
-            this.textBox80.Size = new System.Drawing.Size(58, 31);
-            this.textBox80.TabIndex = 298;
-            // 
-            // textBox105
-            // 
-            this.textBox105.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox105.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox105.Location = new System.Drawing.Point(308, 649);
-            this.textBox105.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox105.MaxLength = 1;
-            this.textBox105.Name = "textBox105";
-            this.textBox105.Size = new System.Drawing.Size(58, 31);
-            this.textBox105.TabIndex = 297;
-            // 
-            // textBox106
-            // 
-            this.textBox106.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox106.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox106.Location = new System.Drawing.Point(250, 683);
-            this.textBox106.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox106.MaxLength = 1;
-            this.textBox106.Name = "textBox106";
-            this.textBox106.Size = new System.Drawing.Size(58, 31);
-            this.textBox106.TabIndex = 296;
-            // 
-            // textBox107
-            // 
-            this.textBox107.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox107.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox107.Location = new System.Drawing.Point(250, 649);
-            this.textBox107.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox107.MaxLength = 1;
-            this.textBox107.Name = "textBox107";
-            this.textBox107.Size = new System.Drawing.Size(58, 31);
-            this.textBox107.TabIndex = 295;
-            // 
-            // editDentalRecBtn
-            // 
-            this.editDentalRecBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.editDentalRecBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.editDentalRecBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editDentalRecBtn.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editDentalRecBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.editDentalRecBtn.Location = new System.Drawing.Point(1150, 24);
-            this.editDentalRecBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.editDentalRecBtn.Name = "editDentalRecBtn";
-            this.editDentalRecBtn.Size = new System.Drawing.Size(268, 48);
-            this.editDentalRecBtn.TabIndex = 9;
-            this.editDentalRecBtn.Text = "Edit Dental Record";
-            this.editDentalRecBtn.UseVisualStyleBackColor = false;
-            this.editDentalRecBtn.Click += new System.EventHandler(this.editDentalRecBtn_Click);
+            // S38
+            // 
+            this.S38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S38.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S38.Location = new System.Drawing.Point(1083, 683);
+            this.S38.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S38.MaxLength = 1;
+            this.S38.Name = "S38";
+            this.S38.Size = new System.Drawing.Size(58, 31);
+            this.S38.TabIndex = 326;
+            // 
+            // TM38
+            // 
+            this.TM38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM38.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM38.Location = new System.Drawing.Point(1083, 649);
+            this.TM38.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM38.MaxLength = 3;
+            this.TM38.Name = "TM38";
+            this.TM38.Size = new System.Drawing.Size(58, 31);
+            this.TM38.TabIndex = 325;
+            // 
+            // S37
+            // 
+            this.S37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S37.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S37.Location = new System.Drawing.Point(1029, 683);
+            this.S37.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S37.MaxLength = 1;
+            this.S37.Name = "S37";
+            this.S37.Size = new System.Drawing.Size(58, 31);
+            this.S37.TabIndex = 324;
+            // 
+            // TM37
+            // 
+            this.TM37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM37.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM37.Location = new System.Drawing.Point(1029, 649);
+            this.TM37.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM37.MaxLength = 3;
+            this.TM37.Name = "TM37";
+            this.TM37.Size = new System.Drawing.Size(58, 31);
+            this.TM37.TabIndex = 323;
+            // 
+            // S36
+            // 
+            this.S36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S36.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S36.Location = new System.Drawing.Point(972, 683);
+            this.S36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S36.MaxLength = 1;
+            this.S36.Name = "S36";
+            this.S36.Size = new System.Drawing.Size(58, 31);
+            this.S36.TabIndex = 322;
+            // 
+            // TM36
+            // 
+            this.TM36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM36.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM36.Location = new System.Drawing.Point(972, 649);
+            this.TM36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM36.MaxLength = 3;
+            this.TM36.Name = "TM36";
+            this.TM36.Size = new System.Drawing.Size(58, 31);
+            this.TM36.TabIndex = 321;
+            // 
+            // S35
+            // 
+            this.S35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S35.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S35.Location = new System.Drawing.Point(915, 683);
+            this.S35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S35.MaxLength = 1;
+            this.S35.Name = "S35";
+            this.S35.Size = new System.Drawing.Size(58, 31);
+            this.S35.TabIndex = 320;
+            // 
+            // TM35
+            // 
+            this.TM35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM35.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM35.Location = new System.Drawing.Point(915, 649);
+            this.TM35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM35.MaxLength = 3;
+            this.TM35.Name = "TM35";
+            this.TM35.Size = new System.Drawing.Size(58, 31);
+            this.TM35.TabIndex = 319;
+            // 
+            // S34
+            // 
+            this.S34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S34.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S34.Location = new System.Drawing.Point(860, 683);
+            this.S34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S34.MaxLength = 1;
+            this.S34.Name = "S34";
+            this.S34.Size = new System.Drawing.Size(58, 31);
+            this.S34.TabIndex = 318;
+            // 
+            // TM34
+            // 
+            this.TM34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM34.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM34.Location = new System.Drawing.Point(860, 649);
+            this.TM34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM34.MaxLength = 3;
+            this.TM34.Name = "TM34";
+            this.TM34.Size = new System.Drawing.Size(58, 31);
+            this.TM34.TabIndex = 317;
+            // 
+            // S33
+            // 
+            this.S33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S33.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S33.Location = new System.Drawing.Point(804, 683);
+            this.S33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S33.MaxLength = 1;
+            this.S33.Name = "S33";
+            this.S33.Size = new System.Drawing.Size(58, 31);
+            this.S33.TabIndex = 316;
+            // 
+            // TM33
+            // 
+            this.TM33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM33.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM33.Location = new System.Drawing.Point(804, 649);
+            this.TM33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM33.MaxLength = 3;
+            this.TM33.Name = "TM33";
+            this.TM33.Size = new System.Drawing.Size(58, 31);
+            this.TM33.TabIndex = 315;
+            // 
+            // S32
+            // 
+            this.S32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S32.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S32.Location = new System.Drawing.Point(747, 683);
+            this.S32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S32.MaxLength = 1;
+            this.S32.Name = "S32";
+            this.S32.Size = new System.Drawing.Size(58, 31);
+            this.S32.TabIndex = 314;
+            // 
+            // TM32
+            // 
+            this.TM32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM32.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM32.Location = new System.Drawing.Point(747, 649);
+            this.TM32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM32.MaxLength = 3;
+            this.TM32.Name = "TM32";
+            this.TM32.Size = new System.Drawing.Size(58, 31);
+            this.TM32.TabIndex = 313;
+            // 
+            // S31
+            // 
+            this.S31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S31.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S31.Location = new System.Drawing.Point(698, 683);
+            this.S31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S31.MaxLength = 1;
+            this.S31.Name = "S31";
+            this.S31.Size = new System.Drawing.Size(52, 31);
+            this.S31.TabIndex = 312;
+            // 
+            // TM31
+            // 
+            this.TM31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM31.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM31.Location = new System.Drawing.Point(698, 649);
+            this.TM31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM31.MaxLength = 3;
+            this.TM31.Name = "TM31";
+            this.TM31.Size = new System.Drawing.Size(52, 31);
+            this.TM31.TabIndex = 311;
+            // 
+            // S41
+            // 
+            this.S41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S41.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S41.Location = new System.Drawing.Point(640, 683);
+            this.S41.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S41.MaxLength = 1;
+            this.S41.Name = "S41";
+            this.S41.Size = new System.Drawing.Size(53, 31);
+            this.S41.TabIndex = 310;
+            // 
+            // TM41
+            // 
+            this.TM41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM41.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM41.Location = new System.Drawing.Point(640, 649);
+            this.TM41.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM41.MaxLength = 3;
+            this.TM41.Name = "TM41";
+            this.TM41.Size = new System.Drawing.Size(53, 31);
+            this.TM41.TabIndex = 309;
+            // 
+            // S42
+            // 
+            this.S42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S42.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S42.Location = new System.Drawing.Point(586, 683);
+            this.S42.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S42.MaxLength = 1;
+            this.S42.Name = "S42";
+            this.S42.Size = new System.Drawing.Size(58, 31);
+            this.S42.TabIndex = 308;
+            // 
+            // TM42
+            // 
+            this.TM42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM42.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM42.Location = new System.Drawing.Point(586, 649);
+            this.TM42.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM42.MaxLength = 3;
+            this.TM42.Name = "TM42";
+            this.TM42.Size = new System.Drawing.Size(58, 31);
+            this.TM42.TabIndex = 307;
+            // 
+            // S43
+            // 
+            this.S43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S43.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S43.Location = new System.Drawing.Point(532, 683);
+            this.S43.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S43.MaxLength = 1;
+            this.S43.Name = "S43";
+            this.S43.Size = new System.Drawing.Size(58, 31);
+            this.S43.TabIndex = 306;
+            // 
+            // TM43
+            // 
+            this.TM43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM43.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM43.Location = new System.Drawing.Point(532, 649);
+            this.TM43.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM43.MaxLength = 3;
+            this.TM43.Name = "TM43";
+            this.TM43.Size = new System.Drawing.Size(58, 31);
+            this.TM43.TabIndex = 305;
+            // 
+            // S44
+            // 
+            this.S44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S44.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S44.Location = new System.Drawing.Point(476, 683);
+            this.S44.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S44.MaxLength = 1;
+            this.S44.Name = "S44";
+            this.S44.Size = new System.Drawing.Size(58, 31);
+            this.S44.TabIndex = 304;
+            // 
+            // TM44
+            // 
+            this.TM44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM44.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM44.Location = new System.Drawing.Point(476, 649);
+            this.TM44.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM44.MaxLength = 3;
+            this.TM44.Name = "TM44";
+            this.TM44.Size = new System.Drawing.Size(58, 31);
+            this.TM44.TabIndex = 303;
+            // 
+            // S45
+            // 
+            this.S45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S45.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S45.Location = new System.Drawing.Point(418, 683);
+            this.S45.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S45.MaxLength = 1;
+            this.S45.Name = "S45";
+            this.S45.Size = new System.Drawing.Size(58, 31);
+            this.S45.TabIndex = 302;
+            // 
+            // TM45
+            // 
+            this.TM45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM45.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM45.Location = new System.Drawing.Point(418, 649);
+            this.TM45.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM45.MaxLength = 3;
+            this.TM45.Name = "TM45";
+            this.TM45.Size = new System.Drawing.Size(58, 31);
+            this.TM45.TabIndex = 301;
+            // 
+            // S46
+            // 
+            this.S46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S46.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S46.Location = new System.Drawing.Point(363, 683);
+            this.S46.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S46.MaxLength = 1;
+            this.S46.Name = "S46";
+            this.S46.Size = new System.Drawing.Size(58, 31);
+            this.S46.TabIndex = 300;
+            // 
+            // TM46
+            // 
+            this.TM46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM46.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM46.Location = new System.Drawing.Point(363, 649);
+            this.TM46.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM46.MaxLength = 3;
+            this.TM46.Name = "TM46";
+            this.TM46.Size = new System.Drawing.Size(58, 31);
+            this.TM46.TabIndex = 299;
+            // 
+            // S47
+            // 
+            this.S47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S47.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S47.Location = new System.Drawing.Point(308, 683);
+            this.S47.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S47.MaxLength = 1;
+            this.S47.Name = "S47";
+            this.S47.Size = new System.Drawing.Size(58, 31);
+            this.S47.TabIndex = 298;
+            // 
+            // TM47
+            // 
+            this.TM47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM47.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM47.Location = new System.Drawing.Point(308, 649);
+            this.TM47.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM47.MaxLength = 3;
+            this.TM47.Name = "TM47";
+            this.TM47.Size = new System.Drawing.Size(58, 31);
+            this.TM47.TabIndex = 297;
+            // 
+            // S48
+            // 
+            this.S48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S48.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S48.Location = new System.Drawing.Point(250, 683);
+            this.S48.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.S48.MaxLength = 1;
+            this.S48.Name = "S48";
+            this.S48.Size = new System.Drawing.Size(58, 31);
+            this.S48.TabIndex = 296;
+            // 
+            // TM48
+            // 
+            this.TM48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM48.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TM48.Location = new System.Drawing.Point(250, 649);
+            this.TM48.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TM48.MaxLength = 3;
+            this.TM48.Name = "TM48";
+            this.TM48.Size = new System.Drawing.Size(58, 31);
+            this.TM48.TabIndex = 295;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(1190, 394);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(262, 273);
+            this.label10.TabIndex = 327;
+            this.label10.Text = resources.GetString("label10.Text");
             // 
             // DentalRecord
             // 
@@ -2310,111 +2323,112 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1534, 911);
-            this.Controls.Add(this.textBox52);
-            this.Controls.Add(this.textBox53);
-            this.Controls.Add(this.textBox54);
-            this.Controls.Add(this.textBox55);
-            this.Controls.Add(this.textBox56);
-            this.Controls.Add(this.textBox57);
-            this.Controls.Add(this.textBox58);
-            this.Controls.Add(this.textBox59);
-            this.Controls.Add(this.textBox60);
-            this.Controls.Add(this.textBox61);
-            this.Controls.Add(this.textBox62);
-            this.Controls.Add(this.textBox63);
-            this.Controls.Add(this.textBox64);
-            this.Controls.Add(this.textBox65);
-            this.Controls.Add(this.textBox66);
-            this.Controls.Add(this.textBox67);
-            this.Controls.Add(this.textBox68);
-            this.Controls.Add(this.textBox69);
-            this.Controls.Add(this.textBox70);
-            this.Controls.Add(this.textBox71);
-            this.Controls.Add(this.textBox72);
-            this.Controls.Add(this.textBox73);
-            this.Controls.Add(this.textBox74);
-            this.Controls.Add(this.textBox75);
-            this.Controls.Add(this.textBox76);
-            this.Controls.Add(this.textBox77);
-            this.Controls.Add(this.textBox78);
-            this.Controls.Add(this.textBox79);
-            this.Controls.Add(this.textBox80);
-            this.Controls.Add(this.textBox105);
-            this.Controls.Add(this.textBox106);
-            this.Controls.Add(this.textBox107);
-            this.Controls.Add(this.textBox36);
-            this.Controls.Add(this.textBox37);
-            this.Controls.Add(this.textBox48);
-            this.Controls.Add(this.textBox49);
-            this.Controls.Add(this.textBox50);
-            this.Controls.Add(this.textBox102);
-            this.Controls.Add(this.textBox103);
-            this.Controls.Add(this.textBox104);
-            this.Controls.Add(this.textBox34);
-            this.Controls.Add(this.textBox35);
-            this.Controls.Add(this.textBox38);
-            this.Controls.Add(this.textBox39);
-            this.Controls.Add(this.textBox40);
-            this.Controls.Add(this.textBox41);
-            this.Controls.Add(this.textBox42);
-            this.Controls.Add(this.textBox43);
-            this.Controls.Add(this.textBox44);
-            this.Controls.Add(this.textBox45);
-            this.Controls.Add(this.textBox46);
-            this.Controls.Add(this.textBox47);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox24);
-            this.Controls.Add(this.textBox25);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.textBox27);
-            this.Controls.Add(this.textBox28);
-            this.Controls.Add(this.textBox29);
-            this.Controls.Add(this.textBox30);
-            this.Controls.Add(this.textBox32);
-            this.Controls.Add(this.textBox33);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox100);
-            this.Controls.Add(this.textBox101);
-            this.Controls.Add(this.textBox94);
-            this.Controls.Add(this.textBox95);
-            this.Controls.Add(this.textBox96);
-            this.Controls.Add(this.textBox97);
-            this.Controls.Add(this.textBox98);
-            this.Controls.Add(this.textBox99);
-            this.Controls.Add(this.textBox87);
-            this.Controls.Add(this.textBox88);
-            this.Controls.Add(this.textBox89);
-            this.Controls.Add(this.textBox91);
-            this.Controls.Add(this.textBox92);
-            this.Controls.Add(this.textBox93);
-            this.Controls.Add(this.textBox85);
-            this.Controls.Add(this.textBox86);
-            this.Controls.Add(this.textBox83);
-            this.Controls.Add(this.textBox84);
-            this.Controls.Add(this.textBox82);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.S38);
+            this.Controls.Add(this.TM38);
+            this.Controls.Add(this.S37);
+            this.Controls.Add(this.TM37);
+            this.Controls.Add(this.S36);
+            this.Controls.Add(this.TM36);
+            this.Controls.Add(this.S35);
+            this.Controls.Add(this.TM35);
+            this.Controls.Add(this.S34);
+            this.Controls.Add(this.TM34);
+            this.Controls.Add(this.S33);
+            this.Controls.Add(this.TM33);
+            this.Controls.Add(this.S32);
+            this.Controls.Add(this.TM32);
+            this.Controls.Add(this.S31);
+            this.Controls.Add(this.TM31);
+            this.Controls.Add(this.S41);
+            this.Controls.Add(this.TM41);
+            this.Controls.Add(this.S42);
+            this.Controls.Add(this.TM42);
+            this.Controls.Add(this.S43);
+            this.Controls.Add(this.TM43);
+            this.Controls.Add(this.S44);
+            this.Controls.Add(this.TM44);
+            this.Controls.Add(this.S45);
+            this.Controls.Add(this.TM45);
+            this.Controls.Add(this.S46);
+            this.Controls.Add(this.TM46);
+            this.Controls.Add(this.S47);
+            this.Controls.Add(this.TM47);
+            this.Controls.Add(this.S48);
+            this.Controls.Add(this.TM48);
+            this.Controls.Add(this.S65);
+            this.Controls.Add(this.TM65);
+            this.Controls.Add(this.S64);
+            this.Controls.Add(this.TM64);
+            this.Controls.Add(this.S63);
+            this.Controls.Add(this.TM63);
+            this.Controls.Add(this.S62);
+            this.Controls.Add(this.TM62);
+            this.Controls.Add(this.S61);
+            this.Controls.Add(this.TM61);
+            this.Controls.Add(this.S51);
+            this.Controls.Add(this.TM51);
+            this.Controls.Add(this.S52);
+            this.Controls.Add(this.TM52);
+            this.Controls.Add(this.S53);
+            this.Controls.Add(this.TM53);
+            this.Controls.Add(this.S54);
+            this.Controls.Add(this.TM54);
+            this.Controls.Add(this.S55);
+            this.Controls.Add(this.TM55);
+            this.Controls.Add(this.S28);
+            this.Controls.Add(this.TM28);
+            this.Controls.Add(this.S27);
+            this.Controls.Add(this.TM27);
+            this.Controls.Add(this.S26);
+            this.Controls.Add(this.TM26);
+            this.Controls.Add(this.S25);
+            this.Controls.Add(this.TM25);
+            this.Controls.Add(this.S24);
+            this.Controls.Add(this.TM24);
+            this.Controls.Add(this.S23);
+            this.Controls.Add(this.TM23);
+            this.Controls.Add(this.S22);
+            this.Controls.Add(this.TM22);
+            this.Controls.Add(this.S21);
+            this.Controls.Add(this.TM21);
+            this.Controls.Add(this.S11);
+            this.Controls.Add(this.TM11);
+            this.Controls.Add(this.S12);
+            this.Controls.Add(this.TM12);
+            this.Controls.Add(this.S13);
+            this.Controls.Add(this.TM13);
+            this.Controls.Add(this.S14);
+            this.Controls.Add(this.TM14);
+            this.Controls.Add(this.S15);
+            this.Controls.Add(this.TM15);
+            this.Controls.Add(this.S16);
+            this.Controls.Add(this.TM16);
+            this.Controls.Add(this.S17);
+            this.Controls.Add(this.TM17);
+            this.Controls.Add(this.S18);
+            this.Controls.Add(this.TM18);
+            this.Controls.Add(this.S72);
+            this.Controls.Add(this.TM72);
+            this.Controls.Add(this.S71);
+            this.Controls.Add(this.TM71);
+            this.Controls.Add(this.S81);
+            this.Controls.Add(this.TM81);
+            this.Controls.Add(this.S82);
+            this.Controls.Add(this.TM82);
+            this.Controls.Add(this.S75);
+            this.Controls.Add(this.TM75);
+            this.Controls.Add(this.S74);
+            this.Controls.Add(this.TM74);
+            this.Controls.Add(this.S73);
+            this.Controls.Add(this.TM73);
+            this.Controls.Add(this.S83);
+            this.Controls.Add(this.TM83);
+            this.Controls.Add(this.S84);
+            this.Controls.Add(this.TM84);
+            this.Controls.Add(this.S85);
             this.Controls.Add(this.textBox81);
-            this.Controls.Add(this.textBox90);
+            this.Controls.Add(this.TM85);
             this.Controls.Add(this.textBox31);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -2628,112 +2642,113 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox31;
         private System.Windows.Forms.TextBox textBox81;
-        private System.Windows.Forms.TextBox textBox90;
-        private System.Windows.Forms.TextBox textBox82;
-        private System.Windows.Forms.TextBox textBox83;
-        private System.Windows.Forms.TextBox textBox84;
-        private System.Windows.Forms.TextBox textBox85;
-        private System.Windows.Forms.TextBox textBox86;
-        private System.Windows.Forms.TextBox textBox87;
-        private System.Windows.Forms.TextBox textBox88;
-        private System.Windows.Forms.TextBox textBox89;
-        private System.Windows.Forms.TextBox textBox91;
-        private System.Windows.Forms.TextBox textBox92;
-        private System.Windows.Forms.TextBox textBox93;
-        private System.Windows.Forms.TextBox textBox94;
-        private System.Windows.Forms.TextBox textBox95;
-        private System.Windows.Forms.TextBox textBox96;
-        private System.Windows.Forms.TextBox textBox97;
-        private System.Windows.Forms.TextBox textBox98;
-        private System.Windows.Forms.TextBox textBox99;
-        private System.Windows.Forms.TextBox textBox100;
-        private System.Windows.Forms.TextBox textBox101;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.TextBox textBox43;
-        private System.Windows.Forms.TextBox textBox44;
-        private System.Windows.Forms.TextBox textBox45;
-        private System.Windows.Forms.TextBox textBox46;
-        private System.Windows.Forms.TextBox textBox47;
+        private System.Windows.Forms.TextBox TM85;
+        private System.Windows.Forms.TextBox S85;
+        private System.Windows.Forms.TextBox S84;
+        private System.Windows.Forms.TextBox TM84;
+        private System.Windows.Forms.TextBox S83;
+        private System.Windows.Forms.TextBox TM83;
+        private System.Windows.Forms.TextBox S75;
+        private System.Windows.Forms.TextBox TM75;
+        private System.Windows.Forms.TextBox S74;
+        private System.Windows.Forms.TextBox TM74;
+        private System.Windows.Forms.TextBox S73;
+        private System.Windows.Forms.TextBox TM73;
+        private System.Windows.Forms.TextBox S71;
+        private System.Windows.Forms.TextBox TM71;
+        private System.Windows.Forms.TextBox S81;
+        private System.Windows.Forms.TextBox TM81;
+        private System.Windows.Forms.TextBox S82;
+        private System.Windows.Forms.TextBox TM82;
+        private System.Windows.Forms.TextBox S72;
+        private System.Windows.Forms.TextBox TM72;
+        private System.Windows.Forms.TextBox S18;
+        private System.Windows.Forms.TextBox TM18;
+        private System.Windows.Forms.TextBox S17;
+        private System.Windows.Forms.TextBox TM17;
+        private System.Windows.Forms.TextBox S16;
+        private System.Windows.Forms.TextBox TM16;
+        private System.Windows.Forms.TextBox S15;
+        private System.Windows.Forms.TextBox TM15;
+        private System.Windows.Forms.TextBox S14;
+        private System.Windows.Forms.TextBox TM14;
+        private System.Windows.Forms.TextBox S13;
+        private System.Windows.Forms.TextBox TM13;
+        private System.Windows.Forms.TextBox S12;
+        private System.Windows.Forms.TextBox TM12;
+        private System.Windows.Forms.TextBox S11;
+        private System.Windows.Forms.TextBox TM11;
+        private System.Windows.Forms.TextBox S21;
+        private System.Windows.Forms.TextBox TM21;
+        private System.Windows.Forms.TextBox S28;
+        private System.Windows.Forms.TextBox TM28;
+        private System.Windows.Forms.TextBox S27;
+        private System.Windows.Forms.TextBox TM27;
+        private System.Windows.Forms.TextBox S26;
+        private System.Windows.Forms.TextBox TM26;
+        private System.Windows.Forms.TextBox S25;
+        private System.Windows.Forms.TextBox TM25;
+        private System.Windows.Forms.TextBox S24;
+        private System.Windows.Forms.TextBox TM24;
+        private System.Windows.Forms.TextBox S23;
+        private System.Windows.Forms.TextBox TM23;
+        private System.Windows.Forms.TextBox S22;
+        private System.Windows.Forms.TextBox TM22;
+        private System.Windows.Forms.TextBox S51;
+        private System.Windows.Forms.TextBox TM51;
+        private System.Windows.Forms.TextBox S52;
+        private System.Windows.Forms.TextBox TM52;
+        private System.Windows.Forms.TextBox S53;
+        private System.Windows.Forms.TextBox TM53;
+        private System.Windows.Forms.TextBox S54;
+        private System.Windows.Forms.TextBox TM54;
+        private System.Windows.Forms.TextBox S55;
+        private System.Windows.Forms.TextBox TM55;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox48;
-        private System.Windows.Forms.TextBox textBox49;
-        private System.Windows.Forms.TextBox textBox50;
-        private System.Windows.Forms.TextBox textBox102;
-        private System.Windows.Forms.TextBox textBox103;
-        private System.Windows.Forms.TextBox textBox104;
+        private System.Windows.Forms.TextBox S61;
+        private System.Windows.Forms.TextBox TM61;
+        private System.Windows.Forms.TextBox S65;
+        private System.Windows.Forms.TextBox TM65;
+        private System.Windows.Forms.TextBox S64;
+        private System.Windows.Forms.TextBox TM64;
+        private System.Windows.Forms.TextBox S63;
+        private System.Windows.Forms.TextBox TM63;
+        private System.Windows.Forms.TextBox S62;
+        private System.Windows.Forms.TextBox TM62;
         private System.Windows.Forms.PictureBox t;
-        private System.Windows.Forms.TextBox textBox52;
-        private System.Windows.Forms.TextBox textBox53;
-        private System.Windows.Forms.TextBox textBox54;
-        private System.Windows.Forms.TextBox textBox55;
-        private System.Windows.Forms.TextBox textBox56;
-        private System.Windows.Forms.TextBox textBox57;
-        private System.Windows.Forms.TextBox textBox58;
-        private System.Windows.Forms.TextBox textBox59;
-        private System.Windows.Forms.TextBox textBox60;
-        private System.Windows.Forms.TextBox textBox61;
-        private System.Windows.Forms.TextBox textBox62;
-        private System.Windows.Forms.TextBox textBox63;
-        private System.Windows.Forms.TextBox textBox64;
-        private System.Windows.Forms.TextBox textBox65;
-        private System.Windows.Forms.TextBox textBox66;
-        private System.Windows.Forms.TextBox textBox67;
-        private System.Windows.Forms.TextBox textBox68;
-        private System.Windows.Forms.TextBox textBox69;
-        private System.Windows.Forms.TextBox textBox70;
-        private System.Windows.Forms.TextBox textBox71;
-        private System.Windows.Forms.TextBox textBox72;
-        private System.Windows.Forms.TextBox textBox73;
-        private System.Windows.Forms.TextBox textBox74;
-        private System.Windows.Forms.TextBox textBox75;
-        private System.Windows.Forms.TextBox textBox76;
-        private System.Windows.Forms.TextBox textBox77;
-        private System.Windows.Forms.TextBox textBox78;
-        private System.Windows.Forms.TextBox textBox79;
-        private System.Windows.Forms.TextBox textBox80;
-        private System.Windows.Forms.TextBox textBox105;
-        private System.Windows.Forms.TextBox textBox106;
-        private System.Windows.Forms.TextBox textBox107;
+        private System.Windows.Forms.TextBox S38;
+        private System.Windows.Forms.TextBox TM38;
+        private System.Windows.Forms.TextBox S37;
+        private System.Windows.Forms.TextBox TM37;
+        private System.Windows.Forms.TextBox S36;
+        private System.Windows.Forms.TextBox TM36;
+        private System.Windows.Forms.TextBox S35;
+        private System.Windows.Forms.TextBox TM35;
+        private System.Windows.Forms.TextBox S34;
+        private System.Windows.Forms.TextBox TM34;
+        private System.Windows.Forms.TextBox S33;
+        private System.Windows.Forms.TextBox TM33;
+        private System.Windows.Forms.TextBox S32;
+        private System.Windows.Forms.TextBox TM32;
+        private System.Windows.Forms.TextBox S31;
+        private System.Windows.Forms.TextBox TM31;
+        private System.Windows.Forms.TextBox S41;
+        private System.Windows.Forms.TextBox TM41;
+        private System.Windows.Forms.TextBox S42;
+        private System.Windows.Forms.TextBox TM42;
+        private System.Windows.Forms.TextBox S43;
+        private System.Windows.Forms.TextBox TM43;
+        private System.Windows.Forms.TextBox S44;
+        private System.Windows.Forms.TextBox TM44;
+        private System.Windows.Forms.TextBox S45;
+        private System.Windows.Forms.TextBox TM45;
+        private System.Windows.Forms.TextBox S46;
+        private System.Windows.Forms.TextBox TM46;
+        private System.Windows.Forms.TextBox S47;
+        private System.Windows.Forms.TextBox TM47;
+        private System.Windows.Forms.TextBox S48;
+        private System.Windows.Forms.TextBox TM48;
         private System.Windows.Forms.Button editDentalRecBtn;
+        private System.Windows.Forms.Label label10;
     }
 }

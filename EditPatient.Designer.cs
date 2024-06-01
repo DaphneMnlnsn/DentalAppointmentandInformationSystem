@@ -72,6 +72,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.savePatientBtn = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.backBtn = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffPic)).BeginInit();
@@ -81,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -755,11 +757,25 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // backBtn
+            // 
+            this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
+            this.backBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.back;
+            this.backBtn.Location = new System.Drawing.Point(411, 29);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(56, 55);
+            this.backBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backBtn.TabIndex = 73;
+            this.backBtn.TabStop = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // EditPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1537, 920);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(1559, 976);
@@ -779,6 +795,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -830,5 +847,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button savePatientBtn;
+        private System.Windows.Forms.PictureBox backBtn;
     }
 }

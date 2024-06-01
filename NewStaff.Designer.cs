@@ -53,15 +53,16 @@
             this.lbl3 = new System.Windows.Forms.Label();
             this.lnameTxtBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.phoneTxtBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.ageTxtBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.staffRoleCombo = new System.Windows.Forms.ComboBox();
             this.birthDateTxtBox = new System.Windows.Forms.DateTimePicker();
-            this.saveStaffBtn = new System.Windows.Forms.Button();
+            this.phoneTxtBox = new System.Windows.Forms.TextBox();
+            this.ageTxtBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.saveStaffBtn = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffPic)).BeginInit();
@@ -71,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -475,41 +477,6 @@
             this.label4.Text = "PHONE *";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // phoneTxtBox
-            // 
-            this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phoneTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTxtBox.Location = new System.Drawing.Point(600, 121);
-            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.phoneTxtBox.MaxLength = 9;
-            this.phoneTxtBox.Name = "phoneTxtBox";
-            this.phoneTxtBox.Size = new System.Drawing.Size(284, 32);
-            this.phoneTxtBox.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(902, 181);
-            this.label5.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(202, 21);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "AGE *";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ageTxtBox
-            // 
-            this.ageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ageTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageTxtBox.Location = new System.Drawing.Point(907, 205);
-            this.ageTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.ageTxtBox.Name = "ageTxtBox";
-            this.ageTxtBox.Size = new System.Drawing.Size(96, 32);
-            this.ageTxtBox.TabIndex = 10;
-            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -567,6 +534,54 @@
             this.birthDateTxtBox.Value = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             this.birthDateTxtBox.Leave += new System.EventHandler(this.birthDateTxtBox_Leave);
             // 
+            // phoneTxtBox
+            // 
+            this.phoneTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phoneTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneTxtBox.Location = new System.Drawing.Point(600, 121);
+            this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.phoneTxtBox.MaxLength = 9;
+            this.phoneTxtBox.Name = "phoneTxtBox";
+            this.phoneTxtBox.Size = new System.Drawing.Size(284, 32);
+            this.phoneTxtBox.TabIndex = 12;
+            // 
+            // ageTxtBox
+            // 
+            this.ageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ageTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageTxtBox.Location = new System.Drawing.Point(907, 205);
+            this.ageTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.ageTxtBox.Name = "ageTxtBox";
+            this.ageTxtBox.Size = new System.Drawing.Size(96, 32);
+            this.ageTxtBox.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Inter", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(902, 181);
+            this.label5.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(202, 21);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "AGE *";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(563, 125);
+            this.label21.Margin = new System.Windows.Forms.Padding(15, 7, 3, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(34, 21);
+            this.label21.TabIndex = 78;
+            this.label21.Text = "09";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // saveStaffBtn
             // 
             this.saveStaffBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -584,24 +599,25 @@
             this.saveStaffBtn.UseVisualStyleBackColor = false;
             this.saveStaffBtn.Click += new System.EventHandler(this.saveStaffBtn_Click);
             // 
-            // label21
+            // backBtn
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Inter SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(563, 125);
-            this.label21.Margin = new System.Windows.Forms.Padding(15, 7, 3, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(34, 21);
-            this.label21.TabIndex = 78;
-            this.label21.Text = "09";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
+            this.backBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.back;
+            this.backBtn.Location = new System.Drawing.Point(402, 226);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(56, 55);
+            this.backBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backBtn.TabIndex = 72;
+            this.backBtn.TabStop = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // NewStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1537, 920);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(1559, 976);
@@ -621,6 +637,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -662,5 +679,6 @@
         private System.Windows.Forms.ComboBox staffRoleCombo;
         private System.Windows.Forms.DateTimePicker birthDateTxtBox;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.PictureBox backBtn;
     }
 }
