@@ -208,6 +208,8 @@
             this.S48 = new System.Windows.Forms.TextBox();
             this.TM48 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
@@ -433,7 +435,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1190, 371);
+            this.label4.Location = new System.Drawing.Point(1190, 340);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(263, 21);
@@ -454,7 +456,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Inter SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1190, 725);
+            this.label6.Location = new System.Drawing.Point(1190, 653);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 21);
@@ -465,7 +467,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1190, 746);
+            this.label7.Location = new System.Drawing.Point(1190, 674);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(321, 42);
@@ -1141,10 +1143,11 @@
             // TM85
             // 
             this.TM85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM85.Enabled = false;
             this.TM85.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM85.Location = new System.Drawing.Point(416, 825);
             this.TM85.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM85.MaxLength = 3;
+            this.TM85.MaxLength = 1;
             this.TM85.Name = "TM85";
             this.TM85.Size = new System.Drawing.Size(58, 27);
             this.TM85.TabIndex = 214;
@@ -1152,10 +1155,11 @@
             // S85
             // 
             this.S85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S85.Enabled = false;
             this.S85.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S85.Location = new System.Drawing.Point(416, 855);
             this.S85.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S85.MaxLength = 1;
+            this.S85.MaxLength = 9;
             this.S85.Name = "S85";
             this.S85.Size = new System.Drawing.Size(58, 27);
             this.S85.TabIndex = 224;
@@ -1163,10 +1167,11 @@
             // S84
             // 
             this.S84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S84.Enabled = false;
             this.S84.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S84.Location = new System.Drawing.Point(472, 855);
             this.S84.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S84.MaxLength = 1;
+            this.S84.MaxLength = 9;
             this.S84.Name = "S84";
             this.S84.Size = new System.Drawing.Size(58, 27);
             this.S84.TabIndex = 226;
@@ -1174,10 +1179,11 @@
             // TM84
             // 
             this.TM84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM84.Enabled = false;
             this.TM84.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM84.Location = new System.Drawing.Point(472, 825);
             this.TM84.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM84.MaxLength = 3;
+            this.TM84.MaxLength = 1;
             this.TM84.Name = "TM84";
             this.TM84.Size = new System.Drawing.Size(58, 27);
             this.TM84.TabIndex = 225;
@@ -1185,10 +1191,11 @@
             // S83
             // 
             this.S83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S83.Enabled = false;
             this.S83.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S83.Location = new System.Drawing.Point(530, 855);
             this.S83.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S83.MaxLength = 1;
+            this.S83.MaxLength = 9;
             this.S83.Name = "S83";
             this.S83.Size = new System.Drawing.Size(58, 27);
             this.S83.TabIndex = 228;
@@ -1196,10 +1203,11 @@
             // TM83
             // 
             this.TM83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM83.Enabled = false;
             this.TM83.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM83.Location = new System.Drawing.Point(530, 825);
             this.TM83.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM83.MaxLength = 3;
+            this.TM83.MaxLength = 1;
             this.TM83.Name = "TM83";
             this.TM83.Size = new System.Drawing.Size(58, 27);
             this.TM83.TabIndex = 227;
@@ -1207,10 +1215,11 @@
             // S75
             // 
             this.S75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S75.Enabled = false;
             this.S75.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S75.Location = new System.Drawing.Point(916, 855);
             this.S75.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S75.MaxLength = 1;
+            this.S75.MaxLength = 9;
             this.S75.Name = "S75";
             this.S75.Size = new System.Drawing.Size(58, 27);
             this.S75.TabIndex = 234;
@@ -1218,10 +1227,11 @@
             // TM75
             // 
             this.TM75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM75.Enabled = false;
             this.TM75.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM75.Location = new System.Drawing.Point(916, 825);
             this.TM75.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM75.MaxLength = 3;
+            this.TM75.MaxLength = 1;
             this.TM75.Name = "TM75";
             this.TM75.Size = new System.Drawing.Size(58, 27);
             this.TM75.TabIndex = 233;
@@ -1229,10 +1239,11 @@
             // S74
             // 
             this.S74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S74.Enabled = false;
             this.S74.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S74.Location = new System.Drawing.Point(860, 855);
             this.S74.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S74.MaxLength = 1;
+            this.S74.MaxLength = 9;
             this.S74.Name = "S74";
             this.S74.Size = new System.Drawing.Size(58, 27);
             this.S74.TabIndex = 232;
@@ -1240,10 +1251,11 @@
             // TM74
             // 
             this.TM74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM74.Enabled = false;
             this.TM74.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM74.Location = new System.Drawing.Point(860, 825);
             this.TM74.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM74.MaxLength = 3;
+            this.TM74.MaxLength = 1;
             this.TM74.Name = "TM74";
             this.TM74.Size = new System.Drawing.Size(58, 27);
             this.TM74.TabIndex = 231;
@@ -1251,10 +1263,11 @@
             // S73
             // 
             this.S73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S73.Enabled = false;
             this.S73.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S73.Location = new System.Drawing.Point(802, 855);
             this.S73.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S73.MaxLength = 1;
+            this.S73.MaxLength = 9;
             this.S73.Name = "S73";
             this.S73.Size = new System.Drawing.Size(58, 27);
             this.S73.TabIndex = 230;
@@ -1262,10 +1275,11 @@
             // TM73
             // 
             this.TM73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM73.Enabled = false;
             this.TM73.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM73.Location = new System.Drawing.Point(802, 825);
             this.TM73.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM73.MaxLength = 3;
+            this.TM73.MaxLength = 1;
             this.TM73.Name = "TM73";
             this.TM73.Size = new System.Drawing.Size(58, 27);
             this.TM73.TabIndex = 229;
@@ -1273,10 +1287,11 @@
             // S71
             // 
             this.S71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S71.Enabled = false;
             this.S71.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S71.Location = new System.Drawing.Point(698, 855);
             this.S71.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S71.MaxLength = 1;
+            this.S71.MaxLength = 9;
             this.S71.Name = "S71";
             this.S71.Size = new System.Drawing.Size(56, 27);
             this.S71.TabIndex = 240;
@@ -1284,10 +1299,11 @@
             // TM71
             // 
             this.TM71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM71.Enabled = false;
             this.TM71.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM71.Location = new System.Drawing.Point(698, 825);
             this.TM71.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM71.MaxLength = 3;
+            this.TM71.MaxLength = 1;
             this.TM71.Name = "TM71";
             this.TM71.Size = new System.Drawing.Size(56, 27);
             this.TM71.TabIndex = 239;
@@ -1295,10 +1311,11 @@
             // S81
             // 
             this.S81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S81.Enabled = false;
             this.S81.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S81.Location = new System.Drawing.Point(644, 855);
             this.S81.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S81.MaxLength = 1;
+            this.S81.MaxLength = 9;
             this.S81.Name = "S81";
             this.S81.Size = new System.Drawing.Size(50, 27);
             this.S81.TabIndex = 238;
@@ -1306,10 +1323,11 @@
             // TM81
             // 
             this.TM81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM81.Enabled = false;
             this.TM81.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM81.Location = new System.Drawing.Point(644, 825);
             this.TM81.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM81.MaxLength = 3;
+            this.TM81.MaxLength = 1;
             this.TM81.Name = "TM81";
             this.TM81.Size = new System.Drawing.Size(50, 27);
             this.TM81.TabIndex = 237;
@@ -1317,10 +1335,11 @@
             // S82
             // 
             this.S82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S82.Enabled = false;
             this.S82.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S82.Location = new System.Drawing.Point(586, 855);
             this.S82.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S82.MaxLength = 1;
+            this.S82.MaxLength = 9;
             this.S82.Name = "S82";
             this.S82.Size = new System.Drawing.Size(58, 27);
             this.S82.TabIndex = 236;
@@ -1328,10 +1347,11 @@
             // TM82
             // 
             this.TM82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM82.Enabled = false;
             this.TM82.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM82.Location = new System.Drawing.Point(586, 825);
             this.TM82.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM82.MaxLength = 3;
+            this.TM82.MaxLength = 1;
             this.TM82.Name = "TM82";
             this.TM82.Size = new System.Drawing.Size(58, 27);
             this.TM82.TabIndex = 235;
@@ -1339,10 +1359,11 @@
             // S72
             // 
             this.S72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S72.Enabled = false;
             this.S72.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S72.Location = new System.Drawing.Point(752, 855);
             this.S72.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S72.MaxLength = 1;
+            this.S72.MaxLength = 9;
             this.S72.Name = "S72";
             this.S72.Size = new System.Drawing.Size(56, 27);
             this.S72.TabIndex = 242;
@@ -1350,10 +1371,11 @@
             // TM72
             // 
             this.TM72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM72.Enabled = false;
             this.TM72.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM72.Location = new System.Drawing.Point(752, 825);
             this.TM72.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM72.MaxLength = 3;
+            this.TM72.MaxLength = 1;
             this.TM72.Name = "TM72";
             this.TM72.Size = new System.Drawing.Size(56, 27);
             this.TM72.TabIndex = 241;
@@ -1361,10 +1383,11 @@
             // S18
             // 
             this.S18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S18.Enabled = false;
             this.S18.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S18.Location = new System.Drawing.Point(250, 380);
             this.S18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S18.MaxLength = 1;
+            this.S18.MaxLength = 9;
             this.S18.Name = "S18";
             this.S18.Size = new System.Drawing.Size(58, 31);
             this.S18.TabIndex = 244;
@@ -1372,10 +1395,11 @@
             // TM18
             // 
             this.TM18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM18.Enabled = false;
             this.TM18.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM18.Location = new System.Drawing.Point(250, 346);
             this.TM18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM18.MaxLength = 3;
+            this.TM18.MaxLength = 1;
             this.TM18.Name = "TM18";
             this.TM18.Size = new System.Drawing.Size(58, 31);
             this.TM18.TabIndex = 243;
@@ -1383,10 +1407,11 @@
             // S17
             // 
             this.S17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S17.Enabled = false;
             this.S17.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S17.Location = new System.Drawing.Point(308, 380);
             this.S17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S17.MaxLength = 1;
+            this.S17.MaxLength = 9;
             this.S17.Name = "S17";
             this.S17.Size = new System.Drawing.Size(58, 31);
             this.S17.TabIndex = 246;
@@ -1394,10 +1419,11 @@
             // TM17
             // 
             this.TM17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM17.Enabled = false;
             this.TM17.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM17.Location = new System.Drawing.Point(308, 346);
             this.TM17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM17.MaxLength = 3;
+            this.TM17.MaxLength = 1;
             this.TM17.Name = "TM17";
             this.TM17.Size = new System.Drawing.Size(58, 31);
             this.TM17.TabIndex = 245;
@@ -1405,10 +1431,11 @@
             // S16
             // 
             this.S16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S16.Enabled = false;
             this.S16.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S16.Location = new System.Drawing.Point(363, 380);
             this.S16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S16.MaxLength = 1;
+            this.S16.MaxLength = 9;
             this.S16.Name = "S16";
             this.S16.Size = new System.Drawing.Size(58, 31);
             this.S16.TabIndex = 248;
@@ -1416,10 +1443,11 @@
             // TM16
             // 
             this.TM16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM16.Enabled = false;
             this.TM16.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM16.Location = new System.Drawing.Point(363, 346);
             this.TM16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM16.MaxLength = 3;
+            this.TM16.MaxLength = 1;
             this.TM16.Name = "TM16";
             this.TM16.Size = new System.Drawing.Size(58, 31);
             this.TM16.TabIndex = 247;
@@ -1427,10 +1455,11 @@
             // S15
             // 
             this.S15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S15.Enabled = false;
             this.S15.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S15.Location = new System.Drawing.Point(418, 380);
             this.S15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S15.MaxLength = 1;
+            this.S15.MaxLength = 9;
             this.S15.Name = "S15";
             this.S15.Size = new System.Drawing.Size(58, 31);
             this.S15.TabIndex = 250;
@@ -1438,10 +1467,11 @@
             // TM15
             // 
             this.TM15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM15.Enabled = false;
             this.TM15.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM15.Location = new System.Drawing.Point(418, 346);
             this.TM15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM15.MaxLength = 3;
+            this.TM15.MaxLength = 1;
             this.TM15.Name = "TM15";
             this.TM15.Size = new System.Drawing.Size(58, 31);
             this.TM15.TabIndex = 249;
@@ -1449,10 +1479,11 @@
             // S14
             // 
             this.S14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S14.Enabled = false;
             this.S14.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S14.Location = new System.Drawing.Point(476, 380);
             this.S14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S14.MaxLength = 1;
+            this.S14.MaxLength = 9;
             this.S14.Name = "S14";
             this.S14.Size = new System.Drawing.Size(58, 31);
             this.S14.TabIndex = 252;
@@ -1460,10 +1491,11 @@
             // TM14
             // 
             this.TM14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM14.Enabled = false;
             this.TM14.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM14.Location = new System.Drawing.Point(476, 346);
             this.TM14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM14.MaxLength = 3;
+            this.TM14.MaxLength = 1;
             this.TM14.Name = "TM14";
             this.TM14.Size = new System.Drawing.Size(58, 31);
             this.TM14.TabIndex = 251;
@@ -1471,10 +1503,11 @@
             // S13
             // 
             this.S13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S13.Enabled = false;
             this.S13.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S13.Location = new System.Drawing.Point(532, 380);
             this.S13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S13.MaxLength = 1;
+            this.S13.MaxLength = 9;
             this.S13.Name = "S13";
             this.S13.Size = new System.Drawing.Size(58, 31);
             this.S13.TabIndex = 254;
@@ -1482,10 +1515,11 @@
             // TM13
             // 
             this.TM13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM13.Enabled = false;
             this.TM13.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM13.Location = new System.Drawing.Point(532, 346);
             this.TM13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM13.MaxLength = 3;
+            this.TM13.MaxLength = 1;
             this.TM13.Name = "TM13";
             this.TM13.Size = new System.Drawing.Size(58, 31);
             this.TM13.TabIndex = 253;
@@ -1493,10 +1527,11 @@
             // S12
             // 
             this.S12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S12.Enabled = false;
             this.S12.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S12.Location = new System.Drawing.Point(586, 380);
             this.S12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S12.MaxLength = 1;
+            this.S12.MaxLength = 9;
             this.S12.Name = "S12";
             this.S12.Size = new System.Drawing.Size(58, 31);
             this.S12.TabIndex = 256;
@@ -1504,10 +1539,11 @@
             // TM12
             // 
             this.TM12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM12.Enabled = false;
             this.TM12.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM12.Location = new System.Drawing.Point(586, 346);
             this.TM12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM12.MaxLength = 3;
+            this.TM12.MaxLength = 1;
             this.TM12.Name = "TM12";
             this.TM12.Size = new System.Drawing.Size(58, 31);
             this.TM12.TabIndex = 255;
@@ -1515,10 +1551,11 @@
             // S11
             // 
             this.S11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S11.Enabled = false;
             this.S11.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S11.Location = new System.Drawing.Point(640, 380);
             this.S11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S11.MaxLength = 1;
+            this.S11.MaxLength = 9;
             this.S11.Name = "S11";
             this.S11.Size = new System.Drawing.Size(53, 31);
             this.S11.TabIndex = 258;
@@ -1526,10 +1563,11 @@
             // TM11
             // 
             this.TM11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM11.Enabled = false;
             this.TM11.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM11.Location = new System.Drawing.Point(640, 346);
             this.TM11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM11.MaxLength = 3;
+            this.TM11.MaxLength = 1;
             this.TM11.Name = "TM11";
             this.TM11.Size = new System.Drawing.Size(53, 31);
             this.TM11.TabIndex = 257;
@@ -1537,10 +1575,11 @@
             // S21
             // 
             this.S21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S21.Enabled = false;
             this.S21.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S21.Location = new System.Drawing.Point(698, 380);
             this.S21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S21.MaxLength = 1;
+            this.S21.MaxLength = 9;
             this.S21.Name = "S21";
             this.S21.Size = new System.Drawing.Size(52, 31);
             this.S21.TabIndex = 260;
@@ -1548,10 +1587,11 @@
             // TM21
             // 
             this.TM21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM21.Enabled = false;
             this.TM21.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM21.Location = new System.Drawing.Point(698, 346);
             this.TM21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM21.MaxLength = 3;
+            this.TM21.MaxLength = 1;
             this.TM21.Name = "TM21";
             this.TM21.Size = new System.Drawing.Size(52, 31);
             this.TM21.TabIndex = 259;
@@ -1559,10 +1599,11 @@
             // S28
             // 
             this.S28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S28.Enabled = false;
             this.S28.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S28.Location = new System.Drawing.Point(1083, 380);
             this.S28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S28.MaxLength = 1;
+            this.S28.MaxLength = 9;
             this.S28.Name = "S28";
             this.S28.Size = new System.Drawing.Size(58, 31);
             this.S28.TabIndex = 274;
@@ -1570,10 +1611,11 @@
             // TM28
             // 
             this.TM28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM28.Enabled = false;
             this.TM28.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM28.Location = new System.Drawing.Point(1083, 346);
             this.TM28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM28.MaxLength = 3;
+            this.TM28.MaxLength = 1;
             this.TM28.Name = "TM28";
             this.TM28.Size = new System.Drawing.Size(58, 31);
             this.TM28.TabIndex = 273;
@@ -1581,10 +1623,11 @@
             // S27
             // 
             this.S27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S27.Enabled = false;
             this.S27.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S27.Location = new System.Drawing.Point(1029, 380);
             this.S27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S27.MaxLength = 1;
+            this.S27.MaxLength = 9;
             this.S27.Name = "S27";
             this.S27.Size = new System.Drawing.Size(58, 31);
             this.S27.TabIndex = 272;
@@ -1592,10 +1635,11 @@
             // TM27
             // 
             this.TM27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM27.Enabled = false;
             this.TM27.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM27.Location = new System.Drawing.Point(1029, 346);
             this.TM27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM27.MaxLength = 3;
+            this.TM27.MaxLength = 1;
             this.TM27.Name = "TM27";
             this.TM27.Size = new System.Drawing.Size(58, 31);
             this.TM27.TabIndex = 271;
@@ -1603,10 +1647,11 @@
             // S26
             // 
             this.S26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S26.Enabled = false;
             this.S26.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S26.Location = new System.Drawing.Point(972, 380);
             this.S26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S26.MaxLength = 1;
+            this.S26.MaxLength = 9;
             this.S26.Name = "S26";
             this.S26.Size = new System.Drawing.Size(58, 31);
             this.S26.TabIndex = 270;
@@ -1614,10 +1659,11 @@
             // TM26
             // 
             this.TM26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM26.Enabled = false;
             this.TM26.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM26.Location = new System.Drawing.Point(972, 346);
             this.TM26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM26.MaxLength = 3;
+            this.TM26.MaxLength = 1;
             this.TM26.Name = "TM26";
             this.TM26.Size = new System.Drawing.Size(58, 31);
             this.TM26.TabIndex = 269;
@@ -1625,10 +1671,11 @@
             // S25
             // 
             this.S25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S25.Enabled = false;
             this.S25.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S25.Location = new System.Drawing.Point(915, 380);
             this.S25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S25.MaxLength = 1;
+            this.S25.MaxLength = 9;
             this.S25.Name = "S25";
             this.S25.Size = new System.Drawing.Size(58, 31);
             this.S25.TabIndex = 268;
@@ -1636,10 +1683,11 @@
             // TM25
             // 
             this.TM25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM25.Enabled = false;
             this.TM25.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM25.Location = new System.Drawing.Point(915, 346);
             this.TM25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM25.MaxLength = 3;
+            this.TM25.MaxLength = 1;
             this.TM25.Name = "TM25";
             this.TM25.Size = new System.Drawing.Size(58, 31);
             this.TM25.TabIndex = 267;
@@ -1647,10 +1695,11 @@
             // S24
             // 
             this.S24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S24.Enabled = false;
             this.S24.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S24.Location = new System.Drawing.Point(860, 380);
             this.S24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S24.MaxLength = 1;
+            this.S24.MaxLength = 9;
             this.S24.Name = "S24";
             this.S24.Size = new System.Drawing.Size(58, 31);
             this.S24.TabIndex = 266;
@@ -1658,10 +1707,11 @@
             // TM24
             // 
             this.TM24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM24.Enabled = false;
             this.TM24.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM24.Location = new System.Drawing.Point(860, 346);
             this.TM24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM24.MaxLength = 3;
+            this.TM24.MaxLength = 1;
             this.TM24.Name = "TM24";
             this.TM24.Size = new System.Drawing.Size(58, 31);
             this.TM24.TabIndex = 265;
@@ -1669,10 +1719,11 @@
             // S23
             // 
             this.S23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S23.Enabled = false;
             this.S23.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S23.Location = new System.Drawing.Point(804, 380);
             this.S23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S23.MaxLength = 1;
+            this.S23.MaxLength = 9;
             this.S23.Name = "S23";
             this.S23.Size = new System.Drawing.Size(58, 31);
             this.S23.TabIndex = 264;
@@ -1680,10 +1731,11 @@
             // TM23
             // 
             this.TM23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM23.Enabled = false;
             this.TM23.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM23.Location = new System.Drawing.Point(804, 346);
             this.TM23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM23.MaxLength = 3;
+            this.TM23.MaxLength = 1;
             this.TM23.Name = "TM23";
             this.TM23.Size = new System.Drawing.Size(58, 31);
             this.TM23.TabIndex = 263;
@@ -1691,10 +1743,11 @@
             // S22
             // 
             this.S22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S22.Enabled = false;
             this.S22.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S22.Location = new System.Drawing.Point(747, 380);
             this.S22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S22.MaxLength = 1;
+            this.S22.MaxLength = 9;
             this.S22.Name = "S22";
             this.S22.Size = new System.Drawing.Size(58, 31);
             this.S22.TabIndex = 262;
@@ -1702,10 +1755,11 @@
             // TM22
             // 
             this.TM22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM22.Enabled = false;
             this.TM22.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM22.Location = new System.Drawing.Point(747, 346);
             this.TM22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM22.MaxLength = 3;
+            this.TM22.MaxLength = 1;
             this.TM22.Name = "TM22";
             this.TM22.Size = new System.Drawing.Size(58, 31);
             this.TM22.TabIndex = 261;
@@ -1713,10 +1767,11 @@
             // S51
             // 
             this.S51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S51.Enabled = false;
             this.S51.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S51.Location = new System.Drawing.Point(639, 162);
             this.S51.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S51.MaxLength = 1;
+            this.S51.MaxLength = 9;
             this.S51.Name = "S51";
             this.S51.Size = new System.Drawing.Size(54, 31);
             this.S51.TabIndex = 284;
@@ -1724,10 +1779,11 @@
             // TM51
             // 
             this.TM51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM51.Enabled = false;
             this.TM51.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM51.Location = new System.Drawing.Point(639, 128);
             this.TM51.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM51.MaxLength = 3;
+            this.TM51.MaxLength = 1;
             this.TM51.Name = "TM51";
             this.TM51.Size = new System.Drawing.Size(54, 31);
             this.TM51.TabIndex = 283;
@@ -1735,10 +1791,11 @@
             // S52
             // 
             this.S52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S52.Enabled = false;
             this.S52.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S52.Location = new System.Drawing.Point(582, 162);
             this.S52.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S52.MaxLength = 1;
+            this.S52.MaxLength = 9;
             this.S52.Name = "S52";
             this.S52.Size = new System.Drawing.Size(58, 31);
             this.S52.TabIndex = 282;
@@ -1746,10 +1803,11 @@
             // TM52
             // 
             this.TM52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM52.Enabled = false;
             this.TM52.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM52.Location = new System.Drawing.Point(582, 128);
             this.TM52.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM52.MaxLength = 3;
+            this.TM52.MaxLength = 1;
             this.TM52.Name = "TM52";
             this.TM52.Size = new System.Drawing.Size(58, 31);
             this.TM52.TabIndex = 281;
@@ -1757,10 +1815,11 @@
             // S53
             // 
             this.S53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S53.Enabled = false;
             this.S53.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S53.Location = new System.Drawing.Point(526, 162);
             this.S53.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S53.MaxLength = 1;
+            this.S53.MaxLength = 9;
             this.S53.Name = "S53";
             this.S53.Size = new System.Drawing.Size(58, 31);
             this.S53.TabIndex = 280;
@@ -1768,10 +1827,11 @@
             // TM53
             // 
             this.TM53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM53.Enabled = false;
             this.TM53.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM53.Location = new System.Drawing.Point(526, 128);
             this.TM53.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM53.MaxLength = 3;
+            this.TM53.MaxLength = 1;
             this.TM53.Name = "TM53";
             this.TM53.Size = new System.Drawing.Size(58, 31);
             this.TM53.TabIndex = 279;
@@ -1779,10 +1839,11 @@
             // S54
             // 
             this.S54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S54.Enabled = false;
             this.S54.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S54.Location = new System.Drawing.Point(471, 162);
             this.S54.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S54.MaxLength = 1;
+            this.S54.MaxLength = 9;
             this.S54.Name = "S54";
             this.S54.Size = new System.Drawing.Size(58, 31);
             this.S54.TabIndex = 278;
@@ -1790,10 +1851,11 @@
             // TM54
             // 
             this.TM54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM54.Enabled = false;
             this.TM54.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM54.Location = new System.Drawing.Point(471, 128);
             this.TM54.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM54.MaxLength = 3;
+            this.TM54.MaxLength = 1;
             this.TM54.Name = "TM54";
             this.TM54.Size = new System.Drawing.Size(58, 31);
             this.TM54.TabIndex = 277;
@@ -1801,10 +1863,11 @@
             // S55
             // 
             this.S55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S55.Enabled = false;
             this.S55.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S55.Location = new System.Drawing.Point(414, 162);
             this.S55.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S55.MaxLength = 1;
+            this.S55.MaxLength = 9;
             this.S55.Name = "S55";
             this.S55.Size = new System.Drawing.Size(58, 31);
             this.S55.TabIndex = 276;
@@ -1812,10 +1875,11 @@
             // TM55
             // 
             this.TM55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM55.Enabled = false;
             this.TM55.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM55.Location = new System.Drawing.Point(414, 128);
             this.TM55.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM55.MaxLength = 3;
+            this.TM55.MaxLength = 1;
             this.TM55.Name = "TM55";
             this.TM55.Size = new System.Drawing.Size(58, 31);
             this.TM55.TabIndex = 275;
@@ -1836,10 +1900,11 @@
             // S61
             // 
             this.S61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S61.Enabled = false;
             this.S61.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S61.Location = new System.Drawing.Point(698, 162);
             this.S61.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S61.MaxLength = 1;
+            this.S61.MaxLength = 9;
             this.S61.Name = "S61";
             this.S61.Size = new System.Drawing.Size(54, 31);
             this.S61.TabIndex = 286;
@@ -1847,10 +1912,11 @@
             // TM61
             // 
             this.TM61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM61.Enabled = false;
             this.TM61.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM61.Location = new System.Drawing.Point(698, 128);
             this.TM61.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM61.MaxLength = 3;
+            this.TM61.MaxLength = 1;
             this.TM61.Name = "TM61";
             this.TM61.Size = new System.Drawing.Size(54, 31);
             this.TM61.TabIndex = 285;
@@ -1858,10 +1924,11 @@
             // S65
             // 
             this.S65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S65.Enabled = false;
             this.S65.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S65.Location = new System.Drawing.Point(918, 162);
             this.S65.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S65.MaxLength = 1;
+            this.S65.MaxLength = 9;
             this.S65.Name = "S65";
             this.S65.Size = new System.Drawing.Size(58, 31);
             this.S65.TabIndex = 294;
@@ -1869,10 +1936,11 @@
             // TM65
             // 
             this.TM65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM65.Enabled = false;
             this.TM65.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM65.Location = new System.Drawing.Point(918, 128);
             this.TM65.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM65.MaxLength = 3;
+            this.TM65.MaxLength = 1;
             this.TM65.Name = "TM65";
             this.TM65.Size = new System.Drawing.Size(58, 31);
             this.TM65.TabIndex = 293;
@@ -1880,10 +1948,11 @@
             // S64
             // 
             this.S64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S64.Enabled = false;
             this.S64.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S64.Location = new System.Drawing.Point(862, 162);
             this.S64.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S64.MaxLength = 1;
+            this.S64.MaxLength = 9;
             this.S64.Name = "S64";
             this.S64.Size = new System.Drawing.Size(58, 31);
             this.S64.TabIndex = 292;
@@ -1891,10 +1960,11 @@
             // TM64
             // 
             this.TM64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM64.Enabled = false;
             this.TM64.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM64.Location = new System.Drawing.Point(862, 128);
             this.TM64.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM64.MaxLength = 3;
+            this.TM64.MaxLength = 1;
             this.TM64.Name = "TM64";
             this.TM64.Size = new System.Drawing.Size(58, 31);
             this.TM64.TabIndex = 291;
@@ -1902,10 +1972,11 @@
             // S63
             // 
             this.S63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S63.Enabled = false;
             this.S63.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S63.Location = new System.Drawing.Point(807, 162);
             this.S63.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S63.MaxLength = 1;
+            this.S63.MaxLength = 9;
             this.S63.Name = "S63";
             this.S63.Size = new System.Drawing.Size(58, 31);
             this.S63.TabIndex = 290;
@@ -1913,10 +1984,11 @@
             // TM63
             // 
             this.TM63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM63.Enabled = false;
             this.TM63.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM63.Location = new System.Drawing.Point(807, 128);
             this.TM63.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM63.MaxLength = 3;
+            this.TM63.MaxLength = 1;
             this.TM63.Name = "TM63";
             this.TM63.Size = new System.Drawing.Size(58, 31);
             this.TM63.TabIndex = 289;
@@ -1924,10 +1996,11 @@
             // S62
             // 
             this.S62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S62.Enabled = false;
             this.S62.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S62.Location = new System.Drawing.Point(750, 162);
             this.S62.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S62.MaxLength = 1;
+            this.S62.MaxLength = 9;
             this.S62.Name = "S62";
             this.S62.Size = new System.Drawing.Size(58, 31);
             this.S62.TabIndex = 288;
@@ -1935,10 +2008,11 @@
             // TM62
             // 
             this.TM62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM62.Enabled = false;
             this.TM62.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM62.Location = new System.Drawing.Point(750, 128);
             this.TM62.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM62.MaxLength = 3;
+            this.TM62.MaxLength = 1;
             this.TM62.Name = "TM62";
             this.TM62.Size = new System.Drawing.Size(58, 31);
             this.TM62.TabIndex = 287;
@@ -1957,10 +2031,11 @@
             // S38
             // 
             this.S38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S38.Enabled = false;
             this.S38.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S38.Location = new System.Drawing.Point(1083, 683);
             this.S38.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S38.MaxLength = 1;
+            this.S38.MaxLength = 9;
             this.S38.Name = "S38";
             this.S38.Size = new System.Drawing.Size(58, 31);
             this.S38.TabIndex = 326;
@@ -1968,10 +2043,11 @@
             // TM38
             // 
             this.TM38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM38.Enabled = false;
             this.TM38.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM38.Location = new System.Drawing.Point(1083, 649);
             this.TM38.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM38.MaxLength = 3;
+            this.TM38.MaxLength = 1;
             this.TM38.Name = "TM38";
             this.TM38.Size = new System.Drawing.Size(58, 31);
             this.TM38.TabIndex = 325;
@@ -1979,10 +2055,11 @@
             // S37
             // 
             this.S37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S37.Enabled = false;
             this.S37.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S37.Location = new System.Drawing.Point(1029, 683);
             this.S37.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S37.MaxLength = 1;
+            this.S37.MaxLength = 9;
             this.S37.Name = "S37";
             this.S37.Size = new System.Drawing.Size(58, 31);
             this.S37.TabIndex = 324;
@@ -1990,10 +2067,11 @@
             // TM37
             // 
             this.TM37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM37.Enabled = false;
             this.TM37.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM37.Location = new System.Drawing.Point(1029, 649);
             this.TM37.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM37.MaxLength = 3;
+            this.TM37.MaxLength = 1;
             this.TM37.Name = "TM37";
             this.TM37.Size = new System.Drawing.Size(58, 31);
             this.TM37.TabIndex = 323;
@@ -2001,10 +2079,11 @@
             // S36
             // 
             this.S36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S36.Enabled = false;
             this.S36.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S36.Location = new System.Drawing.Point(972, 683);
             this.S36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S36.MaxLength = 1;
+            this.S36.MaxLength = 9;
             this.S36.Name = "S36";
             this.S36.Size = new System.Drawing.Size(58, 31);
             this.S36.TabIndex = 322;
@@ -2012,10 +2091,11 @@
             // TM36
             // 
             this.TM36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM36.Enabled = false;
             this.TM36.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM36.Location = new System.Drawing.Point(972, 649);
             this.TM36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM36.MaxLength = 3;
+            this.TM36.MaxLength = 1;
             this.TM36.Name = "TM36";
             this.TM36.Size = new System.Drawing.Size(58, 31);
             this.TM36.TabIndex = 321;
@@ -2023,10 +2103,11 @@
             // S35
             // 
             this.S35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S35.Enabled = false;
             this.S35.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S35.Location = new System.Drawing.Point(915, 683);
             this.S35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S35.MaxLength = 1;
+            this.S35.MaxLength = 9;
             this.S35.Name = "S35";
             this.S35.Size = new System.Drawing.Size(58, 31);
             this.S35.TabIndex = 320;
@@ -2034,10 +2115,11 @@
             // TM35
             // 
             this.TM35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM35.Enabled = false;
             this.TM35.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM35.Location = new System.Drawing.Point(915, 649);
             this.TM35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM35.MaxLength = 3;
+            this.TM35.MaxLength = 1;
             this.TM35.Name = "TM35";
             this.TM35.Size = new System.Drawing.Size(58, 31);
             this.TM35.TabIndex = 319;
@@ -2045,10 +2127,11 @@
             // S34
             // 
             this.S34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S34.Enabled = false;
             this.S34.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S34.Location = new System.Drawing.Point(860, 683);
             this.S34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S34.MaxLength = 1;
+            this.S34.MaxLength = 9;
             this.S34.Name = "S34";
             this.S34.Size = new System.Drawing.Size(58, 31);
             this.S34.TabIndex = 318;
@@ -2056,10 +2139,11 @@
             // TM34
             // 
             this.TM34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM34.Enabled = false;
             this.TM34.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM34.Location = new System.Drawing.Point(860, 649);
             this.TM34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM34.MaxLength = 3;
+            this.TM34.MaxLength = 1;
             this.TM34.Name = "TM34";
             this.TM34.Size = new System.Drawing.Size(58, 31);
             this.TM34.TabIndex = 317;
@@ -2067,10 +2151,11 @@
             // S33
             // 
             this.S33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S33.Enabled = false;
             this.S33.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S33.Location = new System.Drawing.Point(804, 683);
             this.S33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S33.MaxLength = 1;
+            this.S33.MaxLength = 9;
             this.S33.Name = "S33";
             this.S33.Size = new System.Drawing.Size(58, 31);
             this.S33.TabIndex = 316;
@@ -2078,10 +2163,11 @@
             // TM33
             // 
             this.TM33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM33.Enabled = false;
             this.TM33.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM33.Location = new System.Drawing.Point(804, 649);
             this.TM33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM33.MaxLength = 3;
+            this.TM33.MaxLength = 1;
             this.TM33.Name = "TM33";
             this.TM33.Size = new System.Drawing.Size(58, 31);
             this.TM33.TabIndex = 315;
@@ -2089,10 +2175,11 @@
             // S32
             // 
             this.S32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S32.Enabled = false;
             this.S32.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S32.Location = new System.Drawing.Point(747, 683);
             this.S32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S32.MaxLength = 1;
+            this.S32.MaxLength = 9;
             this.S32.Name = "S32";
             this.S32.Size = new System.Drawing.Size(58, 31);
             this.S32.TabIndex = 314;
@@ -2100,10 +2187,11 @@
             // TM32
             // 
             this.TM32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM32.Enabled = false;
             this.TM32.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM32.Location = new System.Drawing.Point(747, 649);
             this.TM32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM32.MaxLength = 3;
+            this.TM32.MaxLength = 1;
             this.TM32.Name = "TM32";
             this.TM32.Size = new System.Drawing.Size(58, 31);
             this.TM32.TabIndex = 313;
@@ -2111,10 +2199,11 @@
             // S31
             // 
             this.S31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S31.Enabled = false;
             this.S31.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S31.Location = new System.Drawing.Point(698, 683);
             this.S31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S31.MaxLength = 1;
+            this.S31.MaxLength = 9;
             this.S31.Name = "S31";
             this.S31.Size = new System.Drawing.Size(52, 31);
             this.S31.TabIndex = 312;
@@ -2122,10 +2211,11 @@
             // TM31
             // 
             this.TM31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM31.Enabled = false;
             this.TM31.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM31.Location = new System.Drawing.Point(698, 649);
             this.TM31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM31.MaxLength = 3;
+            this.TM31.MaxLength = 1;
             this.TM31.Name = "TM31";
             this.TM31.Size = new System.Drawing.Size(52, 31);
             this.TM31.TabIndex = 311;
@@ -2133,10 +2223,11 @@
             // S41
             // 
             this.S41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S41.Enabled = false;
             this.S41.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S41.Location = new System.Drawing.Point(640, 683);
             this.S41.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S41.MaxLength = 1;
+            this.S41.MaxLength = 9;
             this.S41.Name = "S41";
             this.S41.Size = new System.Drawing.Size(53, 31);
             this.S41.TabIndex = 310;
@@ -2144,10 +2235,11 @@
             // TM41
             // 
             this.TM41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM41.Enabled = false;
             this.TM41.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM41.Location = new System.Drawing.Point(640, 649);
             this.TM41.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM41.MaxLength = 3;
+            this.TM41.MaxLength = 1;
             this.TM41.Name = "TM41";
             this.TM41.Size = new System.Drawing.Size(53, 31);
             this.TM41.TabIndex = 309;
@@ -2155,10 +2247,11 @@
             // S42
             // 
             this.S42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S42.Enabled = false;
             this.S42.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S42.Location = new System.Drawing.Point(586, 683);
             this.S42.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S42.MaxLength = 1;
+            this.S42.MaxLength = 9;
             this.S42.Name = "S42";
             this.S42.Size = new System.Drawing.Size(58, 31);
             this.S42.TabIndex = 308;
@@ -2166,10 +2259,11 @@
             // TM42
             // 
             this.TM42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM42.Enabled = false;
             this.TM42.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM42.Location = new System.Drawing.Point(586, 649);
             this.TM42.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM42.MaxLength = 3;
+            this.TM42.MaxLength = 1;
             this.TM42.Name = "TM42";
             this.TM42.Size = new System.Drawing.Size(58, 31);
             this.TM42.TabIndex = 307;
@@ -2177,10 +2271,11 @@
             // S43
             // 
             this.S43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S43.Enabled = false;
             this.S43.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S43.Location = new System.Drawing.Point(532, 683);
             this.S43.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S43.MaxLength = 1;
+            this.S43.MaxLength = 9;
             this.S43.Name = "S43";
             this.S43.Size = new System.Drawing.Size(58, 31);
             this.S43.TabIndex = 306;
@@ -2188,10 +2283,11 @@
             // TM43
             // 
             this.TM43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM43.Enabled = false;
             this.TM43.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM43.Location = new System.Drawing.Point(532, 649);
             this.TM43.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM43.MaxLength = 3;
+            this.TM43.MaxLength = 1;
             this.TM43.Name = "TM43";
             this.TM43.Size = new System.Drawing.Size(58, 31);
             this.TM43.TabIndex = 305;
@@ -2199,10 +2295,11 @@
             // S44
             // 
             this.S44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S44.Enabled = false;
             this.S44.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S44.Location = new System.Drawing.Point(476, 683);
             this.S44.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S44.MaxLength = 1;
+            this.S44.MaxLength = 9;
             this.S44.Name = "S44";
             this.S44.Size = new System.Drawing.Size(58, 31);
             this.S44.TabIndex = 304;
@@ -2210,10 +2307,11 @@
             // TM44
             // 
             this.TM44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM44.Enabled = false;
             this.TM44.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM44.Location = new System.Drawing.Point(476, 649);
             this.TM44.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM44.MaxLength = 3;
+            this.TM44.MaxLength = 1;
             this.TM44.Name = "TM44";
             this.TM44.Size = new System.Drawing.Size(58, 31);
             this.TM44.TabIndex = 303;
@@ -2221,10 +2319,11 @@
             // S45
             // 
             this.S45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S45.Enabled = false;
             this.S45.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S45.Location = new System.Drawing.Point(418, 683);
             this.S45.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S45.MaxLength = 1;
+            this.S45.MaxLength = 9;
             this.S45.Name = "S45";
             this.S45.Size = new System.Drawing.Size(58, 31);
             this.S45.TabIndex = 302;
@@ -2232,10 +2331,11 @@
             // TM45
             // 
             this.TM45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM45.Enabled = false;
             this.TM45.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM45.Location = new System.Drawing.Point(418, 649);
             this.TM45.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM45.MaxLength = 3;
+            this.TM45.MaxLength = 1;
             this.TM45.Name = "TM45";
             this.TM45.Size = new System.Drawing.Size(58, 31);
             this.TM45.TabIndex = 301;
@@ -2243,10 +2343,11 @@
             // S46
             // 
             this.S46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S46.Enabled = false;
             this.S46.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S46.Location = new System.Drawing.Point(363, 683);
             this.S46.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S46.MaxLength = 1;
+            this.S46.MaxLength = 9;
             this.S46.Name = "S46";
             this.S46.Size = new System.Drawing.Size(58, 31);
             this.S46.TabIndex = 300;
@@ -2254,10 +2355,11 @@
             // TM46
             // 
             this.TM46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM46.Enabled = false;
             this.TM46.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM46.Location = new System.Drawing.Point(363, 649);
             this.TM46.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM46.MaxLength = 3;
+            this.TM46.MaxLength = 1;
             this.TM46.Name = "TM46";
             this.TM46.Size = new System.Drawing.Size(58, 31);
             this.TM46.TabIndex = 299;
@@ -2265,10 +2367,11 @@
             // S47
             // 
             this.S47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S47.Enabled = false;
             this.S47.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S47.Location = new System.Drawing.Point(308, 683);
             this.S47.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S47.MaxLength = 1;
+            this.S47.MaxLength = 9;
             this.S47.Name = "S47";
             this.S47.Size = new System.Drawing.Size(58, 31);
             this.S47.TabIndex = 298;
@@ -2276,10 +2379,11 @@
             // TM47
             // 
             this.TM47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM47.Enabled = false;
             this.TM47.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM47.Location = new System.Drawing.Point(308, 649);
             this.TM47.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM47.MaxLength = 3;
+            this.TM47.MaxLength = 1;
             this.TM47.Name = "TM47";
             this.TM47.Size = new System.Drawing.Size(58, 31);
             this.TM47.TabIndex = 297;
@@ -2287,10 +2391,11 @@
             // S48
             // 
             this.S48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.S48.Enabled = false;
             this.S48.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S48.Location = new System.Drawing.Point(250, 683);
             this.S48.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.S48.MaxLength = 1;
+            this.S48.MaxLength = 9;
             this.S48.Name = "S48";
             this.S48.Size = new System.Drawing.Size(58, 31);
             this.S48.TabIndex = 296;
@@ -2298,10 +2403,11 @@
             // TM48
             // 
             this.TM48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TM48.Enabled = false;
             this.TM48.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TM48.Location = new System.Drawing.Point(250, 649);
             this.TM48.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TM48.MaxLength = 3;
+            this.TM48.MaxLength = 1;
             this.TM48.Name = "TM48";
             this.TM48.Size = new System.Drawing.Size(58, 31);
             this.TM48.TabIndex = 295;
@@ -2310,12 +2416,35 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1190, 394);
+            this.label10.Location = new System.Drawing.Point(1190, 363);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(262, 273);
             this.label10.TabIndex = 327;
             this.label10.Text = resources.GetString("label10.Text");
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Inter SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1190, 739);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(340, 21);
+            this.label11.TabIndex = 329;
+            this.label11.Text = "Tooth Marked (for upper textbox only)";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(1190, 762);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(160, 126);
+            this.label12.TabIndex = 328;
+            this.label12.Text = "1 - Top Tooth\r\n2 - Left Tooth\r\n3 - Right Tooth\r\n4 - Bottom Tooth\r\n5 - Center Toot" +
+    "h\r\n6 - Full Tooth";
             // 
             // DentalRecord
             // 
@@ -2323,6 +2452,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1534, 911);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.S38);
             this.Controls.Add(this.TM38);
@@ -2750,5 +2881,7 @@
         private System.Windows.Forms.TextBox TM48;
         private System.Windows.Forms.Button editDentalRecBtn;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }

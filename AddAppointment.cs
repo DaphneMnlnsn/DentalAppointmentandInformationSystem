@@ -139,202 +139,294 @@ namespace DentalAppointmentandInformationSystem
                 + endTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime)";
             SqlCommand compareCmd = new SqlCommand(compareQuery, constring);
             int userCount = (int)compareCmd.ExecuteScalar();
+            string patientExistingQuery = "SELECT COUNT(*) FROM Patient WHERE patient_lname = '" + lnameTxtBox.Text +
+                "' AND patient_mname = '" + mnameTxtBox.Text +
+                "' AND patient_fname = '" + fnameTxtBox.Text + "'";
+            SqlCommand patientExisting = new SqlCommand(patientExistingQuery, constring);
+            int patientExists = (int)patientExisting.ExecuteScalar();
             constring.Close();
 
-            if (!string.IsNullOrWhiteSpace(fnameTxtBox.Text) && !string.IsNullOrWhiteSpace(lnameTxtBox.Text) &&
-                !string.IsNullOrWhiteSpace(ageTxtBox.Text) && !string.IsNullOrWhiteSpace(phoneTxtBox.Text) &&
-                !string.IsNullOrWhiteSpace(addressTxtBox.Text) && !string.IsNullOrWhiteSpace(contactPrsnTxtBox.Text) &&
-                !string.IsNullOrWhiteSpace(cpersonNumTxtBox.Text) && !string.IsNullOrWhiteSpace(service1Combo.Text) &&
-                !string.IsNullOrWhiteSpace(staff1Combo.Text))
+            if (patientExists <= 0)
             {
-                if (addressRegex.IsMatch(emailTxtBox.Text) != true && !string.IsNullOrWhiteSpace(emailTxtBox.Text))
+                if (!string.IsNullOrWhiteSpace(fnameTxtBox.Text) && !string.IsNullOrWhiteSpace(lnameTxtBox.Text) &&
+                    !string.IsNullOrWhiteSpace(ageTxtBox.Text) && !string.IsNullOrWhiteSpace(phoneTxtBox.Text) &&
+                    !string.IsNullOrWhiteSpace(addressTxtBox.Text) && !string.IsNullOrWhiteSpace(contactPrsnTxtBox.Text) &&
+                    !string.IsNullOrWhiteSpace(cpersonNumTxtBox.Text) && !string.IsNullOrWhiteSpace(service1Combo.Text) &&
+                    !string.IsNullOrWhiteSpace(staff1Combo.Text))
                 {
-                    MessageBox.Show("Invalid Email Address!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    emailTxtBox.Focus();
-                }
-                else
-                {
-                    if (userCount <= 0)
+                    if (addressRegex.IsMatch(emailTxtBox.Text) != true && !string.IsNullOrWhiteSpace(emailTxtBox.Text))
                     {
-                        string gender = genderCombo.Items[genderCombo.SelectedIndex].ToString();
-                        int patientID = 0;
-                        int appointmentID = 0;
-                        string service2, service3, staff2, staff3;
-                        constring.Open();
-                        SqlCommand cmd = new SqlCommand("SELECT TOP 1 patient_id FROM Patient ORDER BY patient_id DESC", constring);
-                        SqlDataReader reader1;
-                        reader1 = cmd.ExecuteReader();
-                        if (reader1.Read())
-                        {
-                            patientID = reader1.GetInt32(0) + 1;
-                        }
-                        else
-                        {
-                            MessageBox.Show("NO DATA FOUND");
-                        }
-                        reader1.Close();
-                        cmd.Dispose();
-
-                        string query = "INSERT INTO Patient VALUES('" + patientID + "','" + lnameTxtBox.Text + "','"
-                            + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + ageTxtBox.Text + "','" + gender
-                            + "','" + birthDate.Text + "','" + phoneTxtBox.Text + "','" + emailTxtBox.Text + "','"
-                            + addressTxtBox.Text + "','" + contactPrsnTxtBox.Text + "','" + cpersonNumTxtBox.Text + "','"
-                            + patientNotesTxtBox.Text + "','','','','',1)";
-
-                        SqlCommand cmd2 = new SqlCommand(query, constring);
-                        cmd2.CommandText = query;
-                        if (cmd2.ExecuteNonQuery() == 1)
-                        {
-                        }
-                        else
-                        {
-                            MessageBox.Show("Something went wrong. Please try again.");
-                        }
-
-                        SqlCommand command = new SqlCommand("SELECT TOP 1 appointment_id FROM Appointment ORDER BY appointment_id DESC", constring);
-                        SqlDataReader read;
-                        read = command.ExecuteReader();
-                        if (read.Read())
-                        {
-                            appointmentID = read.GetInt32(0) + 1;
-                        }
-                        else
-                        {
-                            MessageBox.Show("NO DATA FOUND");
-                        }
-                        read.Close();
-                        if (service2Combo.Text == null || service2Combo.Text == "")
-                        {
-                            service2 = "NULL";
-                        }
-                        else
-                        {
-                            service2 = service2Combo.SelectedValue.ToString();
-                        }
-
-                        if (service3Combo.Text == null || service3Combo.Text == "")
-                        {
-                            service3 = "NULL";
-                        }
-                        else
-                        {
-                            service3 = service2Combo.SelectedValue.ToString();
-                        }
-                        if (staff2Combo.Text == null || staff2Combo.Text == "")
-                        {
-                            staff2 = "NULL";
-                        }
-                        else
-                        {
-                            staff2 = staff2Combo.SelectedValue.ToString();
-                        }
-
-                        if (staff3Combo.Text == null || staff3Combo.Text == "")
-                        {
-                            staff3 = "NULL";
-                        }
-                        else
-                        {
-                            staff3 = staff3Combo.SelectedValue.ToString();
-                        }
-                        string query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + patientID + "','"
-                            + service1Combo.SelectedValue + "'," + service2 + "," + service3 + ",'" + appntmntDate.Text
-                            + "','" + startTime.Text + "','" + endTime.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "',1)";
-
-                        SqlCommand cmd3 = new SqlCommand(query2, constring);
-                        cmd3.CommandText = query2;
-                        if (cmd3.ExecuteNonQuery() == 1)
-                        {
-                            MessageBox.Show("Appointment Created!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Something went wrong. Please try again.");
-                        }
-
-                        int recordID = 0;
-                        SqlCommand com = new SqlCommand("SELECT TOP 1 record_id FROM Record ORDER BY record_id DESC", constring);
-                        SqlDataReader re;
-                        re = com.ExecuteReader();
-                        if (re.Read())
-                        {
-                            recordID = re.GetInt32(0) + 1;
-                        }
-                        else
-                        {
-                            MessageBox.Show("NO DATA FOUND");
-                        }
-                        re.Close();
-
-                        string sql3 = "SELECT * FROM Appointment WHERE patient_id = " + patientID + " AND appointment_id = " + appointmentID;
-                        DataTable apps = new DataTable("appointments");
-                        SqlDataAdapter da3 = new SqlDataAdapter(sql3, constring);
-                        da3.Fill(apps);
-
-                        string recordsDate = "";
-                        float recordsPrice = 0;
-                        foreach (DataRow row3 in apps.Rows)
-                        {
-                            recordsDate += DateTime.Parse(row3["appointment_date"].ToString()).ToString("MM/dd/yyyy");
-
-                            SqlCommand retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id"].ToString() + "'", constring);
-                            SqlDataReader readService;
-                            readService = retrieveService.ExecuteReader();
-                            if (readService.Read())
-                            {
-                                recordsPrice += float.Parse(readService["service_price"].ToString());
-                            }
-                            readService.Close();
-                            if (!string.IsNullOrEmpty(row3["service_id2"].ToString()))
-                            {
-                                SqlCommand retrieveService2 = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id2"].ToString() + "'", constring);
-                                SqlDataReader readService2;
-                                readService2 = retrieveService2.ExecuteReader();
-                                if (readService2.Read())
-                                {
-                                    recordsPrice += float.Parse(readService2["service_price"].ToString());
-                                }
-                                readService2.Close();
-                            }
-                            if (!string.IsNullOrEmpty(row3["service_id3"].ToString()))
-                            {
-                                SqlCommand retrieveService3 = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id3"].ToString() + "'", constring);
-                                SqlDataReader readService3;
-                                readService3 = retrieveService3.ExecuteReader();
-                                if (readService3.Read())
-                                {
-                                    recordsPrice += float.Parse(readService3["service_price"].ToString());
-                                }
-                                readService3.Close();
-                            }
-                        }
-                        string query3 = "INSERT INTO Record VALUES('" + recordID + "','" + patientID + "','"
-                            + service1Combo.Text + " " + service2Combo.Text + " " + service3Combo.Text + "','" + appointmentID
-                            + "','0','" + recordsPrice + "',1);";
-
-                        SqlCommand cmd4 = new SqlCommand(query3, constring);
-                        cmd4.CommandText = query3;
-                        if (cmd4.ExecuteNonQuery() == 1)
-                        {
-                            constring.Close();
-                            Calendar clndr = new Calendar();
-                            clndr.Show();
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Something went wrong. Please try again.");
-                        }
+                        MessageBox.Show("Invalid Email Address!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        emailTxtBox.Focus();
                     }
                     else
                     {
-                        MessageBox.Show("This appointment schedule is taken! Please select another date or time.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        if (userCount <= 0)
+                        {
+                            string gender = genderCombo.Items[genderCombo.SelectedIndex].ToString();
+                            int patientID = 0, quadrant1 = 0, quadrant2 = 0, quadrant3 = 0, quadrant4 = 0;
+                            int appointmentID = 0;
+                            string service2, service3, staff2, staff3;
+                            constring.Open();
+
+                            //Quadrant 1 Num Creation
+                            SqlCommand createQuadrant1 = new SqlCommand("SELECT TOP 1 quadrant1_num FROM Quadrant1 ORDER BY quadrant1_num DESC", constring);
+                            SqlDataReader quadrant1Reader;
+                            quadrant1Reader = createQuadrant1.ExecuteReader();
+                            if (quadrant1Reader.Read())
+                            {
+                                quadrant1 = quadrant1Reader.GetInt32(0) + 1;
+                            }
+                            else
+                            {
+                                MessageBox.Show("NO DATA FOUND");
+                            }
+                            quadrant1Reader.Close();
+                            createQuadrant1.Dispose();
+
+                            string quadrant1Query = "INSERT INTO Quadrant1(quadrant1_num,status) VALUES('" + quadrant1 + "',1)";
+
+                            SqlCommand quadrant1Cmd = new SqlCommand(quadrant1Query, constring);
+                            quadrant1Cmd.CommandText = quadrant1Query;
+                            quadrant1Cmd.ExecuteNonQuery();
+
+                            //Quadrant 2 Num Creation
+                            SqlCommand createQuadrant2 = new SqlCommand("SELECT TOP 1 quadrant2_num FROM Quadrant2 ORDER BY quadrant2_num DESC", constring);
+                            SqlDataReader quadrant2Reader;
+                            quadrant2Reader = createQuadrant2.ExecuteReader();
+                            if (quadrant2Reader.Read())
+                            {
+                                quadrant2 = quadrant2Reader.GetInt32(0) + 1;
+                            }
+                            else
+                            {
+                                MessageBox.Show("NO DATA FOUND");
+                            }
+                            quadrant2Reader.Close();
+                            createQuadrant2.Dispose();
+
+                            string quadrant2Query = "INSERT INTO Quadrant2(quadrant2_num,status) VALUES('" + quadrant2 + "',1)";
+
+                            SqlCommand quadrant2Cmd = new SqlCommand(quadrant2Query, constring);
+                            quadrant2Cmd.CommandText = quadrant2Query;
+                            quadrant2Cmd.ExecuteNonQuery();
+
+                            //Quadrant 3 Num Creation
+                            SqlCommand createQuadrant3 = new SqlCommand("SELECT TOP 1 quadrant3_num FROM Quadrant3 ORDER BY quadrant3_num DESC", constring);
+                            SqlDataReader quadrant3Reader;
+                            quadrant3Reader = createQuadrant3.ExecuteReader();
+                            if (quadrant3Reader.Read())
+                            {
+                                quadrant3 = quadrant3Reader.GetInt32(0) + 1;
+                            }
+                            else
+                            {
+                                MessageBox.Show("NO DATA FOUND");
+                            }
+                            quadrant3Reader.Close();
+                            createQuadrant3.Dispose();
+
+                            string quadrant3Query = "INSERT INTO Quadrant3(quadrant3_num,status) VALUES('" + quadrant3 + "',1)";
+
+                            SqlCommand quadrant3Cmd = new SqlCommand(quadrant3Query, constring);
+                            quadrant3Cmd.CommandText = quadrant3Query;
+                            quadrant3Cmd.ExecuteNonQuery();
+
+                            //Quadrant 4 Num Creation
+                            SqlCommand createQuadrant4 = new SqlCommand("SELECT TOP 1 quadrant4_num FROM Quadrant4 ORDER BY quadrant4_num DESC", constring);
+                            SqlDataReader quadrant4Reader;
+                            quadrant4Reader = createQuadrant4.ExecuteReader();
+                            if (quadrant4Reader.Read())
+                            {
+                                quadrant4 = quadrant4Reader.GetInt32(0) + 1;
+                            }
+                            else
+                            {
+                                MessageBox.Show("NO DATA FOUND");
+                            }
+                            quadrant4Reader.Close();
+                            createQuadrant4.Dispose();
+
+                            string quadrant4Query = "INSERT INTO Quadrant4(quadrant4_num,status) VALUES('" + quadrant4 + "',1)";
+
+                            SqlCommand quadrant4Cmd = new SqlCommand(quadrant4Query, constring);
+                            quadrant4Cmd.CommandText = quadrant4Query;
+                            quadrant4Cmd.ExecuteNonQuery();
+
+                            //Creation of Patient Record
+                            SqlCommand cmd = new SqlCommand("SELECT TOP 1 patient_id FROM Patient ORDER BY patient_id DESC", constring);
+                            SqlDataReader reader1;
+                            reader1 = cmd.ExecuteReader();
+                            if (reader1.Read())
+                            {
+                                patientID = reader1.GetInt32(0) + 1;
+                            }
+                            else
+                            {
+                                MessageBox.Show("NO DATA FOUND");
+                            }
+                            reader1.Close();
+                            cmd.Dispose();
+
+                            string query = "INSERT INTO Patient VALUES('" + patientID + "','" + lnameTxtBox.Text + "','"
+                                + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + ageTxtBox.Text + "','" + gender
+                                + "','" + birthDate.Text + "','" + phoneTxtBox.Text + "','" + emailTxtBox.Text + "','"
+                                + addressTxtBox.Text + "','" + contactPrsnTxtBox.Text + "','" + cpersonNumTxtBox.Text + "','"
+                                + patientNotesTxtBox.Text + "','" + quadrant1 + "','" + quadrant2 + "','" + quadrant3 + "','" + quadrant4+ "',1)";
+
+                            SqlCommand cmd2 = new SqlCommand(query, constring);
+                            cmd2.CommandText = query;
+                            cmd2.ExecuteNonQuery();
+
+                            SqlCommand command = new SqlCommand("SELECT TOP 1 appointment_id FROM Appointment ORDER BY appointment_id DESC", constring);
+                            SqlDataReader read;
+                            read = command.ExecuteReader();
+                            if (read.Read())
+                            {
+                                appointmentID = read.GetInt32(0) + 1;
+                            }
+                            else
+                            {
+                                MessageBox.Show("NO DATA FOUND");
+                            }
+                            read.Close();
+                            if (service2Combo.Text == null || service2Combo.Text == "")
+                            {
+                                service2 = "NULL";
+                            }
+                            else
+                            {
+                                service2 = service2Combo.SelectedValue.ToString();
+                            }
+
+                            if (service3Combo.Text == null || service3Combo.Text == "")
+                            {
+                                service3 = "NULL";
+                            }
+                            else
+                            {
+                                service3 = service2Combo.SelectedValue.ToString();
+                            }
+                            if (staff2Combo.Text == null || staff2Combo.Text == "")
+                            {
+                                staff2 = "NULL";
+                            }
+                            else
+                            {
+                                staff2 = staff2Combo.SelectedValue.ToString();
+                            }
+
+                            if (staff3Combo.Text == null || staff3Combo.Text == "")
+                            {
+                                staff3 = "NULL";
+                            }
+                            else
+                            {
+                                staff3 = staff3Combo.SelectedValue.ToString();
+                            }
+                            string query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + patientID + "','"
+                                + service1Combo.SelectedValue + "'," + service2 + "," + service3 + ",'" + appntmntDate.Text
+                                + "','" + startTime.Text + "','" + endTime.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "',1)";
+
+                            SqlCommand cmd3 = new SqlCommand(query2, constring);
+                            cmd3.CommandText = query2;
+                            if (cmd3.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Appointment Created!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Something went wrong. Please try again.");
+                            }
+
+                            int recordID = 0;
+                            SqlCommand com = new SqlCommand("SELECT TOP 1 record_id FROM Record ORDER BY record_id DESC", constring);
+                            SqlDataReader re;
+                            re = com.ExecuteReader();
+                            if (re.Read())
+                            {
+                                recordID = re.GetInt32(0) + 1;
+                            }
+                            else
+                            {
+                                MessageBox.Show("NO DATA FOUND");
+                            }
+                            re.Close();
+
+                            string sql3 = "SELECT * FROM Appointment WHERE patient_id = " + patientID + " AND appointment_id = " + appointmentID;
+                            DataTable apps = new DataTable("appointments");
+                            SqlDataAdapter da3 = new SqlDataAdapter(sql3, constring);
+                            da3.Fill(apps);
+
+                            string recordsDate = "";
+                            float recordsPrice = 0;
+                            foreach (DataRow row3 in apps.Rows)
+                            {
+                                recordsDate += DateTime.Parse(row3["appointment_date"].ToString()).ToString("MM/dd/yyyy");
+
+                                SqlCommand retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id"].ToString() + "'", constring);
+                                SqlDataReader readService;
+                                readService = retrieveService.ExecuteReader();
+                                if (readService.Read())
+                                {
+                                    recordsPrice += float.Parse(readService["service_price"].ToString());
+                                }
+                                readService.Close();
+                                if (!string.IsNullOrEmpty(row3["service_id2"].ToString()))
+                                {
+                                    SqlCommand retrieveService2 = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id2"].ToString() + "'", constring);
+                                    SqlDataReader readService2;
+                                    readService2 = retrieveService2.ExecuteReader();
+                                    if (readService2.Read())
+                                    {
+                                        recordsPrice += float.Parse(readService2["service_price"].ToString());
+                                    }
+                                    readService2.Close();
+                                }
+                                if (!string.IsNullOrEmpty(row3["service_id3"].ToString()))
+                                {
+                                    SqlCommand retrieveService3 = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + row3["service_id3"].ToString() + "'", constring);
+                                    SqlDataReader readService3;
+                                    readService3 = retrieveService3.ExecuteReader();
+                                    if (readService3.Read())
+                                    {
+                                        recordsPrice += float.Parse(readService3["service_price"].ToString());
+                                    }
+                                    readService3.Close();
+                                }
+                            }
+                            string query3 = "INSERT INTO Record VALUES('" + recordID + "','" + patientID + "','"
+                                + service1Combo.Text + " " + service2Combo.Text + " " + service3Combo.Text + "','" + appointmentID
+                                + "','0','" + recordsPrice + "',1);";
+
+                            SqlCommand cmd4 = new SqlCommand(query3, constring);
+                            cmd4.CommandText = query3;
+                            if (cmd4.ExecuteNonQuery() == 1)
+                            {
+                                constring.Close();
+                                Calendar clndr = new Calendar();
+                                clndr.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Something went wrong. Please try again.");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("This appointment schedule is taken! Please select another date or time.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Please fill out all required fields!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Please fill out all required fields!","Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("This patient already has a record in the system!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
         }
