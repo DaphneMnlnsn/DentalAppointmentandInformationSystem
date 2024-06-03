@@ -55,7 +55,7 @@ namespace DentalAppointmentandInformationSystem
                     MessageBox.Show("Appointment deleted permanently!");
                     Calendar clndr = new Calendar();
                     clndr.Show();
-                    this.Hide();
+                    this.ParentForm.Hide();
                 }
                 else
                 {
@@ -84,7 +84,7 @@ namespace DentalAppointmentandInformationSystem
                     MessageBox.Show("Appointment restored successfully!");
                     Calendar clndr = new Calendar();
                     clndr.Show();
-                    this.Hide();
+                    this.ParentForm.Hide();
                 }
                 else
                 {

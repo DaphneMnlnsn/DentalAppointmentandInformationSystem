@@ -210,6 +210,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.backBtn = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
@@ -271,6 +272,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.t54)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // dshbrdLbl
@@ -280,7 +282,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dshbrdLbl.AutoSize = true;
             this.dshbrdLbl.Font = new System.Drawing.Font("Metrophobic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dshbrdLbl.Location = new System.Drawing.Point(194, 22);
+            this.dshbrdLbl.Location = new System.Drawing.Point(253, 22);
             this.dshbrdLbl.Name = "dshbrdLbl";
             this.dshbrdLbl.Size = new System.Drawing.Size(387, 50);
             this.dshbrdLbl.TabIndex = 5;
@@ -290,6 +292,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.panel2.Controls.Add(this.backBtn);
             this.panel2.Controls.Add(this.editDentalRecBtn);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.doctorPic);
@@ -2446,6 +2449,19 @@
             this.label12.Text = "1 - Top Tooth\r\n2 - Left Tooth\r\n3 - Right Tooth\r\n4 - Bottom Tooth\r\n5 - Center Toot" +
     "h\r\n6 - Full Tooth";
             // 
+            // backBtn
+            // 
+            this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.backBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.back;
+            this.backBtn.Location = new System.Drawing.Point(182, 22);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(56, 55);
+            this.backBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backBtn.TabIndex = 328;
+            this.backBtn.TabStop = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // DentalRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2696,6 +2712,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.t54)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t55)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2883,5 +2900,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox backBtn;
     }
 }

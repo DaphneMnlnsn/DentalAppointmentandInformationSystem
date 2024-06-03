@@ -37,7 +37,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.doctorPic = new System.Windows.Forms.PictureBox();
             this.dshbrdLbl = new System.Windows.Forms.Label();
-            this.newPtntBtn = new System.Windows.Forms.Button();
             this.staffContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -141,7 +140,6 @@
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.doctorPic);
             this.panel2.Controls.Add(this.dshbrdLbl);
-            this.panel2.Controls.Add(this.newPtntBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -184,23 +182,6 @@
             this.dshbrdLbl.Text = "List of Patients";
             this.dshbrdLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // newPtntBtn
-            // 
-            this.newPtntBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.newPtntBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.newPtntBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newPtntBtn.Font = new System.Drawing.Font("Inter Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newPtntBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.newPtntBtn.Location = new System.Drawing.Point(1163, 26);
-            this.newPtntBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.newPtntBtn.Name = "newPtntBtn";
-            this.newPtntBtn.Size = new System.Drawing.Size(224, 48);
-            this.newPtntBtn.TabIndex = 1;
-            this.newPtntBtn.Text = "+ New Patient";
-            this.newPtntBtn.UseVisualStyleBackColor = false;
-            this.newPtntBtn.Click += new System.EventHandler(this.newPtntBtn_Click);
-            // 
             // staffContainer
             // 
             this.staffContainer.AutoScroll = true;
@@ -220,7 +201,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.patient_id, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
@@ -241,7 +222,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(327, 29);
+            this.label1.Location = new System.Drawing.Point(326, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 31);
             this.label1.TabIndex = 80;
@@ -265,7 +246,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(691, 29);
+            this.label2.Location = new System.Drawing.Point(690, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 31);
             this.label2.TabIndex = 78;
@@ -277,7 +258,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(799, 29);
+            this.label3.Location = new System.Drawing.Point(798, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 31);
             this.label3.TabIndex = 79;
@@ -289,7 +270,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(1167, 29);
+            this.label5.Location = new System.Drawing.Point(1166, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 31);
             this.label5.TabIndex = 82;
@@ -301,7 +282,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(966, 29);
+            this.label4.Location = new System.Drawing.Point(965, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 31);
             this.label4.TabIndex = 83;
@@ -410,7 +391,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox doctorPic;
         private System.Windows.Forms.Label dshbrdLbl;
-        private System.Windows.Forms.Button newPtntBtn;
         private System.Windows.Forms.FlowLayoutPanel staffContainer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;

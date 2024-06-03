@@ -71,28 +71,38 @@ namespace DentalAppointmentandInformationSystem
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            if(!eNumTxtBox.Text.Equals("Employee Number") && !passTxtbox.Text.Equals("Password"))
+            float num;
+            bool checkInput = float.TryParse(eNumTxtBox.Text, out num);
+
+            
+            if (!eNumTxtBox.Text.Equals("Employee Number") && !passTxtbox.Text.Equals("Password"))
             {
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Staff WHERE employee_num ='" + eNumTxtBox.Text + "' AND employee_pass ='" + passTxtbox.Text + "' AND status = 1", constring);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                if (dt.Rows[0][0].ToString() == "1")
+                if (checkInput == true)
                 {
-                    Variables v = new Variables();
-                    v.getsetloggedIn = eNumTxtBox.Text;
-                    Dashboard dshbrd = new Dashboard();
-                    dshbrd.Show();
-                    this.Hide();
+                    SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Staff WHERE employee_num ='" + eNumTxtBox.Text + "' AND employee_pass ='" + passTxtbox.Text + "' AND status = 1", constring);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    if (dt.Rows[0][0].ToString() == "1")
+                    {
+                        Variables v = new Variables();
+                        v.getsetloggedIn = eNumTxtBox.Text;
+                        Dashboard dshbrd = new Dashboard();
+                        dshbrd.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username or password");
+                    MessageBox.Show("Please enter only employee number!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Please make sure the data you entered is complete!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+                MessageBox.Show("Please make sure the data you entered is complete!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);            }
 
         }
         private void Login_FormClosing(object sender, FormClosingEventArgs e)

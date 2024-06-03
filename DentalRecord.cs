@@ -358,5 +358,11 @@ namespace DentalAppointmentandInformationSystem
             picture.Refresh();
             picture.Visible = true;
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            new PatientDetails().Show();
+            this.Hide();
+        }
     }
 }

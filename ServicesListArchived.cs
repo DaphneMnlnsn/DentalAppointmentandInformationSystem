@@ -80,23 +80,42 @@ namespace DentalAppointmentandInformationSystem
         private void restoreBtn_Click(object sender, EventArgs e)
         {
             constring.Open();
-            DialogResult dialogResult = MessageBox.Show("Restore this service?", "Confirm Restore", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
+            SqlDataReader reader1;
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
             {
-                v.getsetserviceSelected = serviceID.Text;
-                string query2 = "UPDATE Service SET status = 1 WHERE service_id ='" + v.getsetserviceSelected + "';";
-                SqlCommand cmd2 = new SqlCommand(query2, constring);
-                cmd2.CommandText = query2;
-                if (cmd2.ExecuteNonQuery() == 1)
+                if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
-                    MessageBox.Show("Service successfully restored!");
+                    reader1.Close();
+                    DialogResult dialogResult = MessageBox.Show("Restore this service?", "Confirm Restore", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        v.getsetserviceSelected = serviceID.Text;
+                        string query2 = "UPDATE Service SET status = 1 WHERE service_id ='" + v.getsetserviceSelected + "';";
+                        SqlCommand cmd2 = new SqlCommand(query2, constring);
+                        cmd2.CommandText = query2;
+                        if (cmd2.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("Service successfully restored!");
+                            constring.Close();
+                            ServiceArchives srvcs = new ServiceArchives();
+                            srvcs.Show();
+                            this.ParentForm.Hide();
+                        }
+                    }
                     constring.Close();
-                    ServiceArchives srvcs = new ServiceArchives();
-                    srvcs.Show();
-                    this.ParentForm.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("You do not have the authorization to restore archived services!");
+                    constring.Close();
                 }
             }
-            constring.Close();
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
         }
     }
 }

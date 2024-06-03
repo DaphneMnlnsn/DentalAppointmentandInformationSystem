@@ -20,7 +20,7 @@ namespace DentalAppointmentandInformationSystem
         private static string serviceSelected;
         private static string recordSelected;
         private static string attachmentSelected;
-        private static SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\DAISdB.mdf;Integrated Security=True");
+        private static SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DAISdB.mdf;Integrated Security=True");
 
         public string getsetloggedIn
         {

@@ -60,7 +60,7 @@ namespace DentalAppointmentandInformationSystem
             if (reader1.Read())
             {
                 reader1.Close();
-                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this service permanently?\nYou will not be able to retrieve this!", "Confirm Delete", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this staff record permanently?\nYou will not be able to retrieve this!", "Confirm Delete", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     v.getsetstaffSelected = employeeNum.Text;

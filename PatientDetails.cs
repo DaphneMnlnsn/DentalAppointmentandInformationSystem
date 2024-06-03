@@ -337,6 +337,7 @@ namespace DentalAppointmentandInformationSystem
                             MessageBox.Show("DATA NOT DELETED SUCCESSFULLY");
                         }
                     }
+                    constring.Close();
                 }
                 else
                 {
@@ -359,41 +360,62 @@ namespace DentalAppointmentandInformationSystem
 
         private void addAttachment_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Filter = "Pdf Files |*.pdf;|Image Files| *.jpg; *.jpeg; *.png;";
-
-            if (openFile.ShowDialog() == DialogResult.OK)
+            constring.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
+            SqlDataReader reader1;
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
             {
-                int fileID = 0;
-                constring.Open();
-                SqlCommand cmd = new SqlCommand("SELECT TOP 1 file_id FROM [File] ORDER BY file_id DESC", constring);
-                SqlDataReader reader1;
-                reader1 = cmd.ExecuteReader();
-                if (reader1.Read())
+                if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
-                    fileID = reader1.GetInt32(0) + 1;
+                    reader1.Close();
+                    OpenFileDialog openFile = new OpenFileDialog();
+                    openFile.Filter = "Pdf Files |*.pdf;|Image Files| *.jpg; *.jpeg; *.png;";
+
+                    if (openFile.ShowDialog() == DialogResult.OK)
+                    {
+                        int fileID = 0;
+                        constring.Open();
+                        SqlCommand cmdd = new SqlCommand("SELECT TOP 1 file_id FROM [File] ORDER BY file_id DESC", constring);
+                        SqlDataReader readerr1;
+                        readerr1 = cmdd.ExecuteReader();
+                        if (readerr1.Read())
+                        {
+                            fileID = readerr1.GetInt32(0) + 1;
+                        }
+                        else
+                        {
+                            MessageBox.Show("NO DATA FOUND");
+                        }
+                        readerr1.Close();
+                        cmdd.Dispose();
+
+                        string query = "INSERT INTO [File] VALUES('" + fileID + "','" + v.getsetpatientSelected + "','"
+                            + System.IO.Path.GetFileName(openFile.FileName) + "','" + openFile.FileName + "',1);";
+                        SqlCommand addAttach = new SqlCommand(query, constring);
+                        if (addAttach.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("File added!");
+                            constring.Close();
+                            this.Hide();
+                            PatientDetails pd = new PatientDetails();
+                            pd.Show();
+
+                        }
+                    }
+                    constring.Close();
                 }
                 else
                 {
-                    MessageBox.Show("NO DATA FOUND");
-                }
-                reader1.Close();
-                cmd.Dispose();
-
-                string query = "INSERT INTO [File] VALUES('" + fileID + "','" + v.getsetpatientSelected + "','"
-                    + System.IO.Path.GetFileName(openFile.FileName) + "','" + openFile.FileName + "',1);";
-                SqlCommand addAttach = new SqlCommand(query, constring);
-                if (addAttach.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("File added!");
+                    MessageBox.Show("You do not have the authorization to add patient files!");
                     constring.Close();
-                    this.Hide();
-                    PatientDetails pd = new PatientDetails();
-                    pd.Show();
-                    
                 }
-                constring.Close();
             }
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
+            
         }
 
         private void archiveBtn_Click(object sender, EventArgs e)

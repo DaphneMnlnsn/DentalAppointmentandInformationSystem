@@ -38,21 +38,42 @@ namespace DentalAppointmentandInformationSystem
 
         private void deleteFile_Click(object sender, EventArgs e)
         {
-            v.getsetattachmentSelected = attachmentSelected;
             constring.Open();
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this service?\nThis will be moved to the Trash Bin/Archives!", "Confirm Delete", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
+            SqlDataReader reader1;
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
             {
-                SqlCommand cmd = new SqlCommand("UPDATE [File] SET status = 0 WHERE file_id = '" + v.getsetattachmentSelected + "'", constring);
-                if (cmd.ExecuteNonQuery() == 1)
+                if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
-                    MessageBox.Show("File successfully deleted!");
+                    reader1.Close();
+                    v.getsetattachmentSelected = attachmentSelected;
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this file?\nThis will be moved to the Trash Bin/Archives!", "Confirm Delete", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        SqlCommand cmdd = new SqlCommand("UPDATE [File] SET status = 0 WHERE file_id = '" + v.getsetattachmentSelected + "'", constring);
+                        if (cmdd.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("File successfully deleted!");
+                            constring.Close();
+                            this.ParentForm.Hide();
+                            PatientDetails pd = new PatientDetails();
+                            pd.Show();
+                        }
+                    }
                     constring.Close();
-                    PatientDetails pd = new PatientDetails();
-                    pd.Show();
+                }
+                else
+                {
+                    MessageBox.Show("You do not have the authorization to delete patient files!");
+                    constring.Close();
                 }
             }
-            constring.Close();
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
+            
         }
     }
 }

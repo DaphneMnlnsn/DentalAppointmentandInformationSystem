@@ -60,5 +60,15 @@ namespace DentalAppointmentandInformationSystem
         {
 
         }
+
+        private void AttachmentDisplay_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            constring.Close();
+        }
+
+        private void AttachmentDisplay_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            constring.Close();
+        }
     }
 }

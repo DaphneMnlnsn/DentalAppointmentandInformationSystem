@@ -87,6 +87,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PatientDetailsAttachmentArchived";
             this.Size = new System.Drawing.Size(350, 65);
+            this.Click += new System.EventHandler(this.displayFile_Click);
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -38,43 +38,83 @@ namespace DentalAppointmentandInformationSystem
 
         private void deleteFile_Click(object sender, EventArgs e)
         {
-            v.getsetattachmentSelected = attachmentSelected;
             constring.Open();
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this service permanently?\nYou will not be able to retrieve this!", "Confirm Delete", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
+            SqlDataReader reader1;
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
             {
-                SqlCommand cmd = new SqlCommand("DELETE FROM [File] WHERE file_id = '" + v.getsetattachmentSelected + "'", constring);
-                if (cmd.ExecuteNonQuery() == 1)
+                if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
-                    MessageBox.Show("File permanently deleted!");
+                    reader1.Close();
+                    v.getsetattachmentSelected = attachmentSelected;
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this file permanently?\nYou will not be able to retrieve this!", "Confirm Delete", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        SqlCommand cmdd = new SqlCommand("DELETE FROM [File] WHERE file_id = '" + v.getsetattachmentSelected + "'", constring);
+                        if (cmdd.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("File permanently deleted!");
+                            constring.Close();
+                            this.ParentForm.Hide();
+                            FileArchives pd = new FileArchives();
+                            pd.Show();
+                        }
+                    }
                     constring.Close();
-                    FileArchives pd = new FileArchives();
-                    pd.Show();
+                }
+                else
+                {
+                    MessageBox.Show("You do not have the authorization to delete patient files!");
+                    constring.Close();
                 }
             }
-            constring.Close();
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
         }
 
         private void restoreBtn_Click(object sender, EventArgs e)
         {
-            v.getsetattachmentSelected = attachmentSelected;
             constring.Open();
-            DialogResult dialogResult = MessageBox.Show("Restore this patient file?", "Confirm Restore", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
+            SqlDataReader reader1;
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
             {
-                string query2 = "UPDATE [File] SET status = 1 WHERE file_id ='" + v.getsetattachmentSelected + "';";
-                SqlCommand cmd2 = new SqlCommand(query2, constring);
-                cmd2.CommandText = query2;
-                if (cmd2.ExecuteNonQuery() == 1)
+                if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
                 {
-                    MessageBox.Show("File successfully restored!");
+                    reader1.Close();
+                    v.getsetattachmentSelected = attachmentSelected;
+                    DialogResult dialogResult = MessageBox.Show("Restore this patient file?", "Confirm Restore", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string query2 = "UPDATE [File] SET status = 1 WHERE file_id ='" + v.getsetattachmentSelected + "';";
+                        SqlCommand cmd2 = new SqlCommand(query2, constring);
+                        cmd2.CommandText = query2;
+                        if (cmd2.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("File successfully restored!");
+                            constring.Close();
+                            this.ParentForm.Hide();
+                            FileArchives ptd = new FileArchives();
+                            ptd.Show();
+                        }
+                    }
                     constring.Close();
-                    FileArchives ptd = new FileArchives();
-                    ptd.Show();
-                    this.ParentForm.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("You do not have the authorization to restore patient files!");
+                    constring.Close();
                 }
             }
-            constring.Close();
+            else
+            {
+                MessageBox.Show("NO DATA FOUND");
+            }
+            
         }
     }
 }
