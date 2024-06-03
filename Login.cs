@@ -72,8 +72,8 @@ namespace DentalAppointmentandInformationSystem
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            float num;
-            bool checkInput = float.TryParse(eNumTxtBox.Text, out num);
+            int num;
+            bool checkInput = int.TryParse(eNumTxtBox.Text, out num);
 
             
             if (!eNumTxtBox.Text.Equals("Employee Number") && !passTxtbox.Text.Equals("Password"))

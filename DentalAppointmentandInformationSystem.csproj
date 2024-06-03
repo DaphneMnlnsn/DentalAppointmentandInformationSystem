@@ -75,12 +75,6 @@
     <Compile Include="AddAppointmentExisting.Designer.cs">
       <DependentUpon>AddAppointmentExisting.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddHistory.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AddHistory.Designer.cs">
-      <DependentUpon>AddHistory.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddService.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,12 +163,6 @@
     </Compile>
     <Compile Include="EditDentalRecord.Designer.cs">
       <DependentUpon>EditDentalRecord.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditHistory.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="EditHistory.Designer.cs">
-      <DependentUpon>EditHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="EditPatient.cs">
       <SubType>Form</SubType>
@@ -353,9 +341,6 @@
     <EmbeddedResource Include="AddAppointmentExisting.resx">
       <DependentUpon>AddAppointmentExisting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddHistory.resx">
-      <DependentUpon>AddHistory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddService.resx">
       <DependentUpon>AddService.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,9 +373,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditDentalRecord.resx">
       <DependentUpon>EditDentalRecord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditHistory.resx">
-      <DependentUpon>EditHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditPatient.resx">
       <DependentUpon>EditPatient.cs</DependentUpon>

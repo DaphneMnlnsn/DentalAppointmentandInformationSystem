@@ -375,7 +375,6 @@ namespace DentalAppointmentandInformationSystem
                     if (openFile.ShowDialog() == DialogResult.OK)
                     {
                         int fileID = 0;
-                        constring.Open();
                         SqlCommand cmdd = new SqlCommand("SELECT TOP 1 file_id FROM [File] ORDER BY file_id DESC", constring);
                         SqlDataReader readerr1;
                         readerr1 = cmdd.ExecuteReader();

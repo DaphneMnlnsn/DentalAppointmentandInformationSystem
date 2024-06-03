@@ -59,7 +59,7 @@ namespace DentalAppointmentandInformationSystem
         {
             Dashboard dshbrd = new Dashboard();
             dshbrd.Show();
-            dshbrd.Hide();
+            this.Hide();
         }
         private void apptclndrBtn_Click(object sender, EventArgs e)
         {
