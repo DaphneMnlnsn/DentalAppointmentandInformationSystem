@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.displayFile = new System.Windows.Forms.Label();
             this.deleteFile = new System.Windows.Forms.Label();
             this.restoreBtn = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +64,7 @@
             this.deleteFile.TabIndex = 98;
             this.deleteFile.Text = "x";
             this.deleteFile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip1.SetToolTip(this.deleteFile, "Delete File Permanently");
             this.deleteFile.Click += new System.EventHandler(this.deleteFile_Click);
             // 
             // restoreBtn
@@ -74,6 +77,7 @@
             this.restoreBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.restoreBtn.TabIndex = 99;
             this.restoreBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.restoreBtn, "Restore File");
             this.restoreBtn.Click += new System.EventHandler(this.restoreBtn_Click);
             // 
             // PatientDetailsAttachmentArchived
@@ -99,5 +103,6 @@
         private System.Windows.Forms.Label displayFile;
         private System.Windows.Forms.Label deleteFile;
         private System.Windows.Forms.PictureBox restoreBtn;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

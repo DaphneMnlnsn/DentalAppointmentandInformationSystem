@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DentalRecord));
             this.dshbrdLbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.backBtn = new System.Windows.Forms.PictureBox();
             this.editDentalRecBtn = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.doctorPic = new System.Windows.Forms.PictureBox();
@@ -210,8 +212,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.backBtn = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -272,7 +275,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.t54)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // dshbrdLbl
@@ -302,6 +304,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1534, 97);
             this.panel2.TabIndex = 69;
+            // 
+            // backBtn
+            // 
+            this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.backBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.back;
+            this.backBtn.Location = new System.Drawing.Point(182, 22);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(56, 55);
+            this.backBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backBtn.TabIndex = 328;
+            this.backBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.backBtn, "Back to Patient Details");
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // editDentalRecBtn
             // 
@@ -374,6 +390,7 @@
             this.servicesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.servicesBtn.TabIndex = 2;
             this.servicesBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.servicesBtn, "List of Services");
             this.servicesBtn.Click += new System.EventHandler(this.servicesBtn_Click);
             // 
             // staffBtn
@@ -386,6 +403,7 @@
             this.staffBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.staffBtn.TabIndex = 0;
             this.staffBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.staffBtn, "List of Staff");
             this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
             // 
             // patientBtn
@@ -398,6 +416,7 @@
             this.patientBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.patientBtn.TabIndex = 1;
             this.patientBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.patientBtn, "List of Patients");
             this.patientBtn.Click += new System.EventHandler(this.patientBtn_Click);
             // 
             // dshbrdBtn
@@ -410,6 +429,7 @@
             this.dshbrdBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dshbrdBtn.TabIndex = 3;
             this.dshbrdBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.dshbrdBtn, "Dashboard");
             this.dshbrdBtn.Click += new System.EventHandler(this.dshbrdBtn_Click);
             // 
             // label1
@@ -2449,19 +2469,6 @@
             this.label12.Text = "1 - Top Tooth\r\n2 - Left Tooth\r\n3 - Right Tooth\r\n4 - Bottom Tooth\r\n5 - Center Toot" +
     "h\r\n6 - Full Tooth";
             // 
-            // backBtn
-            // 
-            this.backBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.backBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.back;
-            this.backBtn.Location = new System.Drawing.Point(182, 22);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(56, 55);
-            this.backBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.backBtn.TabIndex = 328;
-            this.backBtn.TabStop = false;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
             // DentalRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2652,6 +2659,7 @@
             this.Load += new System.EventHandler(this.DentalRecord_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -2712,7 +2720,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.t54)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t55)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2901,5 +2908,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox backBtn;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

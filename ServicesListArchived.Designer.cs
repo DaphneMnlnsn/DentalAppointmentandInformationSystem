@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.servicePrice = new System.Windows.Forms.Label();
             this.serviceName = new System.Windows.Forms.Label();
             this.serviceID = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.restoreBtn = new System.Windows.Forms.PictureBox();
             this.deleteBtn = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteBtn)).BeginInit();
@@ -95,14 +97,6 @@
             this.serviceID.TabIndex = 77;
             this.serviceID.Text = "Service ID";
             // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(-10, 68);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1178, 74);
-            this.panel1.TabIndex = 95;
-            // 
             // restoreBtn
             // 
             this.restoreBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -113,6 +107,7 @@
             this.restoreBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.restoreBtn.TabIndex = 80;
             this.restoreBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.restoreBtn, "Restore");
             this.restoreBtn.Click += new System.EventHandler(this.restoreBtn_Click);
             // 
             // deleteBtn
@@ -125,7 +120,16 @@
             this.deleteBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.deleteBtn.TabIndex = 81;
             this.deleteBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.deleteBtn, "Delete Permanently");
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(-10, 68);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1178, 74);
+            this.panel1.TabIndex = 95;
             // 
             // ServicesListArchived
             // 
@@ -154,5 +158,6 @@
         private System.Windows.Forms.PictureBox restoreBtn;
         private System.Windows.Forms.PictureBox deleteBtn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

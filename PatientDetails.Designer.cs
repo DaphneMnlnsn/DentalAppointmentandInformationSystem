@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.deletePtnt = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -44,6 +45,8 @@
             this.patientAge = new System.Windows.Forms.Label();
             this.patientName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.contactPNumLbl = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.patientNotes = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.picBoxFemale = new System.Windows.Forms.PictureBox();
@@ -67,13 +70,13 @@
             this.openDental = new System.Windows.Forms.Button();
             this.addAttachment = new System.Windows.Forms.Label();
             this.archiveBtn = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.contactPNumLbl = new System.Windows.Forms.Label();
             this.editRecord1 = new DentalAppointmentandInformationSystem.EditRecord();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxFemale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMale)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -83,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.servicesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBtn)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -293,6 +295,27 @@
             this.panel1.Size = new System.Drawing.Size(1372, 228);
             this.panel1.TabIndex = 83;
             // 
+            // contactPNumLbl
+            // 
+            this.contactPNumLbl.AutoSize = true;
+            this.contactPNumLbl.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactPNumLbl.Location = new System.Drawing.Point(593, 137);
+            this.contactPNumLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.contactPNumLbl.Name = "contactPNumLbl";
+            this.contactPNumLbl.Size = new System.Drawing.Size(358, 21);
+            this.contactPNumLbl.TabIndex = 87;
+            this.contactPNumLbl.Text = "Contact Person Number: XXXXXXXXXXX";
+            // 
+            // panel3
+            // 
+            this.panel3.AutoScroll = true;
+            this.panel3.AutoScrollMinSize = new System.Drawing.Size(264, 0);
+            this.panel3.Controls.Add(this.patientNotes);
+            this.panel3.Location = new System.Drawing.Point(987, 132);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(313, 80);
+            this.panel3.TabIndex = 86;
+            // 
             // patientNotes
             // 
             this.patientNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -347,7 +370,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.99722F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.00278F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 311F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 313F));
             this.tableLayoutPanel2.Controls.Add(this.label4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
@@ -366,10 +389,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(841, 1);
+            this.label4.Location = new System.Drawing.Point(839, 1);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(304, 61);
+            this.label4.Size = new System.Drawing.Size(306, 61);
             this.label4.TabIndex = 3;
             this.label4.Text = "PRICE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -380,7 +403,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(645, 1);
+            this.label3.Location = new System.Drawing.Point(643, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 61);
@@ -394,10 +417,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(255, 1);
+            this.label2.Location = new System.Drawing.Point(254, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(381, 61);
+            this.label2.Size = new System.Drawing.Size(380, 61);
             this.label2.TabIndex = 1;
             this.label2.Text = "TREATMENT";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -411,7 +434,7 @@
             this.label1.Location = new System.Drawing.Point(5, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 61);
+            this.label1.Size = new System.Drawing.Size(240, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "DATE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -471,6 +494,7 @@
             this.clndrbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.clndrbtn.TabIndex = 1;
             this.clndrbtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.clndrbtn, "Appointment Calendar");
             this.clndrbtn.Click += new System.EventHandler(this.clndrbtn_Click);
             // 
             // dshbrdBtn
@@ -483,6 +507,7 @@
             this.dshbrdBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dshbrdBtn.TabIndex = 3;
             this.dshbrdBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.dshbrdBtn, "Dashboard");
             this.dshbrdBtn.Click += new System.EventHandler(this.dshbrdBtn_Click);
             // 
             // servicesBtn
@@ -495,6 +520,7 @@
             this.servicesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.servicesBtn.TabIndex = 2;
             this.servicesBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.servicesBtn, "List of Services");
             this.servicesBtn.Click += new System.EventHandler(this.servicesBtn_Click);
             // 
             // staffBtn
@@ -507,6 +533,7 @@
             this.staffBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.staffBtn.TabIndex = 0;
             this.staffBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.staffBtn, "List of Staff");
             this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
             // 
             // patientsBtn
@@ -519,6 +546,7 @@
             this.patientsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.patientsBtn.TabIndex = 4;
             this.patientsBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.patientsBtn, "List of Patients");
             this.patientsBtn.Click += new System.EventHandler(this.patientsBtn_Click);
             // 
             // attachmentContainer
@@ -594,27 +622,6 @@
             this.archiveBtn.Text = "Archived Files";
             this.archiveBtn.Click += new System.EventHandler(this.archiveBtn_Click);
             // 
-            // panel3
-            // 
-            this.panel3.AutoScroll = true;
-            this.panel3.AutoScrollMinSize = new System.Drawing.Size(264, 0);
-            this.panel3.Controls.Add(this.patientNotes);
-            this.panel3.Location = new System.Drawing.Point(987, 132);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(313, 80);
-            this.panel3.TabIndex = 86;
-            // 
-            // contactPNumLbl
-            // 
-            this.contactPNumLbl.AutoSize = true;
-            this.contactPNumLbl.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactPNumLbl.Location = new System.Drawing.Point(593, 137);
-            this.contactPNumLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.contactPNumLbl.Name = "contactPNumLbl";
-            this.contactPNumLbl.Size = new System.Drawing.Size(358, 21);
-            this.contactPNumLbl.TabIndex = 87;
-            this.contactPNumLbl.Text = "Contact Person Number: XXXXXXXXXXX";
-            // 
             // editRecord1
             // 
             this.editRecord1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -655,6 +662,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxFemale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMale)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -665,8 +674,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.servicesBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBtn)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -715,5 +722,6 @@
         private System.Windows.Forms.Label archiveBtn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label contactPNumLbl;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

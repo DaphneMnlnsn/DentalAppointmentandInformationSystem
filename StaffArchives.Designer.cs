@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dshbrdLbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.doctorPic = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,7 @@
             this.searchTxtBox = new System.Windows.Forms.TextBox();
             this.searchBtn = new System.Windows.Forms.PictureBox();
             this.backBtn = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -141,6 +143,7 @@
             this.servicesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.servicesBtn.TabIndex = 2;
             this.servicesBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.servicesBtn, "Archived Services");
             this.servicesBtn.Click += new System.EventHandler(this.servicesBtn_Click);
             // 
             // patientBtn
@@ -153,6 +156,7 @@
             this.patientBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.patientBtn.TabIndex = 1;
             this.patientBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.patientBtn, "Archived Patients");
             this.patientBtn.Click += new System.EventHandler(this.patientBtn_Click);
             // 
             // clndrBtn
@@ -165,6 +169,7 @@
             this.clndrBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.clndrBtn.TabIndex = 0;
             this.clndrBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.clndrBtn, "Archived Appointments");
             this.clndrBtn.Click += new System.EventHandler(this.clndrBtn_Click);
             // 
             // dshbrdBtn
@@ -177,6 +182,7 @@
             this.dshbrdBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dshbrdBtn.TabIndex = 3;
             this.dshbrdBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.dshbrdBtn, "Dashboard");
             this.dshbrdBtn.Click += new System.EventHandler(this.dshbrdBtn_Click);
             // 
             // staffContainer
@@ -194,7 +200,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(981, 29);
+            this.label5.Location = new System.Drawing.Point(980, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 31);
             this.label5.TabIndex = 82;
@@ -206,7 +212,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(807, 29);
+            this.label4.Location = new System.Drawing.Point(806, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 31);
             this.label4.TabIndex = 81;
@@ -218,7 +224,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(646, 29);
+            this.label3.Location = new System.Drawing.Point(645, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 31);
             this.label3.TabIndex = 79;
@@ -230,7 +236,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(563, 29);
+            this.label2.Location = new System.Drawing.Point(562, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 31);
             this.label2.TabIndex = 78;
@@ -242,7 +248,7 @@
             this.employee_no.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.employee_no.AutoSize = true;
             this.employee_no.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.employee_no.Location = new System.Drawing.Point(15, 14);
+            this.employee_no.Location = new System.Drawing.Point(14, 14);
             this.employee_no.Name = "employee_no";
             this.employee_no.Size = new System.Drawing.Size(135, 62);
             this.employee_no.TabIndex = 77;
@@ -254,7 +260,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(292, 29);
+            this.label1.Location = new System.Drawing.Point(291, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 31);
             this.label1.TabIndex = 80;
@@ -273,7 +279,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.employee_no, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
@@ -307,6 +313,7 @@
             this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.searchBtn.TabIndex = 92;
             this.searchBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.searchBtn, "Search");
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // backBtn
@@ -319,6 +326,7 @@
             this.backBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.backBtn.TabIndex = 93;
             this.backBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.backBtn, "Back to Staff List");
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // StaffArchives
@@ -379,5 +387,6 @@
         private System.Windows.Forms.TextBox searchTxtBox;
         private System.Windows.Forms.PictureBox searchBtn;
         private System.Windows.Forms.PictureBox backBtn;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

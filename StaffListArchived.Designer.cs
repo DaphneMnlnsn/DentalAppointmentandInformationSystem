@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.fullName = new System.Windows.Forms.Label();
@@ -38,6 +39,7 @@
             this.contactNum = new System.Windows.Forms.Label();
             this.deleteBtn = new System.Windows.Forms.PictureBox();
             this.restoreBtn = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deleteBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
@@ -46,9 +48,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(-10, 87);
+            this.panel1.Location = new System.Drawing.Point(-10, 93);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1346, 74);
+            this.panel1.Size = new System.Drawing.Size(1346, 68);
             this.panel1.TabIndex = 94;
             // 
             // tableLayoutPanel2
@@ -84,7 +86,7 @@
             this.fullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fullName.AutoSize = true;
             this.fullName.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.fullName.Location = new System.Drawing.Point(302, 31);
+            this.fullName.Location = new System.Drawing.Point(307, 31);
             this.fullName.Name = "fullName";
             this.fullName.Size = new System.Drawing.Size(104, 24);
             this.fullName.TabIndex = 80;
@@ -96,9 +98,9 @@
             this.employeeNum.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.employeeNum.AutoSize = true;
             this.employeeNum.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.employeeNum.Location = new System.Drawing.Point(15, 19);
+            this.employeeNum.Location = new System.Drawing.Point(10, 31);
             this.employeeNum.Name = "employeeNum";
-            this.employeeNum.Size = new System.Drawing.Size(106, 48);
+            this.employeeNum.Size = new System.Drawing.Size(144, 24);
             this.employeeNum.TabIndex = 77;
             this.employeeNum.Text = "Employee No.";
             this.employeeNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,7 +110,7 @@
             this.ageLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ageLbl.AutoSize = true;
             this.ageLbl.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.ageLbl.Location = new System.Drawing.Point(586, 31);
+            this.ageLbl.Location = new System.Drawing.Point(569, 31);
             this.ageLbl.Name = "ageLbl";
             this.ageLbl.Size = new System.Drawing.Size(49, 24);
             this.ageLbl.TabIndex = 78;
@@ -120,7 +122,7 @@
             this.birthDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.birthDate.AutoSize = true;
             this.birthDate.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.birthDate.Location = new System.Drawing.Point(667, 31);
+            this.birthDate.Location = new System.Drawing.Point(658, 31);
             this.birthDate.Name = "birthDate";
             this.birthDate.Size = new System.Drawing.Size(101, 24);
             this.birthDate.TabIndex = 79;
@@ -161,6 +163,7 @@
             this.deleteBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.deleteBtn.TabIndex = 85;
             this.deleteBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.deleteBtn, "Delete Permanently");
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // restoreBtn
@@ -173,6 +176,7 @@
             this.restoreBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.restoreBtn.TabIndex = 84;
             this.restoreBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.restoreBtn, "Restore");
             this.restoreBtn.Click += new System.EventHandler(this.restoreStaff_Click);
             // 
             // StaffListArchived
@@ -202,5 +206,6 @@
         private System.Windows.Forms.Label contactNum;
         private System.Windows.Forms.PictureBox deleteBtn;
         private System.Windows.Forms.PictureBox restoreBtn;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

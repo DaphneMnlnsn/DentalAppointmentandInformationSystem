@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.servicePrice = new System.Windows.Forms.Label();
             this.serviceName = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             this.editBtn = new System.Windows.Forms.PictureBox();
             this.deleteBtn = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteBtn)).BeginInit();
@@ -105,6 +107,7 @@
             this.editBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.editBtn.TabIndex = 80;
             this.editBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.editBtn, "Edit");
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // deleteBtn
@@ -117,6 +120,7 @@
             this.deleteBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.deleteBtn.TabIndex = 81;
             this.deleteBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.deleteBtn, "Delete");
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // panel1
@@ -154,5 +158,6 @@
         private System.Windows.Forms.PictureBox editBtn;
         private System.Windows.Forms.PictureBox deleteBtn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

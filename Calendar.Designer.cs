@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnnewappointment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.binBtn = new System.Windows.Forms.Panel();
@@ -56,6 +57,7 @@
             this.staffBtn = new System.Windows.Forms.PictureBox();
             this.patientBtn = new System.Windows.Forms.PictureBox();
             this.dshbrdBtn = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.binBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.binPic)).BeginInit();
@@ -129,6 +131,7 @@
             this.binPic.TabIndex = 1;
             this.binPic.TabStop = false;
             this.binPic.Click += new System.EventHandler(this.binBtn_Click);
+            this.toolTip1.SetToolTip(this.binPic, "Trash Bin");
             // 
             // binLbl
             // 
@@ -148,7 +151,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.21121F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.78879F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
             this.tableLayoutPanel3.Controls.Add(this.monthLbl, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnnext, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnprevious, 2, 0);
@@ -174,7 +177,7 @@
             this.monthLbl.Location = new System.Drawing.Point(3, 0);
             this.monthLbl.Margin = new System.Windows.Forms.Padding(3, 0, 24, 0);
             this.monthLbl.Name = "monthLbl";
-            this.monthLbl.Size = new System.Drawing.Size(783, 70);
+            this.monthLbl.Size = new System.Drawing.Size(782, 70);
             this.monthLbl.TabIndex = 16;
             this.monthLbl.Text = "Calendar";
             this.monthLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -183,7 +186,7 @@
             // 
             this.btnnext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnnext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnnext.Location = new System.Drawing.Point(919, 14);
+            this.btnnext.Location = new System.Drawing.Point(918, 14);
             this.btnnext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnnext.Name = "btnnext";
             this.btnnext.Size = new System.Drawing.Size(83, 42);
@@ -191,12 +194,13 @@
             this.btnnext.Text = ">";
             this.btnnext.UseVisualStyleBackColor = true;
             this.btnnext.Click += new System.EventHandler(this.btnnext_Click);
+            this.toolTip1.SetToolTip(this.btnnext, "Next");
             // 
             // btnprevious
             // 
             this.btnprevious.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnprevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnprevious.Location = new System.Drawing.Point(816, 14);
+            this.btnprevious.Location = new System.Drawing.Point(815, 14);
             this.btnprevious.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnprevious.Name = "btnprevious";
             this.btnprevious.Size = new System.Drawing.Size(83, 42);
@@ -204,6 +208,7 @@
             this.btnprevious.Text = "<";
             this.btnprevious.UseVisualStyleBackColor = true;
             this.btnprevious.Click += new System.EventHandler(this.btnprevious_Click);
+            this.toolTip1.SetToolTip(this.btnprevious, "Previous");
             // 
             // label10
             // 
@@ -427,6 +432,7 @@
             this.servicesBtn.TabIndex = 2;
             this.servicesBtn.TabStop = false;
             this.servicesBtn.Click += new System.EventHandler(this.servicesBtn_Click);
+            this.toolTip1.SetToolTip(this.servicesBtn, "List of Services");
             // 
             // staffBtn
             // 
@@ -439,6 +445,7 @@
             this.staffBtn.TabIndex = 0;
             this.staffBtn.TabStop = false;
             this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
+            this.toolTip1.SetToolTip(this.staffBtn, "List of Staff");
             // 
             // patientBtn
             // 
@@ -451,6 +458,7 @@
             this.patientBtn.TabIndex = 1;
             this.patientBtn.TabStop = false;
             this.patientBtn.Click += new System.EventHandler(this.patientBtn_Click);
+            this.toolTip1.SetToolTip(this.patientBtn, "List of Patients");
             // 
             // dshbrdBtn
             // 
@@ -463,6 +471,7 @@
             this.dshbrdBtn.TabIndex = 3;
             this.dshbrdBtn.TabStop = false;
             this.dshbrdBtn.Click += new System.EventHandler(this.dshbrdBtn_Click);
+            this.toolTip1.SetToolTip(this.dshbrdBtn, "Dashboard");
             // 
             // Calendar
             // 
@@ -530,5 +539,6 @@
         private System.Windows.Forms.Panel binBtn;
         private System.Windows.Forms.PictureBox binPic;
         private System.Windows.Forms.Label binLbl;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

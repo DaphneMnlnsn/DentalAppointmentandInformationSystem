@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.displayFile = new System.Windows.Forms.Label();
             this.deleteFile = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // displayFile
@@ -60,6 +62,7 @@
             this.deleteFile.TabIndex = 98;
             this.deleteFile.Text = "x";
             this.deleteFile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip1.SetToolTip(this.deleteFile, "Delete File");
             this.deleteFile.Click += new System.EventHandler(this.deleteFile_Click);
             // 
             // PatientDetailsAttachment
@@ -82,5 +85,6 @@
 
         private System.Windows.Forms.Label displayFile;
         private System.Windows.Forms.Label deleteFile;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

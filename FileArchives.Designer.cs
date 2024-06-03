@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.servicesBtn = new System.Windows.Forms.PictureBox();
             this.staffBtn = new System.Windows.Forms.PictureBox();
@@ -41,6 +42,7 @@
             this.searchTxtBox = new System.Windows.Forms.TextBox();
             this.searchBtn = new System.Windows.Forms.PictureBox();
             this.backBtn = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).BeginInit();
@@ -85,6 +87,7 @@
             this.servicesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.servicesBtn.TabIndex = 2;
             this.servicesBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.servicesBtn, "Archived Services");
             this.servicesBtn.Click += new System.EventHandler(this.servicesBtn_Click);
             // 
             // staffBtn
@@ -97,6 +100,7 @@
             this.staffBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.staffBtn.TabIndex = 0;
             this.staffBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.staffBtn, "Archived Staff");
             this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
             // 
             // patientBtn
@@ -109,6 +113,7 @@
             this.patientBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.patientBtn.TabIndex = 1;
             this.patientBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.patientBtn, "Archived Appointments");
             this.patientBtn.Click += new System.EventHandler(this.clndrBtn_Click);
             // 
             // dshbrdBtn
@@ -121,6 +126,7 @@
             this.dshbrdBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dshbrdBtn.TabIndex = 3;
             this.dshbrdBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.dshbrdBtn, "Dashboard");
             this.dshbrdBtn.Click += new System.EventHandler(this.dshbrdBtn_Click);
             // 
             // panel2
@@ -199,6 +205,7 @@
             this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.searchBtn.TabIndex = 95;
             this.searchBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.searchBtn, "Search");
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // backBtn
@@ -261,5 +268,6 @@
         private System.Windows.Forms.PictureBox searchBtn;
         private System.Windows.Forms.TextBox searchTxtBox;
         private System.Windows.Forms.PictureBox backBtn;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
