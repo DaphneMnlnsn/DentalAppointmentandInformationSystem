@@ -219,5 +219,19 @@ namespace DentalAppointmentandInformationSystem
             new Staff().Show();
             this.Hide();
         }
+
+        private void showPass_Click(object sender, EventArgs e)
+        {
+                passTxtBox.PasswordChar = '\0';
+                showPass.Visible = false;
+                hidePass.Visible = true;
+        }
+
+        private void hidePass_Click(object sender, EventArgs e)
+        {
+                passTxtBox.PasswordChar = '•';
+                hidePass.Visible = false;
+                showPass.Visible = true;
+        }
     }
 }

@@ -56,6 +56,7 @@ namespace DentalAppointmentandInformationSystem
                 passTxtbox.Text = "";
                 passTxtbox.ForeColor = Color.Black;
                 passTxtbox.PasswordChar = '•';
+                showPass.Visible = true;
             }
         }
 
@@ -121,6 +122,26 @@ namespace DentalAppointmentandInformationSystem
             {
                 e.Handled = e.SuppressKeyPress = true;
                 loginBtn.PerformClick();
+            }
+        }
+
+        private void showPass_Click(object sender, EventArgs e)
+        {
+            if (!passTxtbox.Text.Equals("Password") && !string.IsNullOrEmpty(passTxtbox.Text))
+            {
+                passTxtbox.PasswordChar = '\0';
+                showPass.Visible = false;
+                hidePass.Visible = true;
+            }
+        }
+
+        private void hidePass_Click(object sender, EventArgs e)
+        {
+            if (!passTxtbox.Text.Equals("Password") && !string.IsNullOrEmpty(passTxtbox.Text))
+            {
+                passTxtbox.PasswordChar = '•';
+                hidePass.Visible = false;
+                showPass.Visible = true;
             }
         }
     }

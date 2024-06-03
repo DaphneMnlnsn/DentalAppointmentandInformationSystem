@@ -547,6 +547,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>DAISdB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\view.png" />
+    <None Include="Resources\hide.png" />
     <None Include="Resources\teeth chart.png" />
     <None Include="Resources\top_tooth.png" />
     <None Include="Resources\right_tooth.png" />

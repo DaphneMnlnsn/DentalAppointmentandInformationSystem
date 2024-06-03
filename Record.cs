@@ -43,22 +43,20 @@ namespace DentalAppointmentandInformationSystem
                 {
                     reader1.Close();
                     v.getsetrecordSelected = recordID;
+                    constring.Close();
                     PatientDetails mainForm;
                     mainForm = (PatientDetails)this.FindForm();
                     mainForm.editVisible();
-                    constring.Close();
                 }
                 else
                 {
                     constring.Close();
                 }
-                
             }
             else
             {
                 MessageBox.Show("NO DATA FOUND");
             }
-            
         }
     }
 }

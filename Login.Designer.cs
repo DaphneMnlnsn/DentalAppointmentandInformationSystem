@@ -43,11 +43,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.eNumTxtBox = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
+            this.showPass = new System.Windows.Forms.PictureBox();
+            this.hidePass = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePass)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -266,6 +270,32 @@
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
+            // showPass
+            // 
+            this.showPass.BackColor = System.Drawing.SystemColors.Window;
+            this.showPass.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.view;
+            this.showPass.Location = new System.Drawing.Point(1360, 426);
+            this.showPass.Name = "showPass";
+            this.showPass.Size = new System.Drawing.Size(39, 35);
+            this.showPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.showPass.TabIndex = 12;
+            this.showPass.TabStop = false;
+            this.showPass.Visible = false;
+            this.showPass.Click += new System.EventHandler(this.showPass_Click);
+            // 
+            // hidePass
+            // 
+            this.hidePass.BackColor = System.Drawing.SystemColors.Window;
+            this.hidePass.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.hide;
+            this.hidePass.Location = new System.Drawing.Point(1348, 426);
+            this.hidePass.Name = "hidePass";
+            this.hidePass.Size = new System.Drawing.Size(39, 35);
+            this.hidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hidePass.TabIndex = 13;
+            this.hidePass.TabStop = false;
+            this.hidePass.Visible = false;
+            this.hidePass.Click += new System.EventHandler(this.hidePass_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -273,6 +303,8 @@
             this.BackgroundImage = global::DentalAppointmentandInformationSystem.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1537, 920);
+            this.Controls.Add(this.hidePass);
+            this.Controls.Add(this.showPass);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.clinicName);
@@ -292,6 +324,8 @@
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,5 +348,7 @@
         private System.Windows.Forms.TextBox passTxtbox;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.PictureBox showPass;
+        private System.Windows.Forms.PictureBox hidePass;
     }
 }
