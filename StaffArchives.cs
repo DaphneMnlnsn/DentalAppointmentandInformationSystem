@@ -36,6 +36,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void displayStaff()
         {
+            //Displaying archived staffs
             constring.Open();
             string sql = "SELECT * FROM Staff WHERE status = 0";
             DataTable staffs = new DataTable("staffs");

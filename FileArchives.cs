@@ -35,6 +35,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void displayPatient()
         {
+            //Displaying the archived files of the patient
             constring.Open();
             string sql = "SELECT * FROM [File] WHERE status = 0 AND patient_id = " + v.getsetpatientSelected;
             DataTable files = new DataTable("files");

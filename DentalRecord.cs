@@ -32,6 +32,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staffBtn_Click(object sender, EventArgs e)
         {
+            //Checking authorization
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -85,6 +86,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void editDentalRecBtn_Click(object sender, EventArgs e)
         {
+            //Checking authorization if staff can edit
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -111,6 +113,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void setValues()
         {
+            //Setting the values of the textboxes based on existing data in the database
             constring.Open();
             int quadrant1Num = 0, quadrant2Num = 0, quadrant3Num = 0, quadrant4Num = 0;
 
@@ -291,6 +294,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void checkDigit(string TM, PictureBox picture)
         {
+            //Setting the picture box based on the number inputted
             if(TM.Equals("1"))
             {
                 setPictureBoxTop(picture);

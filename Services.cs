@@ -41,6 +41,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void displayServices()
         {
+            //Displaying services that are not archived
             constring.Open();
             string sql = "SELECT * FROM Service WHERE status = 1";
             DataTable services = new DataTable("services");

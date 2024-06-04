@@ -33,6 +33,8 @@ namespace DentalAppointmentandInformationSystem
         {
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+
+            //Replacing staff name label on the nav bar
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -60,6 +62,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void displayAppointments()
         {
+            //Displaying the appointment details for that specific appointment
             constring.Open();
             string sql = "SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + v.getsetDay + "' AND status = 1";
             DataTable appointments = new DataTable("appointments");
@@ -85,6 +88,7 @@ namespace DentalAppointmentandInformationSystem
                 string time = row["appointment_startTime"].ToString()[0] + "" + row["appointment_startTime"].ToString()[1] + "" + row["appointment_startTime"].ToString()[2] + "" + row["appointment_startTime"].ToString()[3] + "" + row["appointment_startTime"].ToString()[4];
                 string time2 = row["appointment_endTime"].ToString()[0] + "" + row["appointment_endTime"].ToString()[1] + "" + row["appointment_endTime"].ToString()[2] + "" + row["appointment_endTime"].ToString()[3] + "" + row["appointment_endTime"].ToString()[4];
 
+                //Retrieving the service name of the service id the appointment employs, as well as staff and patient
                 string sql2 = "SELECT * FROM Service WHERE service_id = " + "'" + service_id + "'";
                 SqlCommand cmd2 = constring.CreateCommand();
                 cmd2.CommandText = sql2;
@@ -203,6 +207,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staffBtn_Click(object sender, EventArgs e)
         {
+            //Checking authorization
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;

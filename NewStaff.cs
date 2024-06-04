@@ -60,6 +60,8 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveStaffBtn_Click(object sender, EventArgs e)
         {
+
+            //Checking if the staff alreadye exists
             constring.Open();
             string staffExistingQuery = "SELECT COUNT(*) FROM Staff WHERE employee_lname = '" + lnameTxtBox.Text +
                 "' AND employee_mname = '" + mnameTxtBox.Text +
@@ -73,6 +75,7 @@ namespace DentalAppointmentandInformationSystem
                 if (!string.IsNullOrWhiteSpace(fnameTxtBox.Text) && !string.IsNullOrWhiteSpace(lnameTxtBox.Text) &&
                 !string.IsNullOrWhiteSpace(phoneTxtBox.Text) && !string.IsNullOrWhiteSpace(ageTxtBox.Text))
                 {
+                    //Staff creation
                     int staffID = 0, staffPassNum = 0;
                     string staffPass = "";
                     constring.Open();

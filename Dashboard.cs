@@ -28,6 +28,8 @@ namespace DentalAppointmentandInformationSystem
         {
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+
+            //Replacing label with staff name in nav bar
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -69,6 +71,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staffBtn_Click(object sender, EventArgs e)
         {
+            //Checking authorization
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -103,6 +106,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void displayDays()
         {
+            //Displaying days of the month
             DateTime now = DateTime.Now;
             v.getsetMonth = now.Month;
             v.getsetYear = now.Year;
@@ -144,6 +148,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void timer1()
         {
+            //Displaying notification
             constring.Open();
             string message = "Today at " + DateTime.Today.ToLongDateString() + ", you have the following appointments:\n";
             SqlCommand sqlcom = new SqlCommand("SELECT * FROM Appointment where appointment_date='" + DateTime.Now.ToString() + "'", constring);

@@ -28,6 +28,7 @@ namespace DentalAppointmentandInformationSystem
         }
         public void DisplayAttachedFile(string fileSelected)
         {
+            //Code for displaying the file clicked
             string filePath = "";
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT file_path FROM [File] WHERE file_id = '" + fileSelected + "';", constring);
@@ -59,16 +60,6 @@ namespace DentalAppointmentandInformationSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void AttachmentDisplay_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            constring.Close();
-        }
-
-        private void AttachmentDisplay_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            constring.Close();
         }
     }
 }

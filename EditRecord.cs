@@ -29,6 +29,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveSrvcBtn_Click(object sender, EventArgs e)
         {
+            //Saving or updating the patient record/appointment history
             if (!string.IsNullOrWhiteSpace(teethTrtdTxtBox.Text) && !string.IsNullOrWhiteSpace(priceBilledTxtBox.Text))
             {
                 float num;

@@ -20,6 +20,7 @@ namespace DentalAppointmentandInformationSystem
         }
         public void setStaffInfo(string employee_num, string employee_fullname, string employee_age, string employee_bday, string employee_role, string employee_contact)
         {
+            //Displaying staff info
             employeeNum.Text = employee_num;
             fullName.Text = employee_fullname;
             ageLbl.Text = employee_age;
@@ -30,6 +31,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void editStaff_Click(object sender, EventArgs e)
         {
+            //What happens after clicking the edit button
             DialogResult dialogResult = MessageBox.Show("Edit this staff record?", "Confirm Edit", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

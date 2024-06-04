@@ -33,6 +33,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void displayAppointment()
         {
+            //Displaying the archived appointment for that day
             constring.Open();
             string sql = "SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + lbldays.Text + "' AND status = 0";
             SqlCommand cmd = constring.CreateCommand();

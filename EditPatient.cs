@@ -159,22 +159,6 @@ namespace DentalAppointmentandInformationSystem
             login.Show();
             this.Hide();
         }
-        private void attachFileBtn_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.InitialDirectory = "C://Documents";
-            openFileDialog1.Title = "Select medical record file.";
-            openFileDialog1.Filter = "Select Valid Document(*.pdf; *.doc; *.xlsx; *.html; *.png; *.jpg)|*.pdf; *.docx; *.xlsx; *.html; *.png; *.jpg";
-            openFileDialog1.FilterIndex = 1;
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                if (openFileDialog1.CheckFileExists)
-                {
-                    fileName = Path.GetFileName(openFileDialog1.FileName);
-                    bytes = File.ReadAllBytes(openFileDialog1.FileName);
-                    //attachFileBtn.Text = fileName;
-                }
-            }
-        }
 
         private void savePatientBtn_Click(object sender, EventArgs e)
         {

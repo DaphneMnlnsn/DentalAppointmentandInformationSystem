@@ -34,6 +34,8 @@ namespace DentalAppointmentandInformationSystem
         {
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+
+            //Replacing nav bar staff name
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -87,6 +89,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staffBtn_Click(object sender, EventArgs e)
         {
+            //Check if staff is authorized to open list of staff
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -128,17 +131,20 @@ namespace DentalAppointmentandInformationSystem
 
         private void savePatientBtn_Click(object sender, EventArgs e)
         {
+            //pattern for email address
             string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|"
                 + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)"
                 + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
             Regex addressRegex = new Regex(pattern, RegexOptions.IgnoreCase);
 
+            //checking if the appointment is existing or if the patient is already existing
             constring.Open();
             string compareQuery = "SELECT COUNT(*) FROM Appointment WHERE appointment_date = '" + appntmntDate.Text +
                 "' AND ('" + startTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime) AND ('"
                 + endTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime)";
             SqlCommand compareCmd = new SqlCommand(compareQuery, constring);
             int userCount = (int)compareCmd.ExecuteScalar();
+
             string patientExistingQuery = "SELECT COUNT(*) FROM Patient WHERE patient_lname = '" + lnameTxtBox.Text +
                 "' AND patient_mname = '" + mnameTxtBox.Text +
                 "' AND patient_fname = '" + fnameTxtBox.Text + "'";
@@ -163,6 +169,7 @@ namespace DentalAppointmentandInformationSystem
                     {
                         if (userCount <= 0)
                         {
+                            //Creation of patient
                             string gender = genderCombo.Items[genderCombo.SelectedIndex].ToString();
                             int patientID = 0, quadrant1 = 0, quadrant2 = 0, quadrant3 = 0, quadrant4 = 0;
                             int appointmentID = 0;
@@ -278,6 +285,7 @@ namespace DentalAppointmentandInformationSystem
                             cmd2.CommandText = query;
                             cmd2.ExecuteNonQuery();
 
+                            //Creation of Appointment
                             SqlCommand command = new SqlCommand("SELECT TOP 1 appointment_id FROM Appointment ORDER BY appointment_id DESC", constring);
                             SqlDataReader read;
                             read = command.ExecuteReader();
@@ -339,6 +347,7 @@ namespace DentalAppointmentandInformationSystem
                                 MessageBox.Show("Something went wrong. Please try again.");
                             }
 
+                            //Creation of patient record/appointment history
                             int recordID = 0;
                             SqlCommand com = new SqlCommand("SELECT TOP 1 record_id FROM Record ORDER BY record_id DESC", constring);
                             SqlDataReader re;
@@ -433,6 +442,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staff1Combo_Click(object sender, EventArgs e)
         {
+            //Assigning of data in the combo box
             string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -445,6 +455,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staff2Combo_Click(object sender, EventArgs e)
         {
+            //Assigning data in the combo box
             string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -457,6 +468,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staff3Combo_Click(object sender, EventArgs e)
         {
+            //Assigning data in the combo box
             string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -469,6 +481,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void service1Combo_Click(object sender, EventArgs e)
         {
+            //Assigning data in the combo box
             string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -480,6 +493,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void service2Combo_Click(object sender, EventArgs e)
         {
+            //Assigning data in the combo box
             string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -491,6 +505,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void service3Combo_Click(object sender, EventArgs e)
         {
+            //Assigning data in the combo box
             string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -501,6 +516,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private int CalculateAge(DateTime dateOfBirth)
         {
+            //Calculating the age from the date of birth
             DateTime today = DateTime.Today;
             int age = today.Year - dateOfBirth.Year;
 
@@ -514,6 +530,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void birthDate_Leave(object sender, EventArgs e)
         {
+            //Displaying the age after selecting a date of birth
             ageTxtBox.ReadOnly = false;
             ageTxtBox.Text = CalculateAge(DateTime.Parse(birthDate.Text)).ToString();
             ageTxtBox.ReadOnly = true;

@@ -66,6 +66,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
+            //Deleting a service
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;

@@ -30,6 +30,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void displayFile_Click(object sender, EventArgs e)
         {
+            //Displaying file
             v.getsetattachmentSelected = attachmentSelected;
             AttachmentDisplay fileWindow = new AttachmentDisplay();
             fileWindow.Show();
@@ -38,6 +39,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void deleteFile_Click(object sender, EventArgs e)
         {
+            //Deleting file
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;

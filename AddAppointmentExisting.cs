@@ -30,6 +30,8 @@ namespace DentalAppointmentandInformationSystem
         {
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+
+            //Replacing staff name label from the nav bar
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -50,6 +52,8 @@ namespace DentalAppointmentandInformationSystem
                 MessageBox.Show("NO DATA FOUND");
             }
             constring.Close();
+
+            //Setting minimum date and maximum date to be selected
             startTime.MinDate = DateTime.Parse("10:00:00");
             endTime.MinDate = DateTime.Parse("11:00:00");
             startTime.MaxDate = DateTime.Parse("16:00:00");
@@ -77,6 +81,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staffBtn_Click(object sender, EventArgs e)
         {
+            //Checking authorization
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -119,6 +124,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void savePatientBtn_Click(object sender, EventArgs e)
         {
+            //Checking if the appointment is existing
             constring.Open();
             string compareQuery = "SELECT COUNT(*) FROM Appointment WHERE appointment_date = '" + appntmntDate.Text +
                 "' AND ('" + startTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime) AND ('"
@@ -132,6 +138,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 if (userCount <= 0)
                 {
+                    //Creation of appointment
                     constring.Open();
                     int appointmentID = 0;
                     string staff2, staff3, service2, service3;
@@ -197,6 +204,7 @@ namespace DentalAppointmentandInformationSystem
                         MessageBox.Show("Something went wrong. Please try again.");
                     }
 
+                    //Creation of record/appointment history
                     int recordID = 0;
                     SqlCommand com = new SqlCommand("SELECT TOP 1 record_id FROM Record ORDER BY record_id DESC", constring);
                     SqlDataReader re;
@@ -286,6 +294,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void patientCombo_Click(object sender, EventArgs e)
         {
+            //Setting combo box data values
             string query = "SELECT * FROM Patient WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -303,6 +312,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staff1Combo_Click(object sender, EventArgs e)
         {
+            //Setting combo box data values
             string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -315,6 +325,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staff2Combo_Click(object sender, EventArgs e)
         {
+            //Setting combo box data values
             string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -327,6 +338,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staff3Combo_Click(object sender, EventArgs e)
         {
+            //Setting combo box data values
             string query = "SELECT * FROM Staff WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -339,6 +351,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void service1Combo_Click(object sender, EventArgs e)
         {
+            //Setting combo box data values
             string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -350,6 +363,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void service2Combo_Click(object sender, EventArgs e)
         {
+            //Setting combo box data values
             string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
@@ -361,6 +375,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void service3Combo_Click(object sender, EventArgs e)
         {
+            //Setting combo box data values
             string query = "SELECT * FROM Service WHERE status = 1";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();

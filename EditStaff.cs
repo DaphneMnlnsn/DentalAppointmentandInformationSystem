@@ -75,6 +75,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staffBtn_Click(object sender, EventArgs e)
         {
+            //Checking authorization
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -118,6 +119,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setValues()
         {
+            //Setting existing values for textboxes
             constring.Open();
             string query = "SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetstaffSelected);
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
@@ -138,6 +140,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveStaffBtn_Click(object sender, EventArgs e)
         {
+            //Updating staff details
             if (!string.IsNullOrWhiteSpace(fnameTxtBox.Text) && !string.IsNullOrWhiteSpace(lnameTxtBox.Text) &&
                 !string.IsNullOrWhiteSpace(phoneTxtBox.Text) && !string.IsNullOrWhiteSpace(ageTxtBox.Text) &&
                 !string.IsNullOrWhiteSpace(passTxtBox.Text))
@@ -172,6 +175,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void deleteStffBtn_Click(object sender, EventArgs e)
         {
+            //Deleting staff
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this staff record?\nThis will be moved to the trash bin.", "Confirm Delete", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

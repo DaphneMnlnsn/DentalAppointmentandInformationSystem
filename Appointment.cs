@@ -27,6 +27,7 @@ namespace DentalAppointmentandInformationSystem
         }
         public void setAppointmentInfo(string patientName, string serviceName, string time, string time2, string staffName, string appointment_notes, int appointmentId)
         {
+            //Setting the appointment information for the appointment details
             ptntLbl.Text = patientName;
             srvcLbl.Text = "Service/s Availed: " + serviceName;
             timeLbl.Text = "Time: " + time + "-" + time2;
@@ -37,6 +38,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void editAppntmnt_Click(object sender, EventArgs e)
         {
+            //What would happen if edit button is clicked
             v.getsetappointmentSelected = appntmntIDLbl.Text;
             this.ParentForm.Hide();
             EditAppointment edit = new EditAppointment();
@@ -46,6 +48,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void deleteAppntmnt_Click(object sender, EventArgs e)
         {
+            //What would happen if delete button is clicked
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this appointment?\nThis will be moved to the trash bin.", "Confirm Delete", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

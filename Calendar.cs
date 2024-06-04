@@ -32,6 +32,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void displayDays()
         {
+            //Displaying the days of the month in the calendar
             DateTime now = DateTime.Now;
             v.getsetMonth = now.Month;
             v.getsetYear = now.Year;
@@ -58,6 +59,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            //Prompt when clicking new appointment
             string message = "Does the patient have an existing record?";
             string caption = "Appointment Creation";
             var result = MessageBox.Show(message, caption,
@@ -79,6 +81,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void btnprevious_Click(object sender, EventArgs e)
         {
+            //What would happen if the previous button is clicked
             daycontainer.Controls.Clear();
             v.getsetMonth--;
 
@@ -105,6 +108,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void btnnext_Click(object sender, EventArgs e)
         {
+            //Displaying the days of the next month
             daycontainer.Controls.Clear();
             v.getsetMonth++;
 
@@ -131,6 +135,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staffBtn_Click(object sender, EventArgs e)
         {
+            //Checking authorization
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -190,6 +195,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void timer1()
         {
+            //For making the notification appear
             constring.Open();
             string message = "Today at " + DateTime.Today.ToLongDateString() + ", you have the following appointments:\n";
             SqlCommand sqlcom = new SqlCommand("SELECT * FROM Appointment where appointment_date='" + DateTime.Now.ToString() + "'", constring);

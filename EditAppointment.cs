@@ -32,6 +32,8 @@ namespace DentalAppointmentandInformationSystem
         {
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+
+            //Replacing label with staff name
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -52,6 +54,8 @@ namespace DentalAppointmentandInformationSystem
                 MessageBox.Show("NO DATA FOUND");
             }
             constring.Close();
+            
+            //Assigning default values of combo box and time limits
             startTime.MinDate = DateTime.Parse("10:00:00");
             endTime.MinDate = DateTime.Parse("11:00:00");
             startTime.MaxDate = DateTime.Parse("16:00:00");
@@ -87,6 +91,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staffBtn_Click(object sender, EventArgs e)
         {
+            //Checking authorization
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -130,6 +135,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setValues()
         {
+            //Displaying current values of the appointment for the textboxes
             constring.Open();
             string query = "SELECT * FROM Appointment WHERE appointment_id =" + int.Parse(v.getsetappointmentSelected);
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
@@ -239,6 +245,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveAppnmtntBtn_Click(object sender, EventArgs e)
         {
+            //Checking if the appointment date (if changed) is still available
             constring.Open();
             string compareQuery = "SELECT COUNT(*) FROM Appointment WHERE appointment_date = '" + appntmntDate.Text +
                 "' AND ('" + startTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime) AND ('"
@@ -252,6 +259,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 if (userCount <= 0)
                 {
+                    //Updating the appointment details
                     constring.Open();
                     string staff2, staff3, service2, service3;
                     if (service2Combo.Text == null || service2Combo.Text == "")
@@ -304,6 +312,8 @@ namespace DentalAppointmentandInformationSystem
                     SqlDataAdapter da3 = new SqlDataAdapter(sql3, constring);
                     da3.Fill(apps);
 
+
+                    //Updating the patient record/appointment history
                     string recordsDate = "";
                     float recordsPrice = 0;
                     foreach (DataRow row3 in apps.Rows)

@@ -29,6 +29,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveServiceBtn_Click(object sender, EventArgs e)
         {
+            //Creation of Service
             constring.Open();
             string serviceExistingQuery = "SELECT COUNT(*) FROM Service WHERE service_name = '" + srvcNameTxtBox.Text + "'";
             SqlCommand serviceExisting = new SqlCommand(serviceExistingQuery, constring);
@@ -40,7 +41,7 @@ namespace DentalAppointmentandInformationSystem
                 if (!string.IsNullOrWhiteSpace(srvcNameTxtBox.Text) && !string.IsNullOrWhiteSpace(srvcPriceTxtBox.Text))
                 {
                     float num;
-                    bool checkInput = float.TryParse(srvcPriceTxtBox.Text, out num);
+                    bool checkInput = float.TryParse(srvcPriceTxtBox.Text, out num); //Checking if the price entered is a float or integer
 
                     if (checkInput == true)
                     {

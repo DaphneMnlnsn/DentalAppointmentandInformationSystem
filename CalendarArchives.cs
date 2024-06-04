@@ -31,6 +31,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void displayDays()
         {
+            //Displaying the days of the month
             DateTime now = DateTime.Now;
             v.getsetMonth = now.Month;
             v.getsetYear = now.Year;
@@ -58,6 +59,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void btnprevious_Click(object sender, EventArgs e)
         {
+            //Displaying days of previous month
             daycontainer.Controls.Clear();
             v.getsetMonth--;
 
@@ -84,6 +86,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void btnnext_Click(object sender, EventArgs e)
         {
+            //Displaying days of next month
             daycontainer.Controls.Clear();
             v.getsetMonth++;
 
@@ -110,6 +113,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staffBtn_Click(object sender, EventArgs e)
         {
+            //Checking authorization
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;

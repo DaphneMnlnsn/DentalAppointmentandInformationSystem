@@ -30,6 +30,7 @@ namespace DentalAppointmentandInformationSystem
 
         public void setServiceInfo(string service_id, string service_name, float service_price)
         {
+            //Setting service information in the user control
             serviceID.Text = service_id;
             serviceName.Text = service_name;
             servicePrice.Text = service_price.ToString();
@@ -37,8 +38,11 @@ namespace DentalAppointmentandInformationSystem
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
+            //Deleting the service permanently
             constring.Open();
             v.getsetserviceSelected = serviceID.Text;
+
+            //Checking if the service is being used in an appointment
             string sql = "SELECT * FROM Appointment WHERE service_id = '" + v.getsetserviceSelected + "' OR service_id2 = '" + v.getsetserviceSelected + "' OR service_id3 = '" + v.getsetserviceSelected + "'";
             DataTable appointments = new DataTable("appointments");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
@@ -91,6 +95,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void restoreBtn_Click(object sender, EventArgs e)
         {
+            //Restoring an appointment
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;

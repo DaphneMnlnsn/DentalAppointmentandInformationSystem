@@ -35,6 +35,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void displayPatient()
         {
+            //Displaying patient information
             constring.Open();
             string sql = "SELECT * FROM Patient WHERE status = 1";
             DataTable patients = new DataTable("patients");

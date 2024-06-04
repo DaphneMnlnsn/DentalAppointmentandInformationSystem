@@ -33,6 +33,8 @@ namespace DentalAppointmentandInformationSystem
         {
             this.CenterToScreen();
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+
+            //Replacing staff name label
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -60,6 +62,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void displayAppointments()
         {
+            //Displaying appointment details of that date, but archived
             constring.Open();
             string sql = "SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + v.getsetDay + "' AND status = 0";
             DataTable appointments = new DataTable("appointments");
@@ -84,6 +87,8 @@ namespace DentalAppointmentandInformationSystem
                 string appointment_notes = row["appointment_notes"].ToString();
                 string time = row["appointment_startTime"].ToString()[0] + "" + row["appointment_startTime"].ToString()[1] + "" + row["appointment_startTime"].ToString()[2] + "" + row["appointment_startTime"].ToString()[3] + "" + row["appointment_startTime"].ToString()[4];
                 string time2 = row["appointment_endTime"].ToString()[0] + "" + row["appointment_endTime"].ToString()[1] + "" + row["appointment_endTime"].ToString()[2] + "" + row["appointment_endTime"].ToString()[3] + "" + row["appointment_endTime"].ToString()[4];
+                
+                //Selecting the name of the service, staff, and patient of the appointment
                 string sql2 = "SELECT * FROM Service WHERE service_id = " + "'" + service_id + "'";
                 SqlCommand cmd2 = constring.CreateCommand();
                 cmd2.CommandText = sql2;
@@ -203,6 +208,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void staffBtn_Click(object sender, EventArgs e)
         {
+            //Checking authorization
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;

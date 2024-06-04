@@ -34,6 +34,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void displayAppointment()
         {
+            //Displays the appointment for that specific day
             constring.Open();
             String sql = "SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + dayLbl.Text + "' AND status = 1";
             SqlCommand cmd = constring.CreateCommand();

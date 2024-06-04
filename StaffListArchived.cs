@@ -22,6 +22,7 @@ namespace DentalAppointmentandInformationSystem
         }
         public void setStaffInfo(string employee_num, string employee_fullname, string employee_age, string employee_bday, string employee_role, string employee_contact)
         {
+            //Setting info of the archived staff
             employeeNum.Text = employee_num;
             fullName.Text = employee_fullname;
             ageLbl.Text = employee_age;
@@ -31,6 +32,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void restoreStaff_Click(object sender, EventArgs e)
         {
+            //What happens after clicking the restore button
             constring.Open();
             DialogResult dialogResult = MessageBox.Show("Restore this staff record?", "Confirm Restore", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
@@ -53,6 +55,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
+            //What happens after clicking delete button
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;

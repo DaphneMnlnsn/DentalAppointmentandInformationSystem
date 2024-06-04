@@ -75,11 +75,12 @@ namespace DentalAppointmentandInformationSystem
             int num;
             bool checkInput = int.TryParse(eNumTxtBox.Text, out num);
 
-            
+            //Checking if the inputs are null or blank
             if (!eNumTxtBox.Text.Equals("Employee Number") && !passTxtbox.Text.Equals("Password"))
             {
                 if (checkInput == true)
                 {
+                    //Verifying if user exists in the database
                     SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Staff WHERE employee_num ='" + eNumTxtBox.Text + "' AND employee_pass ='" + passTxtbox.Text + "' AND status = 1", constring);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);

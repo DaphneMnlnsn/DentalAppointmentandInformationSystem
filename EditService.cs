@@ -29,6 +29,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void saveSrvcBtn_Click(object sender, EventArgs e)
         {
+            //Updating the service details
             if (!string.IsNullOrWhiteSpace(srvcNameTxtBox.Text) && !string.IsNullOrWhiteSpace(srvcPriceTxtBox.Text))
             {
                 float num;

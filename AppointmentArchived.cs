@@ -27,6 +27,7 @@ namespace DentalAppointmentandInformationSystem
         }
         public void setAppointmentInfo(string patientName, string serviceName, string time, string time2, string staffName, string appointment_notes, int appointmentId)
         {
+            //Setting the appointment details but of archived appointments
             ptntLbl.Text = patientName;
             srvcLbl.Text = "Service/s Availed: " + serviceName;
             timeLbl.Text = "Time: " + time + "-" + time2;
@@ -37,6 +38,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void deleteAppntmnt_Click(object sender, EventArgs e)
         {
+            //Deleting an appointment permanently
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this appointment permanently?\nYou will not be able to retrieve this!", "Confirm Delete", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
@@ -66,6 +68,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void restoreAppntmnt_Click(object sender, EventArgs e)
         {
+            //Restoring an appointment permanently
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to restore this appointment?", "Confirm Restore", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

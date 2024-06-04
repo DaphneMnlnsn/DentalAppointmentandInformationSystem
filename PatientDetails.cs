@@ -64,6 +64,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void displayPatientDetails()
         {
+            //Displaying patient info
             constring.Open();
             string sql = "SELECT * FROM Patient WHERE patient_id = " + v.getsetpatientSelected;
             DataTable patients = new DataTable("patients");
@@ -108,7 +109,8 @@ namespace DentalAppointmentandInformationSystem
                 contactPNumLbl.Text = "Contact Person Number: 09" + row["patient_cpernum"].ToString();
                 patientLV.Text = "Last Visit: " + lastVisit.ToString();
                 patientNotes.Text = row["patient_notes"].ToString();
-
+                
+                //Displaying appointment history/records
                 string sql2 = "SELECT * FROM Record WHERE patient_id = " + v.getsetpatientSelected + " AND status = 1";
                 DataTable records = new DataTable("record");
                 SqlDataAdapter da2 = new SqlDataAdapter(sql2, constring);
@@ -168,6 +170,7 @@ namespace DentalAppointmentandInformationSystem
                     recordContainer.Controls.Add(record);
                 }
 
+                //Displaying patient files
                 string sqll = "SELECT * FROM [File] WHERE patient_id = " + v.getsetpatientSelected + " AND status = 1";
                 DataTable files = new DataTable("file");
                 SqlDataAdapter daa = new SqlDataAdapter(sqll, constring);
@@ -248,6 +251,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void deletePtnt_Click(object sender, EventArgs e)
         {
+            //Deleting a patient
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
@@ -343,6 +347,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void addAttachment_Click(object sender, EventArgs e)
         {
+            //Adding attachment of a patient file
             constring.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
