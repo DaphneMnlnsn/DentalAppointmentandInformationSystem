@@ -41,7 +41,7 @@ namespace DentalAppointmentandInformationSystem
                 cmd2.CommandText = query2;
                 if (cmd2.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Staff record successfully restored!");
+                    MessageBox.Show("Changes saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     constring.Close();
                     StaffArchives staff = new StaffArchives();
                     staff.Show();
@@ -69,7 +69,7 @@ namespace DentalAppointmentandInformationSystem
                     cmd2.CommandText = query2;
                     if (cmd2.ExecuteNonQuery() == 1)
                     {
-                        MessageBox.Show("Staff record deleted permanently!");
+                        MessageBox.Show("Staff record deleted permanently!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         constring.Close();
                         StaffArchives srvcs = new StaffArchives();
                         srvcs.Show();

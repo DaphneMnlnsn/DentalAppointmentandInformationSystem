@@ -65,6 +65,11 @@ namespace DentalAppointmentandInformationSystem
             DataTable appointments = new DataTable("appointments");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(appointments);
+            if (appointments.Rows.Count <= 0)
+            {
+                emptyPic.Visible = true;
+                emptyLbl.Visible = true;
+            }
             foreach (DataRow row in appointments.Rows)
             {
                 Appointment appntmnt = new Appointment();
@@ -213,7 +218,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to open this!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }

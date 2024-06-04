@@ -58,11 +58,11 @@
             this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel2.ColumnCount = 8;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 391F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 383F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
             this.tableLayoutPanel2.Controls.Add(this.fullName, 0, 0);
@@ -86,7 +86,7 @@
             this.fullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fullName.AutoSize = true;
             this.fullName.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.fullName.Location = new System.Drawing.Point(307, 31);
+            this.fullName.Location = new System.Drawing.Point(303, 31);
             this.fullName.Name = "fullName";
             this.fullName.Size = new System.Drawing.Size(104, 24);
             this.fullName.TabIndex = 80;
@@ -110,7 +110,7 @@
             this.ageLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ageLbl.AutoSize = true;
             this.ageLbl.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.ageLbl.Location = new System.Drawing.Point(569, 31);
+            this.ageLbl.Location = new System.Drawing.Point(561, 31);
             this.ageLbl.Name = "ageLbl";
             this.ageLbl.Size = new System.Drawing.Size(49, 24);
             this.ageLbl.TabIndex = 78;
@@ -122,7 +122,7 @@
             this.birthDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.birthDate.AutoSize = true;
             this.birthDate.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.birthDate.Location = new System.Drawing.Point(658, 31);
+            this.birthDate.Location = new System.Drawing.Point(647, 31);
             this.birthDate.Name = "birthDate";
             this.birthDate.Size = new System.Drawing.Size(101, 24);
             this.birthDate.TabIndex = 79;
@@ -134,7 +134,7 @@
             this.staffRole.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.staffRole.AutoSize = true;
             this.staffRole.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.staffRole.Location = new System.Drawing.Point(819, 31);
+            this.staffRole.Location = new System.Drawing.Point(803, 31);
             this.staffRole.Name = "staffRole";
             this.staffRole.Size = new System.Drawing.Size(105, 24);
             this.staffRole.TabIndex = 81;
@@ -146,7 +146,7 @@
             this.contactNum.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.contactNum.AutoSize = true;
             this.contactNum.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.contactNum.Location = new System.Drawing.Point(989, 31);
+            this.contactNum.Location = new System.Drawing.Point(981, 31);
             this.contactNum.Name = "contactNum";
             this.contactNum.Size = new System.Drawing.Size(88, 24);
             this.contactNum.TabIndex = 82;

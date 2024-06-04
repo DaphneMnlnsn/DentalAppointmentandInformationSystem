@@ -44,7 +44,16 @@ namespace DentalAppointmentandInformationSystem
             DataTable services = new DataTable("services");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(services);
-
+            if (services.Rows.Count <= 0)
+            {
+                emptyPic.Visible = true;
+                emptyLbl.Visible = true;
+            }
+            else
+            {
+                emptyPic.Visible = false;
+                emptyLbl.Visible = false;
+            }
             foreach (DataRow row in services.Rows)
             {
                 ServicesListArchived service = new ServicesListArchived();
@@ -86,7 +95,7 @@ namespace DentalAppointmentandInformationSystem
                 else
                 {
                     constring.Close();
-                    MessageBox.Show("You do not have the authorization to open this!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -124,7 +133,16 @@ namespace DentalAppointmentandInformationSystem
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(services);
                 servicesContainer.Controls.Clear();
-
+                if (services.Rows.Count <= 0)
+                {
+                    emptyPic.Visible = true;
+                    emptyLbl.Visible = true;
+                }
+                else
+                {
+                    emptyPic.Visible = false;
+                    emptyLbl.Visible = false;
+                }
                 foreach (DataRow row in services.Rows)
                 {
                     ServicesList service = new ServicesList();

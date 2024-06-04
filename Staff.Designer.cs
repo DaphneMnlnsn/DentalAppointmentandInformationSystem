@@ -53,6 +53,8 @@
             this.binLbl = new System.Windows.Forms.Label();
             this.searchBtn = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.emptyLbl = new System.Windows.Forms.Label();
+            this.emptyPic = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -65,6 +67,7 @@
             this.binBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.binPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptyPic)).BeginInit();
             this.SuspendLayout();
             // 
             // dshbrdLbl
@@ -234,7 +237,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(941, 29);
+            this.label4.Location = new System.Drawing.Point(940, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 31);
             this.label4.TabIndex = 81;
@@ -246,7 +249,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(746, 29);
+            this.label3.Location = new System.Drawing.Point(745, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 31);
             this.label3.TabIndex = 79;
@@ -258,7 +261,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(650, 29);
+            this.label2.Location = new System.Drawing.Point(649, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 31);
             this.label2.TabIndex = 78;
@@ -270,7 +273,7 @@
             this.employee_no.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.employee_no.AutoSize = true;
             this.employee_no.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.employee_no.Location = new System.Drawing.Point(21, 14);
+            this.employee_no.Location = new System.Drawing.Point(20, 14);
             this.employee_no.Name = "employee_no";
             this.employee_no.Size = new System.Drawing.Size(135, 62);
             this.employee_no.TabIndex = 77;
@@ -282,7 +285,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(339, 29);
+            this.label1.Location = new System.Drawing.Point(338, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 31);
             this.label1.TabIndex = 80;
@@ -299,7 +302,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.employee_no, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
@@ -369,12 +372,43 @@
             this.searchBtn.TabStop = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
+            // emptyLbl
+            // 
+            this.emptyLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.emptyLbl.AutoSize = true;
+            this.emptyLbl.BackColor = System.Drawing.SystemColors.Control;
+            this.emptyLbl.Font = new System.Drawing.Font("Metrophobic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emptyLbl.Location = new System.Drawing.Point(764, 615);
+            this.emptyLbl.Name = "emptyLbl";
+            this.emptyLbl.Size = new System.Drawing.Size(142, 45);
+            this.emptyLbl.TabIndex = 103;
+            this.emptyLbl.Text = "No Data";
+            this.emptyLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.emptyLbl.Visible = false;
+            // 
+            // emptyPic
+            // 
+            this.emptyPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.emptyPic.BackColor = System.Drawing.SystemColors.Control;
+            this.emptyPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.empty;
+            this.emptyPic.Location = new System.Drawing.Point(758, 471);
+            this.emptyPic.Name = "emptyPic";
+            this.emptyPic.Size = new System.Drawing.Size(153, 141);
+            this.emptyPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.emptyPic.TabIndex = 102;
+            this.emptyPic.TabStop = false;
+            this.emptyPic.Visible = false;
+            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1537, 920);
+            this.Controls.Add(this.emptyLbl);
+            this.Controls.Add(this.emptyPic);
             this.Controls.Add(this.binBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.searchTxtBox);
@@ -403,6 +437,7 @@
             this.binBtn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.binPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptyPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,5 +468,7 @@
         private System.Windows.Forms.PictureBox binPic;
         private System.Windows.Forms.Label binLbl;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label emptyLbl;
+        private System.Windows.Forms.PictureBox emptyPic;
     }
 }

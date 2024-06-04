@@ -40,7 +40,16 @@ namespace DentalAppointmentandInformationSystem
             DataTable files = new DataTable("files");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(files);
-
+            if (files.Rows.Count <= 0)
+            {
+                emptyPic.Visible = true;
+                emptyLbl.Visible = true;
+            }
+            else
+            {
+                emptyPic.Visible = false;
+                emptyLbl.Visible = false;
+            }
             foreach (DataRow row in files.Rows)
             {
                  PatientDetailsAttachmentArchived pda = new PatientDetailsAttachmentArchived();
@@ -75,7 +84,7 @@ namespace DentalAppointmentandInformationSystem
                 else
                 {
                     constring.Close();
-                    MessageBox.Show("You do not have the authorization to open this!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -121,7 +130,16 @@ namespace DentalAppointmentandInformationSystem
                 SqlDataAdapter da = new SqlDataAdapter(sql, constring);
                 da.Fill(files);
                 attachmentContainer.Controls.Clear();
-
+                if (files.Rows.Count <= 0)
+                {
+                    emptyPic.Visible = true;
+                    emptyLbl.Visible = true;
+                }
+                else
+                {
+                    emptyPic.Visible = false;
+                    emptyLbl.Visible = false;
+                }
                 foreach (DataRow row in files.Rows)
                 {
                     PatientDetailsAttachmentArchived pda = new PatientDetailsAttachmentArchived();

@@ -91,7 +91,7 @@ namespace DentalAppointmentandInformationSystem
                 else
                 {
                     constring.Close();
-                    MessageBox.Show("You do not have the authorization to open this!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -181,7 +181,7 @@ namespace DentalAppointmentandInformationSystem
                 cmd2.CommandText = query2;
                 if (cmd2.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Staff Record succesfully moved to the Trash Bin/Archives!");
+                    MessageBox.Show("Staff Record succesfully moved to the Trash Bin/Archives!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     constring.Close();
                     Staff stff = new Staff();
                     stff.Show();

@@ -52,7 +52,7 @@ namespace DentalAppointmentandInformationSystem
                 else
                 {
                     constring.Close();
-                    MessageBox.Show("You do not have the authorization to edit patient records!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -179,19 +179,6 @@ namespace DentalAppointmentandInformationSystem
                     PatientDetailsAttachment pda = new PatientDetailsAttachment();
                     pda.setAttachment(roww["file_id"].ToString(), roww["file_name"].ToString());
                     attachmentContainer.Controls.Add(pda);
-                    /*
-                    string sql4 = "SELECT * FROM History WHERE patient_id = " + v.getsetpatientSelected;
-                    DataTable history = new DataTable("history");
-                    SqlDataAdapter da4 = new SqlDataAdapter(sql4, constring);
-                    da4.Fill(history);
-
-                    foreach (DataRow row4 in history.Rows)
-                    {
-                        PatientDentalHistoryItem dentalHistory = new PatientDentalHistoryItem();
-                        dentalHistory.setDentalHistory(row4["history_id"].ToString(), row4["past_treatment"].ToString(), row4["dentist_name"].ToString());
-                        historyContainer.Controls.Add(dentalHistory);
-
-                    }*/
                 }
             }
             constring.Close();
@@ -235,7 +222,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to open this!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }
@@ -258,12 +245,6 @@ namespace DentalAppointmentandInformationSystem
             editRecord1.Visible = true;
             editRecord1.setValues();
         }
-
-       /* public void editHistoryVisible()
-        {
-            editHistory1.Visible = true;
-            editHistory1.setValues();
-        }*/
 
         private void deletePtnt_Click(object sender, EventArgs e)
         {
@@ -327,6 +308,8 @@ namespace DentalAppointmentandInformationSystem
                         if (cmd4.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("Patient has been added to the Trash Bin/Archives!");
+
+                            MessageBox.Show("");
                             constring.Close();
                             Patients ptnt = new Patients();
                             ptnt.Show();
@@ -341,7 +324,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to delete patient records!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }
@@ -394,7 +377,7 @@ namespace DentalAppointmentandInformationSystem
                         SqlCommand addAttach = new SqlCommand(query, constring);
                         if (addAttach.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("File added!");
+                            MessageBox.Show("File added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             constring.Close();
                             this.Hide();
                             PatientDetails pd = new PatientDetails();
@@ -406,7 +389,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to add patient files!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }

@@ -41,7 +41,16 @@ namespace DentalAppointmentandInformationSystem
             DataTable staffs = new DataTable("staffs");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(staffs);
-
+            if (staffs.Rows.Count <= 0)
+            {
+                emptyPic.Visible = true;
+                emptyLbl.Visible = true;
+            }
+            else
+            {
+                emptyPic.Visible = false;
+                emptyLbl.Visible = false;
+            }
             foreach (DataRow row in staffs.Rows)
             {
                 StaffList staff = new StaffList();
@@ -124,7 +133,16 @@ namespace DentalAppointmentandInformationSystem
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(staffs);
                 staffContainer.Controls.Clear();
-
+                if (staffs.Rows.Count <= 0)
+                {
+                    emptyPic.Visible = true;
+                    emptyLbl.Visible = true;
+                }
+                else
+                {
+                    emptyPic.Visible = false;
+                    emptyLbl.Visible = false;
+                }
                 foreach (DataRow row in staffs.Rows)
                 {
                     StaffList staff = new StaffList();

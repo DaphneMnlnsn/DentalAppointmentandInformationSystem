@@ -61,7 +61,7 @@ namespace DentalAppointmentandInformationSystem
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     constring.Close();
-                    MessageBox.Show("Appointment has been moved to the Trash Bin/Archives!");
+                    MessageBox.Show("Appointment has been moved to the Trash Bin/Archives!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Calendar clndr = new Calendar();
                     clndr.Show();
                     this.ParentForm.Hide();

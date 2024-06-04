@@ -112,7 +112,7 @@ namespace DentalAppointmentandInformationSystem
                     if (cmd2.ExecuteNonQuery() == 1)
                     {
                         constring.Close();
-                        MessageBox.Show("Staff Member added!\nThe employee's credentials are:\nEmployee Number: " + staffID + "\nPassword: " + staffPass);
+                        MessageBox.Show("Staff Member added!\nThe employee's credentials are:\nEmployee Number: " + staffID + "\nPassword: '" + staffPass + "'" , "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Staff staff = new Staff();
                         staff.Show();
                         this.Hide();
@@ -173,7 +173,7 @@ namespace DentalAppointmentandInformationSystem
                 else
                 {
                     constring.Close();
-                    MessageBox.Show("You do not have the authorization to open this!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

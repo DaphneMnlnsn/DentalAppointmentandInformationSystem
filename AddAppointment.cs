@@ -102,7 +102,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to open this!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }
@@ -332,7 +332,7 @@ namespace DentalAppointmentandInformationSystem
                             cmd3.CommandText = query2;
                             if (cmd3.ExecuteNonQuery() == 1)
                             {
-                                MessageBox.Show("Appointment Created!");
+                                MessageBox.Show("Appointment created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {

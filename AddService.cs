@@ -67,7 +67,7 @@ namespace DentalAppointmentandInformationSystem
                         cmd2.CommandText = query;
                         if (cmd2.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("Service added successfully!");
+                            MessageBox.Show("Service added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Visible = false;
                             this.ParentForm.Hide();
                             constring.Close();

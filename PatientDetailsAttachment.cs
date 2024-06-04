@@ -54,7 +54,7 @@ namespace DentalAppointmentandInformationSystem
                         SqlCommand cmdd = new SqlCommand("UPDATE [File] SET status = 0 WHERE file_id = '" + v.getsetattachmentSelected + "'", constring);
                         if (cmdd.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("File successfully deleted!");
+                            MessageBox.Show("File successfully deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             constring.Close();
                             this.ParentForm.Hide();
                             PatientDetails pd = new PatientDetails();
@@ -65,7 +65,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to delete patient files!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }

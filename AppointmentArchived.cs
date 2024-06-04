@@ -52,7 +52,7 @@ namespace DentalAppointmentandInformationSystem
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     constring.Close();
-                    MessageBox.Show("Appointment deleted permanently!");
+                    MessageBox.Show("Appointment deleted permanently!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Calendar clndr = new Calendar();
                     clndr.Show();
                     this.ParentForm.Hide();
@@ -81,7 +81,7 @@ namespace DentalAppointmentandInformationSystem
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     constring.Close();
-                    MessageBox.Show("Appointment restored successfully!");
+                    MessageBox.Show("Appointment restored successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Calendar clndr = new Calendar();
                     clndr.Show();
                     this.ParentForm.Hide();

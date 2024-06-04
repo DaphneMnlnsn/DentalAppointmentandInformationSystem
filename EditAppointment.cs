@@ -103,7 +103,7 @@ namespace DentalAppointmentandInformationSystem
                 else
                 {
                     constring.Close();
-                    MessageBox.Show("You do not have the authorization to open this!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -351,7 +351,7 @@ namespace DentalAppointmentandInformationSystem
 
                     if (cmd3.ExecuteNonQuery() == 1)
                     {
-                        MessageBox.Show("Changes Saved!");
+                        MessageBox.Show("Changes saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         constring.Close();
                         Calendar clndr = new Calendar();
                         clndr.Show();

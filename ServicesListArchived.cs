@@ -38,6 +38,12 @@ namespace DentalAppointmentandInformationSystem
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             constring.Open();
+            v.getsetserviceSelected = serviceID.Text;
+            string sql = "SELECT * FROM Appointment WHERE service_id = '" + v.getsetserviceSelected + "' OR service_id2 = '" + v.getsetserviceSelected + "' OR service_id3 = '" + v.getsetserviceSelected + "'";
+            DataTable appointments = new DataTable("appointments");
+            SqlDataAdapter da = new SqlDataAdapter(sql, constring);
+            da.Fill(appointments);
+
             SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
             SqlDataReader reader1;
             reader1 = cmd.ExecuteReader();
@@ -49,24 +55,30 @@ namespace DentalAppointmentandInformationSystem
                     DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this service permanently?\nYou will not be able to retrieve this!", "Confirm Delete", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        v.getsetserviceSelected = serviceID.Text;
-                        string query2 = "DELETE FROM Service WHERE service_id ='" + v.getsetserviceSelected + "';";
-                        SqlCommand cmd2 = new SqlCommand(query2, constring);
-                        cmd2.CommandText = query2;
-                        if (cmd2.ExecuteNonQuery() == 1)
+                        if (appointments.Rows.Count <= 0)
                         {
-                            MessageBox.Show("Service deleted permanently!");
-                            constring.Close();
-                            ServiceArchives srvcs = new ServiceArchives();
-                            srvcs.Show();
-                            this.ParentForm.Hide();
+                            string query2 = "DELETE FROM Service WHERE service_id ='" + v.getsetserviceSelected + "';";
+                            SqlCommand cmd2 = new SqlCommand(query2, constring);
+                            cmd2.CommandText = query2;
+                            if (cmd2.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Service deleted permanently!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                constring.Close();
+                                ServiceArchives srvcs = new ServiceArchives();
+                                srvcs.Show();
+                                this.ParentForm.Hide();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("This service is currently employed by an appointment!\nPlease delete the appointment using it first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     constring.Close();
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to delete services!");
+                    MessageBox.Show("You do not have authorization to delete services!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }
@@ -108,7 +120,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to restore archived services!");
+                    MessageBox.Show("You do not have the authorization to restore archived services!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }

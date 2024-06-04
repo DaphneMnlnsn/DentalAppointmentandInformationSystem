@@ -109,6 +109,7 @@
             this.teethTrtdTxtBox.Font = new System.Drawing.Font("Inter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teethTrtdTxtBox.Location = new System.Drawing.Point(40, 128);
             this.teethTrtdTxtBox.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.teethTrtdTxtBox.MaxLength = 50;
             this.teethTrtdTxtBox.Name = "teethTrtdTxtBox";
             this.teethTrtdTxtBox.Size = new System.Drawing.Size(430, 32);
             this.teethTrtdTxtBox.TabIndex = 81;

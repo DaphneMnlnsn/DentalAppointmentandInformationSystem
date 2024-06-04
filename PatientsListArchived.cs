@@ -92,7 +92,7 @@ namespace DentalAppointmentandInformationSystem
                         cmd7.CommandText = query7;
                         if (cmd7.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("Patient record deleted permanently!");
+                            MessageBox.Show("Patient record deleted permanently!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             constring.Close();
                             PatientArchives ptnt = new PatientArchives();
                             ptnt.Show();
@@ -103,7 +103,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to delete patient records!");
+                    MessageBox.Show("You do not have authorization to delete this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }
@@ -172,7 +172,7 @@ namespace DentalAppointmentandInformationSystem
                         cmd4.CommandText = query4;
                         if (cmd4.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("Patient record successfully restored!");
+                            MessageBox.Show("Patient record successfully restored!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             constring.Close();
                             PatientArchives ptnt = new PatientArchives();
                             ptnt.Show();
@@ -183,7 +183,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to restore archived patient records!");
+                    MessageBox.Show("You do not have authorization to restore this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }

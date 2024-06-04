@@ -54,7 +54,7 @@ namespace DentalAppointmentandInformationSystem
                         SqlCommand cmdd = new SqlCommand("DELETE FROM [File] WHERE file_id = '" + v.getsetattachmentSelected + "'", constring);
                         if (cmdd.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("File permanently deleted!");
+                            MessageBox.Show("File permanently deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             constring.Close();
                             this.ParentForm.Hide();
                             FileArchives pd = new FileArchives();
@@ -65,7 +65,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to delete patient files!");
+                    MessageBox.Show("You do not have authorization to delete this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }
@@ -95,7 +95,7 @@ namespace DentalAppointmentandInformationSystem
                         cmd2.CommandText = query2;
                         if (cmd2.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("File successfully restored!");
+                            MessageBox.Show("File restored!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             constring.Close();
                             this.ParentForm.Hide();
                             FileArchives ptd = new FileArchives();
@@ -106,7 +106,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to restore patient files!");
+                    MessageBox.Show("You do not have restore this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }

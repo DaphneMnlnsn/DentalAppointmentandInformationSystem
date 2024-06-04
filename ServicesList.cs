@@ -53,7 +53,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to edit services!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }
@@ -84,7 +84,7 @@ namespace DentalAppointmentandInformationSystem
                         cmd2.CommandText = query2;
                         if (cmd2.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("Service successfully moved to the Trash Bin/Archives!");
+                            MessageBox.Show("Service successfully moved to the Trash Bin/Archives!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             constring.Close();
                             Services srvcs = new Services();
                             srvcs.Show();
@@ -92,14 +92,14 @@ namespace DentalAppointmentandInformationSystem
                         }
                         else
                         {
-                            MessageBox.Show("Service cannot be deleted because it is included in a patient's record!");
+                            MessageBox.Show("Service cannot be deleted because it is included in a patient's record!","Error",MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                     }
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to delete services!");
+                    MessageBox.Show("You do not have authorization to delete this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }

@@ -40,7 +40,16 @@ namespace DentalAppointmentandInformationSystem
             DataTable patients = new DataTable("patients");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(patients);
-
+            if (patients.Rows.Count <= 0)
+            {
+                emptyPic.Visible = true;
+                emptyLbl.Visible = true;
+            }
+            else
+            {
+                emptyPic.Visible = false;
+                emptyLbl.Visible = false;
+            }
             foreach (DataRow row in patients.Rows)
             {
                 PatientsList patient = new PatientsList();
@@ -95,7 +104,7 @@ namespace DentalAppointmentandInformationSystem
                 else
                 {
                     constring.Close();
-                    MessageBox.Show("You do not have the authorization to open this!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -116,13 +125,6 @@ namespace DentalAppointmentandInformationSystem
         {
             Dashboard dshbrd = new Dashboard();
             dshbrd.Show();
-            this.Hide();
-        }
-
-        private void newPtntBtn_Click(object sender, EventArgs e)
-        {
-            NewPatient newptnt = new NewPatient();
-            newptnt.Show();
             this.Hide();
         }
 
@@ -158,6 +160,16 @@ namespace DentalAppointmentandInformationSystem
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(patients);
                 staffContainer.Controls.Clear();
+                if (patients.Rows.Count <= 0)
+                {
+                    emptyPic.Visible = true;
+                    emptyLbl.Visible = true;
+                }
+                else
+                {
+                    emptyPic.Visible = false;
+                    emptyLbl.Visible = false;
+                }
                 foreach (DataRow row in patients.Rows)
                 {
                     PatientsList patient = new PatientsList();

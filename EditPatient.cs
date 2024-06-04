@@ -135,7 +135,7 @@ namespace DentalAppointmentandInformationSystem
                 else
                 {
                     constring.Close();
-                    MessageBox.Show("You do not have the authorization to open this!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -207,7 +207,7 @@ namespace DentalAppointmentandInformationSystem
                     SqlCommand cmd3 = new SqlCommand(query2, constring);
                     if(cmd3.ExecuteNonQuery() == 1)
                     {
-                        MessageBox.Show("Changes saved!");
+                        MessageBox.Show("Changes saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         constring.Close();
                         PatientDetails pDetails = new PatientDetails();
                         pDetails.Show();

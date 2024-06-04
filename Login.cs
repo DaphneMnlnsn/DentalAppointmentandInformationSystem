@@ -93,7 +93,7 @@ namespace DentalAppointmentandInformationSystem
                     }
                     else
                     {
-                        MessageBox.Show("Invalid username or password");
+                        MessageBox.Show("Invalid employee number of password!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 else

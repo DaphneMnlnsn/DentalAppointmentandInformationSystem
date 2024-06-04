@@ -47,7 +47,7 @@ namespace DentalAppointmentandInformationSystem
                 }
                 else
                 {
-                    MessageBox.Show("You do not have the authorization to open this!");
+                    MessageBox.Show("You do not have authorization to open this!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     constring.Close();
                 }
             }
@@ -428,7 +428,7 @@ namespace DentalAppointmentandInformationSystem
             SqlCommand editQuadrant4cmd = new SqlCommand(editQuadrant4, constring);
             if (editQuadrant4cmd.ExecuteNonQuery() == 1)
             {
-                MessageBox.Show("Changes saved!");
+                MessageBox.Show("Changes saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 constring.Close();
                 DentalRecord dentalRecord = new DentalRecord();
                 dentalRecord.Show();

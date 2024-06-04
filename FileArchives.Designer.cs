@@ -43,6 +43,8 @@
             this.searchBtn = new System.Windows.Forms.PictureBox();
             this.backBtn = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.emptyLbl = new System.Windows.Forms.Label();
+            this.emptyPic = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).BeginInit();
@@ -53,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptyPic)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -220,11 +223,40 @@
             this.backBtn.TabStop = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
+            // emptyLbl
+            // 
+            this.emptyLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.emptyLbl.AutoSize = true;
+            this.emptyLbl.Font = new System.Drawing.Font("Metrophobic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emptyLbl.Location = new System.Drawing.Point(747, 578);
+            this.emptyLbl.Name = "emptyLbl";
+            this.emptyLbl.Size = new System.Drawing.Size(142, 45);
+            this.emptyLbl.TabIndex = 101;
+            this.emptyLbl.Text = "No Data";
+            this.emptyLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.emptyLbl.Visible = false;
+            // 
+            // emptyPic
+            // 
+            this.emptyPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.emptyPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.empty;
+            this.emptyPic.Location = new System.Drawing.Point(741, 434);
+            this.emptyPic.Name = "emptyPic";
+            this.emptyPic.Size = new System.Drawing.Size(153, 141);
+            this.emptyPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.emptyPic.TabIndex = 100;
+            this.emptyPic.TabStop = false;
+            this.emptyPic.Visible = false;
+            // 
             // FileArchives
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1537, 920);
+            this.Controls.Add(this.emptyLbl);
+            this.Controls.Add(this.emptyPic);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.searchTxtBox);
@@ -248,6 +280,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptyPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +302,7 @@
         private System.Windows.Forms.TextBox searchTxtBox;
         private System.Windows.Forms.PictureBox backBtn;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label emptyLbl;
+        private System.Windows.Forms.PictureBox emptyPic;
     }
 }
