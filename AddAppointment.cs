@@ -169,96 +169,11 @@ namespace DentalAppointmentandInformationSystem
                     {
                         if (userCount <= 0)
                         {
-                            //Creation of patient
                             string gender = genderCombo.Items[genderCombo.SelectedIndex].ToString();
-                            int patientID = 0, quadrant1 = 0, quadrant2 = 0, quadrant3 = 0, quadrant4 = 0;
+                            int patientID = 0;
                             int appointmentID = 0;
                             string service2, service3, staff2, staff3;
                             constring.Open();
-
-                            //Quadrant 1 Num Creation
-                            SqlCommand createQuadrant1 = new SqlCommand("SELECT TOP 1 quadrant1_num FROM Quadrant1 ORDER BY quadrant1_num DESC", constring);
-                            SqlDataReader quadrant1Reader;
-                            quadrant1Reader = createQuadrant1.ExecuteReader();
-                            if (quadrant1Reader.Read())
-                            {
-                                quadrant1 = quadrant1Reader.GetInt32(0) + 1;
-                            }
-                            else
-                            {
-                                MessageBox.Show("NO DATA FOUND");
-                            }
-                            quadrant1Reader.Close();
-                            createQuadrant1.Dispose();
-
-                            string quadrant1Query = "INSERT INTO Quadrant1(quadrant1_num,status) VALUES('" + quadrant1 + "',1)";
-
-                            SqlCommand quadrant1Cmd = new SqlCommand(quadrant1Query, constring);
-                            quadrant1Cmd.CommandText = quadrant1Query;
-                            quadrant1Cmd.ExecuteNonQuery();
-
-                            //Quadrant 2 Num Creation
-                            SqlCommand createQuadrant2 = new SqlCommand("SELECT TOP 1 quadrant2_num FROM Quadrant2 ORDER BY quadrant2_num DESC", constring);
-                            SqlDataReader quadrant2Reader;
-                            quadrant2Reader = createQuadrant2.ExecuteReader();
-                            if (quadrant2Reader.Read())
-                            {
-                                quadrant2 = quadrant2Reader.GetInt32(0) + 1;
-                            }
-                            else
-                            {
-                                MessageBox.Show("NO DATA FOUND");
-                            }
-                            quadrant2Reader.Close();
-                            createQuadrant2.Dispose();
-
-                            string quadrant2Query = "INSERT INTO Quadrant2(quadrant2_num,status) VALUES('" + quadrant2 + "',1)";
-
-                            SqlCommand quadrant2Cmd = new SqlCommand(quadrant2Query, constring);
-                            quadrant2Cmd.CommandText = quadrant2Query;
-                            quadrant2Cmd.ExecuteNonQuery();
-
-                            //Quadrant 3 Num Creation
-                            SqlCommand createQuadrant3 = new SqlCommand("SELECT TOP 1 quadrant3_num FROM Quadrant3 ORDER BY quadrant3_num DESC", constring);
-                            SqlDataReader quadrant3Reader;
-                            quadrant3Reader = createQuadrant3.ExecuteReader();
-                            if (quadrant3Reader.Read())
-                            {
-                                quadrant3 = quadrant3Reader.GetInt32(0) + 1;
-                            }
-                            else
-                            {
-                                MessageBox.Show("NO DATA FOUND");
-                            }
-                            quadrant3Reader.Close();
-                            createQuadrant3.Dispose();
-
-                            string quadrant3Query = "INSERT INTO Quadrant3(quadrant3_num,status) VALUES('" + quadrant3 + "',1)";
-
-                            SqlCommand quadrant3Cmd = new SqlCommand(quadrant3Query, constring);
-                            quadrant3Cmd.CommandText = quadrant3Query;
-                            quadrant3Cmd.ExecuteNonQuery();
-
-                            //Quadrant 4 Num Creation
-                            SqlCommand createQuadrant4 = new SqlCommand("SELECT TOP 1 quadrant4_num FROM Quadrant4 ORDER BY quadrant4_num DESC", constring);
-                            SqlDataReader quadrant4Reader;
-                            quadrant4Reader = createQuadrant4.ExecuteReader();
-                            if (quadrant4Reader.Read())
-                            {
-                                quadrant4 = quadrant4Reader.GetInt32(0) + 1;
-                            }
-                            else
-                            {
-                                MessageBox.Show("NO DATA FOUND");
-                            }
-                            quadrant4Reader.Close();
-                            createQuadrant4.Dispose();
-
-                            string quadrant4Query = "INSERT INTO Quadrant4(quadrant4_num,status) VALUES('" + quadrant4 + "',1)";
-
-                            SqlCommand quadrant4Cmd = new SqlCommand(quadrant4Query, constring);
-                            quadrant4Cmd.CommandText = quadrant4Query;
-                            quadrant4Cmd.ExecuteNonQuery();
 
                             //Creation of Patient Record
                             SqlCommand cmd = new SqlCommand("SELECT TOP 1 patient_id FROM Patient ORDER BY patient_id DESC", constring);
@@ -279,11 +194,18 @@ namespace DentalAppointmentandInformationSystem
                                 + mnameTxtBox.Text + "','" + fnameTxtBox.Text + "','" + ageTxtBox.Text + "','" + gender
                                 + "','" + birthDate.Text + "','" + phoneTxtBox.Text + "','" + emailTxtBox.Text + "','"
                                 + addressTxtBox.Text + "','" + contactPrsnTxtBox.Text + "','" + cpersonNumTxtBox.Text + "','"
-                                + patientNotesTxtBox.Text + "','" + quadrant1 + "','" + quadrant2 + "','" + quadrant3 + "','" + quadrant4+ "',1)";
+                                + patientNotesTxtBox.Text + "',1)";
 
                             SqlCommand cmd2 = new SqlCommand(query, constring);
                             cmd2.CommandText = query;
                             cmd2.ExecuteNonQuery();
+
+                            //Teeth Creation
+                            string teethQuery = "INSERT INTO Teeth(patient_id,status) VALUES('" + patientID + "',1)";
+
+                            SqlCommand teethCmd = new SqlCommand(teethQuery, constring);
+                            teethCmd.CommandText = teethQuery;
+                            teethCmd.ExecuteNonQuery();
 
                             //Creation of Appointment
                             SqlCommand command = new SqlCommand("SELECT TOP 1 appointment_id FROM Appointment ORDER BY appointment_id DESC", constring);
@@ -334,7 +256,7 @@ namespace DentalAppointmentandInformationSystem
                             }
                             string query2 = "INSERT INTO Appointment VALUES('" + appointmentID + "','" + patientID + "','"
                                 + service1Combo.SelectedValue + "'," + service2 + "," + service3 + ",'" + appntmntDate.Text
-                                + "','" + startTime.Text + "','" + endTime.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "',1)";
+                                + "','" + startTime.Text + "','" + endTime.Text + "','" + staff1Combo.SelectedValue + "'," + staff2 + "," + staff3 + ",'" + notesTxtBox.Text + "','Pending',1)";
 
                             SqlCommand cmd3 = new SqlCommand(query2, constring);
                             cmd3.CommandText = query2;

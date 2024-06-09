@@ -115,26 +115,13 @@ namespace DentalAppointmentandInformationSystem
         {
             //Setting the values of the textboxes based on existing data in the database
             constring.Open();
-            int quadrant1Num = 0, quadrant2Num = 0, quadrant3Num = 0, quadrant4Num = 0;
-
-            string query = "SELECT * FROM Patient WHERE patient_id =" + int.Parse(v.getsetpatientSelected);
-            SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
-            DataTable dt = new DataTable();
-            adpt.Fill(dt);
-            foreach (DataRow row in dt.Rows)
-            {
-                quadrant1Num = int.Parse(row["quadrant1_num"].ToString());
-                quadrant2Num = int.Parse(row["quadrant2_num"].ToString());
-                quadrant3Num = int.Parse(row["quadrant3_num"].ToString());
-                quadrant4Num = int.Parse(row["quadrant4_num"].ToString());
-            }
 
             //Setting values for quadrant 1
-            string setquadrant1 = "SELECT * FROM Quadrant1 WHERE quadrant1_num =" + quadrant1Num;
-            SqlDataAdapter quadrant1adpt = new SqlDataAdapter(setquadrant1, constring);
-            DataTable quadrant1DT = new DataTable();
-            quadrant1adpt.Fill(quadrant1DT);
-            foreach (DataRow row in quadrant1DT.Rows)
+            string setTeeth = "SELECT * FROM Teeth WHERE patient_id =" + int.Parse(v.getsetpatientSelected);
+            SqlDataAdapter teethAdpt = new SqlDataAdapter(setTeeth, constring);
+            DataTable teethDT = new DataTable();
+            teethAdpt.Fill(teethDT);
+            foreach (DataRow row in teethDT.Rows)
             {
                 S18.Text = string.Join("", row["tooth_18"].ToString().Where(Char.IsLetter).ToArray());
                 TM18.Text = string.Join("", row["tooth_18"].ToString().Where(Char.IsDigit).ToArray());
@@ -168,15 +155,6 @@ namespace DentalAppointmentandInformationSystem
                 checkDigit(TM54.Text, t54); checkDigit(TM53.Text, t53); checkDigit(TM52.Text, t52);
                 checkDigit(TM51.Text, t51);
 
-            }
-
-            //Setting values for quadrant 2
-            string setquadrant2 = "SELECT * FROM Quadrant2 WHERE quadrant2_num =" + quadrant2Num;
-            SqlDataAdapter quadrant2adpt = new SqlDataAdapter(setquadrant2, constring);
-            DataTable quadrant2DT = new DataTable();
-            quadrant2adpt.Fill(quadrant2DT);
-            foreach (DataRow row in quadrant2DT.Rows)
-            {
                 S21.Text = string.Join("", row["tooth_21"].ToString().Where(Char.IsLetter).ToArray());
                 TM21.Text = string.Join("", row["tooth_21"].ToString().Where(Char.IsDigit).ToArray());
                 S22.Text = string.Join("", row["tooth_22"].ToString().Where(Char.IsLetter).ToArray());
@@ -207,16 +185,8 @@ namespace DentalAppointmentandInformationSystem
                 checkDigit(TM24.Text, t24); checkDigit(TM25.Text, t25); checkDigit(TM26.Text, t26);
                 checkDigit(TM27.Text, t27); checkDigit(TM28.Text, t28); checkDigit(TM61.Text, t61);
                 checkDigit(TM62.Text, t62); checkDigit(TM63.Text, t63); checkDigit(TM64.Text, t64);
-                checkDigit(TM65.Text, t65);
-            }
-
-            //Setting values for quadrant 3
-            string setquadrant3 = "SELECT * FROM Quadrant3 WHERE quadrant3_num =" + quadrant3Num;
-            SqlDataAdapter quadrant3adpt = new SqlDataAdapter(setquadrant3, constring);
-            DataTable quadrant3DT = new DataTable();
-            quadrant3adpt.Fill(quadrant3DT);
-            foreach (DataRow row in quadrant3DT.Rows)
-            {
+                checkDigit(TM65.Text, t65);       
+                
                 S31.Text = string.Join("", row["tooth_31"].ToString().Where(Char.IsLetter).ToArray());
                 TM31.Text = string.Join("", row["tooth_31"].ToString().Where(Char.IsDigit).ToArray());
                 S32.Text = string.Join("", row["tooth_32"].ToString().Where(Char.IsLetter).ToArray());
@@ -248,15 +218,7 @@ namespace DentalAppointmentandInformationSystem
                 checkDigit(TM37.Text, t37); checkDigit(TM38.Text, t38); checkDigit(TM71.Text, t71);
                 checkDigit(TM72.Text, t72); checkDigit(TM73.Text, t73); checkDigit(TM74.Text, t74);
                 checkDigit(TM75.Text, t75);
-            }
 
-            //Setting values for quadrant 4
-            string setquadrant4 = "SELECT * FROM Quadrant4 WHERE quadrant4_num =" + quadrant4Num;
-            SqlDataAdapter quadrant4adpt = new SqlDataAdapter(setquadrant4, constring);
-            DataTable quadrant4DT = new DataTable();
-            quadrant4adpt.Fill(quadrant4DT);
-            foreach (DataRow row in quadrant4DT.Rows)
-            {
                 S48.Text = string.Join("", row["tooth_48"].ToString().Where(Char.IsLetter).ToArray());
                 TM48.Text = string.Join("", row["tooth_48"].ToString().Where(Char.IsDigit).ToArray());
                 S47.Text = string.Join("", row["tooth_47"].ToString().Where(Char.IsLetter).ToArray());
@@ -289,7 +251,6 @@ namespace DentalAppointmentandInformationSystem
                 checkDigit(TM84.Text, t84); checkDigit(TM83.Text, t83); checkDigit(TM82.Text, t82);
                 checkDigit(TM81.Text, t81);
             }
-
             constring.Close();
         }
         private void checkDigit(string TM, PictureBox picture)
