@@ -180,20 +180,28 @@ namespace DentalAppointmentandInformationSystem
             if (dialogResult == DialogResult.Yes)
             {
                 constring.Open();
-                string query2 = "UPDATE Staff SET status = 0 WHERE employee_num =" + v.getsetstaffSelected;
-                SqlCommand cmd2 = new SqlCommand(query2, constring);
-                cmd2.CommandText = query2;
-                if (cmd2.ExecuteNonQuery() == 1)
+                if (!v.getsetstaffSelected.Equals(v.getsetloggedIn))
                 {
-                    MessageBox.Show("Staff Record succesfully moved to the Trash Bin/Archives!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    constring.Close();
-                    Staff stff = new Staff();
-                    stff.Show();
-                    this.Hide();
+                    string query2 = "UPDATE Staff SET status = 0 WHERE employee_num =" + v.getsetstaffSelected;
+                    SqlCommand cmd2 = new SqlCommand(query2, constring);
+                    cmd2.CommandText = query2;
+                    if (cmd2.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Staff Record succesfully moved to the Trash Bin/Archives!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        constring.Close();
+                        Staff stff = new Staff();
+                        stff.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("DATA NOT DELETED SUCCESSFULLY");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("DATA NOT DELETED SUCCESSFULLY");
+                    MessageBox.Show("This staff is currently logged in and cannot be deleted!","Invalid",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    constring.Close();
                 }
                 
             }

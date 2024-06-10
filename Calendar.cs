@@ -195,7 +195,7 @@ namespace DentalAppointmentandInformationSystem
         }
         private void timer1()
         {
-            //For making the notification appear
+            /*//For making the notification appear
             constring.Open();
             string message = "Today at " + DateTime.Today.ToLongDateString() + ", you have the following appointments:\n";
             SqlCommand sqlcom = new SqlCommand("SELECT * FROM Appointment where appointment_date='" + DateTime.Now.ToString() + "'", constring);
@@ -234,7 +234,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 MessageBox.Show("You have no appointments for today.");
             }
-            constring.Close();
+            constring.Close();*/
         }
     }
 }

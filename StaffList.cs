@@ -36,9 +36,16 @@ namespace DentalAppointmentandInformationSystem
             if (dialogResult == DialogResult.Yes)
             {
                 v.getsetstaffSelected = employeeNum.Text;
-                this.ParentForm.Hide();
-                EditStaff edit = new EditStaff();
-                edit.Show();
+                if ((v.getsetstaffSelected.Equals("10001") && v.getsetloggedIn.Equals("10001")) || !v.getsetstaffSelected.Equals("10001"))
+                {
+                    this.ParentForm.Hide();
+                    EditStaff edit = new EditStaff();
+                    edit.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Administrator account can only be edited by the account owner itself!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

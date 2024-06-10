@@ -489,7 +489,6 @@
             this.appntmntDate.Name = "appntmntDate";
             this.appntmntDate.Size = new System.Drawing.Size(337, 29);
             this.appntmntDate.TabIndex = 59;
-            this.appntmntDate.Value = new System.DateTime(2024, 5, 15, 0, 0, 0, 0);
             // 
             // label16
             // 
@@ -515,6 +514,7 @@
             this.startTime.Size = new System.Drawing.Size(283, 29);
             this.startTime.TabIndex = 60;
             this.startTime.Value = new System.DateTime(2024, 5, 15, 0, 0, 0, 0);
+            this.startTime.ValueChanged += new System.EventHandler(this.startTime_ValueChanged);
             // 
             // label18
             // 
@@ -612,6 +612,7 @@
             this.service1Combo.Name = "service1Combo";
             this.service1Combo.Size = new System.Drawing.Size(502, 29);
             this.service1Combo.TabIndex = 66;
+            this.service1Combo.SelectionChangeCommitted += new System.EventHandler(this.service1Combo_SelectionChangeCommitted);
             // 
             // label8
             // 
@@ -636,6 +637,7 @@
             this.service2Combo.Name = "service2Combo";
             this.service2Combo.Size = new System.Drawing.Size(502, 29);
             this.service2Combo.TabIndex = 65;
+            this.service2Combo.SelectionChangeCommitted += new System.EventHandler(this.service2Combo_SelectionChangeCommitted);
             // 
             // label5
             // 
@@ -684,6 +686,7 @@
             this.service3Combo.Name = "service3Combo";
             this.service3Combo.Size = new System.Drawing.Size(502, 29);
             this.service3Combo.TabIndex = 67;
+            this.service3Combo.SelectionChangeCommitted += new System.EventHandler(this.service3Combo_SelectionChangeCommitted);
             // 
             // label23
             // 

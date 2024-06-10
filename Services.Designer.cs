@@ -48,12 +48,13 @@
             this.binBtn = new System.Windows.Forms.Panel();
             this.binPic = new System.Windows.Forms.PictureBox();
             this.binLbl = new System.Windows.Forms.Label();
-            this.editService1 = new DentalAppointmentandInformationSystem.EditService();
-            this.addService1 = new DentalAppointmentandInformationSystem.AddService();
             this.searchBtn = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.emptyLbl = new System.Windows.Forms.Label();
             this.emptyPic = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.editService1 = new DentalAppointmentandInformationSystem.EditService();
+            this.addService1 = new DentalAppointmentandInformationSystem.AddService();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptntsBtn)).BeginInit();
@@ -222,10 +223,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(9, 14);
+            this.label1.Font = new System.Drawing.Font("Inter SemiBold", 11F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(4, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 62);
+            this.label1.Size = new System.Drawing.Size(93, 52);
             this.label1.TabIndex = 77;
             this.label1.Text = "Service ID";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,10 +235,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(289, 29);
+            this.label2.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(254, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 31);
+            this.label2.Size = new System.Drawing.Size(175, 29);
             this.label2.TabIndex = 78;
             this.label2.Text = "Service Name";
             // 
@@ -245,10 +246,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(696, 29);
+            this.label3.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(604, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 31);
+            this.label3.Size = new System.Drawing.Size(166, 29);
             this.label3.TabIndex = 79;
             this.label3.Text = "Service Price";
             // 
@@ -256,15 +257,17 @@
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnCount = 6;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 513F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 481F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(276, 193);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -316,22 +319,6 @@
             this.binLbl.Text = "Trash Bin";
             this.binLbl.Click += new System.EventHandler(this.binBtn_Click);
             // 
-            // editService1
-            // 
-            this.editService1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.editService1.Location = new System.Drawing.Point(351, 302);
-            this.editService1.Name = "editService1";
-            this.editService1.Size = new System.Drawing.Size(998, 298);
-            this.editService1.TabIndex = 87;
-            // 
-            // addService1
-            // 
-            this.addService1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addService1.Location = new System.Drawing.Point(351, 302);
-            this.addService1.Name = "addService1";
-            this.addService1.Size = new System.Drawing.Size(998, 298);
-            this.addService1.TabIndex = 9;
-            // 
             // searchBtn
             // 
             this.searchBtn.BackColor = System.Drawing.SystemColors.Window;
@@ -371,6 +358,34 @@
             this.emptyPic.TabIndex = 102;
             this.emptyPic.TabStop = false;
             this.emptyPic.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(800, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(193, 58);
+            this.label5.TabIndex = 80;
+            this.label5.Text = "Service Duration (hour)";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // editService1
+            // 
+            this.editService1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.editService1.Location = new System.Drawing.Point(351, 302);
+            this.editService1.Name = "editService1";
+            this.editService1.Size = new System.Drawing.Size(998, 345);
+            this.editService1.TabIndex = 87;
+            // 
+            // addService1
+            // 
+            this.addService1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addService1.Location = new System.Drawing.Point(351, 302);
+            this.addService1.Name = "addService1";
+            this.addService1.Size = new System.Drawing.Size(998, 298);
+            this.addService1.TabIndex = 9;
             // 
             // Services
             // 
@@ -440,5 +455,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label emptyLbl;
         private System.Windows.Forms.PictureBox emptyPic;
+        private System.Windows.Forms.Label label5;
     }
 }

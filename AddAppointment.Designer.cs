@@ -1,4 +1,6 @@
-﻿namespace DentalAppointmentandInformationSystem
+﻿using System;
+
+namespace DentalAppointmentandInformationSystem
 {
     partial class AddAppointment
     {
@@ -513,7 +515,7 @@
             this.appntmntDate.Name = "appntmntDate";
             this.appntmntDate.Size = new System.Drawing.Size(337, 29);
             this.appntmntDate.TabIndex = 59;
-            this.appntmntDate.Value = new System.DateTime(2024, 5, 15, 0, 0, 0, 0);
+            this.appntmntDate.Value = new System.DateTime(2024, 6, 10, 18, 9, 10, 3);
             // 
             // startTime
             // 
@@ -526,6 +528,7 @@
             this.startTime.Size = new System.Drawing.Size(317, 29);
             this.startTime.TabIndex = 60;
             this.startTime.Value = new System.DateTime(2024, 5, 15, 0, 0, 0, 0);
+            this.startTime.ValueChanged += new System.EventHandler(this.startTime_ValueChanged);
             // 
             // staff1Combo
             // 
@@ -571,6 +574,7 @@
             this.service1Combo.Name = "service1Combo";
             this.service1Combo.Size = new System.Drawing.Size(472, 29);
             this.service1Combo.TabIndex = 66;
+            this.service1Combo.SelectionChangeCommitted += new System.EventHandler(this.service1Combo_SelectionChangeCommitted);
             this.service1Combo.Click += new System.EventHandler(this.service1Combo_Click);
             // 
             // service2Combo
@@ -582,6 +586,7 @@
             this.service2Combo.Name = "service2Combo";
             this.service2Combo.Size = new System.Drawing.Size(472, 29);
             this.service2Combo.TabIndex = 65;
+            this.service2Combo.SelectionChangeCommitted += new System.EventHandler(this.service2Combo_SelectionChangeCommitted);
             this.service2Combo.Click += new System.EventHandler(this.service2Combo_Click);
             // 
             // service3Combo
@@ -593,6 +598,7 @@
             this.service3Combo.Name = "service3Combo";
             this.service3Combo.Size = new System.Drawing.Size(472, 29);
             this.service3Combo.TabIndex = 67;
+            this.service3Combo.SelectionChangeCommitted += new System.EventHandler(this.service3Combo_SelectionChangeCommitted);
             this.service3Combo.Click += new System.EventHandler(this.service3Combo_Click);
             // 
             // notesTxtBox

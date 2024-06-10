@@ -37,6 +37,7 @@
             this.deleteBtn = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.srvcDuration = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteBtn)).BeginInit();
@@ -45,17 +46,19 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
-            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnCount = 6;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 513F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 480F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanel2.Controls.Add(this.servicePrice, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.serviceName, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.serviceID, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.editBtn, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.deleteBtn, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.deleteBtn, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.editBtn, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.srvcDuration, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -68,10 +71,10 @@
             // 
             this.servicePrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.servicePrice.AutoSize = true;
-            this.servicePrice.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.servicePrice.Location = new System.Drawing.Point(723, 16);
+            this.servicePrice.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.servicePrice.Location = new System.Drawing.Point(616, 20);
             this.servicePrice.Name = "servicePrice";
-            this.servicePrice.Size = new System.Drawing.Size(178, 31);
+            this.servicePrice.Size = new System.Drawing.Size(139, 24);
             this.servicePrice.TabIndex = 79;
             this.servicePrice.Text = "Service Price";
             // 
@@ -79,10 +82,10 @@
             // 
             this.serviceName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.serviceName.AutoSize = true;
-            this.serviceName.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.serviceName.Location = new System.Drawing.Point(317, 16);
+            this.serviceName.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.serviceName.Location = new System.Drawing.Point(267, 20);
             this.serviceName.Name = "serviceName";
-            this.serviceName.Size = new System.Drawing.Size(186, 31);
+            this.serviceName.Size = new System.Drawing.Size(145, 24);
             this.serviceName.TabIndex = 78;
             this.serviceName.Text = "Service Name";
             // 
@@ -90,18 +93,19 @@
             // 
             this.serviceID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.serviceID.AutoSize = true;
-            this.serviceID.Font = new System.Drawing.Font("Inter SemiBold", 13F, System.Drawing.FontStyle.Bold);
-            this.serviceID.Location = new System.Drawing.Point(7, 16);
+            this.serviceID.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.serviceID.Location = new System.Drawing.Point(8, 8);
             this.serviceID.Name = "serviceID";
-            this.serviceID.Size = new System.Drawing.Size(140, 31);
+            this.serviceID.Size = new System.Drawing.Size(84, 48);
             this.serviceID.TabIndex = 77;
             this.serviceID.Text = "Service ID";
+            this.serviceID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // editBtn
             // 
             this.editBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.editBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.edit;
-            this.editBtn.Location = new System.Drawing.Point(985, 9);
+            this.editBtn.Location = new System.Drawing.Point(1010, 9);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(50, 45);
             this.editBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,7 +118,7 @@
             // 
             this.deleteBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.deleteBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.delete;
-            this.deleteBtn.Location = new System.Drawing.Point(1081, 9);
+            this.deleteBtn.Location = new System.Drawing.Point(1086, 9);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(50, 45);
             this.deleteBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,6 +134,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1178, 74);
             this.panel1.TabIndex = 95;
+            // 
+            // srvcDuration
+            // 
+            this.srvcDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.srvcDuration.AutoSize = true;
+            this.srvcDuration.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.srvcDuration.Location = new System.Drawing.Point(807, 8);
+            this.srvcDuration.Name = "srvcDuration";
+            this.srvcDuration.Size = new System.Drawing.Size(176, 48);
+            this.srvcDuration.TabIndex = 82;
+            this.srvcDuration.Text = "Service Duration (hour)";
+            this.srvcDuration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ServicesList
             // 
@@ -159,5 +175,6 @@
         private System.Windows.Forms.PictureBox deleteBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label srvcDuration;
     }
 }

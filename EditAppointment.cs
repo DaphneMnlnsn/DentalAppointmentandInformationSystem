@@ -17,6 +17,8 @@ namespace DentalAppointmentandInformationSystem
     {
         Variables v = new Variables();
         SqlConnection constring;
+        int changed = 0;
+        string currentService, currentService2, currentService3;
         public EditAppointment()
         {
             InitializeComponent();
@@ -54,10 +56,8 @@ namespace DentalAppointmentandInformationSystem
                 MessageBox.Show("NO DATA FOUND");
             }
             constring.Close();
-            
+
             //Assigning default values of combo box and time limits
-            startTime.MinDate = DateTime.Parse("10:00:00");
-            endTime.MinDate = DateTime.Parse("11:00:00");
             startTime.MaxDate = DateTime.Parse("16:00:00");
             endTime.MaxDate = DateTime.Parse("17:00:00");
             setService1Combo();
@@ -158,6 +158,7 @@ namespace DentalAppointmentandInformationSystem
 
                 appntmntDate.Text = row["appointment_date"].ToString();
                 startTime.Text = row["appointment_startTime"].ToString();
+                endTime.MinDate = DateTime.Parse(appntmntDate.MinDate.ToString());
                 endTime.Text = row["appointment_endTime"].ToString();
                 staff1Combo.Text = "";
                 staff2Combo.Text = "";
@@ -238,6 +239,9 @@ namespace DentalAppointmentandInformationSystem
                         cmd5.Dispose();
                     }
                     notesTxtBox.Text = row["appointment_notes"].ToString();
+                    currentService = service1Combo.SelectedValue.ToString();
+                    currentService2 = service2Combo.SelectedValue.ToString();
+                    currentService3 = service3Combo.SelectedValue.ToString();
                 }
             }
             constring.Close();
@@ -248,8 +252,7 @@ namespace DentalAppointmentandInformationSystem
             //Checking if the appointment date (if changed) is still available
             constring.Open();
             string compareQuery = "SELECT COUNT(*) FROM Appointment WHERE appointment_date = '" + appntmntDate.Text +
-                "' AND ('" + startTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime) AND ('"
-                + endTime.Text + "' BETWEEN appointment_startTime AND appointment_endTime) AND appointment_id != '" + v.getsetappointmentSelected + "'";
+            "' AND ('" + startTime.Text + "' <= appointment_endTime AND appointment_startTime <= '" + endTime.Text + "')";
             SqlCommand compareCmd = new SqlCommand(compareQuery, constring);
             int userCount = (int)compareCmd.ExecuteScalar();
             constring.Close();
@@ -433,7 +436,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setService2Combo()
         {
-            string query = "SELECT * FROM Service WHERE status = 1";
+            string query = "SELECT * FROM Service WHERE status = 1 AND service_id != '" + currentService + "'";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -444,7 +447,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setService3Combo()
         {
-            string query = "SELECT * FROM Service WHERE status = 1";
+            string query = "SELECT * FROM Service WHERE status = 1 AND service_id != '" + currentService + "' AND service_id != '" + currentService2 + "'";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -458,5 +461,104 @@ namespace DentalAppointmentandInformationSystem
             new AppntmntDetails().Show();
             this.Hide();
         }
+
+        private void startTime_ValueChanged(object sender, EventArgs e)
+        {
+            if (changed != 0)
+            {
+                if (DateTime.Now >= DateTime.Parse("10:00:00") && !(DateTime.Now >= DateTime.Parse("17:00:00")))
+                {
+                    appntmntDate.MinDate = DateTime.Now;
+                    startTime.MinDate = DateTime.Now.AddHours(1);
+                }
+                else
+                {
+                    appntmntDate.MinDate = DateTime.Now.AddDays(1);
+                    startTime.MinDate = DateTime.Parse("10:00:00");
+                }
+                endTime.MinDate = startTime.Value.AddHours(1);
+            }
+
+            changed++;
+        }
+        private void service1Combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            //Automating Time
+            constring.Open();
+            endTime.MinDate = DateTime.Parse(endTime.Text.ToString());
+            SqlCommand retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + currentService + "'", constring);
+            SqlDataReader readService;
+            readService = retrieveService.ExecuteReader();
+            if (readService.Read())
+            {
+                endTime.MinDate = endTime.MinDate.AddHours(-float.Parse(readService["service_duration"].ToString()));
+            }
+            else
+            {
+                endTime.MinDate = endTime.MinDate.AddHours(-1);
+            }
+            readService.Close();
+
+            retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + service1Combo.SelectedValue.ToString() + "'", constring);
+            readService = retrieveService.ExecuteReader();
+            if (readService.Read())
+            {
+                endTime.Text = DateTime.Parse(endTime.MinDate.AddHours(float.Parse(readService["service_duration"].ToString())).ToString()).ToString();
+            }
+            currentService = service1Combo.SelectedValue.ToString();
+            readService.Close();
+            constring.Close();
+        }
+
+        private void service2Combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            //Automating Time
+            constring.Open();
+            endTime.MinDate = DateTime.Parse(endTime.Text.ToString());
+            SqlCommand retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + currentService2 + "'", constring);
+            SqlDataReader readService;
+            readService = retrieveService.ExecuteReader();
+            if (readService.Read() && !string.IsNullOrWhiteSpace(currentService2))
+            {
+                endTime.MinDate = endTime.MinDate.AddHours(-float.Parse(readService["service_duration"].ToString()));
+            }
+            readService.Close();
+
+            retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + service2Combo.SelectedValue.ToString() + "'", constring);
+            readService = retrieveService.ExecuteReader();
+            if (readService.Read())
+            {
+                endTime.Text = DateTime.Parse(endTime.MinDate.AddHours(float.Parse(readService["service_duration"].ToString())).ToString()).ToString();
+            }
+            currentService2 = service2Combo.SelectedValue.ToString();
+            readService.Close();
+            constring.Close();
+        }
+
+        private void service3Combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            //Automating Time
+            constring.Open();
+            endTime.MinDate = DateTime.Parse(endTime.Text.ToString());
+            SqlCommand retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + currentService3 + "'", constring);
+            SqlDataReader readService;
+            readService = retrieveService.ExecuteReader();
+            if (readService.Read() && !string.IsNullOrWhiteSpace(currentService3))
+            {
+                endTime.MinDate = endTime.MinDate.AddHours(-float.Parse(readService["service_duration"].ToString()));
+            }
+            readService.Close();
+
+            retrieveService = new SqlCommand("SELECT * FROM Service WHERE service_id = '" + service3Combo.SelectedValue.ToString() + "'", constring);
+            readService = retrieveService.ExecuteReader();
+            if (readService.Read())
+            {
+                endTime.Text = DateTime.Parse(endTime.MinDate.AddHours(float.Parse(readService["service_duration"].ToString())).ToString()).ToString();
+            }
+            currentService3 = service3Combo.SelectedValue.ToString();
+            readService.Close();
+            constring.Close();
+        }
+
     }
 }

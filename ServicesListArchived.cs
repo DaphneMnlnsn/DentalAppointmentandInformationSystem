@@ -28,12 +28,13 @@ namespace DentalAppointmentandInformationSystem
         {
         }
 
-        public void setServiceInfo(string service_id, string service_name, float service_price)
+        public void setServiceInfo(string service_id, string service_name, float service_price, float service_duration)
         {
             //Setting service information in the user control
             serviceID.Text = service_id;
             serviceName.Text = service_name;
-            servicePrice.Text = service_price.ToString();
+            servicePrice.Text = service_price.ToString("#,##0.00");
+            srvcDuration.Text = service_duration.ToString();
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)

@@ -30,7 +30,7 @@ namespace DentalAppointmentandInformationSystem
         private void saveSrvcBtn_Click(object sender, EventArgs e)
         {
             //Updating the service details
-            if (!string.IsNullOrWhiteSpace(srvcNameTxtBox.Text) && !string.IsNullOrWhiteSpace(srvcPriceTxtBox.Text))
+            if (!string.IsNullOrWhiteSpace(srvcNameTxtBox.Text) && !string.IsNullOrWhiteSpace(srvcPriceTxtBox.Text) && !string.IsNullOrWhiteSpace(srvcDuration.Text))
             {
                 float num;
                 bool checkInput = float.TryParse(srvcPriceTxtBox.Text, out num);
@@ -40,7 +40,8 @@ namespace DentalAppointmentandInformationSystem
                     constring.Open();
 
                     string query2 = "UPDATE Service SET service_name = '" + srvcNameTxtBox.Text +
-                        "', service_price = '" + srvcPriceTxtBox.Text + "' WHERE service_id = '" + v.getsetserviceSelected + "';";
+                        "', service_price = '" + srvcPriceTxtBox.Text + "', service_duration = '" +
+                        srvcDuration.Text + "' WHERE service_id = '" + v.getsetserviceSelected + "';";
 
                     SqlCommand cmd3 = new SqlCommand(query2, constring);
                     cmd3.CommandText = query2;
@@ -85,6 +86,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 srvcNameTxtBox.Text = row["service_name"].ToString();
                 srvcPriceTxtBox.Text = row["service_price"].ToString();
+                srvcDuration.Text = row["service_duration"].ToString();
             }
             constring.Close();
         }
