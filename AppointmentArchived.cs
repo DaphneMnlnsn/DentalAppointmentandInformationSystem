@@ -25,7 +25,7 @@ namespace DentalAppointmentandInformationSystem
         private void Appointment_Load(object sender, EventArgs e)
         {
         }
-        public void setAppointmentInfo(string patientName, string serviceName, string time, string time2, string staffName, string appointment_notes, int appointmentId)
+        public void setAppointmentInfo(string patientName, string serviceName, string time, string time2, string staffName, string appointment_notes, int appointmentId, string appointment_state)
         {
             //Setting the appointment details but of archived appointments
             ptntLbl.Text = patientName;
@@ -34,6 +34,7 @@ namespace DentalAppointmentandInformationSystem
             stffLbl.Text = "Staff/s Assigned: " + staffName;
             label1.Text = "Notes: " + appointment_notes;
             appntmntIDLbl.Text = appointmentId.ToString();
+            appntmntState.Text = appointment_state;
         }
 
         private void deleteAppntmnt_Click(object sender, EventArgs e)

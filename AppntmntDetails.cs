@@ -87,6 +87,7 @@ namespace DentalAppointmentandInformationSystem
                 string appointment_notes = row["appointment_notes"].ToString();
                 string time = row["appointment_startTime"].ToString()[0] + "" + row["appointment_startTime"].ToString()[1] + "" + row["appointment_startTime"].ToString()[2] + "" + row["appointment_startTime"].ToString()[3] + "" + row["appointment_startTime"].ToString()[4];
                 string time2 = row["appointment_endTime"].ToString()[0] + "" + row["appointment_endTime"].ToString()[1] + "" + row["appointment_endTime"].ToString()[2] + "" + row["appointment_endTime"].ToString()[3] + "" + row["appointment_endTime"].ToString()[4];
+                string appointment_state = row["appointment_state"].ToString();
 
                 //Retrieving the service name of the service id the appointment employs, as well as staff and patient
                 string sql2 = "SELECT * FROM Service WHERE service_id = " + "'" + service_id + "'";
@@ -176,7 +177,7 @@ namespace DentalAppointmentandInformationSystem
                                 reader8.Dispose();
                                 cmd8.Dispose();
                             }
-                            appntmnt.setAppointmentInfo(patient_name, serviceName, time, time2, staffName, appointment_notes, appointment_id);
+                            appntmnt.setAppointmentInfo(patient_name, serviceName, time, time2, staffName, appointment_notes, appointment_id, appointment_state);
                         }
                     }
                 }
