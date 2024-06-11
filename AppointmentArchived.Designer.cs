@@ -101,10 +101,10 @@
             // appntmntIDLbl
             // 
             this.appntmntIDLbl.AutoSize = true;
-            this.appntmntIDLbl.Font = new System.Drawing.Font("Inter Medium", 1F, System.Drawing.FontStyle.Bold);
-            this.appntmntIDLbl.Location = new System.Drawing.Point(1045, 291);
+            this.appntmntIDLbl.Font = new System.Drawing.Font("Inter Medium", 8F, System.Drawing.FontStyle.Bold);
+            this.appntmntIDLbl.Location = new System.Drawing.Point(998, 9);
             this.appntmntIDLbl.Name = "appntmntIDLbl";
-            this.appntmntIDLbl.Size = new System.Drawing.Size(8, 2);
+            this.appntmntIDLbl.Size = new System.Drawing.Size(55, 19);
             this.appntmntIDLbl.TabIndex = 13;
             this.appntmntIDLbl.Text = "label3";
             // 

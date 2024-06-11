@@ -134,6 +134,13 @@ namespace DentalAppointmentandInformationSystem
             SqlCommand cmd2 = new SqlCommand(query2, constring);
             cmd2.CommandText = query2;
             cmd2.ExecuteNonQuery();
+
+            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','marked "
+                + appntmntIDLbl.Text + " as " + appntmntState.Text + "')";
+
+            SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+            cmdAct.CommandText = queryAct;
+            cmdAct.ExecuteNonQuery();
             constring.Close();
         }
     }
