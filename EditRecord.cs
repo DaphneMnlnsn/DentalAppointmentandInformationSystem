@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DentalAppointmentandInformationSystem
 {
@@ -15,6 +17,7 @@ namespace DentalAppointmentandInformationSystem
     {
         Variables v = new Variables();
         SqlConnection constring;
+        string appointmentID;
 
         public EditRecord()
         {
@@ -53,6 +56,57 @@ namespace DentalAppointmentandInformationSystem
                         SqlCommand cmdAct = new SqlCommand(queryAct, constring);
                         cmdAct.CommandText = queryAct;
                         cmdAct.ExecuteNonQuery();
+
+                        if (!teethTrtdTxtBox.Text.Equals("0"))
+                        {
+                            SqlCommand cmd = new SqlCommand("SELECT * FROM Appointment WHERE appointment_id =" + int.Parse(appointmentID), constring);
+                            SqlDataReader read;
+                            read = cmd.ExecuteReader();
+                            string appointment_service1 = "", appointment_service2 = "", appointment_service3 = "";
+                            if (read.Read())
+                            {
+                                appointment_service1 = read["service_id"].ToString();
+                                appointment_service2 = read["service_id2"].ToString();
+                                appointment_service3 = read["service_id3"].ToString();
+                            }
+                            read.Close();
+
+                            string query = "SELECT * FROM Service WHERE service_id ='" + appointment_service1 + "' OR service_id ='" + appointment_service2 + "' OR service_id ='" + appointment_service3 + "'";
+                            SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
+                            DataTable dt = new DataTable();
+                            adpt.Fill(dt);
+                            bool extracted = false;
+                            foreach (DataRow row in dt.Rows)
+                            {
+                                if (row["service_name"].ToString().Contains("extract") || row["service_name"].ToString().Contains("Extract"))
+                                {
+                                    extracted = true;
+                                }
+                            }
+
+                            string[] teeth = teethTrtdTxtBox.Text.Split(' ', ',');
+
+                            foreach (var tooth in teeth)
+                            {
+                                if (extracted == true)
+                                {
+                                    string queryDental = "UPDATE Teeth SET tooth_" + tooth + " = '6X' WHERE patient_id = '" + v.getsetpatientSelected + "';";
+
+                                    SqlCommand cmdDental = new SqlCommand(queryDental, constring);
+                                    cmdDental.CommandText = queryDental;
+                                    cmdDental.ExecuteNonQuery();
+                                }
+                                else
+                                {
+                                    string queryDental = "UPDATE Teeth SET tooth_" + tooth + " = '6' WHERE patient_id = '" + v.getsetpatientSelected + "';";
+
+                                    SqlCommand cmdDental = new SqlCommand(queryDental, constring);
+                                    cmdDental.CommandText = queryDental;
+                                    cmdDental.ExecuteNonQuery();
+                                }
+                            }
+                        }
+
                         this.Visible = false;
                         this.ParentForm.Hide();
                         constring.Close();
@@ -91,6 +145,7 @@ namespace DentalAppointmentandInformationSystem
             {
                 teethTrtdTxtBox.Text = row["teeth_treated"].ToString();
                 priceBilledTxtBox.Text = row["price_billed"].ToString();
+                appointmentID = row["appointment_id"].ToString();
             }
             constring.Close();
         }
