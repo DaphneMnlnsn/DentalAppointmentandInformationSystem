@@ -461,6 +461,15 @@
     <EmbeddedResource Include="StaffListArchived.resx">
       <DependentUpon>StaffListArchived.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBlank.resx">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDays.resx">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDaysArchived.resx">
+      <DependentUpon>UserControlDaysArchived.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DAISdBDataSet.xsc">
       <DependentUpon>DAISdBDataSet.xsd</DependentUpon>
     </None>

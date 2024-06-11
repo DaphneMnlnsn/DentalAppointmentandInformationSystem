@@ -33,14 +33,14 @@
             this.servicePrice = new System.Windows.Forms.Label();
             this.serviceName = new System.Windows.Forms.Label();
             this.serviceID = new System.Windows.Forms.Label();
-            this.editBtn = new System.Windows.Forms.PictureBox();
             this.deleteBtn = new System.Windows.Forms.PictureBox();
+            this.editBtn = new System.Windows.Forms.PictureBox();
+            this.srvcDuration = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.srvcDuration = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.editBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -101,19 +101,6 @@
             this.serviceID.Text = "Service ID";
             this.serviceID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // editBtn
-            // 
-            this.editBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.editBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.edit;
-            this.editBtn.Location = new System.Drawing.Point(1010, 9);
-            this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(50, 45);
-            this.editBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.editBtn.TabIndex = 80;
-            this.editBtn.TabStop = false;
-            this.toolTip1.SetToolTip(this.editBtn, "Edit");
-            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
-            // 
             // deleteBtn
             // 
             this.deleteBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -127,6 +114,31 @@
             this.toolTip1.SetToolTip(this.deleteBtn, "Delete");
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
+            // editBtn
+            // 
+            this.editBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.editBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.edit;
+            this.editBtn.Location = new System.Drawing.Point(1010, 9);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(50, 45);
+            this.editBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.editBtn.TabIndex = 80;
+            this.editBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.editBtn, "Edit");
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
+            // 
+            // srvcDuration
+            // 
+            this.srvcDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.srvcDuration.AutoSize = true;
+            this.srvcDuration.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.srvcDuration.Location = new System.Drawing.Point(809, 8);
+            this.srvcDuration.Name = "srvcDuration";
+            this.srvcDuration.Size = new System.Drawing.Size(171, 48);
+            this.srvcDuration.TabIndex = 82;
+            this.srvcDuration.Text = "Service Duration (hour)";
+            this.srvcDuration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -134,18 +146,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1178, 74);
             this.panel1.TabIndex = 95;
-            // 
-            // srvcDuration
-            // 
-            this.srvcDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.srvcDuration.AutoSize = true;
-            this.srvcDuration.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
-            this.srvcDuration.Location = new System.Drawing.Point(807, 8);
-            this.srvcDuration.Name = "srvcDuration";
-            this.srvcDuration.Size = new System.Drawing.Size(176, 48);
-            this.srvcDuration.TabIndex = 82;
-            this.srvcDuration.Text = "Service Duration (hour)";
-            this.srvcDuration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ServicesList
             // 
@@ -159,8 +159,8 @@
             this.Load += new System.EventHandler(this.ServicesList_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.editBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editBtn)).EndInit();
             this.ResumeLayout(false);
 
         }

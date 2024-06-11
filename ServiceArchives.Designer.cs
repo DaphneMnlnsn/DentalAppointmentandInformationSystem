@@ -50,6 +50,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.srvcDuration = new System.Windows.Forms.Label();
+            this.editBtn = new System.Windows.Forms.PictureBox();
+            this.deleteBtn = new System.Windows.Forms.PictureBox();
+            this.serviceID = new System.Windows.Forms.Label();
+            this.serviceName = new System.Windows.Forms.Label();
+            this.servicePrice = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.staffBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptntsBtn)).BeginInit();
@@ -62,6 +69,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.backBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptyPic)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.editBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deleteBtn)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -267,7 +277,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel3.Controls.Add(this.label4, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label5, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label6, 0, 0);
@@ -285,7 +295,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(602, 30);
+            this.label4.Location = new System.Drawing.Point(601, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 29);
             this.label4.TabIndex = 79;
@@ -296,7 +306,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(258, 30);
+            this.label5.Location = new System.Drawing.Point(257, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(175, 29);
             this.label5.TabIndex = 78;
@@ -319,18 +329,113 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(799, 16);
+            this.label7.Location = new System.Drawing.Point(798, 16);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(193, 58);
             this.label7.TabIndex = 80;
             this.label7.Text = "Service Duration (hour)";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // srvcDuration
+            // 
+            this.srvcDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.srvcDuration.AutoSize = true;
+            this.srvcDuration.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.srvcDuration.Location = new System.Drawing.Point(764, 8);
+            this.srvcDuration.Name = "srvcDuration";
+            this.srvcDuration.Size = new System.Drawing.Size(171, 48);
+            this.srvcDuration.TabIndex = 82;
+            this.srvcDuration.Text = "Service Duration (hour)";
+            this.srvcDuration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // editBtn
+            // 
+            this.editBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.editBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.edit;
+            this.editBtn.Location = new System.Drawing.Point(965, 9);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(50, 45);
+            this.editBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.editBtn.TabIndex = 80;
+            this.editBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.editBtn, "Edit");
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.deleteBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.delete;
+            this.deleteBtn.Location = new System.Drawing.Point(1053, 9);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(50, 45);
+            this.deleteBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.deleteBtn.TabIndex = 81;
+            this.deleteBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.deleteBtn, "Delete");
+            // 
+            // serviceID
+            // 
+            this.serviceID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.serviceID.AutoSize = true;
+            this.serviceID.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.serviceID.Location = new System.Drawing.Point(6, 8);
+            this.serviceID.Name = "serviceID";
+            this.serviceID.Size = new System.Drawing.Size(84, 48);
+            this.serviceID.TabIndex = 77;
+            this.serviceID.Text = "Service ID";
+            this.serviceID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // serviceName
+            // 
+            this.serviceName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.serviceName.AutoSize = true;
+            this.serviceName.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.serviceName.Location = new System.Drawing.Point(259, 20);
+            this.serviceName.Name = "serviceName";
+            this.serviceName.Size = new System.Drawing.Size(145, 24);
+            this.serviceName.TabIndex = 78;
+            this.serviceName.Text = "Service Name";
+            // 
+            // servicePrice
+            // 
+            this.servicePrice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.servicePrice.AutoSize = true;
+            this.servicePrice.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.servicePrice.Location = new System.Drawing.Point(593, 20);
+            this.servicePrice.Name = "servicePrice";
+            this.servicePrice.Size = new System.Drawing.Size(139, 24);
+            this.servicePrice.TabIndex = 79;
+            this.servicePrice.Text = "Service Price";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
+            this.tableLayoutPanel2.ColumnCount = 6;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 471F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel2.Controls.Add(this.servicePrice, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.serviceName, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.serviceID, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.deleteBtn, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.editBtn, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.srvcDuration, 3, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(209, 423);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1117, 64);
+            this.tableLayoutPanel2.TabIndex = 103;
+            // 
             // ServiceArchives
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1534, 911);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.emptyLbl);
             this.Controls.Add(this.emptyPic);
@@ -359,6 +464,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptyPic)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.editBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deleteBtn)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,5 +495,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label srvcDuration;
+        private System.Windows.Forms.PictureBox editBtn;
+        private System.Windows.Forms.PictureBox deleteBtn;
+        private System.Windows.Forms.Label serviceID;
+        private System.Windows.Forms.Label serviceName;
+        private System.Windows.Forms.Label servicePrice;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

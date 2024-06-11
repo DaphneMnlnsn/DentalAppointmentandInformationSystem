@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.restoreBtn = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.servicePrice = new System.Windows.Forms.Label();
             this.serviceName = new System.Windows.Forms.Label();
             this.serviceID = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.srvcDuration = new System.Windows.Forms.Label();
-            this.restoreBtn = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,6 +50,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1178, 74);
             this.panel1.TabIndex = 95;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.delete;
+            this.pictureBox1.Location = new System.Drawing.Point(1086, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 81;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Delete");
+            // 
+            // restoreBtn
+            // 
+            this.restoreBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.restoreBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.restore;
+            this.restoreBtn.Location = new System.Drawing.Point(1010, 9);
+            this.restoreBtn.Name = "restoreBtn";
+            this.restoreBtn.Size = new System.Drawing.Size(50, 45);
+            this.restoreBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.restoreBtn.TabIndex = 83;
+            this.restoreBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.restoreBtn, "Restore");
             // 
             // tableLayoutPanel1
             // 
@@ -109,18 +133,6 @@
             this.serviceID.Text = "Service ID";
             this.serviceID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.delete;
-            this.pictureBox1.Location = new System.Drawing.Point(1086, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 81;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Delete");
-            // 
             // srvcDuration
             // 
             this.srvcDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -133,18 +145,6 @@
             this.srvcDuration.Text = "Service Duration (hour)";
             this.srvcDuration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // restoreBtn
-            // 
-            this.restoreBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.restoreBtn.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.restore;
-            this.restoreBtn.Location = new System.Drawing.Point(1010, 9);
-            this.restoreBtn.Name = "restoreBtn";
-            this.restoreBtn.Size = new System.Drawing.Size(50, 45);
-            this.restoreBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.restoreBtn.TabIndex = 83;
-            this.restoreBtn.TabStop = false;
-            this.toolTip1.SetToolTip(this.restoreBtn, "Restore");
-            // 
             // ServicesListArchived
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -155,10 +155,10 @@
             this.Name = "ServicesListArchived";
             this.Size = new System.Drawing.Size(1150, 69);
             this.Load += new System.EventHandler(this.ServicesList_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restoreBtn)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

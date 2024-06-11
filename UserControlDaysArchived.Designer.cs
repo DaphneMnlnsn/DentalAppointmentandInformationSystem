@@ -34,7 +34,7 @@
             // 
             // lbldays
             // 
-            this.lbldays.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lbldays.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbldays.AutoSize = true;
             this.lbldays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -47,24 +47,30 @@
             // 
             // lblsched
             // 
-            this.lblsched.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblsched.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsched.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblsched.AutoSize = true;
+            this.lblsched.Font = new System.Drawing.Font("Inter Medium", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsched.Location = new System.Drawing.Point(0, 51);
+            this.lblsched.MaximumSize = new System.Drawing.Size(160, 0);
+            this.lblsched.MinimumSize = new System.Drawing.Size(160, 0);
             this.lblsched.Name = "lblsched";
-            this.lblsched.Size = new System.Drawing.Size(165, 51);
+            this.lblsched.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblsched.Size = new System.Drawing.Size(160, 17);
             this.lblsched.TabIndex = 1;
-            this.lblsched.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblsched.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblsched.Click += new System.EventHandler(this.UserControlDays_Click);
             // 
-            // UserControlDays
+            // UserControlDaysArchived
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.lblsched);
             this.Controls.Add(this.lbldays);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "UserControlDays";
+            this.MaximumSize = new System.Drawing.Size(165, 0);
+            this.MinimumSize = new System.Drawing.Size(165, 102);
+            this.Name = "UserControlDaysArchived";
             this.Size = new System.Drawing.Size(165, 102);
             this.Load += new System.EventHandler(this.UserControlDays_Load);
             this.Click += new System.EventHandler(this.UserControlDays_Click);
