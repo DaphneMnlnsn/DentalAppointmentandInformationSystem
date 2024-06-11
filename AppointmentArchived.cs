@@ -35,6 +35,27 @@ namespace DentalAppointmentandInformationSystem
             label1.Text = "Notes: " + appointment_notes;
             appntmntIDLbl.Text = appointmentId.ToString();
             appntmntState.Text = appointment_state;
+            appntmntState.Enabled = false;
+            if (appntmntState.Text.ToString().Equals("Completed"))
+            {
+                appntmntState.ForeColor = Color.FromArgb(45, 204, 255);
+            }
+            else if (appntmntState.Text.ToString().Equals("Ongoing"))
+            {
+                appntmntState.ForeColor = Color.FromArgb(0, 226, 0);
+            }
+            else if (appntmntState.Text.ToString().Equals("Cancelled"))
+            {
+                appntmntState.ForeColor = Color.FromArgb(255, 42, 4);
+            }
+            else if (appntmntState.Text.ToString().Equals("No Show"))
+            {
+                appntmntState.ForeColor = Color.FromArgb(123, 128, 137);
+            }
+            else
+            {
+                appntmntState.ForeColor = Color.FromArgb(250, 216, 0);
+            }
         }
 
         private void deleteAppntmnt_Click(object sender, EventArgs e)

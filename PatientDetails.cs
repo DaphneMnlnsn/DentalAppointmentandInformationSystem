@@ -120,7 +120,7 @@ namespace DentalAppointmentandInformationSystem
                 foreach (DataRow row2 in records.Rows)
                 {
                     float recordsPrice;
-                    string recordsDate = "", recordsTreat = "", recordsTooth;
+                    string recordsDate = "", recordsTreat = "", recordsTooth, recordsStatus = "";
                     string sql3 = "SELECT * FROM Appointment WHERE appointment_id = '" + row2["appointment_id"].ToString() + "'";
                     DataTable apps = new DataTable("appointments");
                     SqlDataAdapter da3 = new SqlDataAdapter(sql3, constring);
@@ -163,10 +163,11 @@ namespace DentalAppointmentandInformationSystem
                             }
                             readService3.Close();
                         }
+                        recordsStatus = row3["appointment_state"].ToString();
 
                     }
                     Record record = new Record();
-                    record.setPatientInfo(row2["record_id"].ToString(), recordsDate, recordsTreat, recordsTooth, recordsPrice);
+                    record.setPatientInfo(row2["record_id"].ToString(), recordsDate, recordsTreat, recordsTooth, recordsPrice, recordsStatus);
                     recordContainer.Controls.Add(record);
                 }
 

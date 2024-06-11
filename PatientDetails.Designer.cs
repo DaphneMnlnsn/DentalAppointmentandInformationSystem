@@ -70,8 +70,9 @@
             this.openDental = new System.Windows.Forms.Button();
             this.addAttachment = new System.Windows.Forms.Label();
             this.archiveBtn = new System.Windows.Forms.Label();
-            this.editRecord1 = new DentalAppointmentandInformationSystem.EditRecord();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label8 = new System.Windows.Forms.Label();
+            this.editRecord1 = new DentalAppointmentandInformationSystem.EditRecord();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
@@ -366,11 +367,13 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.99722F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.00278F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 315F));
+            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.50307F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.49693F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 294F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
+            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
@@ -380,7 +383,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1150, 63);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1320, 63);
             this.tableLayoutPanel2.TabIndex = 84;
             // 
             // label4
@@ -389,12 +392,12 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(837, 1);
+            this.label4.Location = new System.Drawing.Point(1147, 1);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(308, 61);
+            this.label4.Size = new System.Drawing.Size(168, 61);
             this.label4.TabIndex = 3;
-            this.label4.Text = "PRICE";
+            this.label4.Text = "STATUS";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -403,12 +406,12 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(641, 1);
+            this.label3.Location = new System.Drawing.Point(852, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 61);
+            this.label3.Size = new System.Drawing.Size(286, 61);
             this.label3.TabIndex = 2;
-            this.label3.Text = "TOOTH #";
+            this.label3.Text = "PRICE BILLED";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -417,12 +420,12 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(253, 1);
+            this.label2.Location = new System.Drawing.Point(632, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(379, 61);
+            this.label2.Size = new System.Drawing.Size(211, 61);
             this.label2.TabIndex = 1;
-            this.label2.Text = "TREATMENT";
+            this.label2.Text = "TOOTH #";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -434,7 +437,7 @@
             this.label1.Location = new System.Drawing.Point(5, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 61);
+            this.label1.Size = new System.Drawing.Size(220, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "DATE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -457,7 +460,7 @@
             this.recordContainer.Location = new System.Drawing.Point(191, 449);
             this.recordContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.recordContainer.Name = "recordContainer";
-            this.recordContainer.Size = new System.Drawing.Size(1149, 153);
+            this.recordContainer.Size = new System.Drawing.Size(1319, 153);
             this.recordContainer.TabIndex = 86;
             // 
             // tableLayoutPanel1
@@ -587,7 +590,7 @@
             this.openDental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openDental.Font = new System.Drawing.Font("Inter SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openDental.ForeColor = System.Drawing.SystemColors.Control;
-            this.openDental.Location = new System.Drawing.Point(190, 669);
+            this.openDental.Location = new System.Drawing.Point(202, 657);
             this.openDental.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.openDental.Name = "openDental";
             this.openDental.Size = new System.Drawing.Size(290, 48);
@@ -621,6 +624,20 @@
             this.archiveBtn.TabIndex = 94;
             this.archiveBtn.Text = "Archived Files";
             this.archiveBtn.Click += new System.EventHandler(this.archiveBtn_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label8.Location = new System.Drawing.Point(234, 1);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(389, 61);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "TREATMENT";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // editRecord1
             // 
@@ -723,5 +740,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label contactPNumLbl;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label8;
     }
 }

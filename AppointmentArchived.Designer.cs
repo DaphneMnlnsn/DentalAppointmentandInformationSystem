@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.appntmntState = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.appntmntIDLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -42,8 +44,6 @@
             this.timeLbl = new System.Windows.Forms.Label();
             this.srvcLbl = new System.Windows.Forms.Label();
             this.ptntLbl = new System.Windows.Forms.Label();
-            this.appntmntState = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1064, 306);
             this.panel1.TabIndex = 15;
+            // 
+            // appntmntState
+            // 
+            this.appntmntState.DisplayMember = "Pending";
+            this.appntmntState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.appntmntState.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.appntmntState.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold);
+            this.appntmntState.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.appntmntState.FormattingEnabled = true;
+            this.appntmntState.Items.AddRange(new object[] {
+            "Pending",
+            "Ongoing",
+            "Completed",
+            "Cancelled",
+            "No Show"});
+            this.appntmntState.Location = new System.Drawing.Point(831, 229);
+            this.appntmntState.Name = "appntmntState";
+            this.appntmntState.Size = new System.Drawing.Size(188, 29);
+            this.appntmntState.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(753, 234);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 21);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Status:";
             // 
             // appntmntIDLbl
             // 
@@ -201,33 +230,6 @@
             this.ptntLbl.TabIndex = 3;
             this.ptntLbl.Text = "label2";
             this.ptntLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // appntmntState
-            // 
-            this.appntmntState.DisplayMember = "Pending";
-            this.appntmntState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.appntmntState.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold);
-            this.appntmntState.FormattingEnabled = true;
-            this.appntmntState.Items.AddRange(new object[] {
-            "Pending",
-            "Ongoing",
-            "Completed",
-            "Cancelled",
-            "No Show"});
-            this.appntmntState.Location = new System.Drawing.Point(831, 229);
-            this.appntmntState.Name = "appntmntState";
-            this.appntmntState.Size = new System.Drawing.Size(188, 29);
-            this.appntmntState.TabIndex = 17;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(753, 234);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 21);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Status:";
             // 
             // AppointmentArchived
             // 

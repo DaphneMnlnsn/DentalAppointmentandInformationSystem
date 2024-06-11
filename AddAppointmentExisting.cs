@@ -55,10 +55,20 @@ namespace DentalAppointmentandInformationSystem
             constring.Close();
 
             //Setting minimum date and maximum date to be selected
-            startTime.MinDate = DateTime.Parse("10:00:00");
-            endTime.MinDate = DateTime.Parse("11:00:00");
-            startTime.MaxDate = DateTime.Parse("16:00:00");
-            endTime.MaxDate = DateTime.Parse("17:00:00");
+            appntmntDate.MinDate = DateTime.Now;
+            if (DateTime.Now >= DateTime.Parse("10:00:00") && !(DateTime.Now >= DateTime.Parse("17:00:00")) && !(DateTime.Now.AddHours(1) >= DateTime.Parse("16:00:00")))
+            {
+                startTime.MinDate = DateTime.Now.AddHours(1);
+                startTime.MaxDate = DateTime.Parse("16:00:00");
+                endTime.MaxDate = DateTime.Parse("17:00:00");
+            }
+            else
+            {
+                appntmntDate.MinDate = DateTime.Now.AddDays(1);
+                startTime.MinDate = DateTime.Parse("10:00:00");
+                startTime.MaxDate = DateTime.Parse("16:00:00");
+                endTime.MaxDate = DateTime.Parse("17:00:00");
+            }
         }
         private void dashboardBtn_Click(object sender, EventArgs e)
         {
