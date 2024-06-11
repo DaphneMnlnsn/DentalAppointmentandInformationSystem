@@ -88,6 +88,13 @@ namespace DentalAppointmentandInformationSystem
                     {
                         Variables v = new Variables();
                         v.getsetloggedIn = eNumTxtBox.Text;
+                        constring.Open();
+                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','logged in to the system')";
+
+                        SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                        cmdAct.CommandText = queryAct;
+                        cmdAct.ExecuteNonQuery();
+                        constring.Close();
                         Dashboard dshbrd = new Dashboard();
                         dshbrd.Show();
                         this.Hide();

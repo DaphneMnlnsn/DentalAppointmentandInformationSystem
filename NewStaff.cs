@@ -114,6 +114,12 @@ namespace DentalAppointmentandInformationSystem
                     cmd2.CommandText = query;
                     if (cmd2.ExecuteNonQuery() == 1)
                     {
+                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','added staff "
+                                + staffID + "')";
+
+                        SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                        cmdAct.CommandText = queryAct;
+                        cmdAct.ExecuteNonQuery();
                         constring.Close();
                         MessageBox.Show("Staff Member added!\nThe employee's credentials are:\nEmployee Number: " + staffID + "\nPassword: '" + staffPass + "'" , "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Staff staff = new Staff();

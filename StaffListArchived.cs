@@ -43,7 +43,13 @@ namespace DentalAppointmentandInformationSystem
                 cmd2.CommandText = query2;
                 if (cmd2.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Changes saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Staff restored!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','restored staff "
+                                + v.getsetstaffSelected + "')";
+
+                    SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                    cmdAct.CommandText = queryAct;
+                    cmdAct.ExecuteNonQuery();
                     constring.Close();
                     StaffArchives staff = new StaffArchives();
                     staff.Show();
@@ -73,6 +79,12 @@ namespace DentalAppointmentandInformationSystem
                     if (cmd2.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Staff record deleted permanently!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','permanently deleted staff "
+                                + v.getsetstaffSelected + "')";
+
+                        SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                        cmdAct.CommandText = queryAct;
+                        cmdAct.ExecuteNonQuery();
                         constring.Close();
                         StaffArchives srvcs = new StaffArchives();
                         srvcs.Show();

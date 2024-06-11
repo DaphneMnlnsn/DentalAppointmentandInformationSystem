@@ -110,7 +110,22 @@ namespace DentalAppointmentandInformationSystem
 
         private void addServiceBtn_Click(object sender, EventArgs e)
         {
-            addService1.Visible = true;
+            constring.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Staff WHERE employee_num =" + int.Parse(v.getsetloggedIn), constring);
+            SqlDataReader reader1;
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                if (reader1.GetValue(7).ToString().Equals("Dentist") || reader1.GetValue(7).ToString().Equals("Administrator"))
+                {
+                    addService1.Visible = true;
+                }
+                else
+                {
+                    constring.Close();
+                    MessageBox.Show("You do not have authorization to add services!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void editVisible()

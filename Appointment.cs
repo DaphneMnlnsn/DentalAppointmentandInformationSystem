@@ -88,6 +88,12 @@ namespace DentalAppointmentandInformationSystem
                 {
                     constring.Close();
                     MessageBox.Show("Appointment has been moved to the Trash Bin/Archives!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','archived appointment "
+                                + appntmntIDLbl.Text + "')";
+
+                    SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                    cmdAct.CommandText = queryAct;
+                    cmdAct.ExecuteNonQuery();
                     Calendar clndr = new Calendar();
                     clndr.Show();
                     this.ParentForm.Hide();

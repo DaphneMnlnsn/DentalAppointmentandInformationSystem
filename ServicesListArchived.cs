@@ -68,6 +68,12 @@ namespace DentalAppointmentandInformationSystem
                             if (cmd2.ExecuteNonQuery() == 1)
                             {
                                 MessageBox.Show("Service deleted permanently!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','permanently deleted service "
+                                + v.getsetserviceSelected + "')";
+
+                                SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                                cmdAct.CommandText = queryAct;
+                                cmdAct.ExecuteNonQuery();
                                 constring.Close();
                                 ServiceArchives srvcs = new ServiceArchives();
                                 srvcs.Show();
@@ -116,6 +122,12 @@ namespace DentalAppointmentandInformationSystem
                         if (cmd2.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("Service successfully restored!");
+                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','restored service "
+                                + v.getsetserviceSelected + "')";
+
+                            SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                            cmdAct.CommandText = queryAct;
+                            cmdAct.ExecuteNonQuery();
                             constring.Close();
                             ServiceArchives srvcs = new ServiceArchives();
                             srvcs.Show();

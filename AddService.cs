@@ -69,6 +69,12 @@ namespace DentalAppointmentandInformationSystem
                         if (cmd2.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("Service added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','added service "
+                            + serviceID + "')";
+
+                            SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                            cmdAct.CommandText = queryAct;
+                            cmdAct.ExecuteNonQuery();
                             this.Visible = false;
                             this.ParentForm.Hide();
                             constring.Close();
@@ -99,6 +105,7 @@ namespace DentalAppointmentandInformationSystem
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+            constring.Close();
         }
     }
 }

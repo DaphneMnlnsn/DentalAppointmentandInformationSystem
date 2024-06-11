@@ -365,6 +365,12 @@ namespace DentalAppointmentandInformationSystem
                     if (cmd3.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Changes saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','edited appointment "
+                                + v.getsetappointmentSelected + "')";
+
+                        SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                        cmdAct.CommandText = queryAct;
+                        cmdAct.ExecuteNonQuery();
                         constring.Close();
                         Calendar clndr = new Calendar();
                         clndr.Show();

@@ -57,6 +57,12 @@ namespace DentalAppointmentandInformationSystem
                         if (cmdd.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("File successfully deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','archived a file of patient "
+                                + v.getsetpatientSelected + "')";
+
+                            SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                            cmdAct.CommandText = queryAct;
+                            cmdAct.ExecuteNonQuery();
                             constring.Close();
                             this.ParentForm.Hide();
                             PatientDetails pd = new PatientDetails();

@@ -208,6 +208,12 @@ namespace DentalAppointmentandInformationSystem
                     if (cmd3.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Appointment created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','added appointment "
+                                + appointmentID + "')";
+
+                        SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                        cmdAct.CommandText = queryAct;
+                        cmdAct.ExecuteNonQuery();
                     }
                     else
                     {
