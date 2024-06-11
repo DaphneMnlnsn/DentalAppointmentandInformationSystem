@@ -34,38 +34,33 @@ namespace DentalAppointmentandInformationSystem
         }
         private void displayAppointment()
         {
-            //Displays the appointment for that specific day
+            //Displays the number of appointments for that specific day
             constring.Open();
-            String sql = "SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + dayLbl.Text + "' AND status = 1";
-            SqlCommand cmd = constring.CreateCommand();
-            cmd.CommandText = sql;
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read())
+
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + dayLbl.Text + "' AND ((appointment_state = 'Ongoing') OR (appointment_state = 'Pending')) AND status = 1", constring);
+            SqlDataAdapter sqlda = new SqlDataAdapter(sqlcom);
+            DataTable dt = new DataTable();
+            int appNum = 0;
+
+            sqlda.Fill(dt);
+
+            if (dt.Rows.Count > 0)
             {
-                int id = Convert.ToInt32(reader["service_id"]);
-                string time = reader["appointment_startTime"].ToString()[0] + "" + reader["appointment_startTime"].ToString()[1] + "" + reader["appointment_startTime"].ToString()[2] + "" + reader["appointment_startTime"].ToString()[3] + "" + reader["appointment_startTime"].ToString()[4];
-                string time2 = reader["appointment_endTime"].ToString()[0] + "" + reader["appointment_endTime"].ToString()[1] + "" + reader["appointment_endTime"].ToString()[2] + "" + reader["appointment_endTime"].ToString()[3] + "" + reader["appointment_endTime"].ToString()[4];
-                reader.Dispose();
-                String sql2 = "SELECT * FROM Service WHERE service_id = " + "'" + id + "'";
-                SqlCommand cmd2 = constring.CreateCommand();
-                cmd2.CommandText = sql2;
-                SqlDataReader reader2 = cmd2.ExecuteReader();
-                if (reader2.Read())
+                foreach (DataRow row in dt.Rows)
                 {
-                    eventLbl.Text = reader2["service_name"].ToString() + "\n" + time + "-" + time2;
+                    appNum++;
                 }
-                reader2.Dispose();
-                cmd2.Dispose();
+                eventLbl.Text = appNum.ToString() + " apps.";
             }
-            cmd.Dispose();
             constring.Close();
         }
 
         private void DashboardDaysNotBlank_Click(object sender, EventArgs e)
         {
-            Calendar clndr = new Calendar();
-            clndr.Show();
+            v.getsetDay = dayLbl.Text;
+            AppntmntDetails appointment = new AppntmntDetails();
             this.ParentForm.Hide();
+            appointment.Show();
         }
     }
 }

@@ -75,7 +75,6 @@ namespace DentalAppointmentandInformationSystem
             }
             foreach (DataRow row in appointments.Rows)
             {
-                this.MaximumSize = new System.Drawing.Size(165, 0);
                 Appointment appntmnt = new Appointment();
                 int appointment_id = Convert.ToInt32(row["appointment_id"]);
                 int service_id = Convert.ToInt32(row["service_id"]);

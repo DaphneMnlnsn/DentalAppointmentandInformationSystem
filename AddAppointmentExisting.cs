@@ -329,7 +329,7 @@ namespace DentalAppointmentandInformationSystem
         private void staff1Combo_Click(object sender, EventArgs e)
         {
             //Setting combo box data values
-            string query = "SELECT * FROM Staff WHERE status = 1";
+            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001' AND employee_role = 'Dentist'";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -342,7 +342,7 @@ namespace DentalAppointmentandInformationSystem
         private void staff2Combo_Click(object sender, EventArgs e)
         {
             //Setting combo box data values
-            string query = "SELECT * FROM Staff WHERE status = 1";
+            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001'";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -355,7 +355,7 @@ namespace DentalAppointmentandInformationSystem
         private void staff3Combo_Click(object sender, EventArgs e)
         {
             //Setting combo box data values
-            string query = "SELECT * FROM Staff WHERE status = 1";
+            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001'";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);

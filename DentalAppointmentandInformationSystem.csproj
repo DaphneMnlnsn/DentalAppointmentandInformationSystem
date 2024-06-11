@@ -77,6 +77,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="activityLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="activityLog.Designer.cs">
+      <DependentUpon>activityLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,12 @@
     </Compile>
     <Compile Include="DashboardDaysNotBlank.Designer.cs">
       <DependentUpon>DashboardDaysNotBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardNotifItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dashboardNotifItem.Designer.cs">
+      <DependentUpon>dashboardNotifItem.cs</DependentUpon>
     </Compile>
     <Compile Include="DentalRecord.cs">
       <SubType>Form</SubType>
@@ -337,6 +349,9 @@
       <DependentUpon>UserControlDaysArchived.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables.cs" />
+    <EmbeddedResource Include="activityLog.resx">
+      <DependentUpon>activityLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddAppointment.resx">
       <DependentUpon>AddAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,8 +385,14 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DashboardDays.resx">
+      <DependentUpon>DashboardDays.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashboardDaysNotBlank.resx">
       <DependentUpon>DashboardDaysNotBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboardNotifItem.resx">
+      <DependentUpon>dashboardNotifItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DentalRecord.resx">
       <DependentUpon>DentalRecord.cs</DependentUpon>
@@ -541,6 +562,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>DAISdB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\notifs.png" />
     <None Include="Resources\empty.png" />
     <None Include="Resources\view.png" />
     <None Include="Resources\hide.png" />

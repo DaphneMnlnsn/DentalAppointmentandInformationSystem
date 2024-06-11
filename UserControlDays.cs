@@ -62,8 +62,8 @@ namespace DentalAppointmentandInformationSystem
         {
             v.getsetDay = lbldays.Text;
             AppntmntDetails appointment = new AppntmntDetails();
-            appointment.Show();
             this.ParentForm.Hide();
+            appointment.Show();
         }
     }
 }

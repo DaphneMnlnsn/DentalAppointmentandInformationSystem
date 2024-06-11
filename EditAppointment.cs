@@ -395,7 +395,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setStaff1Combo()
         {
-            string query = "SELECT * FROM Staff WHERE status = 1";
+            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001' AND employee_role = 'Dentist'";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -407,7 +407,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setStaff2Combo()
         {
-            string query = "SELECT * FROM Staff WHERE status = 1";
+            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001'";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -419,7 +419,7 @@ namespace DentalAppointmentandInformationSystem
 
         private void setStaff3Combo()
         {
-            string query = "SELECT * FROM Staff WHERE status = 1";
+            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001'";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);

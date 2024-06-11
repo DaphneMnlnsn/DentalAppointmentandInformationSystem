@@ -52,7 +52,8 @@ namespace DentalAppointmentandInformationSystem
             }
             constring.Close();
             displayDays();
-            timer1();
+            displayNotifs();
+            displayActs();
         }
 
         private void apptclndrBtn_Click(object sender, EventArgs e)
@@ -188,6 +189,124 @@ namespace DentalAppointmentandInformationSystem
                 MessageBox.Show("You have no appointments for today.");
             }
             constring.Close();*/
+        }
+
+        private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void displayNotifs()
+        {
+            constring.Open();
+            bool noNotif = true;
+            string message = "You have the following appointments:\n\n";
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM Appointment where appointment_date='" + DateTime.Now.ToString() + "' AND appointment_startTime > '" + DateTime.Now.ToString() + "' AND status = 1 ORDER BY appointment_startTime ASC", constring);
+            SqlDataAdapter sqlda = new SqlDataAdapter(sqlcom);
+            DataTable dt = new DataTable();
+            dashboardNotifItem notification = new dashboardNotifItem();
+
+            sqlda.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    string sql5 = "SELECT * FROM Patient WHERE patient_id = " + "'" + dt.Rows[i]["patient_id"].ToString() + "'";
+                    SqlCommand cmd5 = constring.CreateCommand();
+                    cmd5.CommandText = sql5;
+                    SqlDataReader reader5 = cmd5.ExecuteReader();
+                    if (reader5.Read())
+                    {
+                        string patient_name;
+                        if (reader5.GetValue(5).ToString().Equals("Female"))
+                        {
+                            patient_name = "Ms. " + reader5["patient_lname"].ToString() + ", " + reader5["patient_fname"].ToString() + " " + reader5["patient_mname"].ToString();
+                        }
+                        else
+                        {
+                            patient_name = "Mr. " + reader5["patient_lname"].ToString() + ", " + reader5["patient_fname"].ToString() + " " + reader5["patient_mname"].ToString();
+                        }
+                        message += "- " + dt.Rows[i]["appointment_startTime"].ToString() + "-" + dt.Rows[i]["appointment_endTime"].ToString() + " with " + "\n" + patient_name + "\n\n";
+                        reader5.Dispose();
+                        cmd5.Dispose();
+                        notification.setNotifs(message);
+                        notifContainer.Controls.Add(notification);
+                    }
+                }
+                noNotifPic.Visible = false;
+                noNotifLbl.Visible = false;
+                noNotif = false;
+            }
+
+            string message2 = "You have not marked the following appointments as finished:\n\n";
+            SqlCommand sqlcom2 = new SqlCommand("SELECT * FROM Appointment WHERE ((appointment_state = 'Ongoing') OR (appointment_state = 'Pending')) AND appointment_date <= '" + DateTime.Now.ToString() + "' AND appointment_startTime < '" + DateTime.Now.ToString() + "' AND status = 1 ORDER BY appointment_date ASC", constring);
+            SqlDataAdapter sqlda2 = new SqlDataAdapter(sqlcom2);
+            DataTable dt2 = new DataTable();
+
+            sqlda2.Fill(dt2);
+
+            if (dt2.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt2.Rows.Count; i++)
+                {
+                    string sql5 = "SELECT * FROM Patient WHERE patient_id = " + "'" + dt2.Rows[i]["patient_id"].ToString() + "'";
+                    SqlCommand cmd5 = constring.CreateCommand();
+                    cmd5.CommandText = sql5;
+                    SqlDataReader reader5 = cmd5.ExecuteReader();
+                    if (reader5.Read())
+                    {
+                        string patient_name;
+                        if (reader5.GetValue(5).ToString().Equals("Female"))
+                        {
+                            patient_name = "Ms. " + reader5["patient_lname"].ToString() + ", " + reader5["patient_fname"].ToString() + " " + reader5["patient_mname"].ToString();
+                        }
+                        else
+                        {
+                            patient_name = "Mr. " + reader5["patient_lname"].ToString() + ", " + reader5["patient_fname"].ToString() + " " + reader5["patient_mname"].ToString();
+                        }
+                        message2 += "- " + DateTime.Parse(dt2.Rows[i]["appointment_date"].ToString()).ToString("MM-dd-yyyy") + ": " + dt2.Rows[i]["appointment_startTime"].ToString() + "-" + dt2.Rows[i]["appointment_endTime"].ToString() + " with " + patient_name + "\n\n";
+                        reader5.Dispose();
+                        cmd5.Dispose();
+                        notification.setNotifs(message2);
+                        notifContainer.Controls.Add(notification);
+                    }
+                }
+                noNotifPic.Visible = false;
+                noNotifLbl.Visible = false;
+                noNotif = false;
+            }
+
+            if (noNotif == true)
+            {
+                noNotifPic.Visible = true;
+                noNotifLbl.Visible = true;
+            }
+
+            constring.Close();
+        }
+
+        private void displayActs()
+        {
+            constring.Open();
+            string message = "";
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM Activity_Log ORDER BY activity_time DESC", constring);
+            SqlDataAdapter sqlda = new SqlDataAdapter(sqlcom);
+            DataTable dt = new DataTable();
+
+            sqlda.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    dashboardNotifItem notification = new dashboardNotifItem();
+                    message = "Staff " + row["employee_num"] + " " + row["activity_performed"] + " at " + DateTime.Parse(row["activity_time"].ToString()).ToString("MM-dd-yyyy HH:mm:ss") + ".";
+                    notification.setNotifs(message);
+                    activityPanel.Controls.Add(notification);
+                }
+            }
+
+            constring.Close();
         }
     }
 }

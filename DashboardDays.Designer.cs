@@ -34,8 +34,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DashboardDays";
-            this.Size = new System.Drawing.Size(137, 94);
+            this.Size = new System.Drawing.Size(95, 96);
             this.ResumeLayout(false);
 
         }
