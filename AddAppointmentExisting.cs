@@ -62,6 +62,12 @@ namespace DentalAppointmentandInformationSystem
                 startTime.MaxDate = DateTime.Parse("16:00:00");
                 endTime.MaxDate = DateTime.Parse("17:00:00");
             }
+            else if (DateTime.Now < DateTime.Parse("10:00:00"))
+            {
+                startTime.MinDate = DateTime.Parse("10:00:00");
+                startTime.MaxDate = DateTime.Parse("16:00:00");
+                endTime.MaxDate = DateTime.Parse("17:00:00");
+            }
             else
             {
                 appntmntDate.MinDate = DateTime.Now.AddDays(1);
@@ -343,7 +349,7 @@ namespace DentalAppointmentandInformationSystem
         private void staff2Combo_Click(object sender, EventArgs e)
         {
             //Setting combo box data values
-            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001'";
+            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001' AND employee_num != '" + staff1Combo.SelectedValue.ToString() + "'";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -356,7 +362,7 @@ namespace DentalAppointmentandInformationSystem
         private void staff3Combo_Click(object sender, EventArgs e)
         {
             //Setting combo box data values
-            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001'";
+            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001' AND employee_num != '" + staff1Combo.SelectedValue.ToString() + "' AND employee_num != '" + staff2Combo.SelectedValue.ToString() + "'";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);

@@ -147,49 +147,6 @@ namespace DentalAppointmentandInformationSystem
             login.Show();
             this.Hide();
         }
-        private void timer1()
-        {
-            /*//Displaying notification
-            constring.Open();
-            string message = "Today at " + DateTime.Today.ToLongDateString() + ", you have the following appointments:\n";
-            SqlCommand sqlcom = new SqlCommand("SELECT * FROM Appointment where appointment_date='" + DateTime.Now.ToString() + "'", constring);
-            SqlDataAdapter sqlda = new SqlDataAdapter(sqlcom);
-            DataTable dt = new DataTable();
-                
-            sqlda.Fill(dt);
-
-            if (dt.Rows.Count > 0)
-            {
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    string sql5 = "SELECT * FROM Patient WHERE patient_id = " + "'" + dt.Rows[i]["patient_id"].ToString() + "'";
-                    SqlCommand cmd5 = constring.CreateCommand();
-                    cmd5.CommandText = sql5;
-                    SqlDataReader reader5 = cmd5.ExecuteReader();
-                    if (reader5.Read())
-                    {
-                        string patient_name;
-                        if (reader5.GetValue(5).ToString().Equals("Female"))
-                        {
-                            patient_name = "Ms. " + reader5["patient_lname"].ToString() + ", " + reader5["patient_fname"].ToString() + " " + reader5["patient_mname"].ToString();
-                        }
-                        else
-                        {
-                            patient_name = "Mr. " + reader5["patient_lname"].ToString() + ", " + reader5["patient_fname"].ToString() + " " + reader5["patient_mname"].ToString();
-                        }
-                        reader5.Dispose();
-                        cmd5.Dispose();
-                        message += dt.Rows[i]["appointment_startTime"].ToString() + "-" + dt.Rows[i]["appointment_endTime"].ToString() + " with " + patient_name + "\n";
-                    }
-                }
-                MessageBox.Show(message);
-            }
-            else
-            {
-                MessageBox.Show("You have no appointments for today.");
-            }
-            constring.Close();*/
-        }
 
         private void displayNotifs()
         {
@@ -233,9 +190,8 @@ namespace DentalAppointmentandInformationSystem
                 noNotifLbl.Visible = false;
                 noNotif = false;
             }
-
-            string message2 = "You have not marked the following appointments as finished:\n\n";
-            SqlCommand sqlcom2 = new SqlCommand("SELECT * FROM Appointment WHERE ((appointment_state = 'Ongoing') OR (appointment_state = 'Pending')) AND appointment_date <= '" + DateTime.Now.ToString() + "' AND appointment_startTime < '" + DateTime.Now.ToString() + "' AND status = 1 ORDER BY appointment_date ASC", constring);
+            string message2 = "Unmarked Appointments for Today:\n\n";
+            SqlCommand sqlcom2 = new SqlCommand("SELECT * FROM Appointment WHERE ((appointment_state = 'Ongoing') OR (appointment_state = 'Pending')) AND (appointment_date <= '" + DateTime.Now.ToString("MM-dd-yyyy") + "' OR appointment_startTime < '" + DateTime.Now.ToString("hh:mm tt") + "') AND status = 1 ORDER BY appointment_date ASC", constring);
             SqlDataAdapter sqlda2 = new SqlDataAdapter(sqlcom2);
             DataTable dt2 = new DataTable();
             dashboardNotifItem notification2 = new dashboardNotifItem();

@@ -52,6 +52,7 @@
             this.picBoxFemale = new System.Windows.Forms.PictureBox();
             this.picBoxMale = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,7 +72,6 @@
             this.addAttachment = new System.Windows.Forms.Label();
             this.archiveBtn = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label8 = new System.Windows.Forms.Label();
             this.editRecord1 = new DentalAppointmentandInformationSystem.EditRecord();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -188,7 +188,7 @@
             // 
             this.patientEmail.AutoSize = true;
             this.patientEmail.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientEmail.Location = new System.Drawing.Point(593, 169);
+            this.patientEmail.Location = new System.Drawing.Point(594, 169);
             this.patientEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientEmail.Name = "patientEmail";
             this.patientEmail.Size = new System.Drawing.Size(216, 21);
@@ -372,7 +372,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.49693F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 294F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
             this.tableLayoutPanel2.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
@@ -386,16 +386,30 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1320, 63);
             this.tableLayoutPanel2.TabIndex = 84;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label8.Location = new System.Drawing.Point(233, 1);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(388, 61);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "TREATMENT";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(1147, 1);
+            this.label4.Location = new System.Drawing.Point(1145, 1);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 61);
+            this.label4.Size = new System.Drawing.Size(170, 61);
             this.label4.TabIndex = 3;
             this.label4.Text = "STATUS";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -406,7 +420,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(852, 1);
+            this.label3.Location = new System.Drawing.Point(850, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(286, 61);
@@ -420,7 +434,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(632, 1);
+            this.label2.Location = new System.Drawing.Point(630, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 61);
@@ -437,7 +451,7 @@
             this.label1.Location = new System.Drawing.Point(5, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 61);
+            this.label1.Size = new System.Drawing.Size(219, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "DATE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -624,20 +638,6 @@
             this.archiveBtn.TabIndex = 94;
             this.archiveBtn.Text = "Archived Files";
             this.archiveBtn.Click += new System.EventHandler(this.archiveBtn_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label8.Location = new System.Drawing.Point(234, 1);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(389, 61);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "TREATMENT";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // editRecord1
             // 

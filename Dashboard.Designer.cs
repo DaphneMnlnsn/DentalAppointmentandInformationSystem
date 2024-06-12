@@ -54,13 +54,20 @@ namespace DentalAppointmentandInformationSystem
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.logoutBtn = new System.Windows.Forms.Label();
+            this.logoutPic = new System.Windows.Forms.PictureBox();
             this.servicesBtn = new System.Windows.Forms.Label();
             this.staffBtn = new System.Windows.Forms.Label();
+            this.staffPic = new System.Windows.Forms.PictureBox();
             this.ptntBtn = new System.Windows.Forms.Label();
+            this.patientPic = new System.Windows.Forms.PictureBox();
             this.apptclndrBtn = new System.Windows.Forms.Label();
+            this.clndrPic = new System.Windows.Forms.PictureBox();
+            this.doctorPic = new System.Windows.Forms.PictureBox();
             this.emNameTxtBox = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dshboardBtn = new System.Windows.Forms.Label();
+            this.dshbrdPic = new System.Windows.Forms.PictureBox();
+            this.srvcsPic = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.actlog = new System.Windows.Forms.Label();
             this.activitylog = new System.Windows.Forms.Label();
@@ -74,22 +81,10 @@ namespace DentalAppointmentandInformationSystem
             this.notifContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.noNotifPic = new System.Windows.Forms.PictureBox();
             this.noNotifs = new System.Windows.Forms.PictureBox();
-            this.logoutPic = new System.Windows.Forms.PictureBox();
-            this.staffPic = new System.Windows.Forms.PictureBox();
-            this.patientPic = new System.Windows.Forms.PictureBox();
-            this.clndrPic = new System.Windows.Forms.PictureBox();
-            this.doctorPic = new System.Windows.Forms.PictureBox();
-            this.dshbrdPic = new System.Windows.Forms.PictureBox();
-            this.srvcsPic = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.notifContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.noNotifPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.noNotifs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientPic)).BeginInit();
@@ -97,6 +92,11 @@ namespace DentalAppointmentandInformationSystem
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.notifContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.noNotifPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noNotifs)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -398,6 +398,18 @@ namespace DentalAppointmentandInformationSystem
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
+            // logoutPic
+            // 
+            this.logoutPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.logoutPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.logout;
+            this.logoutPic.Location = new System.Drawing.Point(54, 810);
+            this.logoutPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
+            this.logoutPic.Name = "logoutPic";
+            this.logoutPic.Size = new System.Drawing.Size(42, 43);
+            this.logoutPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoutPic.TabIndex = 13;
+            this.logoutPic.TabStop = false;
+            // 
             // servicesBtn
             // 
             this.servicesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -428,6 +440,19 @@ namespace DentalAppointmentandInformationSystem
             this.staffBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
             // 
+            // staffPic
+            // 
+            this.staffPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.staffPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.staffs;
+            this.staffPic.Location = new System.Drawing.Point(47, 605);
+            this.staffPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
+            this.staffPic.Name = "staffPic";
+            this.staffPic.Size = new System.Drawing.Size(56, 62);
+            this.staffPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.staffPic.TabIndex = 9;
+            this.staffPic.TabStop = false;
+            this.staffPic.Click += new System.EventHandler(this.staffBtn_Click);
+            // 
             // ptntBtn
             // 
             this.ptntBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -443,6 +468,19 @@ namespace DentalAppointmentandInformationSystem
             this.ptntBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ptntBtn.Click += new System.EventHandler(this.ptntBtn_Click);
             // 
+            // patientPic
+            // 
+            this.patientPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.patientPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.patients;
+            this.patientPic.Location = new System.Drawing.Point(46, 508);
+            this.patientPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
+            this.patientPic.Name = "patientPic";
+            this.patientPic.Size = new System.Drawing.Size(57, 60);
+            this.patientPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.patientPic.TabIndex = 7;
+            this.patientPic.TabStop = false;
+            this.patientPic.Click += new System.EventHandler(this.ptntBtn_Click);
+            // 
             // apptclndrBtn
             // 
             this.apptclndrBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -457,6 +495,31 @@ namespace DentalAppointmentandInformationSystem
             this.apptclndrBtn.Text = "Appointment\r\nCalendar";
             this.apptclndrBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.apptclndrBtn.Click += new System.EventHandler(this.apptclndrBtn_Click);
+            // 
+            // clndrPic
+            // 
+            this.clndrPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.clndrPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.calendar;
+            this.clndrPic.Location = new System.Drawing.Point(50, 417);
+            this.clndrPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
+            this.clndrPic.Name = "clndrPic";
+            this.clndrPic.Size = new System.Drawing.Size(50, 46);
+            this.clndrPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.clndrPic.TabIndex = 5;
+            this.clndrPic.TabStop = false;
+            this.clndrPic.Click += new System.EventHandler(this.apptclndrBtn_Click);
+            // 
+            // doctorPic
+            // 
+            this.doctorPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.doctorPic, 2);
+            this.doctorPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.profile_icon;
+            this.doctorPic.Location = new System.Drawing.Point(96, 17);
+            this.doctorPic.Name = "doctorPic";
+            this.doctorPic.Size = new System.Drawing.Size(153, 142);
+            this.doctorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.doctorPic.TabIndex = 0;
+            this.doctorPic.TabStop = false;
             // 
             // emNameTxtBox
             // 
@@ -499,6 +562,31 @@ namespace DentalAppointmentandInformationSystem
             this.dshboardBtn.TabIndex = 3;
             this.dshboardBtn.Text = "Dashboard";
             this.dshboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dshbrdPic
+            // 
+            this.dshbrdPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dshbrdPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.dashboard;
+            this.dshbrdPic.Location = new System.Drawing.Point(52, 318);
+            this.dshbrdPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
+            this.dshbrdPic.Name = "dshbrdPic";
+            this.dshbrdPic.Size = new System.Drawing.Size(46, 48);
+            this.dshbrdPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dshbrdPic.TabIndex = 4;
+            this.dshbrdPic.TabStop = false;
+            // 
+            // srvcsPic
+            // 
+            this.srvcsPic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.srvcsPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.services;
+            this.srvcsPic.Location = new System.Drawing.Point(49, 708);
+            this.srvcsPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
+            this.srvcsPic.Name = "srvcsPic";
+            this.srvcsPic.Size = new System.Drawing.Size(52, 52);
+            this.srvcsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.srvcsPic.TabIndex = 10;
+            this.srvcsPic.TabStop = false;
+            this.srvcsPic.Click += new System.EventHandler(this.servicesBtn_Click);
             // 
             // panel2
             // 
@@ -576,7 +664,7 @@ namespace DentalAppointmentandInformationSystem
             this.noNotifLbl.Name = "noNotifLbl";
             this.noNotifLbl.Size = new System.Drawing.Size(238, 54);
             this.noNotifLbl.TabIndex = 29;
-            this.noNotifLbl.Text = "There are no \r\nupcoming appointments";
+            this.noNotifLbl.Text = "There are no reminders";
             this.noNotifLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
@@ -586,9 +674,9 @@ namespace DentalAppointmentandInformationSystem
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(167)))));
             this.label11.Location = new System.Drawing.Point(10, 23);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(272, 26);
+            this.label11.Size = new System.Drawing.Size(123, 26);
             this.label11.TabIndex = 28;
-            this.label11.Text = "Upcoming Appointments";
+            this.label11.Text = "Reminders";
             // 
             // label14
             // 
@@ -645,94 +733,6 @@ namespace DentalAppointmentandInformationSystem
             this.noNotifs.TabIndex = 0;
             this.noNotifs.TabStop = false;
             // 
-            // logoutPic
-            // 
-            this.logoutPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.logoutPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.logout;
-            this.logoutPic.Location = new System.Drawing.Point(54, 810);
-            this.logoutPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
-            this.logoutPic.Name = "logoutPic";
-            this.logoutPic.Size = new System.Drawing.Size(42, 43);
-            this.logoutPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoutPic.TabIndex = 13;
-            this.logoutPic.TabStop = false;
-            // 
-            // staffPic
-            // 
-            this.staffPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.staffPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.staffs;
-            this.staffPic.Location = new System.Drawing.Point(47, 605);
-            this.staffPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
-            this.staffPic.Name = "staffPic";
-            this.staffPic.Size = new System.Drawing.Size(56, 62);
-            this.staffPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.staffPic.TabIndex = 9;
-            this.staffPic.TabStop = false;
-            this.staffPic.Click += new System.EventHandler(this.staffBtn_Click);
-            // 
-            // patientPic
-            // 
-            this.patientPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.patientPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.patients;
-            this.patientPic.Location = new System.Drawing.Point(46, 508);
-            this.patientPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
-            this.patientPic.Name = "patientPic";
-            this.patientPic.Size = new System.Drawing.Size(57, 60);
-            this.patientPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.patientPic.TabIndex = 7;
-            this.patientPic.TabStop = false;
-            this.patientPic.Click += new System.EventHandler(this.ptntBtn_Click);
-            // 
-            // clndrPic
-            // 
-            this.clndrPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.clndrPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.calendar;
-            this.clndrPic.Location = new System.Drawing.Point(50, 417);
-            this.clndrPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
-            this.clndrPic.Name = "clndrPic";
-            this.clndrPic.Size = new System.Drawing.Size(50, 46);
-            this.clndrPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.clndrPic.TabIndex = 5;
-            this.clndrPic.TabStop = false;
-            this.clndrPic.Click += new System.EventHandler(this.apptclndrBtn_Click);
-            // 
-            // doctorPic
-            // 
-            this.doctorPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.doctorPic, 2);
-            this.doctorPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.profile_icon;
-            this.doctorPic.Location = new System.Drawing.Point(96, 17);
-            this.doctorPic.Name = "doctorPic";
-            this.doctorPic.Size = new System.Drawing.Size(153, 142);
-            this.doctorPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.doctorPic.TabIndex = 0;
-            this.doctorPic.TabStop = false;
-            // 
-            // dshbrdPic
-            // 
-            this.dshbrdPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dshbrdPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.dashboard;
-            this.dshbrdPic.Location = new System.Drawing.Point(52, 318);
-            this.dshbrdPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
-            this.dshbrdPic.Name = "dshbrdPic";
-            this.dshbrdPic.Size = new System.Drawing.Size(46, 48);
-            this.dshbrdPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.dshbrdPic.TabIndex = 4;
-            this.dshbrdPic.TabStop = false;
-            // 
-            // srvcsPic
-            // 
-            this.srvcsPic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.srvcsPic.Image = global::DentalAppointmentandInformationSystem.Properties.Resources.services;
-            this.srvcsPic.Location = new System.Drawing.Point(49, 708);
-            this.srvcsPic.Margin = new System.Windows.Forms.Padding(24, 3, 3, 3);
-            this.srvcsPic.Name = "srvcsPic";
-            this.srvcsPic.Size = new System.Drawing.Size(52, 52);
-            this.srvcsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.srvcsPic.TabIndex = 10;
-            this.srvcsPic.TabStop = false;
-            this.srvcsPic.Click += new System.EventHandler(this.servicesBtn_Click);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -760,13 +760,6 @@ namespace DentalAppointmentandInformationSystem
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.notifContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.noNotifPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.noNotifs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientPic)).EndInit();
@@ -774,6 +767,13 @@ namespace DentalAppointmentandInformationSystem
             ((System.ComponentModel.ISupportInitialize)(this.doctorPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dshbrdPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.srvcsPic)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.notifContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.noNotifPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noNotifs)).EndInit();
             this.ResumeLayout(false);
 
         }
