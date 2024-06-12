@@ -38,7 +38,7 @@ namespace DentalAppointmentandInformationSystem
 
             if (serviceExists <= 0)
             {
-                if (!string.IsNullOrWhiteSpace(srvcNameTxtBox.Text) && !string.IsNullOrWhiteSpace(srvcPriceTxtBox.Text))
+                if (!string.IsNullOrWhiteSpace(srvcNameTxtBox.Text) && !string.IsNullOrWhiteSpace(srvcPriceTxtBox.Text) && !string.IsNullOrWhiteSpace(srvcDuration.Text))
                 {
                     float num;
                     bool checkInput = float.TryParse(srvcPriceTxtBox.Text, out num); //Checking if the price entered is a float or integer
@@ -62,7 +62,7 @@ namespace DentalAppointmentandInformationSystem
                         cmd.Dispose();
 
                         String query = "INSERT INTO Service VALUES('" + serviceID + "','" + srvcNameTxtBox.Text + "','"
-                            + srvcPriceTxtBox.Text + "',1);";
+                            + srvcPriceTxtBox.Text + "','" + srvcDuration.Text + "',1);";
 
                         SqlCommand cmd2 = new SqlCommand(query, constring);
                         cmd2.CommandText = query;
