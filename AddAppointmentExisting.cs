@@ -58,16 +58,17 @@ namespace DentalAppointmentandInformationSystem
             appntmntDate.MinDate = DateTime.Now;
             if (DateTime.Now >= DateTime.Parse("10:00:00") && !(DateTime.Now >= DateTime.Parse("17:00:00")) && !(DateTime.Now.AddHours(1) >= DateTime.Parse("16:00:00")))
             {
-                startTime.MinDate = DateTime.Now.AddHours(1);
+                startTime.MinDate = DateTime.Now;
                 startTime.MaxDate = DateTime.Parse("16:00:00");
                 endTime.MaxDate = DateTime.Parse("17:00:00");
             }
             else
             {
                 appntmntDate.MinDate = DateTime.Now.AddDays(1);
-                startTime.MinDate = DateTime.Parse("10:00:00");
-                startTime.MaxDate = DateTime.Parse("16:00:00");
-                endTime.MaxDate = DateTime.Parse("17:00:00");
+                DateTime nextDate = DateTime.Parse(appntmntDate.Text.ToString());
+                startTime.MinDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 10, 0, 0);
+                startTime.MaxDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 16, 0, 0);
+                endTime.MaxDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 17, 0, 0);
             }
         }
         private void dashboardBtn_Click(object sender, EventArgs e)
@@ -208,7 +209,7 @@ namespace DentalAppointmentandInformationSystem
                     if (cmd3.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Appointment created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','added appointment "
+                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','added appointment "
                                 + appointmentID + "')";
 
                         SqlCommand cmdAct = new SqlCommand(queryAct, constring);
@@ -409,7 +410,26 @@ namespace DentalAppointmentandInformationSystem
 
         private void startTime_ValueChanged(object sender, EventArgs e)
         {
-            endTime.MinDate = startTime.Value.AddHours(1);
+            if (appntmntDate.Text.Equals(DateTime.Now.ToShortDateString()))
+            {
+                endTime.MinDate = startTime.Value.AddHours(1);
+            }
+            if (!appntmntDate.Text.Equals(DateTime.Now.ToShortDateString()))
+            {
+                DateTime nextDate = DateTime.Parse(appntmntDate.Text.ToString());
+                endTime.MinDate = startTime.Value.AddHours(1);
+            }
+        }
+
+        private void appntmntDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (!appntmntDate.Text.Equals(DateTime.Now.ToShortDateString()))
+            {
+                DateTime nextDate = DateTime.Parse(appntmntDate.Text.ToString());
+                endTime.MaxDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 17, 0, 0);
+                startTime.MaxDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 16, 0, 0);
+                startTime.MinDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 10, 0, 0);
+            }
         }
 
         private void service1Combo_SelectionChangeCommitted(object sender, EventArgs e)

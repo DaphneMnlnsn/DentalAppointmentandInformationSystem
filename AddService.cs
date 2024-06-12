@@ -69,7 +69,7 @@ namespace DentalAppointmentandInformationSystem
                         if (cmd2.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("Service added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','added service "
+                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','added service "
                             + serviceID + "')";
 
                             SqlCommand cmdAct = new SqlCommand(queryAct, constring);

@@ -68,7 +68,7 @@ namespace DentalAppointmentandInformationSystem
                             if (cmd2.ExecuteNonQuery() == 1)
                             {
                                 MessageBox.Show("Service deleted permanently!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','permanently deleted service "
+                                string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','permanently deleted service "
                                 + v.getsetserviceSelected + "')";
 
                                 SqlCommand cmdAct = new SqlCommand(queryAct, constring);
@@ -122,7 +122,7 @@ namespace DentalAppointmentandInformationSystem
                         if (cmd2.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("Service successfully restored!");
-                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','restored service "
+                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','restored service "
                                 + v.getsetserviceSelected + "')";
 
                             SqlCommand cmdAct = new SqlCommand(queryAct, constring);

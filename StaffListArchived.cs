@@ -44,7 +44,7 @@ namespace DentalAppointmentandInformationSystem
                 if (cmd2.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Staff restored!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','restored staff "
+                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','restored staff "
                                 + v.getsetstaffSelected + "')";
 
                     SqlCommand cmdAct = new SqlCommand(queryAct, constring);
@@ -79,7 +79,7 @@ namespace DentalAppointmentandInformationSystem
                     if (cmd2.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Staff record deleted permanently!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','permanently deleted staff "
+                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','permanently deleted staff "
                                 + v.getsetstaffSelected + "')";
 
                         SqlCommand cmdAct = new SqlCommand(queryAct, constring);

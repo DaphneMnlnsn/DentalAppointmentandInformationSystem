@@ -68,16 +68,17 @@ namespace DentalAppointmentandInformationSystem
             appntmntDate.MinDate = DateTime.Now;
             if (DateTime.Now >= DateTime.Parse("10:00:00") && !(DateTime.Now >= DateTime.Parse("17:00:00")) && !(DateTime.Now.AddHours(1) >= DateTime.Parse("16:00:00")))
             {
-                startTime.MinDate = DateTime.Now.AddHours(1);
+                startTime.MinDate = DateTime.Now;
                 startTime.MaxDate = DateTime.Parse("16:00:00");
                 endTime.MaxDate = DateTime.Parse("17:00:00");
             }
             else
             {
                 appntmntDate.MinDate = DateTime.Now.AddDays(1);
-                startTime.MinDate = DateTime.Parse("10:00:00");
-                startTime.MaxDate = DateTime.Parse("16:00:00");
-                endTime.MaxDate = DateTime.Parse("17:00:00");
+                DateTime nextDate = DateTime.Parse(appntmntDate.Text.ToString());
+                startTime.MinDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 10,0,0);
+                startTime.MaxDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 16, 0, 0);
+                endTime.MaxDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 17, 0, 0);
             }
         }
 
@@ -276,7 +277,7 @@ namespace DentalAppointmentandInformationSystem
                             if (cmd3.ExecuteNonQuery() == 1)
                             {
                                 MessageBox.Show("Appointment created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','added appointment "
+                                string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','added appointment "
                                 + appointmentID + "')";
 
                                 SqlCommand cmdAct = new SqlCommand(queryAct, constring);
@@ -397,7 +398,7 @@ namespace DentalAppointmentandInformationSystem
         private void staff2Combo_Click(object sender, EventArgs e)
         {
             //Assigning data in the combo box
-            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001'";
+            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001' AND employee_num != '" + staff1Combo.SelectedValue.ToString() + "'";
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -410,7 +411,7 @@ namespace DentalAppointmentandInformationSystem
         private void staff3Combo_Click(object sender, EventArgs e)
         {
             //Assigning data in the combo box
-            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001'";
+            string query = "SELECT * FROM Staff WHERE status = 1 AND employee_num != '10001' AND employee_num != '" + staff1Combo.SelectedValue.ToString() + "' AND employee_num != '" + staff2Combo.SelectedValue.ToString() + "'" ;
             SqlDataAdapter adpt = new SqlDataAdapter(query, constring);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -485,7 +486,26 @@ namespace DentalAppointmentandInformationSystem
 
         private void startTime_ValueChanged(object sender, EventArgs e)
         {
-            endTime.MinDate = startTime.Value.AddHours(1);
+            if (appntmntDate.Text.Equals(DateTime.Now.ToShortDateString()))
+            {
+                endTime.MinDate = startTime.Value.AddHours(1);
+            }
+            if (!appntmntDate.Text.Equals(DateTime.Now.ToShortDateString()))
+            {
+                DateTime nextDate = DateTime.Parse(appntmntDate.Text.ToString());
+                endTime.MinDate = startTime.Value.AddHours(1);
+            }
+        }
+
+        private void appntmntDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (!appntmntDate.Text.Equals(DateTime.Now.ToShortDateString()))
+            {
+                DateTime nextDate = DateTime.Parse(appntmntDate.Text.ToString());
+                endTime.MaxDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 17, 0, 0);
+                startTime.MaxDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 16, 0, 0);
+                startTime.MinDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 10, 0, 0);
+            }
         }
 
         private void service1Combo_SelectionChangeCommitted(object sender, EventArgs e)
@@ -510,7 +530,17 @@ namespace DentalAppointmentandInformationSystem
             readService = retrieveService.ExecuteReader();
             if (readService.Read())
             {
-                endTime.MinDate = endTime.MinDate.AddHours(float.Parse(readService["service_duration"].ToString()));
+                if(!(endTime.MinDate.AddHours(0.01) > endTime.MaxDate))
+                {
+                    endTime.MinDate = endTime.MinDate.AddHours(float.Parse(readService["service_duration"].ToString()));
+                }
+                else
+                {
+                    MessageBox.Show("Time exceeds the clinic's closing time! Date has been automatically adjusted to tomorrow's date.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    appntmntDate.Text = DateTime.Now.AddDays(1).ToString();
+                    startTime.Text = DateTime.Parse(appntmntDate.Text).ToString();
+                    endTime.Text = "11:00:00";
+                }
             }
             currentService = service1Combo.SelectedValue.ToString();
             readService.Close();
@@ -535,7 +565,17 @@ namespace DentalAppointmentandInformationSystem
             readService = retrieveService.ExecuteReader();
             if (readService.Read())
             {
-                endTime.MinDate = endTime.MinDate.AddHours(float.Parse(readService["service_duration"].ToString()));
+                if (!(endTime.MinDate.AddHours(0.01) > endTime.MaxDate))
+                {
+                    endTime.MinDate = endTime.MinDate.AddHours(float.Parse(readService["service_duration"].ToString()));
+                }
+                else
+                {
+                    MessageBox.Show("Time exceeds the clinic's closing time! Date has been automatically adjusted to tomorrow's date.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    appntmntDate.Text = DateTime.Now.AddDays(1).ToString();
+                    startTime.Text = "10:00:00";
+                    endTime.Text = "11:00:00";
+                }
             }
             currentService2 = service2Combo.SelectedValue.ToString();
             readService.Close();
@@ -560,7 +600,17 @@ namespace DentalAppointmentandInformationSystem
             readService = retrieveService.ExecuteReader();
             if (readService.Read())
             {
-                endTime.MinDate = endTime.MinDate.AddHours(float.Parse(readService["service_duration"].ToString()));
+                if (!(endTime.MinDate.AddHours(0.01) > endTime.MaxDate))
+                {
+                    endTime.MinDate = endTime.MinDate.AddHours(float.Parse(readService["service_duration"].ToString()));
+                }
+                else
+                {
+                    MessageBox.Show("Time exceeds the clinic's closing time! Date has been automatically adjusted to tomorrow's date.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    appntmntDate.Text = DateTime.Now.AddDays(1).ToString();
+                    startTime.Text = "10:00:00";
+                    endTime.Text = "11:00:00";
+                }
             }
             currentService3 = service3Combo.SelectedValue.ToString();
             readService.Close();

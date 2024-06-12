@@ -17,7 +17,7 @@ namespace DentalAppointmentandInformationSystem
     {
         Variables v = new Variables();
         SqlConnection constring;
-        int changed = 0;
+        int changed = 0, changed2 = 0;
         string currentService, currentService2, currentService3;
         public EditAppointment()
         {
@@ -244,6 +244,12 @@ namespace DentalAppointmentandInformationSystem
                     currentService3 = service3Combo.SelectedValue.ToString();
                 }
             }
+            if(DateTime.Parse(appntmntDate.Text) < DateTime.Now)
+            {
+                appntmntDate.Enabled = false;
+                startTime.Enabled = false;
+                endTime.Enabled = false;
+            }
             constring.Close();
         }
 
@@ -365,7 +371,7 @@ namespace DentalAppointmentandInformationSystem
                     if (cmd3.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Changes saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','edited appointment "
+                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','edited appointment "
                                 + v.getsetappointmentSelected + "')";
 
                         SqlCommand cmdAct = new SqlCommand(queryAct, constring);
@@ -475,7 +481,7 @@ namespace DentalAppointmentandInformationSystem
                 if (DateTime.Now >= DateTime.Parse("10:00:00") && !(DateTime.Now >= DateTime.Parse("17:00:00")))
                 {
                     appntmntDate.MinDate = DateTime.Now;
-                    startTime.MinDate = DateTime.Now.AddHours(1);
+                    startTime.MinDate = DateTime.Now;
                 }
                 else
                 {
@@ -486,6 +492,20 @@ namespace DentalAppointmentandInformationSystem
             }
 
             changed++;
+        }
+        private void appntmntDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (changed2 != 0)
+            {
+                if (!appntmntDate.Text.Equals(DateTime.Now.ToShortDateString()))
+                {
+                    DateTime nextDate = DateTime.Parse(appntmntDate.Text.ToString());
+                    endTime.MaxDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 17, 0, 0);
+                    startTime.MaxDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 16, 0, 0);
+                    startTime.MinDate = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, 10, 0, 0);
+                }
+            }
+            changed2++;
         }
         private void service1Combo_SelectionChangeCommitted(object sender, EventArgs e)
         {

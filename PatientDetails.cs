@@ -111,7 +111,7 @@ namespace DentalAppointmentandInformationSystem
                 patientNotes.Text = row["patient_notes"].ToString();
                 
                 //Displaying appointment history/records
-                string sql2 = "SELECT * FROM Record WHERE patient_id = " + v.getsetpatientSelected + " AND status = 1";
+                string sql2 = "SELECT * FROM Record WHERE patient_id = " + v.getsetpatientSelected + " AND status = 1 ORDER BY record_id ASC";
                 DataTable records = new DataTable("record");
                 SqlDataAdapter da2 = new SqlDataAdapter(sql2, constring);
                 da2.Fill(records);
@@ -265,19 +265,6 @@ namespace DentalAppointmentandInformationSystem
                     if (dialogResult == DialogResult.Yes)
                     {
                         reader1.Close();
-                        int quadrant1Num = 0, quadrant2Num = 0, quadrant3Num = 0, quadrant4Num = 0;
-
-                        string querySelect = "SELECT * FROM Patient WHERE patient_id =" + int.Parse(v.getsetpatientSelected);
-                        SqlDataAdapter adpt = new SqlDataAdapter(querySelect, constring);
-                        DataTable dt = new DataTable();
-                        adpt.Fill(dt);
-                        foreach (DataRow row in dt.Rows)
-                        {
-                            quadrant1Num = int.Parse(row["quadrant1_num"].ToString());
-                            quadrant2Num = int.Parse(row["quadrant2_num"].ToString());
-                            quadrant3Num = int.Parse(row["quadrant3_num"].ToString());
-                            quadrant4Num = int.Parse(row["quadrant4_num"].ToString());
-                        }
 
                         string query2 = "UPDATE Record SET status = 0 WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd2 = new SqlCommand(query2, constring);
@@ -291,19 +278,7 @@ namespace DentalAppointmentandInformationSystem
                         SqlCommand cmd3 = new SqlCommand(query3, constring);
                         cmd3.CommandText = query3;
                         cmd3.ExecuteNonQuery();
-                        string query8 = "UPDATE Quadrant1 SET status = 0 WHERE quadrant1_num =" + quadrant1Num;
-                        SqlCommand cmd8 = new SqlCommand(query8, constring);
-                        cmd8.CommandText = query8;
-                        cmd8.ExecuteNonQuery();
-                        string query5 = "UPDATE Quadrant2 SET status = 0 WHERE quadrant2_num =" + quadrant2Num;
-                        SqlCommand cmd5 = new SqlCommand(query5, constring);
-                        cmd5.CommandText = query5;
-                        cmd5.ExecuteNonQuery();
-                        string query6 = "UPDATE Quadrant3 SET status = 0 WHERE quadrant3_num =" + quadrant3Num;
-                        SqlCommand cmd6 = new SqlCommand(query6, constring);
-                        cmd6.CommandText = query6;
-                        cmd6.ExecuteNonQuery();
-                        string query7 = "UPDATE Quadrant4 SET status = 0 WHERE quadrant4_num =" + quadrant4Num;
+                        string query7 = "UPDATE Teeth SET status = 0 WHERE patient_id =" + v.getsetpatientSelected;
                         SqlCommand cmd7 = new SqlCommand(query7, constring);
                         cmd7.CommandText = query7;
                         cmd7.ExecuteNonQuery();
@@ -313,8 +288,12 @@ namespace DentalAppointmentandInformationSystem
                         if (cmd4.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("Patient has been added to the Trash Bin/Archives!");
+                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','archived patient "
+                                + v.getsetpatientSelected + "')";
 
-                            MessageBox.Show("");
+                            SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                            cmdAct.CommandText = queryAct;
+                            cmdAct.ExecuteNonQuery();
                             constring.Close();
                             Patients ptnt = new Patients();
                             ptnt.Show();
@@ -384,6 +363,12 @@ namespace DentalAppointmentandInformationSystem
                         if (addAttach.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("File added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','added a file to patient "
+                                + v.getsetpatientSelected + "')";
+
+                            SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                            cmdAct.CommandText = queryAct;
+                            cmdAct.ExecuteNonQuery();
                             constring.Close();
                             this.Hide();
                             PatientDetails pd = new PatientDetails();

@@ -87,7 +87,7 @@ namespace DentalAppointmentandInformationSystem
                         if (cmd2.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("Service successfully moved to the Trash Bin/Archives!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','archived service "
+                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','archived service "
                                 + v.getsetserviceSelected + "')";
 
                             SqlCommand cmdAct = new SqlCommand(queryAct, constring);

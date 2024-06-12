@@ -48,7 +48,7 @@ namespace DentalAppointmentandInformationSystem
                     if (cmd3.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Changes saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','edited service "
+                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','edited service "
                                 + v.getsetserviceSelected + "')";
 
                         SqlCommand cmdAct = new SqlCommand(queryAct, constring);

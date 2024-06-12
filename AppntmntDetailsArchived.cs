@@ -64,7 +64,7 @@ namespace DentalAppointmentandInformationSystem
         {
             //Displaying appointment details of that date, but archived
             constring.Open();
-            string sql = "SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + v.getsetDay + "' AND status = 0";
+            string sql = "SELECT * FROM Appointment WHERE appointment_date = " + "'" + v.getsetYear.ToString() + "/" + v.getsetMonth.ToString() + "/" + v.getsetDay + "' AND status = 0 ORDER BY appointment_startTime ASC";
             DataTable appointments = new DataTable("appointments");
             SqlDataAdapter da = new SqlDataAdapter(sql, constring);
             da.Fill(appointments);

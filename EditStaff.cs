@@ -157,7 +157,7 @@ namespace DentalAppointmentandInformationSystem
                 if (cmd3.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Changes Saved!");
-                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','edited staff "
+                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','edited staff "
                                 + v.getsetstaffSelected + "')";
 
                     SqlCommand cmdAct = new SqlCommand(queryAct, constring);
@@ -194,7 +194,7 @@ namespace DentalAppointmentandInformationSystem
                     if (cmd2.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Staff Record succesfully moved to the Trash Bin/Archives!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','archived staff "
+                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','archived staff "
                                 + v.getsetstaffSelected + "')";
 
                         SqlCommand cmdAct = new SqlCommand(queryAct, constring);

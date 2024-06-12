@@ -516,6 +516,7 @@ namespace DentalAppointmentandInformationSystem
             this.appntmntDate.Size = new System.Drawing.Size(337, 29);
             this.appntmntDate.TabIndex = 59;
             this.appntmntDate.Value = new System.DateTime(2024, 6, 10, 18, 9, 10, 3);
+            this.appntmntDate.ValueChanged += new System.EventHandler(this.appntmntDate_ValueChanged);
             // 
             // startTime
             // 

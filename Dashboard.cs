@@ -191,16 +191,12 @@ namespace DentalAppointmentandInformationSystem
             constring.Close();*/
         }
 
-        private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void displayNotifs()
         {
             constring.Open();
             bool noNotif = true;
             string message = "You have the following appointments:\n\n";
-            SqlCommand sqlcom = new SqlCommand("SELECT * FROM Appointment where appointment_date='" + DateTime.Now.ToString() + "' AND appointment_startTime > '" + DateTime.Now.ToString() + "' AND status = 1 ORDER BY appointment_startTime ASC", constring);
+            SqlCommand sqlcom = new SqlCommand("SELECT * FROM Appointment where appointment_date='" + DateTime.Now.ToString("MM-dd-yyyy") + "' AND appointment_startTime > '" + DateTime.Now.ToString("hh:mm tt") + "' AND status = 1 ORDER BY appointment_startTime ASC", constring);
             SqlDataAdapter sqlda = new SqlDataAdapter(sqlcom);
             DataTable dt = new DataTable();
             dashboardNotifItem notification = new dashboardNotifItem();
@@ -242,6 +238,7 @@ namespace DentalAppointmentandInformationSystem
             SqlCommand sqlcom2 = new SqlCommand("SELECT * FROM Appointment WHERE ((appointment_state = 'Ongoing') OR (appointment_state = 'Pending')) AND appointment_date <= '" + DateTime.Now.ToString() + "' AND appointment_startTime < '" + DateTime.Now.ToString() + "' AND status = 1 ORDER BY appointment_date ASC", constring);
             SqlDataAdapter sqlda2 = new SqlDataAdapter(sqlcom2);
             DataTable dt2 = new DataTable();
+            dashboardNotifItem notification2 = new dashboardNotifItem();
 
             sqlda2.Fill(dt2);
 
@@ -267,8 +264,8 @@ namespace DentalAppointmentandInformationSystem
                         message2 += "- " + DateTime.Parse(dt2.Rows[i]["appointment_date"].ToString()).ToString("MM-dd-yyyy") + ": " + dt2.Rows[i]["appointment_startTime"].ToString() + "-" + dt2.Rows[i]["appointment_endTime"].ToString() + " with " + patient_name + "\n\n";
                         reader5.Dispose();
                         cmd5.Dispose();
-                        notification.setNotifs(message2);
-                        notifContainer.Controls.Add(notification);
+                        notification2.setNotifs(message2);
+                        notifContainer.Controls.Add(notification2);
                     }
                 }
                 noNotifPic.Visible = false;

@@ -77,12 +77,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="activityLog.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="activityLog.Designer.cs">
-      <DependentUpon>activityLog.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,9 +343,6 @@
       <DependentUpon>UserControlDaysArchived.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables.cs" />
-    <EmbeddedResource Include="activityLog.resx">
-      <DependentUpon>activityLog.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddAppointment.resx">
       <DependentUpon>AddAppointment.cs</DependentUpon>
     </EmbeddedResource>

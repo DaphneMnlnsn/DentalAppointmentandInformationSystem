@@ -378,7 +378,7 @@ namespace DentalAppointmentandInformationSystem
             if (editQuadrant4cmd.ExecuteNonQuery() == 1)
             {
                 MessageBox.Show("Changes saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','edited the dental record of patient "
+                string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','edited the dental record of patient "
                                 + v.getsetpatientSelected + "')";
 
                 SqlCommand cmdAct = new SqlCommand(queryAct, constring);

@@ -114,7 +114,7 @@ namespace DentalAppointmentandInformationSystem
                     cmd2.CommandText = query;
                     if (cmd2.ExecuteNonQuery() == 1)
                     {
-                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','added staff "
+                        string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','added staff "
                                 + staffID + "')";
 
                         SqlCommand cmdAct = new SqlCommand(queryAct, constring);

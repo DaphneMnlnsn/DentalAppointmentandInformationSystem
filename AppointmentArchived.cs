@@ -75,14 +75,14 @@ namespace DentalAppointmentandInformationSystem
                 cmd.CommandText = query;
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    constring.Close();
                     MessageBox.Show("Appointment deleted permanently!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','permanently deleted appointment "
+                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','permanently deleted appointment "
                                 + appntmntIDLbl.Text + "')";
 
                     SqlCommand cmdAct = new SqlCommand(queryAct, constring);
                     cmdAct.CommandText = queryAct;
                     cmdAct.ExecuteNonQuery();
+                    constring.Close();
                     Calendar clndr = new Calendar();
                     clndr.Show();
                     this.ParentForm.Hide();
@@ -111,14 +111,14 @@ namespace DentalAppointmentandInformationSystem
                 cmd.CommandText = query;
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    constring.Close();
                     MessageBox.Show("Appointment restored successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','restored appointment "
+                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','restored appointment "
                                 + appntmntIDLbl.Text + "')";
 
                     SqlCommand cmdAct = new SqlCommand(queryAct, constring);
                     cmdAct.CommandText = queryAct;
                     cmdAct.ExecuteNonQuery();
+                    constring.Close();
                     Calendar clndr = new Calendar();
                     clndr.Show();
                     this.ParentForm.Hide();

@@ -86,14 +86,14 @@ namespace DentalAppointmentandInformationSystem
                 cmd.CommandText = query;
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    constring.Close();
                     MessageBox.Show("Appointment has been moved to the Trash Bin/Archives!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','archived appointment "
+                    string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','archived appointment "
                                 + appntmntIDLbl.Text + "')";
 
                     SqlCommand cmdAct = new SqlCommand(queryAct, constring);
                     cmdAct.CommandText = queryAct;
                     cmdAct.ExecuteNonQuery();
+                    constring.Close();
                     Calendar clndr = new Calendar();
                     clndr.Show();
                     this.ParentForm.Hide();

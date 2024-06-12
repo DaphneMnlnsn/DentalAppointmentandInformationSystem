@@ -57,7 +57,7 @@ namespace DentalAppointmentandInformationSystem
                         if (cmdd.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("File permanently deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Now + "','deleted a file of patient "
+                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','deleted a file of patient "
                                 + v.getsetpatientSelected + "')";
 
                             SqlCommand cmdAct = new SqlCommand(queryAct, constring);
@@ -105,6 +105,12 @@ namespace DentalAppointmentandInformationSystem
                         if (cmd2.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("File restored!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            string queryAct = "INSERT INTO Activity_Log VALUES('" + v.getsetloggedIn + "','" + DateTime.Parse(DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss")) + "','restored a file of patient "
+                                + v.getsetpatientSelected + "')";
+
+                            SqlCommand cmdAct = new SqlCommand(queryAct, constring);
+                            cmdAct.CommandText = queryAct;
+                            cmdAct.ExecuteNonQuery();
                             constring.Close();
                             this.ParentForm.Hide();
                             FileArchives ptd = new FileArchives();
